@@ -1,0 +1,25 @@
+'tv_turn_on_xbox':
+  alias: Turn On TV and select XBOX
+  sequence:
+  - service: switch.turn_on
+    data:
+      entity_id: switch.xbox
+  - service: scene.turn_on
+    data:
+      entity_id: scene.relax
+  - service: media_player.turn_on
+    data: 
+      entity_id: media_player.tele
+  - wait_template: "{{ is_state('media_player.tele', 'playing') }}"
+  - service: media_player.select_source
+    data: 
+      entity_id: media_player.tele
+      source: 'Xbox One'
+  - service: media_player.volume_mute
+    data:
+      entity_id: media_player.tele
+      is_volume_muted: false
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.tele
+      volume_level: 0.02

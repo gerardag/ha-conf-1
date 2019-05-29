@@ -1,0 +1,20 @@
+'1546170284407':
+  alias: On - Kitchen light
+  sequence:
+  - data:
+      event: turn_on_kitchen_light
+    service: ifttt.trigger
+  - service: mqtt.publish
+    data:
+      topic: wifi/switch/cuina
+      payload: 'on'
+'1547158353179':
+  alias: Off - Kitchen light
+  sequence:
+  - data:
+      event: turn_off_kitchen_light
+    service: ifttt.trigger
+  - service: mqtt.publish
+    data:
+      topic: wifi/switch/cuina
+      payload: 'off'
