@@ -1,0 +1,18 @@
+alias: 22:00 - Lower brightness entrance
+trigger:
+- entity_id: light.entrada
+  from: 'off'
+  platform: state
+  to: 'on'
+condition:
+- after: '22:00'
+  before: 06:30
+  condition: time
+action:
+- data:
+    brightness: 10
+    entity_id: light.entrada
+    transition: 10
+  service: light.turn_on
+initial_state: true
+hide_entity: true

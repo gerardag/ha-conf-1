@@ -1,0 +1,9 @@
+alias: Off - Kichen light
+initial_state: true
+trigger:
+- payload: 'off'
+  platform: mqtt
+  topic: wifi/switch/cuina/set
+condition: []
+action:
+- service: script.1547158353179

@@ -1,0 +1,13 @@
+alias: 06:00 - Turn on heater (bedroom, livingroom)
+initial_state: false
+trigger:
+- at: '5:15'
+  platform: time
+condition: []
+action:
+- data:
+    entity_id: switch.calefaccio
+  service: switch.turn_on
+- data:
+    entity_id: switch.calefaccio_dormitori
+  service: switch.turn_on

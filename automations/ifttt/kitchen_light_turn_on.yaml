@@ -1,0 +1,9 @@
+alias: On - Kitchen light
+initial_state: true
+trigger:
+- payload: 'on'
+  platform: mqtt
+  topic: wifi/switch/cuina/set
+condition: []
+action:
+- service: script.1546170284407

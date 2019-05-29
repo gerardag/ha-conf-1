@@ -1,0 +1,17 @@
+alias: 07:10 - Higher brightness entrance
+trigger:
+- entity_id: light.entrada
+  from: 'off'
+  platform: state
+  to: 'on'
+condition:
+- after: 06:40
+  before: '21:59'
+  condition: time
+action:
+- data:
+    brightness: 250
+    entity_id: light.entrada
+    transition: 10
+  service: light.turn_on
+initial_state: true

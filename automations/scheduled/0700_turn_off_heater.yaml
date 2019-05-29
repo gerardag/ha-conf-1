@@ -1,0 +1,13 @@
+alias: 07:00 - Turn off heater (bedroom, livingroom)
+initial_state: true
+trigger:
+- at: '6:15'
+  platform: time
+condition: []
+action:
+- data:
+    entity_id: switch.calefaccio
+  service: switch.turn_off
+- data:
+    entity_id: switch.calefaccio_dormitori
+  service: switch.turn_off

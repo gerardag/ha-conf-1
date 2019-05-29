@@ -1,0 +1,9 @@
+alias: On - Bedroom heater
+initial_state: true
+trigger:
+- payload: 'on'
+  platform: mqtt
+  topic: wifi/switch/dormitori_calefaccio/set
+condition: []
+action:
+- service: script.1546170284406
