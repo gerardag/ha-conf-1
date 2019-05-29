@@ -1,0 +1,18 @@
+- platform: broadlink
+  host: !secret ip_switch_calefaccio_menjador
+  mac: !secret mac_switch_calefaccio_menjador
+  type: sp2
+  friendly_name: 'Calefacció'
+- platform: mqtt
+  name: 'Calefacció dormitori'
+  command_topic: 'wifi/switch/dormitori_calefaccio/set'
+  state_topic: 'wifi/switch/dormitori_calefaccio'
+  state_on: 'on'
+  state_off: 'off'
+  payload_on: 'on'
+  payload_off: 'off'
+- platform: command_line
+  switches:
+    xbox:
+      command_on: !secret xbox_command
+      command_off: !secret xbox_command

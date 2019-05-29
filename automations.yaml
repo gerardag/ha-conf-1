@@ -1,0 +1,188 @@
+- alias: IFTTT Integration
+  hide_entity: true
+  initial_state: true
+  trigger:
+    platform: event
+    event_type: ifttt_webhook_received
+    event_data:
+      action: call_service
+  action:
+    service_template: '{{ trigger.event.data.service }}'
+    data_template:
+      entity_id: '{{ trigger.event.data.entity_id }}'
+  id: 161d1d436ceb485ca0881830325b073b
+- id: a30cf3d97e52446cbcde84646263cdec
+  alias: 22:00 - Lower brightness entrance
+  trigger:
+  - entity_id: light.entrada
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - after: '22:00'
+    before: 06:30
+    condition: time
+  action:
+  - data:
+      brightness: 10
+      entity_id: light.entrada
+      transition: 10
+    service: light.turn_on
+  initial_state: true
+  hide_entity: true
+- id: '1546985949731'
+  alias: 06:00 - Turn on heater (bedroom, livingroom)
+  initial_state: false
+  trigger:
+  - at: '5:15'
+    platform: time
+  condition: []
+  action:
+  - data:
+      entity_id: switch.calefaccio
+    service: switch.turn_on
+  - data:
+      entity_id: switch.calefaccio_dormitori
+    service: switch.turn_on
+- id: '1546986092015'
+  alias: 07:00 - Turn off heater (bedroom, livingroom)
+  initial_state: true
+  trigger:
+  - at: '6:15'
+    platform: time
+  condition: []
+  action:
+  - data:
+      entity_id: switch.calefaccio
+    service: switch.turn_off
+  - data:
+      entity_id: switch.calefaccio_dormitori
+    service: switch.turn_off
+- id: '1548109165054'
+  alias: 23:59 - Turn off heater (bedroom)
+  initial_state: true
+  trigger:
+  - at: '22:30'
+    platform: time
+  condition: []
+  action:
+  - data:
+      entity_id: switch.calefaccio_dormitori
+    service: switch.turn_off
+- id: '1548109222182'
+  alias: 22:00 - Turn on heater (bedroom)
+  initial_state: false
+  trigger:
+  - at: '21:00'
+    platform: time
+  condition: []
+  action:
+  - data:
+      entity_id: switch.calefaccio_dormitori
+    service: switch.turn_on
+- id: '1548196463402'
+  alias: 07:10 - Higher brightness entrance
+  trigger:
+  - entity_id: light.entrada
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - after: 06:40
+    before: '21:59'
+    condition: time
+  action:
+  - data:
+      brightness: 250
+      entity_id: light.entrada
+      transition: 10
+    service: light.turn_on
+  initial_state: true
+- id: '1552754153943'
+  alias: Off - Kichen light
+  initial_state: true
+  trigger:
+  - payload: 'off'
+    platform: mqtt
+    topic: wifi/switch/cuina/set
+  condition: []
+  action:
+  - service: script.1547158353179
+- id: '1548196463403'
+  alias: On - Kitchen light
+  initial_state: true
+  trigger:
+  - payload: 'on'
+    platform: mqtt
+    topic: wifi/switch/cuina/set
+  condition: []
+  action:
+  - service: script.1546170284407
+- id: '1552754153944'
+  alias: Off - Bedroom heater
+  initial_state: true
+  trigger:
+  - payload: 'off'
+    platform: mqtt
+    topic: wifi/switch/dormitori_calefaccio/set
+  condition: []
+  action:
+  - service: script.1547158353178
+- id: '1552754178173'
+  alias: On - Bedroom heater
+  initial_state: true
+  trigger:
+  - payload: 'on'
+    platform: mqtt
+    topic: wifi/switch/dormitori_calefaccio/set
+  condition: []
+  action:
+  - service: script.1546170284406
+- id: '1555839858812'
+  alias: Home Assistant - Started
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition: []
+  action:
+  - data:
+      message: Your Home Assistant has been started right now. Check that all works
+        properly. Check if it has been produced by a power outage.
+      title: Service alert!
+      target:
+      - 475501
+      - 417277407
+    service: telegram_bot.send_message
+  initial_state: true
+- id: '1557092049281'
+  alias: Escala - Send photo
+  trigger:
+  - entity_id: binary_sensor.moviment_escala
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      entity_id: camera.escala
+      filename: /tmp/escala.jpg
+    service: camera.snapshot
+  - delay: '3'
+  - data:
+      file: /tmp/escala.jpg
+      target:
+      - 475501
+      - 417277407
+    service: telegram_bot.send_photo
+  - data:
+      duration: '10'
+      entity_id: camera.escala
+      filename: /tmp/escala.mp4
+    service: camera.record
+  - delay: '12'
+  - data:
+      file: /tmp/escala.mp4
+      target:
+      - 475501
+      - 417277407
+    service: telegram_bot.send_video

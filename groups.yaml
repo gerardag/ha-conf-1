@@ -1,0 +1,38 @@
+habitacio:
+  name: Habitació
+  view: true
+  entities:
+    - media_player.el_lado_oscuro
+    - sensor.dormitori_humidity
+    - sensor.dormitori_temperature
+
+menjador:
+  name: Menjador
+  view: true
+  entities:
+    - light.detras_de_la_tele
+    - light.mesa
+    - light.sofa
+    - media_player.cuarto_de_estar
+    - media_player.tele
+    - scene.buenos_dias
+    - scene.cena
+    - scene.relax
+    - scene.tele
+    - sensor.menjador_humidity
+    - sensor.menjador_temperature
+    - switch.calefaccio
+
+exterior:
+  name: Exterior
+  view: true
+  entities:
+    - camera.raspberry_pi_camera
+    - sensor.exterior_humidity
+    - sensor.exterior_temperature
+
+entrada:
+  name: Entrada
+  view: true
+  entities:
+    - light.entrada

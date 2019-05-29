@@ -1,0 +1,34 @@
+- platform: generic_thermostat
+  name: Menjador
+  heater: switch.calefaccio
+  target_sensor: sensor.menjador_temperature
+  min_temp: 7
+  max_temp: 25
+  ac_mode: false
+  target_temp: 14
+  cold_tolerance: 0.4
+  hot_tolerance: 0.2
+  min_cycle_duration:
+    minutes: 5
+  keep_alive:
+    minutes: 3
+  initial_operation_mode: "off"
+  away_temp: 16
+  precision: 0.1
+- platform: generic_thermostat
+  name: Dormitori
+  heater: switch.calefaccio_dormitori
+  target_sensor: sensor.dormitori_temperature
+  min_temp: 7
+  max_temp: 25
+  ac_mode: false
+  target_temp: 14
+  cold_tolerance: 0.4
+  hot_tolerance: 0.2
+  min_cycle_duration:
+    minutes: 5
+  keep_alive:
+    minutes: 3
+  initial_operation_mode: "off"
+  away_temp: 16
+  precision: 0.1

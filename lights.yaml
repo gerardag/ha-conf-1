@@ -1,0 +1,8 @@
+- platform: mqtt
+  name: 'Kitchen light'
+  command_topic: 'wifi/switch/cuina/set'
+  state_topic: 'wifi/switch/cuina'
+  brightness_state_topic: 'wifi/switch/cuina/brightness'
+  brightness_command_topic: 'wifi/switch/cuina/brightness/set'
+  payload_on: 'on'
+  payload_off: 'off'

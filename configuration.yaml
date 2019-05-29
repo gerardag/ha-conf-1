@@ -1,0 +1,110 @@
+# Config needed to work
+
+homeassistant:
+  name: Casa
+  latitude: !secret latitude
+  longitude: !secret longitude
+  elevation: 102
+  unit_system: metric
+  time_zone: UTC
+  customize: !include customize.yaml
+  whitelist_external_dirs: /tmp/
+
+logger:
+  default: info
+
+config:
+
+frontend:
+  themes: !include_dir_merge_named themes
+
+http:
+  base_url: casa.aleix.cloud
+
+history:
+
+recorder:
+  purge_keep_days: 1
+  purge_interval: 1
+
+logbook:
+
+api:
+
+auth:
+
+duckdns:
+  domain: hass-amurtra
+  access_token: !secret duckdns_api_key
+
+# Notifications
+
+telegram_bot:
+  - platform: polling
+    api_key: !secret telegram_api_key
+    allowed_chat_ids:
+      - !secret telegram_chat_aleix
+      - !secret telegram_chat_imma
+
+notify:
+  - name: "Xat Aleix"
+    platform: telegram
+    chat_id: !secret telegram_chat_aleix
+  - name: "Xat Imma"
+    platform: telegram
+    chat_id: !secret telegram_chat_imma
+  - name: "Grup casa"
+    platform: telegram
+    chat_id: !secret telegram_chat_casa
+
+# Services
+
+sun:
+
+weather:
+  - platform: darksky
+    api_key: !secret darksky_api_key
+
+ifttt:
+  key: !secret ifttt_api_key
+
+tts:
+  - platform: google_translate
+    service_name: google_say
+    language: es
+
+google_assistant:
+  project_id: !secret google_project_id
+  api_key: !secret google_api_key
+  expose_by_default: true
+
+wake_on_lan:
+
+mqtt:
+  broker: !secret mqtt_ip
+  port: !secret mqtt_port
+  username: !secret mqtt_username
+  password: !secret mqtt_password
+
+# Devices
+
+cast:
+  media_player:
+    - host: !secret ip_chromecast
+    - host: !secret ip_google_home
+
+light: !include lights.yaml
+switch: !include switches.yaml
+sensor: !include sensors.yaml
+camera: !include cameras.yaml
+climate: !include climates.yaml
+media_player: !include media_players.yaml
+
+# Other config
+
+scene: !include scenes.yaml
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+
+

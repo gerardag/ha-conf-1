@@ -1,0 +1,23 @@
+- platform: yr
+- platform: mqtt
+  name: Exterior Temperature
+  state_topic: "ble/exterior/temperature"
+  unit_of_measurement: "°C"
+- platform: mqtt
+  name: Exterior Humidity
+  state_topic: "ble/exterior/humidity"
+  unit_of_measurement: "%"
+- platform: mitemp_bt
+  mac: !secret mac_temp_mi_dormitori
+  monitored_conditions:
+    - temperature
+    - humidity
+  median: 1
+  name: Dormitori
+- platform: mitemp_bt
+  mac: !secret mac_temp_mi_menjador
+  monitored_conditions:
+    - temperature
+    - humidity
+  median: 1
+  name: Menjador
