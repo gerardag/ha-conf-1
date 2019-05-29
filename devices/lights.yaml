@@ -6,3 +6,4 @@
   brightness_command_topic: 'wifi/switch/cuina/brightness/set'
   payload_on: 'on'
   payload_off: 'off'
+  retain: true

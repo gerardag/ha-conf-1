@@ -11,6 +11,7 @@
   state_off: 'off'
   payload_on: 'on'
   payload_off: 'off'
+  retain: true
 - platform: command_line
   switches:
     xbox:
