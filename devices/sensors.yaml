@@ -21,3 +21,7 @@
     - humidity
   median: 1
   name: Menjador
+- platform: github
+  access_token: !secret github_access_token
+  repositories:
+    - path: 'alemuro/ha-conf'
