@@ -8,6 +8,7 @@
     data:
       topic: wifi/switch/cuina
       payload: 'on'
+      retain: true
 '1547158353179':
   alias: Off - Kitchen light
   sequence:
@@ -18,3 +19,4 @@
     data:
       topic: wifi/switch/cuina
       payload: 'off'
+      retain: true
