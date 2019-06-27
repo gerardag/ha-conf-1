@@ -3,6 +3,11 @@
   mac: !secret mac_switch_calefaccio_menjador
   type: sp2
   friendly_name: 'Calefacció'
+- platform: broadlink
+  host: !secret ip_switch_calefaccio_menjador
+  mac: !secret mac_switch_calefaccio_menjador
+  type: sp2
+  friendly_name: 'Ventilador'
 - platform: mqtt
   name: 'Calefacció dormitori'
   command_topic: 'wifi/switch/dormitori_calefaccio/set'
