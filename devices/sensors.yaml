@@ -25,3 +25,7 @@
   access_token: !secret github_access_token
   repositories:
     - path: 'alemuro/ha-conf'
+- platform: waqi
+  token: !secret waqi_api_key
+  locations:
+    - barcelona
