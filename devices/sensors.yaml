@@ -29,3 +29,19 @@
   token: !secret waqi_api_key
   locations:
     - barcelona
+- platform: google_travel_time
+  scan_interval: 3600
+  api_key: !secret google_api_key
+  origin: !secret home_address
+  destination: !secret work_address
+  options:
+    mode: driving
+- platform: google_travel_time
+  scan_interval: 3600
+  api_key: !secret google_api_key
+  origin: !secret home_address
+  destination: !secret work_address
+  options:
+    mode: transit
+    transit_mode: bus
+

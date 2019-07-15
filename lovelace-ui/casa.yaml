@@ -1,0 +1,433 @@
+resources:
+  - type: module
+    url: >-
+      https://cdn.jsdelivr.net/gh/bramkragten/custom-ui@master/weather-card/weather-card.min.js
+  - type: module
+    url: /local/mini-media-player-bundle.js?v=1.1.3
+  - type: module
+    url: /local/mini-graph-card-bundle.js?v=0.4.2
+  - type: module
+    url: /local/simple-weather-card.bundle.js?v=0.3.0
+  - type: module
+    url: /local/simple-thermostat.js?v=1
+  - type: module
+    url: /local/compact-custom-header.js?v=0.0.1
+title: Casa
+views:
+  - background: var(--background-image)
+    badges: []
+    cards:
+      - main_config: true
+        type: 'custom:compact-custom-header'
+      - cards:
+          - entities:
+              - entity: light.mesa
+                hold_action:
+                  action: more-info
+                icon: 'mdi:ceiling-light'
+                name: Taula
+                tap_action:
+                  action: toggle
+              - entity: light.sofa
+                hold_action:
+                  action: more-info
+                icon: 'mdi:floor-lamp'
+                name: Sofà
+                tap_action:
+                  action: toggle
+              - entity: light.detras_de_la_tele
+                hold_action:
+                  action: more-info
+                name: Tele
+                tap_action:
+                  action: toggle
+              - entity: switch.ventilador
+                hold_action:
+                  action: more-info
+                icon: 'mdi:fan'
+                tap_action:
+                  action: toggle
+              - entity: media_player.tele
+                hold_action:
+                  action: more-info
+                icon: 'mdi:television-classic'
+                tap_action:
+                  action: toggle
+            show_name: true
+            show_state: true
+            title: Menjador
+            type: glance
+          - artwork: cover
+            entity: media_player.spotify
+            hide:
+              power_state: false
+              source: true
+              volume: true
+            icon: 'mdi:spotify'
+            name: Spotify Aleix
+            type: 'custom:mini-media-player'
+          - cards:
+              - entities:
+                  - sensor.dormitori_temperature
+                icon: 'mdi:thermometer'
+                line_color: orange
+                line_width: 8
+                name: Dormitori
+                type: 'custom:mini-graph-card'
+              - entities:
+                  - sensor.menjador_temperature
+                icon: 'mdi:thermometer'
+                line_color: orange
+                line_width: 8
+                name: Menjador
+                type: 'custom:mini-graph-card'
+              - entities:
+                  - sensor.exterior_temperature
+                icon: 'mdi:thermometer'
+                line_color: orange
+                line_width: 8
+                name: Exterior
+                type: 'custom:mini-graph-card'
+            type: horizontal-stack
+          - cards:
+              - entities:
+                  - sensor.dormitori_humidity
+                icon: 'mdi:water'
+                line_color: '#00C6C5'
+                line_width: 8
+                name: Dormitori
+                type: 'custom:mini-graph-card'
+              - entities:
+                  - sensor.menjador_humidity
+                icon: 'mdi:water'
+                line_color: '#00C6C5'
+                line_width: 8
+                name: Menjador
+                type: 'custom:mini-graph-card'
+              - entities:
+                  - sensor.exterior_humidity
+                icon: 'mdi:water'
+                line_color: '#00C6C5'
+                line_width: 8
+                name: Exterior
+                type: 'custom:mini-graph-card'
+            type: horizontal-stack
+          - backdrop:
+              day: var(--primary-color)
+              night: '#40445a'
+            entity: weather.dark_sky
+            type: 'custom:simple-weather-card'
+          - cards:
+              - color_thresholds:
+                  - color: '#008040'
+                    value: 0
+                  - color: '#E5E500'
+                    value: 51
+                  - color: '#E59400'
+                    value: 1001
+                color_trhesholds_transition: soft
+                entities:
+                  - sensor.waqi_barcelona_parc_vall_d_hebron_catalunya_spain
+                hours_to_show: 168
+                icon: 'mdi:weather-windy'
+                line_color: '#00C6C5'
+                line_width: 5
+                lower_bound: 20
+                name: Vall hebron
+                type: 'custom:mini-graph-card'
+                upper_bound: 100
+              - color_thresholds:
+                  - color: '#008040'
+                    value: 0
+                  - color: '#E5E500'
+                    value: 51
+                  - color: '#E59400'
+                    value: 1001
+                color_trhesholds_transition: soft
+                entities:
+                  - sensor.waqi_barcelona_poblenou_catalunya_spain
+                hours_to_show: 168
+                icon: 'mdi:weather-windy'
+                line_color: '#00C6C5'
+                line_width: 5
+                lower_bound: 20
+                name: Poble nou
+                type: 'custom:mini-graph-card'
+                upper_bound: 100
+              - color_thresholds:
+                  - color: '#008040'
+                    value: 0
+                  - color: '#E5E500'
+                    value: 51
+                  - color: '#E59400'
+                    value: 1001
+                color_trhesholds_transition: soft
+                entities:
+                  - sensor.waqi_barcelona_eixample_catalunya_spain
+                hours_to_show: 168
+                icon: 'mdi:weather-windy'
+                line_color: '#00C6C5'
+                line_width: 5
+                lower_bound: 20
+                name: Eixample
+                type: 'custom:mini-graph-card'
+                upper_bound: 100
+            type: horizontal-stack
+          - entities:
+              - entity: sensor.google_travel_time_driving
+            type: entities
+        type: vertical-stack
+      - cards:
+          - cards:
+              - columns: 2
+                entities:
+                  - entity: switch.calefaccio_dormitori
+                    hold_action:
+                      action: more-info
+                    icon: 'mdi:radiator'
+                    name: Calefacció
+                    tap_action:
+                      action: toggle
+                  - entity: media_player.el_lado_oscuro
+                    hold_action:
+                      action: more-info
+                    icon: 'mdi:television-classic'
+                    name: Tele
+                    tap_action:
+                      action: toggle
+                title: Dormitori
+                type: glance
+              - columns: 2
+                entities:
+                  - entity: light.kitchen_light
+                    hold_action:
+                      action: more-info
+                    name: Cuina
+                    tap_action:
+                      action: toggle
+                  - entity: light.entrada
+                    hold_action:
+                      action: more-info
+                    tap_action:
+                      action: toggle
+                title: Altres
+                type: glance
+            type: horizontal-stack
+          - artwork: cover
+            entity: media_player.tele
+            hide:
+              power_state: true
+              volume: true
+            icon: 'mdi:television'
+            max_volume: 11
+            name: Tele Menjador
+            type: 'custom:mini-media-player'
+          - cards:
+              - artwork: cover
+                entity: media_player.el_lado_oscuro
+                hide:
+                  controls: true
+                  power_state: false
+                  volume: true
+                icon: 'mdi:google-chrome'
+                type: 'custom:mini-media-player'
+              - artwork: cover
+                entity: media_player.cuarto_de_estar
+                hide:
+                  controls: true
+                  power_state: true
+                  volume: true
+                icon: 'mdi:google-home'
+                type: 'custom:mini-media-player'
+            type: horizontal-stack
+          - columns: 3
+            entities:
+              - entity: scene.buenos_dias
+                tap_action:
+                  action: call-service
+                  service: scene.turn_on
+                  service_data:
+                    entity_id: scene.buenos_dias
+              - entity: scene.cena
+                tap_action:
+                  action: call-service
+                  service: scene.turn_on
+                  service_data:
+                    entity_id: scene.cena
+              - entity: scene.con_amigos
+                tap_action:
+                  action: call-service
+                  service: scene.turn_on
+                  service_data:
+                    entity_id: scene.con_amigos
+              - entity: scene.juegos_de_mesa
+                tap_action:
+                  action: call-service
+                  service: scene.turn_on
+                  service_data:
+                    entity_id: scene.juegos_de_mesa
+              - entity: scene.relax
+                tap_action:
+                  action: call-service
+                  service: scene.turn_on
+                  service_data:
+                    entity_id: scene.relax
+              - entity: scene.tele
+                tap_action:
+                  action: call-service
+                  service: scene.turn_on
+                  service_data:
+                    entity_id: scene.tele
+            show_state: false
+            type: glance
+          - camera_image: camera.escala
+            entities:
+              - camera.escala
+            title: Entrada
+            type: picture-glance
+        type: vertical-stack
+    icon: 'mdi:home'
+    panel: false
+    path: home
+    title: test
+  - background: var(--background-image)
+    badges: []
+    cards:
+      - main_config: true
+        type: 'custom:compact-custom-header'
+      - cards:
+          - entities:
+              - entity: automation.06_00_turn_on_heater_bedroom_livingroom
+              - entity: automation.07_00_turn_off_heater_bedroom_livingroom
+              - entity: automation.07_10_higher_brightness_entrance
+              - entity: automation.22_00_lower_brightness_entrance
+              - entity: automation.22_00_turn_on_heater_bedroom
+              - entity: automation.23_59_turn_off_heater_bedroom
+              - entity: automation.off_bedroom_heater
+              - entity: automation.off_kichen_light
+              - entity: automation.on_bedroom_heater
+              - entity: automation.on_kitchen_light
+            type: entities
+          - entities:
+              - entity: script.1546170284406
+              - entity: script.1546170284407
+              - entity: script.1547158353178
+              - entity: script.1547158353179
+              - entity: script.tv_turn_on_xbox
+              - entity: script.tv_turn_on_netflix
+              - entity: script.tv_turn_on_dinner
+            type: entities
+        type: horizontal-stack
+    icon: 'mdi:robot'
+    panel: true
+    path: automations
+    title: automations
+  - background: var(--background-image)
+    badges: []
+    cards:
+      - main_config: true
+        type: 'custom:compact-custom-header'
+      - cards:
+          - entity: climate.menjador
+            name: Menjador
+            type: 'custom:simple-thermostat'
+          - entity: climate.dormitori
+            name: Dormitori
+            type: 'custom:simple-thermostat'
+        type: vertical-stack
+      - entities:
+          - entity: switch.calefaccio
+            name: Menjador
+          - entity: switch.calefaccio_dormitori
+            name: Dormitori
+          - entity: sensor.menjador_temperature
+            name: Menjador
+          - entity: sensor.dormitori_temperature
+            name: Dormitori
+          - entity: sensor.exterior_temperature
+            name: Exterior
+        title: Temperatures
+        type: history-graph
+    icon: 'mdi:thermometer'
+    title: Termostats
+  - background: var(--background-image)
+    badges:
+      - sensor.tradfri_remote_control
+      - sensor.yr_symbol
+      - sensor.tradfri_motion_sensor
+      - sun.sun
+    cards:
+      - main_config: true
+        type: 'custom:compact-custom-header'
+      - artwork: cover
+        entity: media_player.spotify
+        hide:
+          power_state: false
+          source: true
+          volume: true
+        icon: 'mdi:spotify'
+        name: Spotify Aleix
+        type: 'custom:mini-media-player'
+      - artwork: cover
+        entity: media_player.tele
+        hide:
+          power_state: true
+          volume: true
+        icon: 'mdi:television'
+        max_volume: 11
+        name: Tele Menjador
+        type: 'custom:mini-media-player'
+      - artwork: cover
+        entity: media_player.el_lado_oscuro
+        hide:
+          power_state: false
+        icon: 'mdi:google-chrome'
+        type: 'custom:mini-media-player'
+      - artwork: cover
+        entity: media_player.cuarto_de_estar
+        hide:
+          power_state: true
+        icon: 'mdi:google-home'
+        type: 'custom:mini-media-player'
+      - cards:
+          - color_thresholds:
+              - color: '#008040'
+                value: 0
+              - color: '#E5E500'
+                value: 51
+              - color: '#E59400'
+                value: 1001
+            color_trhesholds_transition: soft
+            entities:
+              - sensor.waqi_barcelona_parc_vall_d_hebron_catalunya_spain
+            hours_to_show: 168
+            icon: 'mdi:weather-windy'
+            line_color: '#00C6C5'
+            line_width: 5
+            lower_bound: 20
+            name: Vall hebron
+            type: 'custom:mini-graph-card'
+            upper_bound: 100
+          - color_thresholds:
+              - color: '#008040'
+                value: 0
+              - color: '#E5E500'
+                value: 51
+              - color: '#E59400'
+                value: 1001
+            color_trhesholds_transition: soft
+            entities:
+              - sensor.waqi_barcelona_poblenou_catalunya_spain
+            hours_to_show: 168
+            icon: 'mdi:weather-windy'
+            line_color: '#00C6C5'
+            line_width: 5
+            lower_bound: 20
+            name: Poble nou
+            type: 'custom:mini-graph-card'
+            upper_bound: 100
+        type: horizontal-stack
+    icon: 'mdi:test-tube-empty'
+    path: test
+    title: Test
+
