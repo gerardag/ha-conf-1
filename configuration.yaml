@@ -8,7 +8,8 @@ homeassistant:
   unit_system: metric
   time_zone: UTC
   customize: !include customize.yaml
-  whitelist_external_dirs: /tmp/
+  whitelist_external_dirs:
+    - /tmp/
 
 logger:
   default: info
@@ -24,7 +25,7 @@ http:
 history:
 
 recorder:
-  purge_keep_days: 1
+  purge_keep_days: 7
   purge_interval: 1
 
 logbook:
