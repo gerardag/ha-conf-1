@@ -1,8 +1,14 @@
 alias: "Default Theme after Sunrise"
 trigger:
-  platform: sun
-  event: sunrise
-  offset: "+00:00:00"
+  - platform: sun
+    event: sunrise
+    offset: "+00:00:00"
+  - event: start
+    platform: homeassistant
+condition:
+  - condition: state
+    entity_id: sun
+    state: above_horizon
 initial_state: true
 action:
   - service: frontend.set_theme

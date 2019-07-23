@@ -1,8 +1,14 @@
 alias: "dark Theme after Sunset"
 trigger:
-  platform: sun
-  event: sunset
-  offset: "+00:00:00"
+  - platform: sun
+    event: sunset
+    offset: "+00:00:00"
+  - event: start
+    platform: homeassistant
+condition:
+  - condition: state
+    entity_id: sun
+    state: below_horizon
 initial_state: true
 action:
   - service: frontend.set_theme
