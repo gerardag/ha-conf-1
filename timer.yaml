@@ -1,0 +1,7 @@
+time_from_home_to_work:
+  name: "Time from Home to Work"
+  icon: mdi:motorbike
+
+time_from_work_to_home:
+  name: "Time from Work to Home"
+  icon: mdi:motorbike
