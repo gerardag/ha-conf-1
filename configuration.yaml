@@ -89,6 +89,8 @@ mqtt:
 
 speedtestdotnet:
 
+map:
+
 # Devices
 
 cast:
@@ -109,3 +111,4 @@ scene: !include scenes.yaml
 group: !include groups.yaml
 automation: !include_dir_list automations/
 script: !include_dir_merge_named scripts/
+zone: !include zones.yaml

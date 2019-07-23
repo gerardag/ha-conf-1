@@ -1,0 +1,6 @@
+- name: Feina 
+  latitude: !secret latitude_feina
+  longitude: !secret longitude_feina
+  elevation: 7
+  radius: 200
+  icon: mdi:briefcase
