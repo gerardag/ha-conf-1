@@ -8,7 +8,7 @@ trigger:
 condition:
   - condition: state
     entity_id: sun
-    state: below_horizon
+    state: "below_horizon"
 initial_state: true
 action:
   - service: frontend.set_theme
