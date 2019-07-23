@@ -7,7 +7,7 @@ trigger:
     platform: homeassistant
 condition:
   - condition: state
-    entity_id: sun
+    entity_id: sun.sun
     state: "below_horizon"
 initial_state: true
 action:
