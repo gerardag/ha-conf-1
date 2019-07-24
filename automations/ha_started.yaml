@@ -1,15 +1,14 @@
 alias: Home Assistant - Started
 trigger:
-- event: start
-  platform: homeassistant
+  - event: start
+    platform: homeassistant
 condition: []
 action:
-- data:
-    message: Your Home Assistant has been started right now. Check that all works
-      properly. Check if it has been produced by a power outage.
-    title: Service alert!
-    target:
-    - 475501
-    - 417277407
-  service: telegram_bot.send_message
+  - data:
+      message: Home Assistant started
+      title: Service alert!
+      target:
+        - 475501
+        # - 417277407
+    service: telegram_bot.send_message
 initial_state: true

@@ -47,7 +47,7 @@
 - platform: history_stats
   name: Time at home
   entity_id: device_tracker.aleix_mobil
-  state: "A casa"
+  state: "home"
   type: time
   start: "{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}"
   end: "{{ now() }}"
