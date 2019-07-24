@@ -1,4 +1,4 @@
-alias: "Default Theme after Sunrise"
+alias: "Light theme"
 trigger:
   - platform: sun
     event: sunrise

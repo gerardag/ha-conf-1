@@ -24,7 +24,7 @@
 - platform: github
   access_token: !secret github_access_token
   repositories:
-    - path: 'alemuro/ha-conf'
+    - path: "alemuro/ha-conf"
 - platform: waqi
   token: !secret waqi_api_key
   locations:
@@ -44,4 +44,17 @@
   options:
     mode: transit
     transit_mode: bus
-
+- platform: history_stats
+  name: Time at home
+  entity_id: device_tracker.aleix_mobil
+  state: "A casa"
+  type: time
+  start: "{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}"
+  end: "{{ now() }}"
+- platform: history_stats
+  name: Time at work
+  entity_id: device_tracker.aleix_mobil
+  state: "Feina"
+  type: time
+  start: "{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}"
+  end: "{{ now() }}"

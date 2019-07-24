@@ -1,4 +1,4 @@
-alias: "dark Theme after Sunset"
+alias: "Dark theme"
 trigger:
   - platform: sun
     event: sunset
