@@ -53,17 +53,17 @@ cch:
         user: dashboard
       config:
         show_tabs: 10
-        kiosk_mode: true 
+        kiosk_mode: true
 decluttering_templates:
   nest_button:
     card:
-      entity: '[[entity]]'
-      name: '[[name]]'
+      entity: "[[entity]]"
+      name: "[[name]]"
       show_icon: true
-      show_last_changed: '[[show_last_changed]]'
-      show_name: '[[show_name]]'
-      show_state: '[[show_state]]'
-      state: '[[state]]'
+      show_last_changed: "[[show_last_changed]]"
+      show_name: "[[show_name]]"
+      show_state: "[[show_state]]"
+      state: "[[state]]"
       style: |
         ha-card {
           font-family: 'Open Sans', sans-serif;
@@ -95,15 +95,15 @@ decluttering_templates:
         action: toggle
       hold_action:
         action: more-info
-      type: 'custom:button-card'
+      type: "custom:button-card"
     default:
       - show_state: true
       - show_name: false
       - show_last_changed: true
   nest_picture_button:
     card:
-      entity: '[[entity]]'
-      entity_picture: '[[entity_picture]]'
+      entity: "[[entity]]"
+      entity_picture: "[[entity_picture]]"
       show_entity_picture: true
       show_icon: true
       show_name: false
@@ -131,7 +131,7 @@ decluttering_templates:
         }
       tap_action:
         action: more-info
-      type: 'custom:button-card'
+      type: "custom:button-card"
 title: Casa
 views:
   - !include lovelace/10_home_classic.yaml
@@ -139,3 +139,4 @@ views:
   - !include lovelace/30_climates.yaml
   - !include lovelace/40_test.yaml
   - !include lovelace/00_home_modern.yaml
+  - !include lovelace/00_home_modern_2.yaml
