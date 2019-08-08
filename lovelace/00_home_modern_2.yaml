@@ -80,7 +80,8 @@ cards:
                   }
                 type: "custom:weather-card"
             type: vertical-stack
-          - cards:
+          - type: horizontal-stack
+            cards:
               - type: "custom:vertical-stack-in-card"
                 cards:
                   - type: horizontal-stack
@@ -362,62 +363,6 @@ cards:
                                 icon: "mdi:thermometer-alert"
                                 operator: ">"
                                 value: 75
-          - type: vertical-stack
-            cards:
-              - artwork: cover
-                entity: media_player.spotify
-                hide:
-                  power_state: false
-                  source: true
-                  volume: true
-                icon: "mdi:spotify"
-                name: Spotify Aleix
-                type: "custom:mini-media-player"
-              - columns: 3
-                entities:
-                  - entity: scene.buenos_dias
-                    tap_action:
-                      action: call-service
-                      service: scene.turn_on
-                      service_data:
-                        entity_id: scene.buenos_dias
-                  - entity: scene.cena
-                    tap_action:
-                      action: call-service
-                      service: scene.turn_on
-                      service_data:
-                        entity_id: scene.cena
-                  - entity: scene.con_amigos
-                    tap_action:
-                      action: call-service
-                      service: scene.turn_on
-                      service_data:
-                        entity_id: scene.con_amigos
-                  - entity: scene.juegos_de_mesa
-                    tap_action:
-                      action: call-service
-                      service: scene.turn_on
-                      service_data:
-                        entity_id: scene.juegos_de_mesa
-                  - entity: scene.relax
-                    tap_action:
-                      action: call-service
-                      service: scene.turn_on
-                      service_data:
-                        entity_id: scene.relax
-                  - entity: scene.tele
-                    tap_action:
-                      action: call-service
-                      service: scene.turn_on
-                      service_data:
-                        entity_id: scene.tele
-                show_state: false
-                type: glance
-              - camera_image: camera.escala
-                entities:
-                  - camera.escala
-                title: Entrada
-                type: picture-glance
         column_num: 2
         layout: horizontal
         max_columns: 2
