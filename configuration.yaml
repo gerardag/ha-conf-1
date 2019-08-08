@@ -16,6 +16,9 @@ logger:
 
 config:
 
+system_health:
+
+
 frontend:
   themes: !include_dir_merge_named themes
 
@@ -37,6 +40,28 @@ auth:
 duckdns:
   domain: hass-amurtra
   access_token: !secret duckdns_api_key
+
+lovelace:
+  mode: yaml
+
+person:
+  - name: Aleix
+    id: aleix
+    user_id: 23b5a590030a4d5b907d0f5675e75e3e
+    device_trackers: 
+      - device_tracker.aleix_mobil
+  - name: Imma
+    id: imma
+    user_id: be173f93ffef481eba84dc6359ea6124
+
+alarm_control_panel:
+  - platform: manual
+    name: home
+    code: 1234
+
+google:
+  client_id: !secret google_oauth_calendar_id
+  client_secret: !secret google_oauth_calendar_secret
 
 # Notifications
 

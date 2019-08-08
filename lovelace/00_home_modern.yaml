@@ -1,0 +1,431 @@
+icon: 'mdi:home'
+panel: false
+path: tablet
+title: tablet
+background: var(--background-image)
+badges: []
+cards:
+      - cards:
+          - cards:
+              - cards:
+                  - cards:
+                      - template: nest_picture_button
+                        type: 'custom:decluttering-card'
+                        variables:
+                          - entity: person.aleix
+                          - entity_picture: /local/aleix.jpg
+                      - template: nest_button
+                        type: 'custom:decluttering-card'
+                        variables:
+                          - entity: alarm_control_panel.home
+                          - state:
+                              - color: 'rgb(152,251,152)'
+                                icon: 'mdi:shield-lock'
+                                value: armed_away
+                              - color: 'rgb(251, 210, 41)'
+                                icon: 'mdi:shield-home'
+                                value: armed_home
+                              - color: 'rgb(255, 0, 0)'
+                                icon: 'mdi:shield-alert'
+                                styles:
+                                  icon:
+                                    - animation: blink 2s ease infinite
+                                value: triggered
+                              - color: 'rgb(169,169,169)'
+                                icon: 'mdi:shield-off'
+                                value: disarmed
+                              - color: 'rgb(169,169,169)'
+                                icon: 'mdi:shield-half-full'
+                                styles:
+                                  icon:
+                                    - animation: blink 2s ease infinite
+                                value: pending
+                      - template: nest_picture_button
+                        type: 'custom:decluttering-card'
+                        variables:
+                          - entity: person.imma
+                          - entity_picture: /local/imma2.jpg
+                    type: horizontal-stack
+                  - content: |
+                      # [[ sensor.time.state ]]
+                      ### [[ sensor.date.state ]]
+                    style: |
+                      ha-card {
+                        margin-top: 30px;
+                        margin-bottom: 120px;
+                        background-color: rgba(0, 0, 0, 0);
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 150%;
+                        -webkit-box-shadow: none;
+                        -moz-box-shadow: none;
+                        box-shadow: none;
+                        text-align: center;
+                      }
+                      h1, h3 {
+                        font-weight: 300 !important;
+                        margin: 0px;
+                      }
+                      h3 {
+                        font-size: 0.7em;
+                      }
+                    type: markdown
+                  - entity: weather.dark_sky
+                    icons: /local/icons/weather_icons/animated/
+                    style: |
+                      ha-card {
+                        background-color: rgba(0, 0, 0, 0);
+                        -webkit-box-shadow: none;
+                        -moz-box-shadow: none;
+                        box-shadow: none;
+                      }
+                    type: 'custom:weather-card'
+                type: vertical-stack
+              - cards:
+                  - cards:
+                      - cards:
+                          - show_name: true
+                            template: nest_button
+                            type: 'custom:decluttering-card'
+                            variables:
+                              - show_name: true
+                              - show_state: false
+                              - name: Taula
+                              - entity: light.mesa
+                              - state:
+                                  - color: '#BAC0C6'
+                                    icon: 'mdi:ceiling-light'
+                                    value: 'off'
+                                  - color: 'rgb(251, 210, 41)'
+                                    icon: 'mdi:ceiling-light'
+                                    value: 'on'
+                          - template: nest_button
+                            type: 'custom:decluttering-card'
+                            variables:
+                              - show_name: true
+                              - show_state: false
+                              - name: Sofà
+                              - entity: light.sofa
+                              - state:
+                                  - color: '#BAC0C6'
+                                    icon: 'mdi:floor-lamp'
+                                    value: 'off'
+                                  - color: 'rgb(251, 210, 41)'
+                                    icon: 'mdi:floor-lamp'
+                                    value: 'on'
+                          - template: nest_button
+                            type: 'custom:decluttering-card'
+                            variables:
+                              - show_name: true
+                              - show_state: false
+                              - name: Tele
+                              - entity: light.detras_de_la_tele
+                              - state:
+                                  - color: '#BAC0C6'
+                                    icon: 'mdi:lightbulb'
+                                    value: 'off'
+                                  - color: 'rgb(251, 210, 41)'
+                                    icon: 'mdi:lightbulb'
+                                    value: 'on'
+                          - template: nest_button
+                            type: 'custom:decluttering-card'
+                            variables:
+                              - show_name: true
+                              - show_state: false
+                              - name: Ventilador
+                              - entity: switch.ventilador
+                              - state:
+                                  - color: '#BAC0C6'
+                                    icon: 'mdi:fan-off'
+                                    value: 'off'
+                                  - color: 'rgb(251, 210, 41)'
+                                    icon: 'mdi:fan'
+                                    value: 'on'
+                          - template: nest_button
+                            type: 'custom:decluttering-card'
+                            variables:
+                              - show_name: true
+                              - show_state: false
+                              - name: Tele
+                              - entity: media_player.tele
+                              - state:
+                                  - color: '#BAC0C6'
+                                    icon: 'mdi:television-classic'
+                                    value: 'off'
+                                  - color: 'rgb(251, 210, 41)'
+                                    icon: 'mdi:television-classic'
+                                    value: playing
+                          - template: nest_button
+                            type: 'custom:decluttering-card'
+                            variables:
+                              - show_name: true
+                              - show_state: false
+                              - name: Calefacció
+                              - entity: switch.calefaccio_dormitori
+                              - state:
+                                  - color: '#BAC0C6'
+                                    icon: 'mdi:radiator'
+                                    value: 'off'
+                                  - color: 'rgb(251, 210, 41)'
+                                    icon: 'mdi:radiator'
+                                    value: 'on'
+                          - template: nest_button
+                            type: 'custom:decluttering-card'
+                            variables:
+                              - show_name: true
+                              - show_state: false
+                              - name: Tele
+                              - entity: media_player.el_lado_oscuro
+                              - state:
+                                  - color: '#BAC0C6'
+                                    icon: 'mdi:television-classic'
+                                    value: 'off'
+                                  - color: 'rgb(251, 210, 41)'
+                                    icon: 'mdi:television-classic'
+                                    value: playing
+                          - template: nest_button
+                            type: 'custom:decluttering-card'
+                            variables:
+                              - show_name: true
+                              - show_state: false
+                              - name: Cuina
+                              - entity: light.kitchen_light
+                              - state:
+                                  - color: '#BAC0C6'
+                                    icon: 'mdi:lightbulb'
+                                    value: 'off'
+                                  - color: 'rgb(251, 210, 41)'
+                                    icon: 'mdi:lightbulb'
+                                    value: 'on'
+                          - template: nest_button
+                            type: 'custom:decluttering-card'
+                            variables:
+                              - show_name: true
+                              - show_state: false
+                              - name: Entrada
+                              - entity: light.entrada
+                              - state:
+                                  - color: '#BAC0C6'
+                                    icon: 'mdi:lightbulb'
+                                    value: 'off'
+                                  - color: 'rgb(251, 210, 41)'
+                                    icon: 'mdi:lightbulb'
+                                    value: 'on'
+                        type: horizontal-stack
+                    type: 'custom:vertical-stack-in-card'
+                  - cards:
+                      - cards:
+                          - cards:
+                              - cards:
+                                  - template: nest_button
+                                    type: 'custom:decluttering-card'
+                                    variables:
+                                      - show_name: true
+                                      - show_last_changed: false
+                                      - name: Casa
+                                      - entity: sensor.time_at_home
+                                      - state:
+                                          - color: '#BAC0C6'
+                                            icon: 'mdi:home'
+                                            operator: <=
+                                            value: 9
+                                          - color: '#EC7B2C'
+                                            icon: 'mdi:home'
+                                            operator: '>'
+                                            value: 9
+                                  - template: nest_button
+                                    type: 'custom:decluttering-card'
+                                    variables:
+                                      - show_name: true
+                                      - show_last_changed: false
+                                      - name: Feina
+                                      - entity: sensor.time_at_work
+                                      - state:
+                                          - color: '#BAC0C6'
+                                            icon: 'mdi:briefcase'
+                                            operator: <=
+                                            value: 9
+                                          - color: '#EC7B2C'
+                                            icon: 'mdi:briefcase'
+                                            operator: '>'
+                                            value: 9
+                                  - template: nest_button
+                                    type: 'custom:decluttering-card'
+                                    variables:
+                                      - show_name: true
+                                      - show_last_changed: false
+                                      - name: Fora
+                                      - entity: sensor.time_other
+                                      - state:
+                                          - color: '#BAC0C6'
+                                            icon: 'mdi:walk'
+                                            operator: <=
+                                            value: 9
+                                          - color: '#EC7B2C'
+                                            icon: 'mdi:walk'
+                                            operator: '>'
+                                            value: 9
+                                type: horizontal-stack
+                            type: 'custom:vertical-stack-in-card'
+                          - cards:
+                              - entities:
+                                  - sensor.dormitori_temperature
+                                icon: 'mdi:thermometer'
+                                line_color: orange
+                                line_width: 0
+                                name: Dormitori
+                                type: 'custom:mini-graph-card'
+                              - entities:
+                                  - sensor.menjador_temperature
+                                icon: 'mdi:thermometer'
+                                line_color: orange
+                                line_width: 0
+                                name: Menjador
+                                type: 'custom:mini-graph-card'
+                              - entities:
+                                  - sensor.exterior_temperature
+                                icon: 'mdi:thermometer'
+                                line_color: orange
+                                line_width: 0
+                                name: Exterior
+                                type: 'custom:mini-graph-card'
+                            type: horizontal-stack
+                          - cards:
+                              - entities:
+                                  - sensor.dormitori_humidity
+                                icon: 'mdi:water'
+                                line_color: '#00C6C5'
+                                line_width: 0
+                                name: Dormitori
+                                type: 'custom:mini-graph-card'
+                              - entities:
+                                  - sensor.menjador_humidity
+                                icon: 'mdi:water'
+                                line_color: '#00C6C5'
+                                line_width: 0
+                                name: Menjador
+                                type: 'custom:mini-graph-card'
+                              - entities:
+                                  - sensor.exterior_humidity
+                                icon: 'mdi:water'
+                                line_color: '#00C6C5'
+                                line_width: 0
+                                name: Exterior
+                                type: 'custom:mini-graph-card'
+                            type: horizontal-stack
+                          - cards:
+                              - color_thresholds:
+                                  - color: '#008040'
+                                    value: 0
+                                  - color: '#E5E500'
+                                    value: 51
+                                  - color: '#E59400'
+                                    value: 1001
+                                color_trhesholds_transition: soft
+                                entities:
+                                  - >-
+                                    sensor.waqi_barcelona_parc_vall_d_hebron_catalunya_spain
+                                icon: 'mdi:weather-windy'
+                                line_color: '#00C6C5'
+                                line_width: 0
+                                name: Vall hebron
+                                type: 'custom:mini-graph-card'
+                              - color_thresholds:
+                                  - color: '#008040'
+                                    value: 0
+                                  - color: '#E5E500'
+                                    value: 51
+                                  - color: '#E59400'
+                                    value: 1001
+                                color_trhesholds_transition: soft
+                                entities:
+                                  - >-
+                                    sensor.waqi_barcelona_poblenou_catalunya_spain
+                                icon: 'mdi:weather-windy'
+                                line_color: '#00C6C5'
+                                line_width: 0
+                                name: Poble nou
+                                type: 'custom:mini-graph-card'
+                              - color_thresholds:
+                                  - color: '#008040'
+                                    value: 0
+                                  - color: '#E5E500'
+                                    value: 51
+                                  - color: '#E59400'
+                                    value: 1001
+                                color_trhesholds_transition: soft
+                                entities:
+                                  - >-
+                                    sensor.waqi_barcelona_eixample_catalunya_spain
+                                icon: 'mdi:weather-windy'
+                                line_color: '#00C6C5'
+                                line_width: 0
+                                name: Eixample
+                                type: 'custom:mini-graph-card'
+                            type: horizontal-stack
+                        type: vertical-stack
+                      - cards:
+                          - artwork: cover
+                            entity: media_player.spotify
+                            hide:
+                              power_state: false
+                              source: true
+                              volume: true
+                            icon: 'mdi:spotify'
+                            name: Spotify Aleix
+                            type: 'custom:mini-media-player'
+                          - columns: 3
+                            entities:
+                              - entity: scene.buenos_dias
+                                tap_action:
+                                  action: call-service
+                                  service: scene.turn_on
+                                  service_data:
+                                    entity_id: scene.buenos_dias
+                              - entity: scene.cena
+                                tap_action:
+                                  action: call-service
+                                  service: scene.turn_on
+                                  service_data:
+                                    entity_id: scene.cena
+                              - entity: scene.con_amigos
+                                tap_action:
+                                  action: call-service
+                                  service: scene.turn_on
+                                  service_data:
+                                    entity_id: scene.con_amigos
+                              - entity: scene.juegos_de_mesa
+                                tap_action:
+                                  action: call-service
+                                  service: scene.turn_on
+                                  service_data:
+                                    entity_id: scene.juegos_de_mesa
+                              - entity: scene.relax
+                                tap_action:
+                                  action: call-service
+                                  service: scene.turn_on
+                                  service_data:
+                                    entity_id: scene.relax
+                              - entity: scene.tele
+                                tap_action:
+                                  action: call-service
+                                  service: scene.turn_on
+                                  service_data:
+                                    entity_id: scene.tele
+                            show_state: false
+                            type: glance
+                          - camera_image: camera.escala
+                            entities:
+                              - camera.escala
+                            title: Entrada
+                            type: picture-glance
+                        type: vertical-stack
+                    type: horizontal-stack
+                type: vertical-stack
+            column_num: 2
+            layout: horizontal
+            max_columns: 2
+            max_width:
+              - 500px
+              - 100%
+            type: 'custom:nest-layout-card'
+        type: vertical-stack

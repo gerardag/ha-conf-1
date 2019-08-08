@@ -1,0 +1,32 @@
+icon: 'mdi:robot'
+panel: true
+path: automations
+title: automations
+background: var(--background-image)
+badges: []
+cards:
+  - main_config: true
+    type: 'custom:compact-custom-header'
+  - cards:
+      - entities:
+          - entity: automation.06_00_turn_on_heater_bedroom_livingroom
+          - entity: automation.07_00_turn_off_heater_bedroom_livingroom
+          - entity: automation.07_10_higher_brightness_entrance
+          - entity: automation.22_00_lower_brightness_entrance
+          - entity: automation.22_00_turn_on_heater_bedroom
+          - entity: automation.23_59_turn_off_heater_bedroom
+          - entity: automation.off_bedroom_heater
+          - entity: automation.off_kichen_light
+          - entity: automation.on_bedroom_heater
+          - entity: automation.on_kitchen_light
+        type: entities
+      - entities:
+          - entity: script.1546170284406
+          - entity: script.1546170284407
+          - entity: script.1547158353178
+          - entity: script.1547158353179
+          - entity: script.tv_turn_on_xbox
+          - entity: script.tv_turn_on_netflix
+          - entity: script.tv_turn_on_dinner
+        type: entities
+    type: horizontal-stack

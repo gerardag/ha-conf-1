@@ -1,0 +1,88 @@
+icon: 'mdi:test-tube-empty'
+path: test
+title: Test
+background: var(--background-image)
+badges:
+  - sensor.tradfri_remote_control
+  - sensor.yr_symbol
+  - sensor.tradfri_motion_sensor
+  - sun.sun
+cards:
+  - main_config: true
+    type: 'custom:compact-custom-header'
+  - artwork: cover
+    entity: media_player.spotify
+    hide:
+      power_state: false
+      source: true
+      volume: true
+    icon: 'mdi:spotify'
+    name: Spotify Aleix
+    type: 'custom:mini-media-player'
+  - artwork: cover
+    entity: media_player.tele
+    hide:
+      power_state: true
+      volume: true
+    icon: 'mdi:television'
+    max_volume: 11
+    name: Tele Menjador
+    type: 'custom:mini-media-player'
+  - artwork: cover
+    entity: media_player.el_lado_oscuro
+    hide:
+      power_state: false
+    icon: 'mdi:google-chrome'
+    type: 'custom:mini-media-player'
+  - artwork: cover
+    entity: media_player.cuarto_de_estar
+    hide:
+      power_state: true
+    icon: 'mdi:google-home'
+    type: 'custom:mini-media-player'
+  - cards:
+      - color_thresholds:
+          - color: '#008040'
+            value: 0
+          - color: '#E5E500'
+            value: 51
+          - color: '#E59400'
+            value: 1001
+        color_trhesholds_transition: soft
+        entities:
+          - sensor.waqi_barcelona_parc_vall_d_hebron_catalunya_spain
+        hours_to_show: 168
+        icon: 'mdi:weather-windy'
+        line_color: '#00C6C5'
+        line_width: 5
+        lower_bound: 20
+        name: Vall hebron
+        type: 'custom:mini-graph-card'
+        upper_bound: 100
+      - color_thresholds:
+          - color: '#008040'
+            value: 0
+          - color: '#E5E500'
+            value: 51
+          - color: '#E59400'
+            value: 1001
+        color_trhesholds_transition: soft
+        entities:
+          - sensor.waqi_barcelona_poblenou_catalunya_spain
+        hours_to_show: 168
+        icon: 'mdi:weather-windy'
+        line_color: '#00C6C5'
+        line_width: 5
+        lower_bound: 20
+        name: Poble nou
+        type: 'custom:mini-graph-card'
+        upper_bound: 100
+    type: horizontal-stack
+  - entities:
+      - entity: sensor.time_at_home
+        icon: 'mdi:home'
+        name: Time at Home
+      - entity: sensor.time_at_work
+        icon: 'mdi:briefcase'
+        name: Time at Work
+    type: entities

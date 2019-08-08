@@ -19,9 +19,7 @@ trigger:
     event: enter
 action:
   - data:
-      message: >
-        "Aleix movements:
-        {{ trigger.zone	}} changed from {{ trigger.from_state.state }} to {{ trigger.to_state.state	}}."
+      message: "Aleix is now at: {{ states('person.aleix') }}."
       title: Movement
       target:
         - 475501

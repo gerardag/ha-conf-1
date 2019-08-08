@@ -1,0 +1,28 @@
+icon: 'mdi:thermometer'
+title: Termostats
+background: var(--background-image)
+badges: []
+cards:
+  - main_config: true
+    type: 'custom:compact-custom-header'
+  - cards:
+      - entity: climate.menjador
+        name: Menjador
+        type: 'custom:simple-thermostat'
+      - entity: climate.dormitori
+        name: Dormitori
+        type: 'custom:simple-thermostat'
+    type: vertical-stack
+  - entities:
+      - entity: switch.calefaccio
+        name: Menjador
+      - entity: switch.calefaccio_dormitori
+        name: Dormitori
+      - entity: sensor.menjador_temperature
+        name: Menjador
+      - entity: sensor.dormitori_temperature
+        name: Dormitori
+      - entity: sensor.exterior_temperature
+        name: Exterior
+    title: Temperatures
+    type: history-graph

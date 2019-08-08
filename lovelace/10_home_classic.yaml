@@ -1,0 +1,272 @@
+icon: 'mdi:home'
+panel: false
+path: home
+title: test
+background: var(--background-image)
+badges: []
+cards:
+  - main_config: true
+    type: 'custom:compact-custom-header'
+  - cards:
+      - entities:
+          - entity: light.mesa
+            hold_action:
+              action: more-info
+            icon: 'mdi:ceiling-light'
+            name: Taula
+            tap_action:
+              action: toggle
+          - entity: light.sofa
+            hold_action:
+              action: more-info
+            icon: 'mdi:floor-lamp'
+            name: Sofà
+            tap_action:
+              action: toggle
+          - entity: light.detras_de_la_tele
+            hold_action:
+              action: more-info
+            name: Tele
+            tap_action:
+              action: toggle
+          - entity: switch.ventilador
+            hold_action:
+              action: more-info
+            icon: 'mdi:fan'
+            tap_action:
+              action: toggle
+          - entity: media_player.tele
+            hold_action:
+              action: more-info
+            icon: 'mdi:television-classic'
+            tap_action:
+              action: toggle
+        show_name: true
+        show_state: true
+        title: Menjador
+        type: glance
+      - artwork: cover
+        entity: media_player.spotify
+        hide:
+          power_state: false
+          source: true
+          volume: true
+        icon: 'mdi:spotify'
+        name: Spotify Aleix
+        type: 'custom:mini-media-player'
+      - cards:
+          - entities:
+              - sensor.dormitori_temperature
+            icon: 'mdi:thermometer'
+            line_color: orange
+            line_width: 0
+            name: Dormitori
+            type: 'custom:mini-graph-card'
+          - entities:
+              - sensor.menjador_temperature
+            icon: 'mdi:thermometer'
+            line_color: orange
+            line_width: 0
+            name: Menjador
+            type: 'custom:mini-graph-card'
+          - entities:
+              - sensor.exterior_temperature
+            icon: 'mdi:thermometer'
+            line_color: orange
+            line_width: 0
+            name: Exterior
+            type: 'custom:mini-graph-card'
+        type: horizontal-stack
+      - cards:
+          - entities:
+              - sensor.dormitori_humidity
+            icon: 'mdi:water'
+            line_color: '#00C6C5'
+            line_width: 0
+            name: Dormitori
+            type: 'custom:mini-graph-card'
+          - entities:
+              - sensor.menjador_humidity
+            icon: 'mdi:water'
+            line_color: '#00C6C5'
+            line_width: 0
+            name: Menjador
+            type: 'custom:mini-graph-card'
+          - entities:
+              - sensor.exterior_humidity
+            icon: 'mdi:water'
+            line_color: '#00C6C5'
+            line_width: 0
+            name: Exterior
+            type: 'custom:mini-graph-card'
+        type: horizontal-stack
+      - backdrop:
+          day: var(--primary-color)
+          night: '#40445a'
+        entity: weather.dark_sky
+        type: 'custom:simple-weather-card'
+      - cards:
+          - color_thresholds:
+              - color: '#008040'
+                value: 0
+              - color: '#E5E500'
+                value: 51
+              - color: '#E59400'
+                value: 1001
+            color_trhesholds_transition: soft
+            entities:
+              - sensor.waqi_barcelona_parc_vall_d_hebron_catalunya_spain
+            icon: 'mdi:weather-windy'
+            line_color: '#00C6C5'
+            line_width: 0
+            name: Vall hebron
+            type: 'custom:mini-graph-card'
+          - color_thresholds:
+              - color: '#008040'
+                value: 0
+              - color: '#E5E500'
+                value: 51
+              - color: '#E59400'
+                value: 1001
+            color_trhesholds_transition: soft
+            entities:
+              - sensor.waqi_barcelona_poblenou_catalunya_spain
+            icon: 'mdi:weather-windy'
+            line_color: '#00C6C5'
+            line_width: 0
+            name: Poble nou
+            type: 'custom:mini-graph-card'
+          - color_thresholds:
+              - color: '#008040'
+                value: 0
+              - color: '#E5E500'
+                value: 51
+              - color: '#E59400'
+                value: 1001
+            color_trhesholds_transition: soft
+            entities:
+              - sensor.waqi_barcelona_eixample_catalunya_spain
+            icon: 'mdi:weather-windy'
+            line_color: '#00C6C5'
+            line_width: 0
+            name: Eixample
+            type: 'custom:mini-graph-card'
+        type: horizontal-stack
+      - entities:
+          - entity: sensor.time_at_home
+            icon: 'mdi:home'
+            name: Time at Home
+          - entity: sensor.time_at_work
+            icon: 'mdi:briefcase'
+            name: Time at Work
+        type: entities
+    type: vertical-stack
+  - cards:
+      - cards:
+          - columns: 2
+            entities:
+              - entity: switch.calefaccio_dormitori
+                hold_action:
+                  action: more-info
+                icon: 'mdi:radiator'
+                name: Calefacció
+                tap_action:
+                  action: toggle
+              - entity: media_player.el_lado_oscuro
+                hold_action:
+                  action: more-info
+                icon: 'mdi:television-classic'
+                name: Tele
+                tap_action:
+                  action: toggle
+            title: Dormitori
+            type: glance
+          - columns: 2
+            entities:
+              - entity: light.kitchen_light
+                hold_action:
+                  action: more-info
+                name: Cuina
+                tap_action:
+                  action: toggle
+              - entity: light.entrada
+                hold_action:
+                  action: more-info
+                tap_action:
+                  action: toggle
+            title: Altres
+            type: glance
+        type: horizontal-stack
+      - artwork: cover
+        entity: media_player.tele
+        hide:
+          power_state: true
+          volume: true
+        icon: 'mdi:television'
+        max_volume: 11
+        name: Tele Menjador
+        type: 'custom:mini-media-player'
+      - cards:
+          - artwork: cover
+            entity: media_player.el_lado_oscuro
+            hide:
+              controls: true
+              power_state: false
+              volume: true
+            icon: 'mdi:google-chrome'
+            type: 'custom:mini-media-player'
+          - artwork: cover
+            entity: media_player.cuarto_de_estar
+            hide:
+              controls: true
+              power_state: true
+              volume: true
+            icon: 'mdi:google-home'
+            type: 'custom:mini-media-player'
+        type: horizontal-stack
+      - columns: 3
+        entities:
+          - entity: scene.buenos_dias
+            tap_action:
+              action: call-service
+              service: scene.turn_on
+              service_data:
+                entity_id: scene.buenos_dias
+          - entity: scene.cena
+            tap_action:
+              action: call-service
+              service: scene.turn_on
+              service_data:
+                entity_id: scene.cena
+          - entity: scene.con_amigos
+            tap_action:
+              action: call-service
+              service: scene.turn_on
+              service_data:
+                entity_id: scene.con_amigos
+          - entity: scene.juegos_de_mesa
+            tap_action:
+              action: call-service
+              service: scene.turn_on
+              service_data:
+                entity_id: scene.juegos_de_mesa
+          - entity: scene.relax
+            tap_action:
+              action: call-service
+              service: scene.turn_on
+              service_data:
+                entity_id: scene.relax
+          - entity: scene.tele
+            tap_action:
+              action: call-service
+              service: scene.turn_on
+              service_data:
+                entity_id: scene.tele
+        show_state: false
+        type: glance
+      - camera_image: camera.escala
+        entities:
+          - camera.escala
+        title: Entrada
+        type: picture-glance
+    type: vertical-stack

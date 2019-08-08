@@ -5,8 +5,8 @@ trigger:
   platform: state
   to: 'on'
 condition:
-- after: '22:00'
-  before: 06:30
+- after: '22:00:00'
+  before: '06:30:00'
   condition: time
 action:
 - data:
