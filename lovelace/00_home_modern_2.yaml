@@ -292,11 +292,11 @@ cards:
                           - entity: sensor.dormitori_humidity
                           - state:
                               - color: "#93BCFE"
-                                icon: "mdi:thermometer"
+                                icon: "mdi:water-percent"
                                 operator: "<="
                                 value: 75
                               - color: "#FE9393"
-                                icon: "mdi:thermometer-alert"
+                                icon: "mdi:water-percent"
                                 operator: ">"
                                 value: 75
                       - template: nest_button
@@ -324,11 +324,11 @@ cards:
                           - entity: sensor.menjador_humidity
                           - state:
                               - color: "#93BCFE"
-                                icon: "mdi:thermometer"
+                                icon: "mdi:water-percent"
                                 operator: "<="
                                 value: 75
                               - color: "#FE9393"
-                                icon: "mdi:thermometer-alert"
+                                icon: "mdi:water-percent"
                                 operator: ">"
                                 value: 75
                       - template: nest_button
@@ -356,11 +356,11 @@ cards:
                           - entity: sensor.exterior_humidity
                           - state:
                               - color: "#93BCFE"
-                                icon: "mdi:thermometer"
+                                icon: "mdi:water-percent"
                                 operator: "<="
                                 value: 75
                               - color: "#FE9393"
-                                icon: "mdi:thermometer-alert"
+                                icon: "mdi:water-percent"
                                 operator: ">"
                                 value: 75
         column_num: 2
