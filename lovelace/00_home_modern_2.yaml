@@ -367,7 +367,7 @@ cards:
                           - show_name: true
                           - show_state: false
                           - show_last_changed: false
-                          - service: scene.turn_on
+                          - service_id: scene.turn_on
                           - service_data:
                               - entity_id: scene.buenos_dias
                           - name: Buenos días
@@ -382,7 +382,7 @@ cards:
                           - show_name: true
                           - show_state: false
                           - show_last_changed: false
-                          - service: scene.turn_on
+                          - service_id: scene.turn_on
                           - service_data:
                               - entity_id: scene.cena
                           - name: Cena
@@ -397,7 +397,7 @@ cards:
                           - show_name: true
                           - show_state: false
                           - show_last_changed: false
-                          - service: scene.turn_on
+                          - service_id: scene.turn_on
                           - service_data:
                               - entity_id: scene.con_amigos
                           - name: Amigos
@@ -412,7 +412,7 @@ cards:
                           - show_name: true
                           - show_state: false
                           - show_last_changed: false
-                          - service: scene.turn_on
+                          - service_id: scene.turn_on
                           - service_data:
                               - entity_id: scene.juegos_de_mesa
                           - name: Juegos
@@ -427,7 +427,7 @@ cards:
                           - show_name: true
                           - show_state: false
                           - show_last_changed: false
-                          - service: scene.turn_on
+                          - service_id: scene.turn_on
                           - service_data:
                               - entity_id: scene.relax
                           - name: Relax
@@ -442,7 +442,7 @@ cards:
                           - show_name: true
                           - show_state: false
                           - show_last_changed: false
-                          - service: scene.turn_on
+                          - service_id: scene.turn_on
                           - service_data:
                               - entity_id: scene.tele
                           - name: Tele

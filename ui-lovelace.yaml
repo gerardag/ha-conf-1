@@ -181,7 +181,7 @@ decluttering_templates:
         }
       tap_action:
         action: call-service
-        service: [[service]]
+        service: [[service_id]]
         service_data: [[service_data]]
       hold_action:
         action: more-info
