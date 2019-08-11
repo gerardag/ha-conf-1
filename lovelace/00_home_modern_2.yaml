@@ -369,6 +369,7 @@ cards:
                         type: "custom:decluttering-card"
                         variables:
                           - show_name: true
+                          - show_state: false
                           - show_last_changed: false
                           - name: Buenos días
                           - entity: scene.buenos_dias
@@ -380,6 +381,7 @@ cards:
                         type: "custom:decluttering-card"
                         variables:
                           - show_name: true
+                          - show_state: false
                           - show_last_changed: false
                           - name: Cena
                           - entity: scene.cena
@@ -391,6 +393,7 @@ cards:
                         type: "custom:decluttering-card"
                         variables:
                           - show_name: true
+                          - show_state: false
                           - show_last_changed: false
                           - name: Amigos
                           - entity: scene.con_amigos
@@ -402,6 +405,7 @@ cards:
                         type: "custom:decluttering-card"
                         variables:
                           - show_name: true
+                          - show_state: false
                           - show_last_changed: false
                           - name: Juegos
                           - entity: scene.juegos_de_mesa
@@ -413,6 +417,7 @@ cards:
                         type: "custom:decluttering-card"
                         variables:
                           - show_name: true
+                          - show_state: false
                           - show_last_changed: false
                           - name: Relax
                           - entity: scene.relax
@@ -424,6 +429,7 @@ cards:
                         type: "custom:decluttering-card"
                         variables:
                           - show_name: true
+                          - show_state: false
                           - show_last_changed: false
                           - name: Tele
                           - entity: scene.tele
