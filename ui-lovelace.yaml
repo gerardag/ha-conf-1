@@ -100,6 +100,96 @@ decluttering_templates:
       - show_state: true
       - show_name: false
       - show_last_changed: true
+  nest_button_info:
+    card:
+      entity: "[[entity]]"
+      name: "[[name]]"
+      show_icon: true
+      show_last_changed: "[[show_last_changed]]"
+      show_name: "[[show_name]]"
+      show_state: "[[show_state]]"
+      state: "[[state]]"
+      style: |
+        ha-card {
+          font-family: 'Open Sans', sans-serif;
+          padding-top: 15px !important;
+          background-color: rgba(0, 0, 0, 0);
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+        }
+        ha-icon {
+          width: 60% !important;
+        }
+        img {
+          width: 100%;
+        }
+        #img-cell {
+          background-color: #F5F5F5;
+          border-radius: 50px;
+          height: 50px !important;
+          width: 50px !important;
+        }
+        #state {
+          padding-top: 5px;
+        }
+        #label {
+          font-size: 70%;
+        }
+      tap_action:
+        action: more-info
+      type: "custom:button-card"
+    default:
+      - show_state: true
+      - show_name: false
+      - show_last_changed: true
+  nest_button_service:
+    card:
+      entity: "[[entity]]"
+      name: "[[name]]"
+      show_icon: true
+      show_last_changed: "[[show_last_changed]]"
+      show_name: "[[show_name]]"
+      show_state: "[[show_state]]"
+      state: "[[state]]"
+      style: |
+        ha-card {
+          font-family: 'Open Sans', sans-serif;
+          padding-top: 15px !important;
+          background-color: rgba(0, 0, 0, 0);
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+        }
+        ha-icon {
+          width: 60% !important;
+        }
+        img {
+          width: 100%;
+        }
+        #img-cell {
+          background-color: #F5F5F5;
+          border-radius: 50px;
+          height: 50px !important;
+          width: 50px !important;
+        }
+        #state {
+          padding-top: 5px;
+        }
+        #label {
+          font-size: 70%;
+        }
+      tap_action:
+        action: service
+        service: [[service]]
+        service_data: [[service_data]]
+      hold_action:
+        action: more-info
+      type: "custom:button-card"
+    default:
+      - show_state: true
+      - show_name: false
+      - show_last_changed: true
   nest_picture_button:
     card:
       entity: "[[entity]]"

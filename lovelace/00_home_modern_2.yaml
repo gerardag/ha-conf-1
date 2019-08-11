@@ -227,12 +227,8 @@ cards:
                           - state:
                               - color: "#BAC0C6"
                                 icon: "mdi:home"
-                                operator: <=
-                                value: 9
-                              - color: "#EC7B2C"
-                                icon: "mdi:home"
-                                operator: ">"
-                                value: 9
+                                operator: =>
+                                value: 0
                       - template: nest_button
                         type: "custom:decluttering-card"
                         variables:
@@ -267,7 +263,7 @@ cards:
                                 value: 9
                   - type: horizontal-stack
                     cards:
-                      - template: nest_button
+                      - template: nest_button_info
                         type: "custom:decluttering-card"
                         variables:
                           - show_name: true
@@ -283,7 +279,7 @@ cards:
                                 icon: "mdi:thermometer-alert"
                                 operator: ">"
                                 value: 27
-                      - template: nest_button
+                      - template: nest_button_info
                         type: "custom:decluttering-card"
                         variables:
                           - show_name: true
@@ -299,7 +295,7 @@ cards:
                                 icon: "mdi:water-percent"
                                 operator: ">"
                                 value: 75
-                      - template: nest_button
+                      - template: nest_button_info
                         type: "custom:decluttering-card"
                         variables:
                           - show_name: true
@@ -315,7 +311,7 @@ cards:
                                 icon: "mdi:thermometer-alert"
                                 operator: ">"
                                 value: 27
-                      - template: nest_button
+                      - template: nest_button_info
                         type: "custom:decluttering-card"
                         variables:
                           - show_name: true
@@ -331,7 +327,7 @@ cards:
                                 icon: "mdi:water-percent"
                                 operator: ">"
                                 value: 75
-                      - template: nest_button
+                      - template: nest_button_info
                         type: "custom:decluttering-card"
                         variables:
                           - show_name: true
@@ -347,7 +343,7 @@ cards:
                                 icon: "mdi:thermometer-alert"
                                 operator: ">"
                                 value: 27
-                      - template: nest_button
+                      - template: nest_button_info
                         type: "custom:decluttering-card"
                         variables:
                           - show_name: true
@@ -365,72 +361,90 @@ cards:
                                 value: 75
                   - type: horizontal-stack
                     cards:
-                      - template: nest_button
+                      - template: nest_button_service
                         type: "custom:decluttering-card"
                         variables:
                           - show_name: true
                           - show_state: false
                           - show_last_changed: false
+                          - service: scene.turn_on
+                          - service_data:
+                              - entity_id: scene.buenos_dias
                           - name: Buenos días
                           - entity: scene.buenos_dias
                           - state:
                               - color: "#CC93FE"
                                 icon: "mdi:weather-sunny"
                                 value: scening
-                      - template: nest_button
+                      - template: nest_button_service
                         type: "custom:decluttering-card"
                         variables:
                           - show_name: true
                           - show_state: false
                           - show_last_changed: false
+                          - service: scene.turn_on
+                          - service_data:
+                              - entity_id: scene.cena
                           - name: Cena
                           - entity: scene.cena
                           - state:
                               - color: "#CC93FE"
                                 icon: "mdi:silverware-fork-knife"
                                 value: scening
-                      - template: nest_button
+                      - template: nest_button_service
                         type: "custom:decluttering-card"
                         variables:
                           - show_name: true
                           - show_state: false
                           - show_last_changed: false
+                          - service: scene.turn_on
+                          - service_data:
+                              - entity_id: scene.con_amigos
                           - name: Amigos
                           - entity: scene.con_amigos
                           - state:
                               - color: "#CC93FE"
                                 icon: "mdi:account-group"
                                 value: scening
-                      - template: nest_button
+                      - template: nest_button_service
                         type: "custom:decluttering-card"
                         variables:
                           - show_name: true
                           - show_state: false
                           - show_last_changed: false
+                          - service: scene.turn_on
+                          - service_data:
+                              - entity_id: scene.juegos_de_mesa
                           - name: Juegos
                           - entity: scene.juegos_de_mesa
                           - state:
                               - color: "#CC93FE"
                                 icon: "mdi:chess-knight"
                                 value: scening
-                      - template: nest_button
+                      - template: nest_button_service
                         type: "custom:decluttering-card"
                         variables:
                           - show_name: true
                           - show_state: false
                           - show_last_changed: false
+                          - service: scene.turn_on
+                          - service_data:
+                              - entity_id: scene.relax
                           - name: Relax
                           - entity: scene.relax
                           - state:
                               - color: "#CC93FE"
                                 icon: "mdi:book-open-page-variant"
                                 value: scening
-                      - template: nest_button
+                      - template: nest_button_service
                         type: "custom:decluttering-card"
                         variables:
                           - show_name: true
                           - show_state: false
                           - show_last_changed: false
+                          - service: scene.turn_on
+                          - service_data:
+                              - entity_id: scene.tele
                           - name: Tele
                           - entity: scene.tele
                           - state:
