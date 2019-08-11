@@ -363,6 +363,74 @@ cards:
                                 icon: "mdi:water-percent"
                                 operator: ">"
                                 value: 75
+                  - type: horizontal-stack
+                    cards:
+                      - template: nest_button
+                        type: "custom:decluttering-card"
+                        variables:
+                          - show_name: true
+                          - show_last_changed: false
+                          - name: Buenos días
+                          - entity: scene.buenos_dias
+                          - state:
+                              - color: "#CC93FE"
+                                icon: "mdi:weather-sunny"
+                                value: scening
+                      - template: nest_button
+                        type: "custom:decluttering-card"
+                        variables:
+                          - show_name: true
+                          - show_last_changed: false
+                          - name: Cena
+                          - entity: scene.cena
+                          - state:
+                              - color: "#CC93FE"
+                                icon: "mdi:silverware-fork-knife"
+                                value: scening
+                      - template: nest_button
+                        type: "custom:decluttering-card"
+                        variables:
+                          - show_name: true
+                          - show_last_changed: false
+                          - name: Amigos
+                          - entity: scene.con_amigos
+                          - state:
+                              - color: "#CC93FE"
+                                icon: "mdi:account-group"
+                                value: scening
+                      - template: nest_button
+                        type: "custom:decluttering-card"
+                        variables:
+                          - show_name: true
+                          - show_last_changed: false
+                          - name: Juegos
+                          - entity: scene.juegos_de_mesa
+                          - state:
+                              - color: "#CC93FE"
+                                icon: "mdi:chess-knight"
+                                value: scening
+                      - template: nest_button
+                        type: "custom:decluttering-card"
+                        variables:
+                          - show_name: true
+                          - show_last_changed: false
+                          - name: Relax
+                          - entity: scene.relax
+                          - state:
+                              - color: "#CC93FE"
+                                icon: "mdi:book-open-page-variant"
+                                value: scening
+                      - template: nest_button
+                        type: "custom:decluttering-card"
+                        variables:
+                          - show_name: true
+                          - show_last_changed: false
+                          - name: Tele
+                          - entity: scene.tele
+                          - state:
+                              - color: "#CC93FE"
+                                icon: "mdi:television-classic"
+                                value: scening
         column_num: 2
         layout: horizontal
         max_columns: 2
