@@ -180,7 +180,7 @@ decluttering_templates:
           font-size: 70%;
         }
       tap_action:
-        action: service
+        action: call-service
         service: [[service]]
         service_data: [[service_data]]
       hold_action:
