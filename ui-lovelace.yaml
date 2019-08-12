@@ -64,6 +64,10 @@ decluttering_templates:
       show_name: "[[show_name]]"
       show_state: "[[show_state]]"
       state: "[[state]]"
+      tap_action: [[tap_action]]
+      hold_action:
+        action: more-info
+      type: "custom:button-card"
       style: |
         ha-card {
           font-family: 'Open Sans', sans-serif;
@@ -91,10 +95,6 @@ decluttering_templates:
         #label {
           font-size: 70%;
         }
-      tap_action: [[tap_action]]
-      hold_action:
-        action: more-info
-      type: "custom:button-card"
     default:
       - show_state: true
       - show_name: false
