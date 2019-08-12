@@ -5,8 +5,16 @@ title: tablet2
 background: var(--background-image)
 badges: []
 cards:
-  - cards:
-      - cards:
+  - type: vertical-stack
+    cards:
+      - column_num: 2
+        layout: horizontal
+        max_columns: 2
+        max_width:
+          - 500px
+          - 100%
+        type: "custom:nest-layout-card"
+        cards:
           - cards:
               - cards:
                   - template: nest_picture_button
@@ -369,7 +377,7 @@ cards:
                           - show_last_changed: false
                           - service_id: scene.turn_on
                           - service_data:
-                              - entity_id: scene.buenos_dias
+                              entity_id: scene.buenos_dias
                           - name: Buenos días
                           - entity: scene.buenos_dias
                           - state:
@@ -384,7 +392,7 @@ cards:
                           - show_last_changed: false
                           - service_id: scene.turn_on
                           - service_data:
-                              - entity_id: scene.cena
+                              entity_id: scene.cena
                           - name: Cena
                           - entity: scene.cena
                           - state:
@@ -399,7 +407,7 @@ cards:
                           - show_last_changed: false
                           - service_id: scene.turn_on
                           - service_data:
-                              - entity_id: scene.con_amigos
+                              entity_id: scene.con_amigos
                           - name: Amigos
                           - entity: scene.con_amigos
                           - state:
@@ -414,7 +422,7 @@ cards:
                           - show_last_changed: false
                           - service_id: scene.turn_on
                           - service_data:
-                              - entity_id: scene.juegos_de_mesa
+                              entity_id: scene.juegos_de_mesa
                           - name: Juegos
                           - entity: scene.juegos_de_mesa
                           - state:
@@ -429,7 +437,7 @@ cards:
                           - show_last_changed: false
                           - service_id: scene.turn_on
                           - service_data:
-                              - entity_id: scene.relax
+                              entity_id: scene.relax
                           - name: Relax
                           - entity: scene.relax
                           - state:
@@ -444,18 +452,10 @@ cards:
                           - show_last_changed: false
                           - service_id: scene.turn_on
                           - service_data:
-                              - entity_id: scene.tele
+                              entity_id: scene.tele
                           - name: Tele
                           - entity: scene.tele
                           - state:
                               - color: "#CC93FE"
                                 icon: "mdi:television-classic"
                                 value: scening
-        column_num: 2
-        layout: horizontal
-        max_columns: 2
-        max_width:
-          - 500px
-          - 100%
-        type: "custom:nest-layout-card"
-    type: vertical-stack
