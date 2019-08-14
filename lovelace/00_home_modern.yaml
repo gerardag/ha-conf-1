@@ -40,7 +40,7 @@ cards:
                         font-weight: 300 !important;
                         margin: 0px;
                       }
-                  - type: horizontal-stack
+                  - type: vertical-stack
                     cards: !include 00_home_modern/group_categories.yaml
                   - type: conditional
                     conditions:
