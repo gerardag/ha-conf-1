@@ -1,0 +1,71 @@
+- show_name: true
+  template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_state: false
+    - name: Taula
+    - entity: light.mesa
+    - state:
+        - color: "#BAC0C6"
+          icon: "mdi:ceiling-light"
+          value: "off"
+        - color: "rgb(251, 210, 41)"
+          icon: "mdi:ceiling-light"
+          value: "on"
+- template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_state: false
+    - name: Sofà
+    - entity: light.sofa
+    - state:
+        - color: "#BAC0C6"
+          icon: "mdi:floor-lamp"
+          value: "off"
+        - color: "rgb(251, 210, 41)"
+          icon: "mdi:floor-lamp"
+          value: "on"
+- template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_state: false
+    - name: Tele
+    - entity: light.detras_de_la_tele
+    - state:
+        - color: "#BAC0C6"
+          icon: "mdi:lightbulb"
+          value: "off"
+        - color: "rgb(251, 210, 41)"
+          icon: "mdi:lightbulb"
+          value: "on"
+- template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_state: false
+    - name: Ventilador
+    - entity: switch.ventilador
+    - state:
+        - color: "#BAC0C6"
+          icon: "mdi:fan-off"
+          value: "off"
+        - color: "rgb(251, 210, 41)"
+          icon: "mdi:fan"
+          value: "on"
+- template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_state: false
+    - name: Tele
+    - entity: media_player.tele
+    - state:
+        - color: "#BAC0C6"
+          icon: "mdi:television-classic"
+          value: "off"
+        - color: "rgb(251, 210, 41)"
+          icon: "mdi:television-classic"
+          value: playing

@@ -1,0 +1,108 @@
+- template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_last_changed: false
+    - name: Dormitori
+    - entity: sensor.dormitori_temperature
+    - tap_action:
+        action: more-info
+    - state:
+        - color: "#FEBF93"
+          icon: "mdi:thermometer"
+          operator: <=
+          value: 27
+        - color: "#FE9393"
+          icon: "mdi:thermometer-alert"
+          operator: ">"
+          value: 27
+- template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_last_changed: false
+    - name: Dormitori
+    - entity: sensor.dormitori_humidity
+    - tap_action:
+        action: more-info
+    - state:
+        - color: "#93BCFE"
+          icon: "mdi:water-percent"
+          operator: "<="
+          value: 75
+        - color: "#FE9393"
+          icon: "mdi:water-percent"
+          operator: ">"
+          value: 75
+- template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_last_changed: false
+    - name: Menjador
+    - entity: sensor.menjador_temperature
+    - tap_action:
+        action: more-info
+    - state:
+        - color: "#FEBF93"
+          icon: "mdi:thermometer"
+          operator: <=
+          value: 27
+        - color: "#FE9393"
+          icon: "mdi:thermometer-alert"
+          operator: ">"
+          value: 27
+- template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_last_changed: false
+    - name: Menjador
+    - entity: sensor.menjador_humidity
+    - tap_action:
+        action: more-info
+    - state:
+        - color: "#93BCFE"
+          icon: "mdi:water-percent"
+          operator: "<="
+          value: 75
+        - color: "#FE9393"
+          icon: "mdi:water-percent"
+          operator: ">"
+          value: 75
+- template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_last_changed: false
+    - name: Exterior
+    - entity: sensor.exterior_temperature
+    - tap_action:
+        action: more-info
+    - state:
+        - color: "#FEBF93"
+          icon: "mdi:thermometer"
+          operator: <=
+          value: 27
+        - color: "#FE9393"
+          icon: "mdi:thermometer-alert"
+          operator: ">"
+          value: 27
+- template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_last_changed: false
+    - name: Exterior
+    - entity: sensor.exterior_humidity
+    - tap_action:
+        action: more-info
+    - state:
+        - color: "#93BCFE"
+          icon: "mdi:water-percent"
+          operator: "<="
+          value: 75
+        - color: "#FE9393"
+          icon: "mdi:water-percent"
+          operator: ">"
+          value: 75

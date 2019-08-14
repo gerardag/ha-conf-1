@@ -1,0 +1,44 @@
+- template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_last_changed: false
+    - name: Casa
+    - entity: sensor.time_at_home
+    - state:
+        - color: "#BAC0C6"
+          icon: "mdi:home"
+          operator: =>
+          value: 0
+- template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_last_changed: false
+    - name: Feina
+    - entity: sensor.time_at_work
+    - state:
+        - color: "#BAC0C6"
+          icon: "mdi:briefcase"
+          operator: <=
+          value: 9
+        - color: "#EC7B2C"
+          icon: "mdi:briefcase"
+          operator: ">"
+          value: 9
+- template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_last_changed: false
+    - name: Fora
+    - entity: sensor.time_other
+    - state:
+        - color: "#BAC0C6"
+          icon: "mdi:walk"
+          operator: <=
+          value: 9
+        - color: "#EC7B2C"
+          icon: "mdi:walk"
+          operator: ">"
+          value: 9

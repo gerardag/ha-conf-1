@@ -1,0 +1,102 @@
+- template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_state: false
+    - show_last_changed: false
+    - tap_action:
+        action: call-service
+        service: scene.turn_on
+        service_data:
+          entity_id: scene.buenos_dias
+    - name: Bon dia
+    - entity: scene.buenos_dias
+    - state:
+        - color: "#CC93FE"
+          icon: "mdi:weather-sunny"
+          value: scening
+- template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_state: false
+    - show_last_changed: false
+    - tap_action:
+        action: call-service
+        service: scene.turn_on
+        service_data:
+          entity_id: scene.cena
+    - name: Sopar
+    - entity: scene.cena
+    - state:
+        - color: "#CC93FE"
+          icon: "mdi:silverware-fork-knife"
+          value: scening
+- template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_state: false
+    - show_last_changed: false
+    - tap_action:
+        action: call-service
+        service: scene.turn_on
+        service_data:
+          entity_id: scene.con_amigos
+    - name: Amics
+    - entity: scene.con_amigos
+    - state:
+        - color: "#CC93FE"
+          icon: "mdi:account-group"
+          value: scening
+- template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_state: false
+    - show_last_changed: false
+    - tap_action:
+        action: call-service
+        service: scene.turn_on
+        service_data:
+          entity_id: scene.juegos_de_mesa
+    - name: Jocs
+    - entity: scene.juegos_de_mesa
+    - state:
+        - color: "#CC93FE"
+          icon: "mdi:chess-knight"
+          value: scening
+- template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_state: false
+    - show_last_changed: false
+    - tap_action:
+        action: call-service
+        service: scene.turn_on
+        service_data:
+          entity_id: scene.relax
+    - name: Relax
+    - entity: scene.relax
+    - state:
+        - color: "#CC93FE"
+          icon: "mdi:book-open-page-variant"
+          value: scening
+- template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_state: false
+    - show_last_changed: false
+    - tap_action:
+        action: call-service
+        service: scene.turn_on
+        service_data:
+          entity_id: scene.tele
+    - name: Tele
+    - entity: scene.tele
+    - state:
+        - color: "#CC93FE"
+          icon: "mdi:television-classic"
+          value: scening
