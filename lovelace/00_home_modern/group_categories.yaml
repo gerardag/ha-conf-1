@@ -8,7 +8,7 @@
     - name: Il·luminació
     - entity: input_text.selected_category
     - state:
-        - color: "#FFF2BE"
+        - color: "#FDEC9F"
           icon: "mdi:lightbulb-outline"
           operator: default
     - tap_action:
