@@ -18,7 +18,6 @@ config:
 
 system_health:
 
-
 frontend:
   themes: !include_dir_merge_named themes
 
@@ -48,7 +47,7 @@ person:
   - name: Aleix
     id: aleix
     user_id: 23b5a590030a4d5b907d0f5675e75e3e
-    device_trackers: 
+    device_trackers:
       - device_tracker.aleix_mobil
   - name: Imma
     id: imma
@@ -82,6 +81,10 @@ notify:
   - name: "Grup casa"
     platform: telegram
     chat_id: !secret telegram_chat_casa
+
+# Variables
+
+input_text: !include devices/input_text.yaml
 
 # Services
 

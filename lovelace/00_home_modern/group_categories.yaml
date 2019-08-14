@@ -1,0 +1,90 @@
+- show_name: true
+  template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_state: false
+    - name: Menjador
+    - entity: input_text.selected_category
+    - state:
+        - color: "rgb(251, 210, 41)"
+          icon: "mdi:ceiling-light"
+          value: "menjador"
+    - tap_action:
+        action: call-service
+        service: input_text.set_value
+        service_data:
+          entity_id: input_text.selected_category
+          value: menjador
+- show_name: true
+  template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_state: false
+    - name: Altres
+    - entity: input_text.selected_category
+    - state:
+        - color: "rgb(251, 210, 41)"
+          icon: "mdi:ceiling-light"
+          value: "altres"
+    - tap_action:
+        action: call-service
+        service: input_text.set_value
+        service_data:
+          entity_id: input_text.selected_category
+          value: altres
+- show_name: true
+  template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_state: false
+    - name: Temperatures
+    - entity: input_text.selected_category
+    - state:
+        - color: "rgb(251, 210, 41)"
+          icon: "mdi:ceiling-light"
+          value: "temperatures"
+    - tap_action:
+        action: call-service
+        service: input_text.set_value
+        service_data:
+          entity_id: input_text.selected_category
+          value: temperatures
+- show_name: true
+  template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_state: false
+    - name: Escenes
+    - entity: input_text.selected_category
+    - state:
+        - color: "rgb(251, 210, 41)"
+          icon: "mdi:ceiling-light"
+          value: "escenes"
+    - tap_action:
+        action: call-service
+        service: input_text.set_value
+        service_data:
+          entity_id: input_text.selected_category
+          value: escenes
+- show_name: true
+  template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_state: false
+    - name: Temps
+    - entity: input_text.selected_category
+    - state:
+        - color: "rgb(251, 210, 41)"
+          icon: "mdi:ceiling-light"
+          value: "temps"
+    - tap_action:
+        action: call-service
+        service: input_text.set_value
+        service_data:
+          entity_id: input_text.selected_category
+          value: temps
