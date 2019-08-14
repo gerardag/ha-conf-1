@@ -95,8 +95,10 @@ cards:
                           show_last_changed: false
                           show_name: false
                           show_state: false
-                          icon: "mdi:chevron-up"
-                          state: none
+                          state:
+                            - color: "#000000"
+                              icon: "mdi:chevron-up"
+                              operator: default
                           tap_action:
                             action: call-service
                             service: input_text.set_value
