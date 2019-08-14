@@ -136,8 +136,5 @@ decluttering_templates:
 title: Casa
 views:
   - !include lovelace/10_home_classic.yaml
-  - !include lovelace/20_automations.yaml
-  - !include lovelace/30_climates.yaml
-  - !include lovelace/40_test.yaml
   - !include lovelace/00_home_modern.yaml
-  - !include lovelace/00_home_modern_2.yaml
+  - !include lovelace/30_climates.yaml
