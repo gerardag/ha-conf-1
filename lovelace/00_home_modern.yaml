@@ -88,40 +88,38 @@ cards:
                     card:
                       type: horizontal-stack
                       cards:
-                        - nest_button:
-                          card:
-                            entity: input_text.selected_category
-                            name: Go up
-                            show_icon: true
-                            show_last_changed: false
-                            show_name: false
-                            show_state: false
-                            icon: "mdi:chevron-up"
-                            state: none
-                            tap_action:
-                              action: call-service
-                              service: input_text.set_value
-                              service_data:
-                                entity_id: input_text.selected_category
-                                value: none
-                            type: "custom:button-card"
-                            style: |
-                              ha-card {
-                                font-family: 'Open Sans', sans-serif;
-                                padding-top: 15px !important;
-                                background-color: rgba(0, 0, 0, 0);
-                                -webkit-box-shadow: none;
-                                -moz-box-shadow: none;
-                                box-shadow: none;
-                              }
-                              ha-icon {
-                                width: 60% !important;
-                              }
-                              img {
-                                width: 100%;
-                              }
-                              #img-cell {
-                                border-radius: 50px;
-                                height: 30px !important;
-                                width: 30px !important;
-                              }
+                        - type: "custom:button-card"
+                          entity: input_text.selected_category
+                          name: Go up
+                          show_icon: true
+                          show_last_changed: false
+                          show_name: false
+                          show_state: false
+                          icon: "mdi:chevron-up"
+                          state: none
+                          tap_action:
+                            action: call-service
+                            service: input_text.set_value
+                            service_data:
+                              entity_id: input_text.selected_category
+                              value: none
+                          style: |
+                            ha-card {
+                              font-family: 'Open Sans', sans-serif;
+                              padding-top: 15px !important;
+                              background-color: rgba(0, 0, 0, 0);
+                              -webkit-box-shadow: none;
+                              -moz-box-shadow: none;
+                              box-shadow: none;
+                            }
+                            ha-icon {
+                              width: 60% !important;
+                            }
+                            img {
+                              width: 100%;
+                            }
+                            #img-cell {
+                              border-radius: 50px;
+                              height: 30px !important;
+                              width: 30px !important;
+                            }
