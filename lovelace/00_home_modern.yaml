@@ -42,10 +42,6 @@ cards:
                       }
                   - type: horizontal-stack
                     cards: !include 00_home_modern/group_categories.yaml
-                    style: |
-                      #root {
-                        margin-bottom: 40px;
-                      }
                   - type: conditional
                     conditions:
                       - entity: input_text.selected_category
