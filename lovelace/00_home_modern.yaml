@@ -19,46 +19,44 @@ cards:
             cards: !include 00_home_modern/sidebar.yaml
           - type: vertical-stack
             cards:
-              - type: horizontal-stack
+              - type: "custom:vertical-stack-in-card"
                 cards:
-                  - type: "custom:vertical-stack-in-card"
-                    cards:
-                      - type: horizontal-stack
-                        cards: !include 00_home_modern/group_categories.yaml
-                  - type: "custom:vertical-stack-in-card"
-                    cards:
-                      - type: conditional
-                        conditions:
-                          - entity: input_text.selected_category
-                            state: menjador
-                        card:
-                          type: horizontal-stack
-                          cards: !include 00_home_modern/group_dinning_room.yaml
-                      - type: conditional
-                        conditions:
-                          - entity: input_text.selected_category
-                            state: altres
-                        card:
-                          type: horizontal-stack
-                          cards: !include 00_home_modern/group_other.yaml
-                      - type: conditional
-                        conditions:
-                          - entity: input_text.selected_category
-                            state: temps
-                        card:
-                          type: horizontal-stack
-                          cards: !include 00_home_modern/group_geotime.yaml
-                      - type: conditional
-                        conditions:
-                          - entity: input_text.selected_category
-                            state: temperatures
-                        card:
-                          type: horizontal-stack
-                          cards: !include 00_home_modern/group_temperatures.yaml
-                      - type: conditional
-                        conditions:
-                          - entity: input_text.selected_category
-                            state: escenes
-                        card:
-                          type: horizontal-stack
-                          cards: !include 00_home_modern/group_scenes.yaml
+                  - type: horizontal-stack
+                    cards: !include 00_home_modern/group_categories.yaml
+              - type: "custom:vertical-stack-in-card"
+                cards:
+                  - type: conditional
+                    conditions:
+                      - entity: input_text.selected_category
+                        state: menjador
+                    card:
+                      type: horizontal-stack
+                      cards: !include 00_home_modern/group_dinning_room.yaml
+                  - type: conditional
+                    conditions:
+                      - entity: input_text.selected_category
+                        state: altres
+                    card:
+                      type: horizontal-stack
+                      cards: !include 00_home_modern/group_other.yaml
+                  - type: conditional
+                    conditions:
+                      - entity: input_text.selected_category
+                        state: temps
+                    card:
+                      type: horizontal-stack
+                      cards: !include 00_home_modern/group_geotime.yaml
+                  - type: conditional
+                    conditions:
+                      - entity: input_text.selected_category
+                        state: temperatures
+                    card:
+                      type: horizontal-stack
+                      cards: !include 00_home_modern/group_temperatures.yaml
+                  - type: conditional
+                    conditions:
+                      - entity: input_text.selected_category
+                        state: escenes
+                    card:
+                      type: horizontal-stack
+                      cards: !include 00_home_modern/group_scenes.yaml
