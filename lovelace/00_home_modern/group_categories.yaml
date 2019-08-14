@@ -9,7 +9,7 @@
     - state:
         - color: "rgb(251, 210, 41)"
           icon: "mdi:ceiling-light"
-          value: "menjador"
+          operator: default
     - tap_action:
         action: call-service
         service: input_text.set_value
@@ -25,9 +25,9 @@
     - name: Altres
     - entity: input_text.selected_category
     - state:
-        - color: "rgb(251, 210, 41)"
-          icon: "mdi:ceiling-light"
-          value: "altres"
+        - color: "#BAC0C6"
+          icon: "mdi:plus-circle"
+          operator: default
     - tap_action:
         action: call-service
         service: input_text.set_value
@@ -43,9 +43,9 @@
     - name: Temperatures
     - entity: input_text.selected_category
     - state:
-        - color: "rgb(251, 210, 41)"
-          icon: "mdi:ceiling-light"
-          value: "temperatures"
+        - color: "#FE9393"
+          icon: "mdi:thermometer"
+          operator: default
     - tap_action:
         action: call-service
         service: input_text.set_value
@@ -61,9 +61,9 @@
     - name: Escenes
     - entity: input_text.selected_category
     - state:
-        - color: "rgb(251, 210, 41)"
-          icon: "mdi:ceiling-light"
-          value: "escenes"
+        - color: "#CC93FE"
+          icon: "mdi:image"
+          operator: default
     - tap_action:
         action: call-service
         service: input_text.set_value
@@ -79,9 +79,9 @@
     - name: Temps
     - entity: input_text.selected_category
     - state:
-        - color: "rgb(251, 210, 41)"
-          icon: "mdi:ceiling-light"
-          value: "temps"
+        - color: "#BAC0C6"
+          icon: "mdi:walk"
+          operator: default
     - tap_action:
         action: call-service
         service: input_text.set_value
