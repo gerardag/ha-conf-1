@@ -111,6 +111,7 @@ decluttering_templates:
       show_state: "[[show_state]]"
       state: "[[state]]"
       tap_action: "[[tap_action]]"
+      color_type: card
       hold_action:
         action: more-info
       type: "custom:button-card"

@@ -15,30 +15,31 @@ cards:
           - 100%
         type: "custom:nest-layout-card"
         cards:
-          - type: markdown
-            content: |
-              # Benvingut a casa
-            style: |
-              ha-card {
-                margin-top: 30px;
-                margin-bottom: 50px;
-                font-family: 'Open Sans', sans-serif;
-                font-size: 100%;
-                -webkit-box-shadow: none;
-                -moz-box-shadow: none;
-                box-shadow: none;
-                text-align: center;
-              }
-              h1 {
-                font-weight: bold;
-                margin: 0px;
-              }
           - type: vertical-stack
             cards: !include 00_home_modern/sidebar.yaml
           - type: vertical-stack
             cards:
               - type: "custom:vertical-stack-in-card"
                 cards:
+                  - type: markdown
+                    content: |
+                      # Benvingut a casa
+                    style: |
+                      ha-card {
+                        margin-top: 30px;
+                        margin-bottom: 50px;
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 100%;
+                        -webkit-box-shadow: none;
+                        -moz-box-shadow: none;
+                        box-shadow: none;
+                        text-align: left;
+                      }
+                      h1 {
+                        color: black;
+                        font-weight: 300 !important;
+                        margin: 0px;
+                      }
                   - type: horizontal-stack
                     cards: !include 00_home_modern/group_categories.yaml
                   - type: conditional

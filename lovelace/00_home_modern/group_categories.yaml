@@ -5,7 +5,6 @@
     - show_name: true
     - show_state: false
     - show_last_changed: false
-    - color_type: card
     - name: Il·luminació
     - entity: input_text.selected_category
     - state:
@@ -25,7 +24,6 @@
     - show_name: true
     - show_state: false
     - show_last_changed: false
-    - color_type: card
     - name: Càmeres
     - entity: input_text.selected_category
     - state:
@@ -45,7 +43,6 @@
     - show_name: true
     - show_state: false
     - show_last_changed: false
-    - color_type: card
     - name: Temperatures
     - entity: input_text.selected_category
     - state:
@@ -65,7 +62,6 @@
     - show_name: true
     - show_state: false
     - show_last_changed: false
-    - color_type: card
     - name: Escenes
     - entity: input_text.selected_category
     - state:
@@ -85,7 +81,6 @@
     - show_name: true
     - show_state: false
     - show_last_changed: false
-    - color_type: card
     - name: Temps
     - entity: input_text.selected_category
     - state:
