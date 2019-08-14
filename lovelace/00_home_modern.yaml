@@ -40,14 +40,14 @@ cards:
                         font-weight: 300 !important;
                         margin: 0px;
                       }
-                  - type: vertical-stack
+                  - type: horizontal-stack
                     cards: !include 00_home_modern/group_categories.yaml
                   - type: conditional
                     conditions:
                       - entity: input_text.selected_category
                         state: menjador
                     card:
-                      type: horizontal-stack
+                      type: vertical-stack
                       cards: !include 00_home_modern/group_bulbs.yaml
                   - type: conditional
                     conditions:
