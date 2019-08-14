@@ -16,7 +16,7 @@ cards:
         type: "custom:nest-layout-card"
         cards:
           - type: vertical-stack
-            cards: !include 00_home_modern/sidebar.yaml
+            cards: !include 00_home_modern/sidebar_hour.yaml
           - type: vertical-stack
             cards:
               - type: "custom:vertical-stack-in-card"
