@@ -1,41 +1,37 @@
-- type: horizontal-stack
-  cards:
-    - type: markdown
-      content: |
-        # [[ sensor.time.state ]]
-      style: |
-        ha-card {
-          background-color: rgba(0, 0, 0, 0);
-          font-family: 'Open Sans', sans-serif;
-          font-size: 300%;
-          -webkit-box-shadow: none;
-          -moz-box-shadow: none;
-          box-shadow: none;
-          text-align: left;
-          margin-top: 550px;
-        }
-        h1, h3 {
-          font-weight: 300 !important;
-          margin: 0px;
-          color: white;
-        }
-        h3 {
-          font-size: 0.7em;
-        }
-    - backdrop:
-        day: "rgba(0, 0, 0, 0)"
-        night: "rgba(0, 0, 0, 0)"
-        text: "#ffffff"
-      entity: weather.dark_sky
-      type: "custom:simple-weather-card"
-      style: |
-        ha-card {
-          background-color: rgba(0, 0, 0, 0);
-          font-family: 'Open Sans', sans-serif;
-          -webkit-box-shadow: none;
-          -moz-box-shadow: none;
-          box-shadow: none;
-        }
-        .weather__info--add {
-          display: none;
-        }
+- type: markdown
+  content: |
+    # [[ sensor.time.state ]]
+  style: |
+    ha-card {
+      background-color: rgba(0, 0, 0, 0);
+      font-family: 'Open Sans', sans-serif;
+      font-size: 300%;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      text-align: left;
+      margin-top: 550px;
+    }
+    h1, h3 {
+      font-weight: 300 !important;
+      margin: 0px;
+      color: white;
+    }
+    h3 {
+      font-size: 0.7em;
+    }
+- backdrop:
+    day: "rgba(0, 0, 0, 0)"
+    night: "rgba(0, 0, 0, 0)"
+    text: "#ffffff"
+  entity: weather.dark_sky
+  type: "custom:simple-weather-card"
+  style: |
+    ha-card {
+      background-color: rgba(0, 0, 0, 0);
+      font-family: 'Open Sans', sans-serif;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      # margin-top: 585px;
+    }

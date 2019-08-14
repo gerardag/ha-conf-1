@@ -11,4 +11,4 @@ action:
         - 475501
         # - 417277407
     service: telegram_bot.send_message
-initial_state: true
+initial_state: false
