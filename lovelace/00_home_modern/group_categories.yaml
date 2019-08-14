@@ -1,14 +1,16 @@
 - show_name: true
-  template: nest_button
+  template: nest_button_category
   type: "custom:decluttering-card"
   variables:
     - show_name: true
     - show_state: false
-    - name: Menjador
+    - show_last_changed: false
+    - color_type: card
+    - name: Il·luminació
     - entity: input_text.selected_category
     - state:
-        - color: "rgb(251, 210, 41)"
-          icon: "mdi:ceiling-light"
+        - color: "#FFF2BE"
+          icon: "mdi:lightbulb-outline"
           operator: default
     - tap_action:
         action: call-service
@@ -17,16 +19,18 @@
           entity_id: input_text.selected_category
           value: menjador
 - show_name: true
-  template: nest_button
+  template: nest_button_category
   type: "custom:decluttering-card"
   variables:
     - show_name: true
     - show_state: false
-    - name: Altres
+    - show_last_changed: false
+    - color_type: card
+    - name: Càmeres
     - entity: input_text.selected_category
     - state:
-        - color: "#BAC0C6"
-          icon: "mdi:plus-circle"
+        - color: "#BEE7FF"
+          icon: "mdi:camera-outline"
           operator: default
     - tap_action:
         action: call-service
@@ -35,15 +39,17 @@
           entity_id: input_text.selected_category
           value: altres
 - show_name: true
-  template: nest_button
+  template: nest_button_category
   type: "custom:decluttering-card"
   variables:
     - show_name: true
     - show_state: false
+    - show_last_changed: false
+    - color_type: card
     - name: Temperatures
     - entity: input_text.selected_category
     - state:
-        - color: "#FE9393"
+        - color: "#FFCCBE"
           icon: "mdi:thermometer"
           operator: default
     - tap_action:
@@ -53,15 +59,17 @@
           entity_id: input_text.selected_category
           value: temperatures
 - show_name: true
-  template: nest_button
+  template: nest_button_category
   type: "custom:decluttering-card"
   variables:
     - show_name: true
     - show_state: false
+    - show_last_changed: false
+    - color_type: card
     - name: Escenes
     - entity: input_text.selected_category
     - state:
-        - color: "#CC93FE"
+        - color: "#E8BEFF"
           icon: "mdi:image"
           operator: default
     - tap_action:
@@ -71,11 +79,13 @@
           entity_id: input_text.selected_category
           value: escenes
 - show_name: true
-  template: nest_button
+  template: nest_button_category
   type: "custom:decluttering-card"
   variables:
     - show_name: true
     - show_state: false
+    - show_last_changed: false
+    - color_type: card
     - name: Temps
     - entity: input_text.selected_category
     - state:

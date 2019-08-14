@@ -101,6 +101,52 @@ decluttering_templates:
       - show_last_changed: true
       - tap_action:
           action: toggle
+  nest_button_category:
+    card:
+      entity: "[[entity]]"
+      name: "[[name]]"
+      show_icon: true
+      show_last_changed: "[[show_last_changed]]"
+      show_name: "[[show_name]]"
+      show_state: "[[show_state]]"
+      state: "[[state]]"
+      tap_action: "[[tap_action]]"
+      hold_action:
+        action: more-info
+      type: "custom:button-card"
+      style: |
+        ha-card {
+          font-family: 'Open Sans', sans-serif;
+          padding-top: 15px !important;
+          background-color: rgba(0, 0, 0, 0);
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+        }
+        ha-icon {
+          width: 60% !important;
+        }
+        img {
+          width: 100%;
+        }
+        #img-cell {
+          background-color: #F5F5F5;
+          border-radius: 50px;
+          height: 70px !important;
+          width: 70px !important;
+        }
+        #state {
+          padding-top: 5px;
+        }
+        #label {
+          font-size: 70%;
+        }
+    default:
+      - show_state: true
+      - show_name: false
+      - show_last_changed: true
+      - tap_action:
+          action: toggle
   nest_picture_button:
     card:
       entity: "[[entity]]"
