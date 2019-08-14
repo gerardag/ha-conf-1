@@ -130,7 +130,7 @@ decluttering_templates:
           width: 100%;
         }
         #img-cell {
-          background-color: #F5F5F5;
+          background-color: #FAFAFA;
           border-radius: 50px;
           height: 70px !important;
           width: 70px !important;

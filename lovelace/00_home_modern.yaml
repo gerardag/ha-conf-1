@@ -43,8 +43,8 @@ cards:
                   - type: horizontal-stack
                     cards: !include 00_home_modern/group_categories.yaml
                     style: |
-                      ha-card {
-                        margin-bottom: 30px;
+                      #root {
+                        margin-bottom: 40px;
                       }
                   - type: conditional
                     conditions:
@@ -52,14 +52,14 @@ cards:
                         state: menjador
                     card:
                       type: horizontal-stack
-                      cards: !include 00_home_modern/group_dinning_room.yaml
+                      cards: !include 00_home_modern/group_bulbs.yaml
                   - type: conditional
                     conditions:
                       - entity: input_text.selected_category
                         state: altres
                     card:
                       type: horizontal-stack
-                      cards: !include 00_home_modern/group_other.yaml
+                      cards: !include 00_home_modern/group_cameras.yaml
                   - type: conditional
                     conditions:
                       - entity: input_text.selected_category
@@ -113,6 +113,7 @@ cards:
                               -webkit-box-shadow: none;
                               -moz-box-shadow: none;
                               box-shadow: none;
+                              padding: 10px !important;
                             }
                             ha-icon {
                               width: 60% !important;

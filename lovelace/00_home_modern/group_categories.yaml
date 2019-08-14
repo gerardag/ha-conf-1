@@ -81,7 +81,7 @@
     - show_name: true
     - show_state: false
     - show_last_changed: false
-    - name: Temps
+    - name: Activitat
     - entity: input_text.selected_category
     - state:
         - color: "#BAC0C6"
