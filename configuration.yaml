@@ -6,7 +6,7 @@ homeassistant:
   longitude: !secret longitude
   elevation: 102
   unit_system: metric
-  time_zone: UTC
+  time_zone: CEST
   # customize: !include customize.yaml
   whitelist_external_dirs:
     - /tmp/
