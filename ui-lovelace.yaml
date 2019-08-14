@@ -64,7 +64,7 @@ decluttering_templates:
       show_name: "[[show_name]]"
       show_state: "[[show_state]]"
       state: "[[state]]"
-      tap_action: [[tap_action]]
+      tap_action: "[[tap_action]]"
       hold_action:
         action: more-info
       type: "custom:button-card"
