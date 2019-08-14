@@ -388,7 +388,7 @@ cards:
                           - show_state: false
                           - show_last_changed: false
                           - tap_action:
-                              action: service
+                              action: call-service
                               service: scene.turn_on
                               service_data:
                                 entity_id: scene.buenos_dias
@@ -405,7 +405,7 @@ cards:
                           - show_state: false
                           - show_last_changed: false
                           - tap_action:
-                              action: service
+                              action: call-service
                               service: scene.turn_on
                               service_data:
                                 entity_id: scene.cena
@@ -422,7 +422,7 @@ cards:
                           - show_state: false
                           - show_last_changed: false
                           - tap_action:
-                              action: service
+                              action: call-service
                               service: scene.turn_on
                               service_data:
                                 entity_id: scene.con_amigos
@@ -439,7 +439,7 @@ cards:
                           - show_state: false
                           - show_last_changed: false
                           - tap_action:
-                              action: service
+                              action: call-service
                               service: scene.turn_on
                               service_data:
                                 entity_id: scene.juegos_de_mesa
@@ -456,7 +456,7 @@ cards:
                           - show_state: false
                           - show_last_changed: false
                           - tap_action:
-                              action: service
+                              action: call-service
                               service: scene.turn_on
                               service_data:
                                 entity_id: scene.relax
@@ -473,7 +473,7 @@ cards:
                           - show_state: false
                           - show_last_changed: false
                           - tap_action:
-                              action: service
+                              action: call-service
                               service: scene.turn_on
                               service_data:
                                 entity_id: scene.tele
