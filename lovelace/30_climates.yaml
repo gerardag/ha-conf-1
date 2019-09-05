@@ -22,7 +22,7 @@ cards:
         name: Menjador
       - entity: sensor.dormitori_temperature
         name: Dormitori
-      - entity: sensor.exterior_temperature
+      - entity: sensor.exterior_temperature_2
         name: Exterior
     title: Temperatures
     type: history-graph

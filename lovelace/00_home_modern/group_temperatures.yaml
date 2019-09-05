@@ -1,108 +1,180 @@
-- template: nest_button
-  type: "custom:decluttering-card"
-  variables:
-    - show_name: true
-    - show_last_changed: false
-    - name: Dormitori
-    - entity: sensor.dormitori_temperature
-    - tap_action:
-        action: more-info
-    - state:
-        - color: "#FEBF93"
-          icon: "mdi:thermometer"
-          operator: <=
-          value: 27
-        - color: "#FE9393"
-          icon: "mdi:thermometer-alert"
-          operator: ">"
-          value: 27
-- template: nest_button
-  type: "custom:decluttering-card"
-  variables:
-    - show_name: true
-    - show_last_changed: false
-    - name: Dormitori
-    - entity: sensor.dormitori_humidity
-    - tap_action:
-        action: more-info
-    - state:
-        - color: "#93BCFE"
-          icon: "mdi:water-percent"
-          operator: "<="
-          value: 75
-        - color: "#FE9393"
-          icon: "mdi:water-percent"
-          operator: ">"
-          value: 75
-- template: nest_button
-  type: "custom:decluttering-card"
-  variables:
-    - show_name: true
-    - show_last_changed: false
-    - name: Menjador
-    - entity: sensor.menjador_temperature
-    - tap_action:
-        action: more-info
-    - state:
-        - color: "#FEBF93"
-          icon: "mdi:thermometer"
-          operator: <=
-          value: 27
-        - color: "#FE9393"
-          icon: "mdi:thermometer-alert"
-          operator: ">"
-          value: 27
-- template: nest_button
-  type: "custom:decluttering-card"
-  variables:
-    - show_name: true
-    - show_last_changed: false
-    - name: Menjador
-    - entity: sensor.menjador_humidity
-    - tap_action:
-        action: more-info
-    - state:
-        - color: "#93BCFE"
-          icon: "mdi:water-percent"
-          operator: "<="
-          value: 75
-        - color: "#FE9393"
-          icon: "mdi:water-percent"
-          operator: ">"
-          value: 75
-- template: nest_button
-  type: "custom:decluttering-card"
-  variables:
-    - show_name: true
-    - show_last_changed: false
-    - name: Exterior
-    - entity: sensor.exterior_temperature
-    - tap_action:
-        action: more-info
-    - state:
-        - color: "#FEBF93"
-          icon: "mdi:thermometer"
-          operator: <=
-          value: 27
-        - color: "#FE9393"
-          icon: "mdi:thermometer-alert"
-          operator: ">"
-          value: 27
-- template: nest_button
-  type: "custom:decluttering-card"
-  variables:
-    - show_name: true
-    - show_last_changed: false
-    - name: Exterior
-    - entity: sensor.exterior_humidity
-    - tap_action:
-        action: more-info
-    - state:
-        - color: "#93BCFE"
-          icon: "mdi:water-percent"
-          operator: "<="
-          value: 75
-        - color: "#FE9393"
-          icon: "mdi:water-percent"
-          operator: ">"
-          value: 75
+- type: horizontal-stack
+  cards:
+    - template: nest_button
+      type: "custom:decluttering-card"
+      variables:
+        - show_name: true
+        - show_last_changed: false
+        - name: Dormitori
+        - entity: sensor.dormitori_temperature
+        - tap_action:
+            action: more-info
+        - state:
+            - color: "#FEBF93"
+              icon: "mdi:thermometer"
+              operator: <=
+              value: 27
+            - color: "#FE9393"
+              icon: "mdi:thermometer-alert"
+              operator: ">"
+              value: 27
+    - template: nest_button
+      type: "custom:decluttering-card"
+      variables:
+        - show_name: true
+        - show_last_changed: false
+        - name: Dormitori
+        - entity: sensor.dormitori_humidity
+        - tap_action:
+            action: more-info
+        - state:
+            - color: "#93BCFE"
+              icon: "mdi:water-percent"
+              operator: "<="
+              value: 75
+            - color: "#FE9393"
+              icon: "mdi:water-percent"
+              operator: ">"
+              value: 75
+    - template: nest_button
+      type: "custom:decluttering-card"
+      variables:
+        - show_name: true
+        - show_last_changed: false
+        - name: Menjador
+        - entity: sensor.menjador_temperature
+        - tap_action:
+            action: more-info
+        - state:
+            - color: "#FEBF93"
+              icon: "mdi:thermometer"
+              operator: <=
+              value: 27
+            - color: "#FE9393"
+              icon: "mdi:thermometer-alert"
+              operator: ">"
+              value: 27
+    - template: nest_button
+      type: "custom:decluttering-card"
+      variables:
+        - show_name: true
+        - show_last_changed: false
+        - name: Menjador
+        - entity: sensor.menjador_humidity
+        - tap_action:
+            action: more-info
+        - state:
+            - color: "#93BCFE"
+              icon: "mdi:water-percent"
+              operator: "<="
+              value: 75
+            - color: "#FE9393"
+              icon: "mdi:water-percent"
+              operator: ">"
+              value: 75
+    - template: nest_button
+      type: "custom:decluttering-card"
+      variables:
+        - show_name: true
+        - show_last_changed: false
+        - name: Exterior
+        - entity: sensor.exterior_temperature_2
+        - tap_action:
+            action: more-info
+        - state:
+            - color: "#FEBF93"
+              icon: "mdi:thermometer"
+              operator: <=
+              value: 27
+            - color: "#FE9393"
+              icon: "mdi:thermometer-alert"
+              operator: ">"
+              value: 27
+    - template: nest_button
+      type: "custom:decluttering-card"
+      variables:
+        - show_name: true
+        - show_last_changed: false
+        - name: Exterior
+        - entity: sensor.exterior_humidity_2
+        - tap_action:
+            action: more-info
+        - state:
+            - color: "#93BCFE"
+              icon: "mdi:water-percent"
+              operator: "<="
+              value: 75
+            - color: "#FE9393"
+              icon: "mdi:water-percent"
+              operator: ">"
+              value: 75
+
+
+- type: horizontal-stack
+  cards:
+    - template: nest_button
+      type: "custom:decluttering-card"
+      variables:
+        - show_name: true
+        - show_last_changed: false
+        - name: Vall Hebron
+        - entity: sensor.waqi_barcelona_parc_vall_d_hebron_catalunya_spain
+        - tap_action:
+            action: more-info
+        - state:
+            - color: "#B2FE93"
+              icon: "mdi:leaf"
+              operator: <
+              value: 50
+            - color: "#EEFE93"
+              icon: "mdi:leaf"
+              operator: "<"
+              value: 100
+            - color: "#FECC93"
+              icon: "mdi:leaf"
+              operator: ">="
+              value: 100
+    - template: nest_button
+      type: "custom:decluttering-card"
+      variables:
+        - show_name: true
+        - show_last_changed: false
+        - name: Poble Nou
+        - entity: sensor.waqi_barcelona_poblenou_catalunya_spain
+        - tap_action:
+            action: more-info
+        - state:
+            - color: "#B2FE93"
+              icon: "mdi:leaf"
+              operator: <
+              value: 50
+            - color: "#EEFE93"
+              icon: "mdi:leaf"
+              operator: "<"
+              value: 100
+            - color: "#FECC93"
+              icon: "mdi:leaf"
+              operator: ">="
+              value: 100
+    - template: nest_button
+      type: "custom:decluttering-card"
+      variables:
+        - show_name: true
+        - show_last_changed: false
+        - name: Eixample
+        - entity: sensor.waqi_barcelona_eixample_catalunya_spain
+        - tap_action:
+            action: more-info
+        - state:
+            - color: "#B2FE93"
+              icon: "mdi:leaf"
+              operator: <
+              value: 50
+            - color: "#EEFE93"
+              icon: "mdi:leaf"
+              operator: "<"
+              value: 100
+            - color: "#FECC93"
+              icon: "mdi:leaf"
+              operator: ">="
+              value: 100

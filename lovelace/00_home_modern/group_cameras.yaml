@@ -1,5 +1,14 @@
-- camera_image: camera.escala
-  entities:
-    - camera.escala
-  title: Entrada
-  type: picture-glance
+- template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_last_changed: false
+    - show_state: false
+    - name: Replà
+    - entity: camera.escala
+    - tap_action:
+        action: more-info
+    - state:
+        - color: "#BAC0C6"
+          icon: "mdi:camera"
+          operator: default

@@ -28,8 +28,8 @@ exterior:
   view: true
   entities:
     - camera.raspberry_pi_camera
-    - sensor.exterior_humidity
-    - sensor.exterior_temperature
+    - sensor.exterior_humidity_2
+    - sensor.exterior_temperature_2
 
 entrada:
   name: Entrada

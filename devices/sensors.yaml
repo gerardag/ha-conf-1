@@ -1,17 +1,18 @@
 - platform: yr
-- platform: mqtt
-  name: Exterior Temperature
-  state_topic: "ble/exterior/temperature"
-  unit_of_measurement: "°C"
-- platform: mqtt
-  name: Exterior Humidity
-  state_topic: "ble/exterior/humidity"
-  unit_of_measurement: "%"
+# - platform: mqtt
+#   name: Exterior Temperature
+#   state_topic: "ble/exterior/temperature"
+#   unit_of_measurement: "°C"
+# - platform: mqtt
+#   name: Exterior Humidity
+#   state_topic: "ble/exterior/humidity"
+#   unit_of_measurement: "%"
 - platform: mitemp_bt
   mac: !secret mac_temp_mi_dormitori
   monitored_conditions:
     - temperature
     - humidity
+  scan_interval: 60
   median: 1
   name: Dormitori
 - platform: mitemp_bt
@@ -19,8 +20,13 @@
   monitored_conditions:
     - temperature
     - humidity
+  scan_interval: 60
   median: 1
   name: Menjador
+- platform: beewi_smartclim
+  mac: !secret mac_temp_beewi_exterior
+  name: Exterior
+  scan_interval: 60
 - platform: github
   access_token: !secret github_access_token
   repositories:
@@ -74,3 +80,13 @@
     - 'time_date'
     - 'time_utc'
     - 'beat'
+- platform: tmb
+  app_id: 5c16345e
+  app_key: 9d234e1b963e90908b9b09b093d2c475
+  stops:
+    - line: V25
+      stop: 1051
+      name: Casa
+    - line: V25
+      stop: 3258
+      name: Feina

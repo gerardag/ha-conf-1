@@ -24,10 +24,10 @@
     - show_name: true
     - show_state: false
     - show_last_changed: false
-    - name: Càmeres
+    - name: Seguretat
     - entity: input_text.selected_category
     - state:
-        - color: "#BEE7FF"
+        - color: "#C5E4B3"
           icon: "mdi:camera-outline"
           operator: default
     - tap_action:
@@ -84,7 +84,7 @@
     - name: Activitat
     - entity: input_text.selected_category
     - state:
-        - color: "#BEFFC0"
+        - color: "#BEE7FF"
           icon: "mdi:walk"
           operator: default
     - tap_action:

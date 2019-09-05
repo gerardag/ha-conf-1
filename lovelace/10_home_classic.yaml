@@ -70,7 +70,7 @@ cards:
             name: Menjador
             type: 'custom:mini-graph-card'
           - entities:
-              - sensor.exterior_temperature
+              - sensor.exterior_temperature_2
             icon: 'mdi:thermometer'
             line_color: orange
             line_width: 0
@@ -93,7 +93,7 @@ cards:
             name: Menjador
             type: 'custom:mini-graph-card'
           - entities:
-              - sensor.exterior_humidity
+              - sensor.exterior_humidity_2
             icon: 'mdi:water'
             line_color: '#00C6C5'
             line_width: 0

@@ -68,7 +68,7 @@ cards:
                       - entity: input_text.selected_category
                         state: temperatures
                     card:
-                      type: horizontal-stack
+                      type: vertical-stack
                       cards: !include 00_home_modern/group_temperatures.yaml
                   - type: conditional
                     conditions:
