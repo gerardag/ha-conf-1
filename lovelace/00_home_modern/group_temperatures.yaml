@@ -122,7 +122,7 @@
         - tap_action:
             action: more-info
         - state:
-            - color: "#B2FE93"
+            - color: "#C5E4B3"
               icon: "mdi:leaf"
               operator: <
               value: 50
@@ -144,7 +144,7 @@
         - tap_action:
             action: more-info
         - state:
-            - color: "#B2FE93"
+            - color: "#C5E4B3"
               icon: "mdi:leaf"
               operator: <
               value: 50
@@ -166,7 +166,7 @@
         - tap_action:
             action: more-info
         - state:
-            - color: "#B2FE93"
+            - color: "#C5E4B3"
               icon: "mdi:leaf"
               operator: <
               value: 50

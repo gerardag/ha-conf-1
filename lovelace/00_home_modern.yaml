@@ -59,10 +59,10 @@ cards:
                   - type: conditional
                     conditions:
                       - entity: input_text.selected_category
-                        state: temps
+                        state: activity
                     card:
                       type: horizontal-stack
-                      cards: !include 00_home_modern/group_geotime.yaml
+                      cards: !include 00_home_modern/group_activity.yaml
                   - type: conditional
                     conditions:
                       - entity: input_text.selected_category

@@ -10,5 +10,5 @@
         action: more-info
     - state:
         - color: "#BAC0C6"
-          icon: "mdi:camera"
+          icon: "mdi:camera-outline"
           operator: default

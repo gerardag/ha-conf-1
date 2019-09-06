@@ -23,10 +23,10 @@
 - template: nest_button
   type: "custom:decluttering-card"
   variables:
-    - show_name: false
+    - show_name: true
     - show_last_changed: false
     - name: V25 Casa
-    - entity: sensor.v25_v25_1051_1051
+    - entity: sensor.v25_1051
     - state:
         - color: "#BAC0C6"
           icon: "mdi:bus-stop"
@@ -34,10 +34,10 @@
 - template: nest_button
   type: "custom:decluttering-card"
   variables:
-    - show_name: false
+    - show_name: true
     - show_last_changed: false
     - name: V25 Feina
-    - entity: sensor.v25_v25_3258_3258
+    - entity: sensor.v25_3258
     - state:
         - color: "#BAC0C6"
           icon: "mdi:bus-stop"
@@ -50,11 +50,11 @@
     - name: Cotxe
     - entity: sensor.google_travel_time_driving
     - state:
-        - color: "#B2FE93"
+        - color: "#C5E4B3"
           icon: "mdi:car"
           operator: <
           value: 25
-        - color: "#EEFE93"
+        - color: "#EBE562"
           icon: "mdi:car"
           operator: "<"
           value: 30
@@ -69,11 +69,11 @@
     - name: Cotxe
     - entity: sensor.google_travel_time_transit
     - state:
-        - color: "#B2FE93"
+        - color: "#C5E4B3"
           icon: "mdi:bus-side"
           operator: <
           value: 35
-        - color: "#EEFE93"
+        - color: "#EBE562"
           icon: "mdi:bus-side"
           operator: "<"
           value: 40

@@ -13,8 +13,6 @@ homeassistant:
 
 logger:
   default: info
-  logs:
-    custom_components.beewi_smartclim.sensor: debug
 
 config:
 
@@ -24,12 +22,12 @@ frontend:
   themes: !include_dir_merge_named themes
 
 http:
-  base_url: casa.aleix.cloud
+  base_url: aleix.casa
 
 history:
 
 recorder:
-  purge_keep_days: 7
+  purge_keep_days: 1
   purge_interval: 1
 
 logbook:

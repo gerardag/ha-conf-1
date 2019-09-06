@@ -28,7 +28,7 @@
     - entity: input_text.selected_category
     - state:
         - color: "#C5E4B3"
-          icon: "mdi:camera-outline"
+          icon: "mdi:shield-home"
           operator: default
     - tap_action:
         action: call-service
@@ -92,4 +92,4 @@
         service: input_text.set_value
         service_data:
           entity_id: input_text.selected_category
-          value: temps
+          value: activity
