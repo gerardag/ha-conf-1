@@ -10,14 +10,22 @@
         - tap_action:
             action: more-info
         - state:
-            - color: "#FEBF93"
+            - color: "#C993FE"
+              icon: "mdi:thermometer-low"
+              operator: "<"
+              value: 15
+            - color: "#93BCFE"
               icon: "mdi:thermometer"
-              operator: <=
-              value: 27
+              operator: "<"
+              value: 25
+            - color: "#FEBF93"
+              icon: "mdi:thermometer-high"
+              operator: "<"
+              value: 30
             - color: "#FE9393"
               icon: "mdi:thermometer-alert"
-              operator: ">"
-              value: 27
+              operator: ">="
+              value: 30
     - template: nest_button
       type: "custom:decluttering-card"
       variables:
@@ -46,14 +54,22 @@
         - tap_action:
             action: more-info
         - state:
-            - color: "#FEBF93"
+            - color: "#C993FE"
+              icon: "mdi:thermometer-low"
+              operator: "<"
+              value: 15
+            - color: "#93BCFE"
               icon: "mdi:thermometer"
-              operator: <=
-              value: 27
+              operator: "<"
+              value: 25
+            - color: "#FEBF93"
+              icon: "mdi:thermometer-high"
+              operator: "<"
+              value: 30
             - color: "#FE9393"
               icon: "mdi:thermometer-alert"
-              operator: ">"
-              value: 27
+              operator: ">="
+              value: 30
     - template: nest_button
       type: "custom:decluttering-card"
       variables:
@@ -82,14 +98,22 @@
         - tap_action:
             action: more-info
         - state:
-            - color: "#FEBF93"
+            - color: "#C993FE"
+              icon: "mdi:thermometer-low"
+              operator: "<"
+              value: 15
+            - color: "#93BCFE"
               icon: "mdi:thermometer"
-              operator: <=
-              value: 27
+              operator: "<"
+              value: 25
+            - color: "#FEBF93"
+              icon: "mdi:thermometer-high"
+              operator: "<"
+              value: 30
             - color: "#FE9393"
               icon: "mdi:thermometer-alert"
-              operator: ">"
-              value: 27
+              operator: ">="
+              value: 30
     - template: nest_button
       type: "custom:decluttering-card"
       variables:
