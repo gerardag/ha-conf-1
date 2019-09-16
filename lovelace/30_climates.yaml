@@ -18,11 +18,11 @@ cards:
         name: Menjador
       - entity: switch.calefaccio_dormitori
         name: Dormitori
-      - entity: sensor.menjador_temperature
+      - entity: sensor.menjador_temperature_mqtt
         name: Menjador
-      - entity: sensor.dormitori_temperature
+      - entity: sensor.dormitori_temperature_mqtt
         name: Dormitori
-      - entity: sensor.exterior_temperature_2
+      - entity: sensor.exterior_temperature_mqtt_2
         name: Exterior
     title: Temperatures
     type: history-graph

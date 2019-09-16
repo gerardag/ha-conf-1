@@ -5,8 +5,6 @@ title: test
 background: var(--background-image)
 badges: []
 cards:
-  - main_config: true
-    type: 'custom:compact-custom-header'
   - cards:
       - entities:
           - entity: light.mesa
@@ -56,21 +54,21 @@ cards:
         type: 'custom:mini-media-player'
       - cards:
           - entities:
-              - sensor.dormitori_temperature
+              - sensor.dormitori_temperature_mqtt
             icon: 'mdi:thermometer'
             line_color: orange
             line_width: 0
             name: Dormitori
             type: 'custom:mini-graph-card'
           - entities:
-              - sensor.menjador_temperature
+              - sensor.menjador_temperature_mqtt
             icon: 'mdi:thermometer'
             line_color: orange
             line_width: 0
             name: Menjador
             type: 'custom:mini-graph-card'
           - entities:
-              - sensor.exterior_temperature_2
+              - sensor.exterior_temperature_mqtt
             icon: 'mdi:thermometer'
             line_color: orange
             line_width: 0
@@ -79,21 +77,21 @@ cards:
         type: horizontal-stack
       - cards:
           - entities:
-              - sensor.dormitori_humidity
+              - sensor.dormitori_humidity_mqtt
             icon: 'mdi:water'
             line_color: '#00C6C5'
             line_width: 0
             name: Dormitori
             type: 'custom:mini-graph-card'
           - entities:
-              - sensor.menjador_humidity
+              - sensor.menjador_humidity_mqtt
             icon: 'mdi:water'
             line_color: '#00C6C5'
             line_width: 0
             name: Menjador
             type: 'custom:mini-graph-card'
           - entities:
-              - sensor.exterior_humidity_2
+              - sensor.exterior_humidity_mqtt
             icon: 'mdi:water'
             line_color: '#00C6C5'
             line_width: 0

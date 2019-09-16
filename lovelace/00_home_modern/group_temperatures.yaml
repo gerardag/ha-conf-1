@@ -6,7 +6,7 @@
         - show_name: true
         - show_last_changed: false
         - name: Dormitori
-        - entity: sensor.dormitori_temperature
+        - entity: sensor.dormitori_temperature_mqtt
         - tap_action:
             action: more-info
         - state:
@@ -32,7 +32,7 @@
         - show_name: true
         - show_last_changed: false
         - name: Dormitori
-        - entity: sensor.dormitori_humidity
+        - entity: sensor.dormitori_humidity_mqtt
         - tap_action:
             action: more-info
         - state:
@@ -50,7 +50,7 @@
         - show_name: true
         - show_last_changed: false
         - name: Menjador
-        - entity: sensor.menjador_temperature
+        - entity: sensor.menjador_temperature_mqtt
         - tap_action:
             action: more-info
         - state:
@@ -76,7 +76,7 @@
         - show_name: true
         - show_last_changed: false
         - name: Menjador
-        - entity: sensor.menjador_humidity
+        - entity: sensor.menjador_humidity_mqtt
         - tap_action:
             action: more-info
         - state:
@@ -94,7 +94,7 @@
         - show_name: true
         - show_last_changed: false
         - name: Exterior
-        - entity: sensor.exterior_temperature_2
+        - entity: sensor.exterior_temperature_mqtt
         - tap_action:
             action: more-info
         - state:
@@ -120,7 +120,7 @@
         - show_name: true
         - show_last_changed: false
         - name: Exterior
-        - entity: sensor.exterior_humidity_2
+        - entity: sensor.exterior_humidity_mqtt
         - tap_action:
             action: more-info
         - state:
