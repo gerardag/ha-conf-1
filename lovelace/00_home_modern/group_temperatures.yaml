@@ -26,6 +26,9 @@
               icon: "mdi:thermometer-alert"
               operator: ">="
               value: 30
+            - color: "#BAC0C6"
+              icon: "mdi:thermometer"
+              operator: default
     - template: nest_button
       type: "custom:decluttering-card"
       variables:
@@ -44,6 +47,9 @@
               icon: "mdi:water-percent"
               operator: ">"
               value: 75
+            - color: "#BAC0C6"
+              icon: "mdi:water-percent"
+              operator: default
     - template: nest_button
       type: "custom:decluttering-card"
       variables:
@@ -70,6 +76,9 @@
               icon: "mdi:thermometer-alert"
               operator: ">="
               value: 30
+            - color: "#BAC0C6"
+              icon: "mdi:thermometer"
+              operator: default
     - template: nest_button
       type: "custom:decluttering-card"
       variables:
@@ -88,6 +97,9 @@
               icon: "mdi:water-percent"
               operator: ">"
               value: 75
+            - color: "#BAC0C6"
+              icon: "mdi:water-percent"
+              operator: default
     - template: nest_button
       type: "custom:decluttering-card"
       variables:
@@ -114,6 +126,9 @@
               icon: "mdi:thermometer-alert"
               operator: ">="
               value: 30
+            - color: "#BAC0C6"
+              icon: "mdi:thermometer"
+              operator: default
     - template: nest_button
       type: "custom:decluttering-card"
       variables:
@@ -132,10 +147,45 @@
               icon: "mdi:water-percent"
               operator: ">"
               value: 75
-
-
+            - color: "#BAC0C6"
+              icon: "mdi:water-percent"
+              operator: default
 - type: horizontal-stack
   cards:
+    - template: nest_button
+      type: "custom:decluttering-card"
+      variables:
+        - show_name: true
+        - show_last_changed: false
+        - name: Menjador
+        - entity: climate.menjador
+        - tap_action:
+            action: more-info
+        - state:
+            - color: "#BAC0C6"
+              icon: "mdi:radiator-off"
+              operator: "=="
+              value: "off"
+            - color: "#FEBF93"
+              icon: "mdi:radiator"
+              operator: default
+    - template: nest_button
+      type: "custom:decluttering-card"
+      variables:
+        - show_name: true
+        - show_last_changed: false
+        - name: Dormitori
+        - entity: climate.dormitori
+        - tap_action:
+            action: more-info
+        - state:
+            - color: "#BAC0C6"
+              icon: "mdi:radiator-off"
+              operator: "=="
+              value: "off"
+            - color: "#FEBF93"
+              icon: "mdi:radiator"
+              operator: default
     - template: nest_button
       type: "custom:decluttering-card"
       variables:
@@ -156,8 +206,7 @@
               value: 100
             - color: "#FECC93"
               icon: "mdi:leaf"
-              operator: ">="
-              value: 100
+              operator: default
     - template: nest_button
       type: "custom:decluttering-card"
       variables:
@@ -178,8 +227,7 @@
               value: 100
             - color: "#FECC93"
               icon: "mdi:leaf"
-              operator: ">="
-              value: 100
+              operator: default
     - template: nest_button
       type: "custom:decluttering-card"
       variables:

@@ -129,15 +129,34 @@ cards:
                     card:
                       type: conditional
                       conditions:
-                        - entity: media_player.spotify
-                          state_not: idle
+                        - entity: media_player.cuarto_de_estar
+                          state_not: "off"
                       card:
                         type: 'custom:mini-media-player'
-                        entity: media_player.spotify
+                        entity: media_player.cuarto_de_estar
                         artwork: none
                         hide:
                           power_state: false
                           source: true
                           volume: true
-                        icon: 'mdi:spotify'
-                        name: Spotify Aleix
+                        icon: 'mdi:google-home'
+                        name: Google Home
+                  - type: conditional
+                    conditions:
+                      - entity: input_text.selected_category
+                        state: none
+                    card:
+                      type: conditional
+                      conditions:
+                        - entity: media_player.tele
+                          state_not: "off"
+                      card:
+                        type: 'custom:mini-media-player'
+                        entity: media_player.tele
+                        artwork: none
+                        hide:
+                          power_state: false
+                          source: true
+                          volume: true
+                        icon: 'mdi:television-classic'
+                        name: Tele menjador

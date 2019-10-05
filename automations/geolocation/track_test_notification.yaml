@@ -1,5 +1,5 @@
 alias: "Track test notification"
-initial_state: true
+initial_state: false
 trigger:
   - platform: zone
     entity_id: device_tracker.aleix_mobil

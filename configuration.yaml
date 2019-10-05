@@ -14,14 +14,8 @@ homeassistant:
 logger:
   default: info
   logs:
-    beewi_smartclim: debug
     homeassistant.components.mitemp_bt.sensor: debug
-    mitemp_bt.mitemp_bt_poller: debug
-    homeassistant.loader: debug
-    homeassistant.components.sensor: debug
-    homeassistant.util.package: debug
-    custom_components: debug
-    custom_components.beewi_smartclim: debug
+    homeassistant.components.beewi_smartclim.sensor: debug
 
 config:
 

@@ -8,8 +8,6 @@ badges:
   - sensor.tradfri_motion_sensor
   - sun.sun
 cards:
-  - main_config: true
-    type: 'custom:compact-custom-header'
   - artwork: cover
     entity: media_player.spotify
     hide:

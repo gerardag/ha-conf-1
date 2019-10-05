@@ -5,6 +5,8 @@
     - show_last_changed: false
     - name: Casa
     - entity: sensor.time_at_home
+    - tap_action:
+        action: more-info
     - state:
         - color: "#BAC0C6"
           icon: "mdi:home"
@@ -16,6 +18,8 @@
     - show_last_changed: false
     - name: Feina
     - entity: sensor.time_at_work
+    - tap_action:
+        action: more-info
     - state:
         - color: "#BAC0C6"
           icon: "mdi:briefcase"
@@ -27,6 +31,8 @@
     - show_last_changed: false
     - name: V25 Casa
     - entity: sensor.v25_1051
+    - tap_action:
+        action: more-info
     - state:
         - color: "#BAC0C6"
           icon: "mdi:bus-stop"
@@ -38,6 +44,8 @@
     - show_last_changed: false
     - name: V25 Feina
     - entity: sensor.v25_3258
+    - tap_action:
+        action: more-info
     - state:
         - color: "#BAC0C6"
           icon: "mdi:bus-stop"
@@ -49,6 +57,8 @@
     - show_last_changed: false
     - name: Cotxe
     - entity: sensor.google_travel_time_driving
+    - tap_action:
+        action: more-info
     - state:
         - color: "#C5E4B3"
           icon: "mdi:car"
@@ -68,6 +78,8 @@
     - show_last_changed: false
     - name: Cotxe
     - entity: sensor.google_travel_time_transit
+    - tap_action:
+        action: more-info
     - state:
         - color: "#C5E4B3"
           icon: "mdi:bus-side"

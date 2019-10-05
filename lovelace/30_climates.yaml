@@ -3,8 +3,6 @@ title: Termostats
 background: var(--background-image)
 badges: []
 cards:
-  - main_config: true
-    type: 'custom:compact-custom-header'
   - cards:
       - entity: climate.menjador
         name: Menjador
@@ -22,7 +20,7 @@ cards:
         name: Menjador
       - entity: sensor.dormitori_temperature_mqtt
         name: Dormitori
-      - entity: sensor.exterior_temperature_mqtt_2
+      - entity: sensor.exterior_temperature_mqtt
         name: Exterior
     title: Temperatures
     type: history-graph

@@ -5,8 +5,6 @@ title: automations
 background: var(--background-image)
 badges: []
 cards:
-  - main_config: true
-    type: 'custom:compact-custom-header'
   - cards:
       - entities:
           - entity: automation.06_00_turn_on_heater_bedroom_livingroom

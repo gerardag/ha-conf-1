@@ -43,26 +43,26 @@
             - color: "rgb(251, 210, 41)"
               icon: "mdi:lightbulb"
               value: "on"
+    # - template: nest_button
+    #   type: "custom:decluttering-card"
+    #   variables:
+    #     - show_name: true
+    #     - show_state: false
+    #     - name: Ventilador
+    #     - entity: switch.ventilador
+    #     - state:
+    #         - color: "#BAC0C6"
+    #           icon: "mdi:fan-off"
+    #           value: "off"
+    #         - color: "rgb(251, 210, 41)"
+    #           icon: "mdi:fan"
+    #           value: "on"
     - template: nest_button
       type: "custom:decluttering-card"
       variables:
         - show_name: true
         - show_state: false
-        - name: Ventilador
-        - entity: switch.ventilador
-        - state:
-            - color: "#BAC0C6"
-              icon: "mdi:fan-off"
-              value: "off"
-            - color: "rgb(251, 210, 41)"
-              icon: "mdi:fan"
-              value: "on"
-    - template: nest_button
-      type: "custom:decluttering-card"
-      variables:
-        - show_name: true
-        - show_state: false
-        - name: Tele
+        - name: Tele men.
         - entity: media_player.tele
         - state:
             - color: "#BAC0C6"
@@ -92,7 +92,7 @@
       variables:
         - show_name: true
         - show_state: false
-        - name: Tele
+        - name: Tele dorm.
         - entity: media_player.el_lado_oscuro
         - state:
             - color: "#BAC0C6"

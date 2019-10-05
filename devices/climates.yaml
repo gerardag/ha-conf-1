@@ -1,7 +1,7 @@
 - platform: generic_thermostat
   name: Menjador
   heater: switch.calefaccio
-  target_sensor: sensor.menjador_temperature
+  target_sensor: sensor.menjador_temperature_mqtt
   min_temp: 7
   max_temp: 25
   ac_mode: false
@@ -18,7 +18,7 @@
 - platform: generic_thermostat
   name: Dormitori
   heater: switch.calefaccio_dormitori
-  target_sensor: sensor.dormitori_temperature
+  target_sensor: sensor.dormitori_temperature_mqtt
   min_temp: 7
   max_temp: 25
   ac_mode: false
