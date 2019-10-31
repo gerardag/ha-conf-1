@@ -1,94 +1,253 @@
-- template: nest_button
-  type: "custom:decluttering-card"
-  variables:
-    - show_name: true
-    - show_last_changed: false
-    - name: Casa
-    - entity: sensor.time_at_home
-    - tap_action:
-        action: more-info
-    - state:
-        - color: "#BAC0C6"
-          icon: "mdi:home"
-          operator: default
-- template: nest_button
-  type: "custom:decluttering-card"
-  variables:
-    - show_name: true
-    - show_last_changed: false
-    - name: Feina
-    - entity: sensor.time_at_work
-    - tap_action:
-        action: more-info
-    - state:
-        - color: "#BAC0C6"
-          icon: "mdi:briefcase"
-          operator: default
-- template: nest_button
-  type: "custom:decluttering-card"
-  variables:
-    - show_name: true
-    - show_last_changed: false
-    - name: V25 Casa
-    - entity: sensor.v25_1051
-    - tap_action:
-        action: more-info
-    - state:
-        - color: "#BAC0C6"
-          icon: "mdi:bus-stop"
-          operator: default
-- template: nest_button
-  type: "custom:decluttering-card"
-  variables:
-    - show_name: true
-    - show_last_changed: false
-    - name: V25 Feina
-    - entity: sensor.v25_3258
-    - tap_action:
-        action: more-info
-    - state:
-        - color: "#BAC0C6"
-          icon: "mdi:bus-stop"
-          operator: default
-- template: nest_button
-  type: "custom:decluttering-card"
-  variables:
-    - show_name: false
-    - show_last_changed: false
-    - name: Cotxe
-    - entity: sensor.google_travel_time_driving
-    - tap_action:
-        action: more-info
-    - state:
-        - color: "#C5E4B3"
-          icon: "mdi:car"
-          operator: <
-          value: 25
-        - color: "#EBE562"
-          icon: "mdi:car"
-          operator: "<"
-          value: 30
-        - color: "#FECC93"
-          icon: "mdi:car"
-          operator: default
-- template: nest_button
-  type: "custom:decluttering-card"
-  variables:
-    - show_name: false
-    - show_last_changed: false
-    - name: Cotxe
-    - entity: sensor.google_travel_time_transit
-    - tap_action:
-        action: more-info
-    - state:
-        - color: "#C5E4B3"
-          icon: "mdi:bus-side"
-          operator: <
-          value: 35
-        - color: "#EBE562"
-          icon: "mdi:bus-side"
-          operator: "<"
-          value: 40
-        - color: "#FECC93"
-          icon: "mdi:bus-side"
-          operator: default
+- type: horizontal-stack
+  cards:
+    - template: nest_button
+      type: "custom:decluttering-card"
+      variables:
+        - show_name: true
+        - show_last_changed: false
+        - name: "C/ Fulton"
+        - entity: sensor.bicing_horta_da3eabed50f10a0ec8ebdc51a3fea6df
+        - tap_action:
+            action: more-info
+        - state:
+            - color: "#C5E4B3"
+              icon: "mdi:bicycle"
+              operator: ">"
+              value: 5
+            - color: "#FDEC9F"
+              icon: "mdi:bicycle"
+              operator: ">"
+              value: 0
+            - color: "#FECC93"
+              icon: "mdi:bicycle"
+              operator: default
+    - template: nest_button
+      type: "custom:decluttering-card"
+      variables:
+        - show_name: true
+        - show_last_changed: false
+        - name: "C/ Granollers"
+        - entity: sensor.bicing_horta_47af314f73b4b5b03d6fc0789257b443
+        - tap_action:
+            action: more-info
+        - state:
+            - color: "#C5E4B3"
+              icon: "mdi:bicycle"
+              operator: ">"
+              value: 5
+            - color: "#FDEC9F"
+              icon: "mdi:bicycle"
+              operator: ">"
+              value: 0
+            - color: "#FECC93"
+              icon: "mdi:bicycle"
+              operator: default
+    - template: nest_button
+      type: "custom:decluttering-card"
+      variables:
+        - show_name: true
+        - show_last_changed: false
+        - name: Vall Hebron
+        - entity: sensor.waqi_barcelona_parc_vall_d_hebron_catalunya_spain
+        - tap_action:
+            action: more-info
+        - state:
+            - color: "#C5E4B3"
+              icon: "mdi:leaf"
+              operator: <
+              value: 50
+            - color: "#FDEC9F"
+              icon: "mdi:leaf"
+              operator: "<"
+              value: 100
+            - color: "#FECC93"
+              icon: "mdi:leaf"
+              operator: default
+    - template: nest_button
+      type: "custom:decluttering-card"
+      variables:
+        - show_name: true
+        - show_last_changed: false
+        - name: V25 Casa
+        - entity: sensor.v25_1051
+        - tap_action:
+            action: more-info
+        - state:
+            - color: "#BAC0C6"
+              icon: "mdi:bus-stop"
+              operator: default
+    - template: nest_button
+      type: "custom:decluttering-card"
+      variables:
+        - show_name: true
+        - show_last_changed: false
+        - name: Cotxe
+        - entity: sensor.home_to_work_car
+        - tap_action:
+            action: more-info
+        - state:
+            - color: "#C5E4B3"
+              icon: "mdi:car"
+              operator: <
+              value: 25
+            - color: "#EBE562"
+              icon: "mdi:car"
+              operator: "<"
+              value: 30
+            - color: "#FECC93"
+              icon: "mdi:car"
+              operator: default
+    - template: nest_button
+      type: "custom:decluttering-card"
+      variables:
+        - show_name: true
+        - show_last_changed: false
+        - name: Bus
+        - entity: sensor.home_to_work_bus
+        - tap_action:
+            action: more-info
+        - state:
+            - color: "#C5E4B3"
+              icon: "mdi:bus-side"
+              operator: <
+              value: 35
+            - color: "#EBE562"
+              icon: "mdi:bus-side"
+              operator: "<"
+              value: 40
+            - color: "#FECC93"
+              icon: "mdi:bus-side"
+              operator: default
+
+
+
+
+
+
+
+
+
+
+
+
+
+- type: horizontal-stack
+  cards:
+    - template: nest_button
+      type: "custom:decluttering-card"
+      variables:
+        - show_name: true
+        - show_last_changed: false
+        - name: "C/ Pallars"
+        - entity: sensor.bicing_feina_fba9e99bbd040d256eea48be1e55f488
+        - tap_action:
+            action: more-info
+        - state:
+            - color: "#C5E4B3"
+              icon: "mdi:bicycle"
+              operator: ">"
+              value: 5
+            - color: "#FDEC9F"
+              icon: "mdi:bicycle"
+              operator: ">"
+              value: 0
+            - color: "#FECC93"
+              icon: "mdi:bicycle"
+              operator: default
+    - template: nest_button
+      type: "custom:decluttering-card"
+      variables:
+        - show_name: true
+        - show_last_changed: false
+        - name: "C/ Llacuna"
+        - entity: sensor.bicing_feina_0d18aea21093f707b08ac0e03177434c
+        - tap_action:
+            action: more-info
+        - state:
+            - color: "#C5E4B3"
+              icon: "mdi:bicycle"
+              operator: ">"
+              value: 5
+            - color: "#FDEC9F"
+              icon: "mdi:bicycle"
+              operator: ">"
+              value: 0
+            - color: "#FECC93"
+              icon: "mdi:bicycle"
+              operator: default
+    - template: nest_button
+      type: "custom:decluttering-card"
+      variables:
+        - show_name: true
+        - show_last_changed: false
+        - name: Poble Nou
+        - entity: sensor.waqi_barcelona_poblenou_catalunya_spain
+        - tap_action:
+            action: more-info
+        - state:
+            - color: "#C5E4B3"
+              icon: "mdi:leaf"
+              operator: <
+              value: 50
+            - color: "#FDEC9F"
+              icon: "mdi:leaf"
+              operator: "<"
+              value: 100
+            - color: "#FECC93"
+              icon: "mdi:leaf"
+              operator: default
+    - template: nest_button
+      type: "custom:decluttering-card"
+      variables:
+        - show_name: true
+        - show_last_changed: false
+        - name: V25 Feina
+        - entity: sensor.v25_3258
+        - tap_action:
+            action: more-info
+        - state:
+            - color: "#BAC0C6"
+              icon: "mdi:bus-stop"
+              operator: default
+    - template: nest_button
+      type: "custom:decluttering-card"
+      variables:
+        - show_name: true
+        - show_last_changed: false
+        - name: Cotxe
+        - entity: sensor.work_to_home_car
+        - tap_action:
+            action: more-info
+        - state:
+            - color: "#C5E4B3"
+              icon: "mdi:car"
+              operator: <
+              value: 25
+            - color: "#EBE562"
+              icon: "mdi:car"
+              operator: "<"
+              value: 30
+            - color: "#FECC93"
+              icon: "mdi:car"
+              operator: default
+    - template: nest_button
+      type: "custom:decluttering-card"
+      variables:
+        - show_name: true
+        - show_last_changed: false
+        - name: Bus
+        - entity: sensor.work_to_home_bus
+        - tap_action:
+            action: more-info
+        - state:
+            - color: "#C5E4B3"
+              icon: "mdi:bus-side"
+              operator: <
+              value: 35
+            - color: "#EBE562"
+              icon: "mdi:bus-side"
+              operator: "<"
+              value: 40
+            - color: "#FECC93"
+              icon: "mdi:bus-side"
+              operator: default

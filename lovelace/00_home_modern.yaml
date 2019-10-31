@@ -61,7 +61,7 @@ cards:
                       - entity: input_text.selected_category
                         state: activity
                     card:
-                      type: horizontal-stack
+                      type: vertical-stack
                       cards: !include 00_home_modern/group_activity.yaml
                   - type: conditional
                     conditions:
@@ -77,6 +77,11 @@ cards:
                     card:
                       type: horizontal-stack
                       cards: !include 00_home_modern/group_scenes.yaml
+
+
+
+
+                      
                   - type: conditional
                     conditions:
                       - entity: input_text.selected_category

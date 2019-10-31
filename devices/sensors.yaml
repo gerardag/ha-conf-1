@@ -56,6 +56,7 @@
   locations:
     - barcelona
 - platform: google_travel_time
+  name: "Home to Work car"
   scan_interval: 3600
   api_key: !secret google_api_key
   origin: !secret home_address
@@ -63,10 +64,28 @@
   options:
     mode: driving
 - platform: google_travel_time
+  name: "Home to Work bus"
   scan_interval: 3600
   api_key: !secret google_api_key
   origin: !secret home_address
   destination: !secret work_address
+  options:
+    mode: transit
+    transit_mode: bus
+- platform: google_travel_time
+  name: "Work to home car"
+  scan_interval: 3600
+  api_key: !secret google_api_key
+  destination: !secret home_address
+  origin: !secret work_address
+  options:
+    mode: driving
+- platform: google_travel_time
+  name: "Work to home bus"
+  scan_interval: 3600
+  api_key: !secret google_api_key
+  destination: !secret home_address
+  origin: !secret work_address
   options:
     mode: transit
     transit_mode: bus
@@ -110,3 +129,13 @@
     - line: V25
       stop: 3258
       name: Feina
+- platform: citybikes
+  name: Horta
+  latitude: !secret latitude
+  longitude: !secret longitude
+  radius: 1000
+- platform: citybikes
+  name: Feina
+  latitude: !secret latitude_feina
+  longitude: !secret longitude_feina
+  radius: 500
