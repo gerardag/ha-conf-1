@@ -15,40 +15,11 @@
         - color: "#CC93FE"
           icon: "mdi:weather-sunny"
           value: scening
-- template: nest_button
-  type: "custom:decluttering-card"
-  variables:
-    - show_name: true
-    - show_state: false
-    - show_last_changed: false
-    - tap_action:
-        action: call-service
-        service: scene.turn_on
-        service_data:
-          entity_id: scene.cena
-    - name: Sopar
-    - entity: scene.cena
-    - state:
-        - color: "#CC93FE"
-          icon: "mdi:silverware-fork-knife"
-          value: scening
-- template: nest_button
-  type: "custom:decluttering-card"
-  variables:
-    - show_name: true
-    - show_state: false
-    - show_last_changed: false
-    - tap_action:
-        action: call-service
-        service: scene.turn_on
-        service_data:
-          entity_id: scene.con_amigos
-    - name: Amics
-    - entity: scene.con_amigos
-    - state:
-        - color: "#CC93FE"
-          icon: "mdi:account-group"
-          value: scening
+
+
+
+
+
 - template: nest_button
   type: "custom:decluttering-card"
   variables:
@@ -66,6 +37,32 @@
         - color: "#CC93FE"
           icon: "mdi:chess-knight"
           value: scening
+          
+
+
+
+- template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_state: false
+    - show_last_changed: false
+    - tap_action:
+        action: call-service
+        service: scene.turn_on
+        service_data:
+          entity_id: scene.con_amigos
+    - name: Amics
+    - entity: scene.con_amigos
+    - state:
+        - color: "#CC93FE"
+          icon: "mdi:account-group"
+          value: scening
+
+
+
+
+
 - template: nest_button
   type: "custom:decluttering-card"
   variables:
@@ -83,6 +80,33 @@
         - color: "#CC93FE"
           icon: "mdi:book-open-page-variant"
           value: scening
+
+
+
+
+
+- template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_state: false
+    - show_last_changed: false
+    - tap_action:
+        action: call-service
+        service: scene.turn_on
+        service_data:
+          entity_id: scene.cena
+    - name: Sopar
+    - entity: scene.cena
+    - state:
+        - color: "#CC93FE"
+          icon: "mdi:silverware-fork-knife"
+          value: scening
+
+
+
+
+
 - template: nest_button
   type: "custom:decluttering-card"
   variables:

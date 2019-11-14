@@ -184,4 +184,5 @@ title: Casa
 views:
   - !include lovelace/10_home_classic.yaml
   - !include lovelace/00_home_modern.yaml
+  - !include lovelace/00_home_modern_mobile.yaml
   - !include lovelace/30_climates.yaml

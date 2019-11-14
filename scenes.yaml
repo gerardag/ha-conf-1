@@ -3,7 +3,7 @@
     light.detras_de_la_tele:
       state: true
       brightness: 10
-      color_temp: 352
+      color_temp: 454
     light.sofa: false
     light.mesa: false
 - name: Buenos días

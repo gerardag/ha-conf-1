@@ -1,0 +1,14 @@
+alias: 'Set dormitori climate to 19 at night'
+initial_state: true
+trigger:
+  - platform: time
+    at: "23:00:00"
+condition:
+  - condition: state
+    entity_id: climate.dormitori
+    state: 'heat'
+action:
+  - service: climate.set_temperature
+    entity_id: climate.dormitori
+    data:
+      temperature: 18.5

@@ -1,0 +1,146 @@
+- type: "custom:vertical-stack-in-card"
+  cards:
+  - type: markdown
+    content: |
+      # Benvingut a casa,
+    style: |
+      ha-card {
+        margin-top: 30px;
+        margin-left: 10px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 100%;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        text-align: left;
+      }
+      h1 {
+        color: black;
+        font-weight: 300 !important;
+        margin: 0px;
+      }
+  - type: horizontal-stack
+    cards: !include group_categories.yaml
+  - type: conditional
+    conditions:
+      - entity: input_text.selected_category
+        state: menjador
+    card:
+      type: vertical-stack
+      cards: !include group_bulbs.yaml
+  - type: conditional
+    conditions:
+      - entity: input_text.selected_category
+        state: altres
+    card:
+      type: horizontal-stack
+      cards: !include group_cameras.yaml
+  - type: conditional
+    conditions:
+      - entity: input_text.selected_category
+        state: activity
+    card:
+      type: vertical-stack
+      cards: !include group_activity.yaml
+  - type: conditional
+    conditions:
+      - entity: input_text.selected_category
+        state: temperatures
+    card:
+      type: vertical-stack
+      cards: !include group_temperatures.yaml
+  - type: conditional
+    conditions:
+      - entity: input_text.selected_category
+        state: escenes
+    card:
+      type: horizontal-stack
+      cards: !include group_scenes.yaml
+
+
+
+
+      
+  - type: conditional
+    conditions:
+      - entity: input_text.selected_category
+        state_not: none
+    card:
+      type: horizontal-stack
+      cards:
+        - type: "custom:button-card"
+          entity: input_text.selected_category
+          name: Go up
+          show_icon: true
+          show_last_changed: false
+          show_name: false
+          show_state: false
+          state:
+            - color: "#000000"
+              icon: "mdi:chevron-up"
+              operator: default
+          tap_action:
+            action: call-service
+            service: input_text.set_value
+            service_data:
+              entity_id: input_text.selected_category
+              value: none
+          style: |
+            ha-card {
+              font-family: 'Open Sans', sans-serif;
+              padding-top: 15px !important;
+              background-color: rgba(0, 0, 0, 0);
+              -webkit-box-shadow: none;
+              -moz-box-shadow: none;
+              box-shadow: none;
+              padding: 10px !important;
+            }
+            ha-icon {
+              width: 60% !important;
+            }
+            img {
+              width: 100%;
+            }
+            #img-cell {
+              border-radius: 50px;
+              height: 30px !important;
+              width: 30px !important;
+            }
+  - type: conditional
+    conditions:
+      - entity: input_text.selected_category
+        state: none
+    card:
+      type: conditional
+      conditions:
+        - entity: media_player.cuarto_de_estar
+          state_not: "off"
+      card:
+        type: 'custom:mini-media-player'
+        entity: media_player.cuarto_de_estar
+        artwork: none
+        hide:
+          power_state: false
+          source: true
+          volume: true
+        icon: 'mdi:google-home'
+        name: Google Home
+  - type: conditional
+    conditions:
+      - entity: input_text.selected_category
+        state: none
+    card:
+      type: conditional
+      conditions:
+        - entity: media_player.tele
+          state_not: "off"
+      card:
+        type: 'custom:mini-media-player'
+        entity: media_player.tele
+        artwork: none
+        hide:
+          power_state: false
+          source: true
+          volume: true
+        icon: 'mdi:television-classic'
+        name: Tele menjador

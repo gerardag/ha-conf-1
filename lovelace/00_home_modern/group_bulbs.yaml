@@ -57,50 +57,8 @@
     #         - color: "rgb(251, 210, 41)"
     #           icon: "mdi:fan"
     #           value: "on"
-    - template: nest_button
-      type: "custom:decluttering-card"
-      variables:
-        - show_name: true
-        - show_state: false
-        - name: Tele men.
-        - entity: media_player.tele
-        - state:
-            - color: "#BAC0C6"
-              icon: "mdi:television-classic"
-              value: "off"
-            - color: "rgb(251, 210, 41)"
-              icon: "mdi:television-classic"
-              value: playing
-- type: horizontal-stack
-  cards:
-    - template: nest_button
-      type: "custom:decluttering-card"
-      variables:
-        - show_name: true
-        - show_state: false
-        - name: Calefacció
-        - entity: switch.calefaccio_dormitori
-        - state:
-            - color: "#BAC0C6"
-              icon: "mdi:radiator"
-              value: "off"
-            - color: "rgb(251, 210, 41)"
-              icon: "mdi:radiator"
-              value: "on"
-    - template: nest_button
-      type: "custom:decluttering-card"
-      variables:
-        - show_name: true
-        - show_state: false
-        - name: Tele dorm.
-        - entity: media_player.el_lado_oscuro
-        - state:
-            - color: "#BAC0C6"
-              icon: "mdi:television-classic"
-              value: "off"
-            - color: "rgb(251, 210, 41)"
-              icon: "mdi:television-classic"
-              value: playing
+# - type: horizontal-stack
+#   cards:
     - template: nest_button
       type: "custom:decluttering-card"
       variables:
@@ -128,4 +86,18 @@
               value: "off"
             - color: "rgb(251, 210, 41)"
               icon: "mdi:lightbulb"
+              value: "on"
+    - template: nest_button
+      type: "custom:decluttering-card"
+      variables:
+        - show_name: true
+        - show_state: false
+        - name: Xiaomi
+        - entity: light.gateway_light
+        - state:
+            - color: "#BAC0C6"
+              icon: "mdi:hubspot"
+              value: "off"
+            - color: "rgb(251, 210, 41)"
+              icon: "mdi:hubspot"
               value: "on"

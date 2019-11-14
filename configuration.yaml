@@ -27,6 +27,8 @@ frontend:
 http:
   base_url: aleix.casa
 
+prometheus:
+
 history:
 
 recorder:
@@ -123,6 +125,13 @@ speedtestdotnet:
 map:
 
 # Devices
+
+xiaomi_aqara:
+  discovery_retry: 5
+  gateways:
+    - mac: !secret xiaomi_gateway_mac
+      key: !secret xiaomi_gateway_key
+      host: !secret xiaomi_gateway_ip
 
 cast:
   media_player:
