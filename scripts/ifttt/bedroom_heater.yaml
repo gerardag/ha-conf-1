@@ -1,4 +1,4 @@
-'1546170284406':
+'bedroom_heater_turn_on':
   alias: On - Bedroom heater
   sequence:
   - data:
@@ -9,7 +9,7 @@
       topic: wifi/switch/dormitori_calefaccio
       payload: 'on'
       retain: true
-'1547158353178':
+'bedroom_heater_turn_off':
   alias: Off - Bedroom heater
   sequence:
   - data:

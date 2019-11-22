@@ -26,8 +26,15 @@ frontend:
 
 http:
   base_url: aleix.casa
+  # use_x_forwarded_for: true
+  # ip_ban_enabled: true
+  # login_attempts_threshold: 3
 
 prometheus:
+  namespace: hass
+  component_config_glob:
+    sensor.solar_angle:
+      override_metric: sensor_unit_degrees
 
 history:
 

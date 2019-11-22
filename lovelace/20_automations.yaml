@@ -19,10 +19,10 @@ cards:
           - entity: automation.on_kitchen_light
         type: entities
       - entities:
-          - entity: script.1546170284406
-          - entity: script.1546170284407
-          - entity: script.1547158353178
-          - entity: script.1547158353179
+          - entity: script.bedroom_heater_turn_on
+          - entity: script.kitchen_light_turn_on
+          - entity: script.bedroom_heater_turn_off
+          - entity: script.kitchen_light_turn_off
           - entity: script.tv_turn_on_xbox
           - entity: script.tv_turn_on_netflix
           - entity: script.tv_turn_on_dinner

@@ -4,6 +4,9 @@ trigger:
 - payload: 'on'
   platform: mqtt
   topic: wifi/switch/cuina/set
-condition: []
+condition: 
+- condition: state
+  entity_id: light.kitchen_light 
+  state: 'off'
 action:
-- service: script.1546170284407
+- service: script.kitchen_light_turn_on

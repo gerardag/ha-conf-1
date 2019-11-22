@@ -6,4 +6,4 @@ trigger:
   topic: wifi/switch/dormitori_calefaccio/set
 condition: []
 action:
-- service: script.1547158353178
+- service: script.bedroom_heater_turn_off

@@ -139,3 +139,9 @@
   latitude: !secret latitude_feina
   longitude: !secret longitude_feina
   radius: 500
+- platform: template
+  sensors:
+    solar_angle:
+      friendly_name: "Sun Angle"
+      unit_of_measurement: '°'
+      value_template: "{{ '%+.1f'|format(state_attr('sun.sun', 'elevation')) }}"

@@ -1,4 +1,4 @@
-'1546170284407':
+'kitchen_light_turn_on':
   alias: On - Kitchen light
   sequence:
   - data:
@@ -9,7 +9,7 @@
       topic: wifi/switch/cuina
       payload: 'on'
       retain: true
-'1547158353179':
+'kitchen_light_turn_off':
   alias: Off - Kitchen light
   sequence:
   - data:
