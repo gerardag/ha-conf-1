@@ -16,6 +16,7 @@ logger:
   logs:
     homeassistant.components.mitemp_bt.sensor: debug
     homeassistant.components.beewi_smartclim.sensor: debug
+    # xiaomi_gateway: debug
 
 config:
 
@@ -134,10 +135,10 @@ map:
 # Devices
 
 xiaomi_aqara:
-  discovery_retry: 5
+  discovery_retry: 10
   gateways:
-    - mac: !secret xiaomi_gateway_mac
-      key: !secret xiaomi_gateway_key
+    - key: !secret xiaomi_gateway_key
+      mac: !secret xiaomi_gateway_mac
       host: !secret xiaomi_gateway_ip
 
 cast:

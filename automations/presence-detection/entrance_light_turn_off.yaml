@@ -1,0 +1,13 @@
+alias: Entrada - Encendre llum amb moviment
+trigger:
+- entity_id: binary_sensor.motion_entrance 
+  from: 'on'
+  platform: state
+  to: 'off'
+condition: []
+action:
+# - delay: 
+#     minutes: 1
+- service: light.turn_off
+  data:
+    entity_id: light.entrada
