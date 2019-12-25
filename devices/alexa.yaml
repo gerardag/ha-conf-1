@@ -1,0 +1,11 @@
+smart_home:
+  filter:
+    exclude_domains:
+      - automation
+      - script
+      - input_boolean
+      - group
+    exclude_entities:
+      - switch.ventilador
+      - switch.calefaccio_menjador
+      - switch.calefaccio_dormitori

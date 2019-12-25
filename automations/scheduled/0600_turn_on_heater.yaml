@@ -6,7 +6,7 @@ trigger:
 condition: []
 action:
 - data:
-    entity_id: switch.calefaccio
+    entity_id: switch.calefaccio_menjador
   service: switch.turn_on
 - data:
     entity_id: switch.calefaccio_dormitori

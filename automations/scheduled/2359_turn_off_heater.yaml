@@ -1,5 +1,5 @@
 alias: 23:59 - Turn off heater (bedroom)
-initial_state: true
+initial_state: false
 trigger:
 - at: '22:30'
   platform: time

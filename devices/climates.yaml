@@ -1,6 +1,6 @@
 - platform: generic_thermostat
   name: Menjador
-  heater: switch.calefaccio
+  heater: switch.calefaccio_menjador
   target_sensor: sensor.menjador_temperature_mqtt
   min_temp: 7
   max_temp: 25

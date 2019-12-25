@@ -4,9 +4,9 @@ trigger:
 - payload: 'off'
   platform: mqtt
   topic: wifi/switch/dormitori_calefaccio/set
-condition: 
+condition:
 - condition: state
-  entity_id: switch.calefaccio_dormitori 
+  entity_id: switch.calefaccio_dormitori
   state: 'on'
 action:
 - service: script.bedroom_heater_turn_off

@@ -14,9 +14,7 @@ homeassistant:
 logger:
   default: info
   logs:
-    homeassistant.components.mitemp_bt.sensor: debug
-    homeassistant.components.beewi_smartclim.sensor: debug
-    # xiaomi_gateway: debug
+    homeassistant.components.broadlink: debug
 
 config:
 
@@ -27,7 +25,8 @@ frontend:
 
 http:
   base_url: aleix.casa
-  # use_x_forwarded_for: true
+  use_x_forwarded_for: true
+  trusted_proxies: 127.0.0.1
   # ip_ban_enabled: true
   # login_attempts_threshold: 3
 
@@ -38,6 +37,10 @@ prometheus:
       override_metric: sensor_unit_degrees
 
 history:
+  exclude:
+    domains:
+      - automation
+      - scripts
 
 recorder:
   purge_keep_days: 1
@@ -59,12 +62,12 @@ lovelace:
 person:
   - name: Aleix
     id: aleix
-    user_id: 23b5a590030a4d5b907d0f5675e75e3e
+    user_id: b87122c56ad8422db17a948a2e61c407
     device_trackers:
       - device_tracker.aleix_mobil
   - name: Imma
     id: imma
-    user_id: be173f93ffef481eba84dc6359ea6124
+    user_id: 3824b6d26b9e463e9b0627c658bca45b
 
 alarm_control_panel:
   - platform: manual
@@ -98,6 +101,7 @@ notify:
 # Variables
 
 input_text: !include devices/input_text.yaml
+input_select: !include devices/input_select.yaml
 
 # Services
 
@@ -145,6 +149,8 @@ cast:
   media_player:
     - host: !secret ip_chromecast
     - host: !secret ip_google_home
+
+alexa: !include devices/alexa.yaml
 
 light: !include devices/lights.yaml
 switch: !include devices/switches.yaml

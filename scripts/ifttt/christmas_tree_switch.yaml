@@ -1,22 +1,22 @@
-'encimera_turn_on':
-  alias: On - Kitchen light
+'christmas_tree_turn_on':
+  alias: On - Christmas tree
   sequence:
   - data:
-      event: turn_on_encimera
+      event: turn_on_christmas_tree
     service: ifttt.trigger
   - service: mqtt.publish
     data:
-      topic: wifi/switch/cuina
+      topic: wifi/switch/arbre
       payload: 'on'
       retain: true
-'encimera_turn_off':
-  alias: Off - Kitchen light
+'christmas_tree_turn_off':
+  alias: Off - Christmas tree
   sequence:
   - data:
-      event: turn_off_encimera
+      event: turn_off_christmas_tree
     service: ifttt.trigger
   - service: mqtt.publish
     data:
-      topic: wifi/switch/cuina
+      topic: wifi/switch/arbre
       payload: 'off'
       retain: true

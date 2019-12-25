@@ -1,5 +1,5 @@
 - platform: mqtt
-  name: 'Kitchen light'
+  name: 'Encimera'
   command_topic: 'wifi/switch/cuina/set'
   state_topic: 'wifi/switch/cuina'
   brightness_state_topic: 'wifi/switch/cuina/brightness'

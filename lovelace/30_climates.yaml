@@ -12,7 +12,7 @@ cards:
         type: 'custom:simple-thermostat'
     type: vertical-stack
   - entities:
-      - entity: switch.calefaccio
+      - entity: switch.calefaccio_menjador
         name: Menjador
       - entity: switch.calefaccio_dormitori
         name: Dormitori

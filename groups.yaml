@@ -21,7 +21,7 @@ menjador:
     - scene.tele
     - sensor.menjador_humidity
     - sensor.menjador_temperature
-    - switch.calefaccio
+    - switch.calefaccio_menjador
 
 exterior:
   name: Exterior

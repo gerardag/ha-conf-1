@@ -6,7 +6,7 @@ trigger:
   topic: wifi/switch/cuina/set
 condition: 
 - condition: state
-  entity_id: light.kitchen_light 
+  entity_id: light.encimera 
   state: 'off'
 action:
-- service: script.kitchen_light_turn_on
+- service: script.encimera_turn_on

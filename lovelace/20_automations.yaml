@@ -16,13 +16,13 @@ cards:
           - entity: automation.off_bedroom_heater
           - entity: automation.off_kichen_light
           - entity: automation.on_bedroom_heater
-          - entity: automation.on_kitchen_light
+          - entity: automation.on_encimera
         type: entities
       - entities:
           - entity: script.bedroom_heater_turn_on
-          - entity: script.kitchen_light_turn_on
+          - entity: script.encimera_turn_on
           - entity: script.bedroom_heater_turn_off
-          - entity: script.kitchen_light_turn_off
+          - entity: script.encimera_turn_off
           - entity: script.tv_turn_on_xbox
           - entity: script.tv_turn_on_netflix
           - entity: script.tv_turn_on_dinner

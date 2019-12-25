@@ -1,0 +1,8 @@
+home_mode:
+  name: Mode casa
+  options:
+    - Manual
+    - Autònom
+    - Simular vida
+  initial: Autònom
+  icon: mdi:robot

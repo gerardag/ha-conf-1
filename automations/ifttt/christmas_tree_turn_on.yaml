@@ -1,0 +1,12 @@
+alias: On - Christmas tree
+initial_state: true
+trigger:
+- payload: 'on'
+  platform: mqtt
+  topic: wifi/switch/arbre/set
+condition: 
+- condition: state
+  entity_id: switch.arbol_de_navidad 
+  state: 'off'
+action:
+- service: script.christmas_tree_turn_on

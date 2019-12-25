@@ -4,9 +4,9 @@ trigger:
 - payload: 'off'
   platform: mqtt
   topic: wifi/switch/cuina/set
-condition: 
+condition:
 - condition: state
-  entity_id: light.kitchen_light 
+  entity_id: light.encimera
   state: 'on'
 action:
-- service: script.kitchen_light_turn_off
+- service: script.encimera_turn_off

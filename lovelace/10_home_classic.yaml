@@ -64,7 +64,7 @@ cards:
             type: glance
           - columns: 2
             entities:
-              - entity: light.kitchen_light
+              - entity: light.encimera
                 hold_action:
                   action: more-info
                 name: Cuina
