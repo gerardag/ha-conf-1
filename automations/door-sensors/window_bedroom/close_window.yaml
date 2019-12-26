@@ -1,0 +1,11 @@
+alias: Bedroom - Close window
+trigger:
+- entity_id: binary_sensor.window_bedroom
+  from: 'on'
+  platform: state
+  to: 'off'
+condition: []
+action:
+- service: timer.cancel
+  data:
+    entity_id: timer.sensor_finestra_habitacio_timeout

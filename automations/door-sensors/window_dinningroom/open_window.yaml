@@ -1,0 +1,11 @@
+alias: Dinningroom - Open window
+trigger:
+- entity_id: binary_sensor.window_dinningroom
+  from: 'off'
+  platform: state
+  to: 'on'
+condition: []
+action:
+- service: timer.start
+  data:
+    entity_id: timer.sensor_finestra_menjador_timeout	
