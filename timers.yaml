@@ -1,0 +1,8 @@
+llum_entrada:
+  duration: '00:05:00'
+llum_cuina:
+  duration: '00:15:00'
+sensor_finestra_habitacio_timeout:
+  duration: '00:01:00'
+sensor_finestra_menjador_timeout:
+  duration: '00:01:00'
