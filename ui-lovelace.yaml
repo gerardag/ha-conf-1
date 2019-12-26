@@ -18,7 +18,7 @@ resources:
     url: /local/simple-weather-card.bundle.js?v=0.3.0
   - type: module
     url: /local/simple-thermostat.js?v=1
-  - url: /local/custom-lovelace/compact-custom-header/compact-custom-header.js?v=0.0.1
+  - url: /community_plugin/custom-header/custom-header.js
     type: module
   - type: module
     url: /local/button-card.js
