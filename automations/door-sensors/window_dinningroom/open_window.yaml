@@ -8,4 +8,4 @@ condition: []
 action:
 - service: timer.start
   data:
-    entity_id: timer.sensor_finestra_menjador_timeout	
+    entity_id: timer.sensor_finestra_menjador_timeout
