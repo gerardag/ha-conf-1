@@ -36,6 +36,8 @@ resources:
     url: /local/markdown-mod.js
   - type: module
     url: /local/atomic_calendar.js
+custom_header: 
+  compact_mode: true
 cch:
   disable: false
   header: true
