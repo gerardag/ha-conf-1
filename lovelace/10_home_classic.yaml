@@ -53,13 +53,6 @@ cards:
                 name: Calefacció
                 tap_action:
                   action: toggle
-              - entity: media_player.el_lado_oscuro
-                hold_action:
-                  action: more-info
-                icon: 'mdi:television-classic'
-                name: Tele
-                tap_action:
-                  action: toggle
             title: Dormitori
             type: glance
           - columns: 2
