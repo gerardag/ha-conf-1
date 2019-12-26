@@ -9,3 +9,4 @@ action:
 - service: light.turn_off
   data:
     entity_id: light.entrada
+    transition: 30

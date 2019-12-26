@@ -1,5 +1,5 @@
 llum_entrada_timeout:
-  duration: '00:05:00'
+  duration: '00:04:30'
 llum_cuina_timeout:
   duration: '00:15:00'
 sensor_finestra_habitacio_timeout:
