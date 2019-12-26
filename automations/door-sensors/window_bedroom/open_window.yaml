@@ -1,0 +1,11 @@
+alias: Bedroom - Open window
+trigger:
+- entity_id: binary_sensor.window_bedroom
+  from: 'off'
+  platform: state
+  to: 'on'
+condition: []
+action:
+- service: timer.start
+  data:
+    entity_id: timer.sensor_finestra_habitacio_timeout	
