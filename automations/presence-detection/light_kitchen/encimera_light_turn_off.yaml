@@ -1,6 +1,6 @@
 alias: Entrada - Quan no hi hagi moviment, activar timer
 trigger:
-- entity_id: binary_sensor.motion_entrance 
+- entity_id: binary_sensor.motion_kitchen 
   from: 'on'
   platform: state
   to: 'off'
@@ -8,4 +8,4 @@ condition: []
 action:
 - service: timer.start
   data:
-    entity_id: timer.llum_entrada_timeout
+    entity_id: timer.llum_cuina_timeout

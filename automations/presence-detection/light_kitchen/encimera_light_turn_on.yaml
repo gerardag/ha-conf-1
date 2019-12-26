@@ -1,0 +1,17 @@
+alias: Entrada - Encendre llum amb moviment
+trigger:
+- entity_id: binary_sensor.motion_kitchen 
+  from: 'off'
+  platform: state
+  to: 'on'
+condition:
+- condition: time
+  after: "07:00:00"
+  before: "23:00:00"
+action:
+- service: light.turn_on
+  data:
+    entity_id: light.encimera
+- service: timer.cancel
+  data:
+    entity_id: timer.llum_cuina_timeout
