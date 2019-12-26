@@ -1,4 +1,4 @@
-alias: Entrada - Encendre llum amb moviment
+alias: Cuina - Encendre llum amb moviment
 trigger:
 - entity_id: binary_sensor.motion_kitchen 
   from: 'off'

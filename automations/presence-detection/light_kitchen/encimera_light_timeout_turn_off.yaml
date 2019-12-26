@@ -1,4 +1,4 @@
-alias: Entrada - Apagar llum quan timer sigui 0
+alias: Cuina - Apagar llum quan timer sigui 0
 trigger:
 - platform: event
   event_type: timer.finished
