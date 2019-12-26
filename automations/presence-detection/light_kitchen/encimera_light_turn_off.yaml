@@ -1,4 +1,4 @@
-alias: Entrada - Quan no hi hagi moviment, activar timer
+alias: Cuina - Quan no hi hagi moviment, activar timer
 trigger:
 - entity_id: binary_sensor.motion_kitchen 
   from: 'on'
