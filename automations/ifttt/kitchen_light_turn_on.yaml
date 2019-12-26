@@ -4,9 +4,6 @@ trigger:
 - payload: 'on'
   platform: mqtt
   topic: wifi/switch/cuina/set
-condition: 
-- condition: state
-  entity_id: light.encimera 
-  state: 'off'
+condition: []
 action:
 - service: script.encimera_turn_on
