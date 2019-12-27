@@ -1,8 +1,10 @@
 home_mode:
   name: Mode casa
   options:
-    - Manual
-    - Autònom
-    - Simular vida
-  initial: Autònom
+    - Normal              # Mode normal, els automatismes funcionen com sempre
+    - Ocult               # No executis automatismes
+    - Inactiu             # No es detecta moviment però no sabem si hi ha gent a casa
+    - Fora de casa        # Activa el mode alarma/notificacions
+    - Simular activitat   # Mode especial per simular les rutines
+  initial: Normal
   icon: mdi:robot

@@ -30,17 +30,28 @@ http:
   # ip_ban_enabled: true
   # login_attempts_threshold: 3
 
-prometheus:
-  namespace: hass
-  component_config_glob:
-    sensor.solar_angle:
-      override_metric: sensor_unit_degrees
+# prometheus:
+#   namespace: hass
+#   component_config_glob:
+#     sensor.solar_angle:
+#       override_metric: sensor_unit_degrees
 
 history:
   exclude:
     domains:
       - automation
-      - scripts
+      - script
+    entities:
+      - sensor.date
+      - sensor.date_time
+      - sensor.date_time_iso
+      - sensor.time_date
+      - sensor.internet_time
+      - sensor.time
+      - sensor.time_at_home
+      - sensor.time_at_work
+      - sensor.time_other
+      - sensor.time_utc
 
 recorder:
   db_url: !secret db_mysql_url
