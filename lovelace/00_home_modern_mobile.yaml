@@ -2,7 +2,6 @@ icon: "mdi:cellphone-android"
 panel: true
 path: mobile
 title: mobile
-background: var(--background-image)
 badges: []
 cards:
   - type: vertical-stack
