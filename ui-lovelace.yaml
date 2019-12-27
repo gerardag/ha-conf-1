@@ -25,6 +25,10 @@ resources:
     type: module
   - url: /community_plugin/atomic_calendar/atomic_calendar.js
     type: module
+  - url: /community_plugin/lovelace-animated-background/animated-background.js
+    type: module
+  - url: /community_plugin/lovelace-gui-sandbox/gui-sandbox.js
+    type: module
   - url: /local/nest-layout-card.js
     type: js
   - url: /local/weather-card-ws-mod.js

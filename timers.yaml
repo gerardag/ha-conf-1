@@ -3,6 +3,6 @@ llum_entrada_timeout:
 llum_cuina_timeout:
   duration: '00:15:00'
 sensor_finestra_habitacio_timeout:
-  duration: '00:01:00'
+  duration: '00:00:30'
 sensor_finestra_menjador_timeout:
-  duration: '00:01:00'
+  duration: '00:00:30'
