@@ -1,5 +1,5 @@
 'encimera_turn_on':
-  alias: On - Kitchen light
+  alias: On - Kitchen light (to MQTT)
   sequence:
   - data:
       event: turn_on_encimera
@@ -10,7 +10,7 @@
       payload: 'on'
       retain: true
 'encimera_turn_off':
-  alias: Off - Kitchen light
+  alias: Off - Kitchen light (to MQTT)
   sequence:
   - data:
       event: turn_off_encimera
