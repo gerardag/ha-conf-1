@@ -43,6 +43,7 @@ history:
       - scripts
 
 recorder:
+  db_url: !secret db_mysql_url
   purge_keep_days: 1
   purge_interval: 1
 
