@@ -2,7 +2,6 @@ icon: 'mdi:home'
 panel: false
 path: home
 title: test
-background: var(--background-image)
 badges: []
 cards:
   - cards:

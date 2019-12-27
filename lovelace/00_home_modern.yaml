@@ -2,7 +2,6 @@ icon: "mdi:tablet-dashboard"
 panel: true
 path: tablet
 title: tablet
-background: var(--background-image)
 badges: []
 cards:
   - type: vertical-stack

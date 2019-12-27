@@ -1,6 +1,5 @@
 icon: 'mdi:thermometer'
 title: Termostats
-background: var(--background-image)
 badges: []
 cards:
   - cards:
