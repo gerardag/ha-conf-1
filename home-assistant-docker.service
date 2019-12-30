@@ -1,0 +1,25 @@
+[Unit]
+Description=Home Assistant container
+After=docker.service
+Requires=docker.service
+
+[Service]
+ExecStart=/usr/bin/docker run \
+                        --init \
+                        --privileged \
+                        -itd \
+                        --name="home-assistant" \
+                        -v /srv/homeassistant:/config \
+                        -v /etc/localtime:/etc/localtime:ro \
+                        --net=host \
+                        --restart=always \
+                        homeassistant/home-assistant:0.103.4
+ExecStop=/usr/bin/docker stop home-assistant
+ExecStopPost=/usr/bin/docker rm -f home-assistant
+Type=simple
+Restart=always
+RemainAfterExit=yes
+TimeoutSec=infinit
+
+[Install]
+WantedBy=multi-user.target

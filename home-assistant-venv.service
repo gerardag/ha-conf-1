@@ -1,0 +1,10 @@
+[Unit]
+Description=Home Assistant venv
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/srv/homeassistant/.virtualenv/bin/hass -c "/srv/homeassistant"
+
+[Install]
+WantedBy=multi-user.target
