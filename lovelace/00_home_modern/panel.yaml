@@ -7,7 +7,7 @@
       ha-card {
         margin-top: 30px;
         margin-left: 10px;
-        font-family: 'Open Sans', sans-serif;
+        font-family: Roboto, 'Open Sans', sans-serif;
         font-size: 100%;
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
@@ -87,7 +87,7 @@
               value: none
           style: |
             ha-card {
-              font-family: 'Open Sans', sans-serif;
+              font-family: Roboto, 'Open Sans', sans-serif;
               padding-top: 15px !important;
               background-color: rgba(0, 0, 0, 0);
               -webkit-box-shadow: none;

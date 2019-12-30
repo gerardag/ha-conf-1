@@ -6,7 +6,7 @@
       style: |
         ha-card {
           background-color: rgba(0, 0, 0, 0);
-          font-family: Roboto, 'Open Sans', sans-serif;
+          font-family: Roboto, Roboto, 'Open Sans', sans-serif;
           font-size: 300%;
           -webkit-box-shadow: none;
           -moz-box-shadow: none;
@@ -33,7 +33,7 @@
       style: |
         ha-card {
           background-color: rgba(0, 0, 0, 0);
-          font-family: 'Open Sans', sans-serif;
+          font-family: Roboto, 'Open Sans', sans-serif;
           -webkit-box-shadow: none;
           -moz-box-shadow: none;
           box-shadow: none;
