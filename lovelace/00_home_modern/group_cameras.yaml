@@ -12,3 +12,45 @@
         - color: "#BAC0C6"
           icon: "mdi:camera-outline"
           operator: default
+
+
+
+- template: nest_picture_button
+  type: "custom:decluttering-card"
+  variables:
+    - entity: person.aleix
+    - entity_picture: /local/aleix.jpg
+- template: nest_picture_button
+  type: "custom:decluttering-card"
+  variables:
+    - entity: person.imma
+    - entity_picture: /local/imma2.jpg
+
+- template: nest_button
+  type: "custom:decluttering-card"
+  style: |
+    
+  variables:
+    - entity: alarm_control_panel.home
+    - state:
+        - color: "rgb(152,251,152)"
+          icon: "mdi:shield-lock"
+          value: armed_away
+        - color: "rgb(251, 210, 41)"
+          icon: "mdi:shield-home"
+          value: armed_home
+        - color: "rgb(255, 0, 0)"
+          icon: "mdi:shield-alert"
+          styles:
+            icon:
+              - animation: blink 2s ease infinite
+          value: triggered
+        - color: "rgb(169,169,169)"
+          icon: "mdi:shield-off"
+          value: disarmed
+        - color: "rgb(169,169,169)"
+          icon: "mdi:shield-half-full"
+          styles:
+            icon:
+              - animation: blink 2s ease infinite
+          value: pending

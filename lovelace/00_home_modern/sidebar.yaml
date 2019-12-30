@@ -1,71 +1,112 @@
-- cards:
-    - template: nest_picture_button
-      type: "custom:decluttering-card"
-      variables:
-        - entity: person.aleix
-        - entity_picture: /local/aleix.jpg
-    - template: nest_button
-      type: "custom:decluttering-card"
-      variables:
-        - entity: alarm_control_panel.home
-        - state:
-            - color: "rgb(152,251,152)"
-              icon: "mdi:shield-lock"
-              value: armed_away
-            - color: "rgb(251, 210, 41)"
-              icon: "mdi:shield-home"
-              value: armed_home
-            - color: "rgb(255, 0, 0)"
-              icon: "mdi:shield-alert"
-              styles:
-                icon:
-                  - animation: blink 2s ease infinite
-              value: triggered
-            - color: "rgb(169,169,169)"
-              icon: "mdi:shield-off"
-              value: disarmed
-            - color: "rgb(169,169,169)"
-              icon: "mdi:shield-half-full"
-              styles:
-                icon:
-                  - animation: blink 2s ease infinite
-              value: pending
-    - template: nest_picture_button
-      type: "custom:decluttering-card"
-      variables:
-        - entity: person.imma
-        - entity_picture: /local/imma2.jpg
-  type: horizontal-stack
-- content: |
-    # [[ sensor.time.state ]]
-    ### [[ sensor.date.state ]]
+- type: entities
   style: |
     ha-card {
-      margin-top: 30px;
-      margin-bottom: 120px;
-      background-color: rgba(0, 0, 0, 0);
-      font-family: Roboto, 'Open Sans', sans-serif;
-      font-size: 150%;
-      -webkit-box-shadow: none;
-      -moz-box-shadow: none;
+      background: rgba(0,0,0,0.3);
       box-shadow: none;
-      text-align: center;
+      color: #ffffff;
     }
-    h1, h3 {
-      font-weight: 300 !important;
+    .card-content {
+      padding: 0px;
       margin: 0px;
     }
-    h3 {
-      font-size: 0.7em;
-    }
-  type: markdown
-- entity: weather.dark_sky
-  icons: /local/icons/weather_icons/animated/
+  entities: 
+  - type: "custom:vertical-stack-in-card"
+    cards:
+    - type: horizontal-stack
+      cards:
+        - template: nest_picture_button
+          type: "custom:decluttering-card"
+          variables:
+            - entity: person.aleix
+            - entity_picture: /local/aleix.jpg
+        - template: nest_button
+          type: "custom:decluttering-card"
+          style: |
+            
+          variables:
+            - entity: alarm_control_panel.home
+            - state:
+                - color: "rgb(152,251,152)"
+                  icon: "mdi:shield-lock"
+                  value: armed_away
+                - color: "rgb(251, 210, 41)"
+                  icon: "mdi:shield-home"
+                  value: armed_home
+                - color: "rgb(255, 0, 0)"
+                  icon: "mdi:shield-alert"
+                  styles:
+                    icon:
+                      - animation: blink 2s ease infinite
+                  value: triggered
+                - color: "rgb(169,169,169)"
+                  icon: "mdi:shield-off"
+                  value: disarmed
+                - color: "rgb(169,169,169)"
+                  icon: "mdi:shield-half-full"
+                  styles:
+                    icon:
+                      - animation: blink 2s ease infinite
+                  value: pending
+        - template: nest_picture_button
+          type: "custom:decluttering-card"
+          variables:
+            - entity: person.imma
+            - entity_picture: /local/imma2.jpg
+
+- type: entities
   style: |
     ha-card {
-      background-color: rgba(0, 0, 0, 0);
-      -webkit-box-shadow: none;
-      -moz-box-shadow: none;
+      background: rgba(0,0,0,0.3);
+      display: block;
+      position: absolute;
+      bottom: 0px;
       box-shadow: none;
     }
-  type: "custom:weather-card"
+    .card-content {
+      padding: 0px;
+      margin: 0px;
+    }
+  entities: 
+  - type: "custom:vertical-stack-in-card"
+    cards:
+    - type: horizontal-stack
+      cards:
+        - type: markdown
+          content: |
+            # [[ sensor.time.state ]]
+          style: |
+            ha-card {
+              background-color: rgba(0, 0, 0, 0);
+              font-family: Roboto, 'Open Sans', sans-serif;
+              font-size: 300%;
+              -webkit-box-shadow: none;
+              -moz-box-shadow: none;
+              box-shadow: none;
+              text-align: left;
+            }
+            h1, h3 {
+              font-weight: 300 !important;
+              margin: 0px;
+              color: white;
+            }
+            h3 {
+              font-size: 0.7em;
+            }
+        - backdrop:
+            day: "rgba(0, 0, 0, 0)"
+            night: "rgba(0, 0, 0, 0)"
+            text: "#ffffff"
+          entity: weather.dark_sky
+          type: "custom:simple-weather-card"
+          style: |
+            ha-card {
+              background-color: rgba(0, 0, 0, 0);
+              font-family: Roboto, 'Open Sans', sans-serif;
+              -webkit-box-shadow: none;
+              -moz-box-shadow: none;
+              box-shadow: none;
+              margin-top: 25px;
+            }
+            .weather__info--add {
+              display: none;
+            }
