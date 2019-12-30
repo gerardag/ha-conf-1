@@ -38,7 +38,7 @@ resources:
   - url: /local/markdown-mod.js
     type: module
 custom_header: 
-  header_text: '{{ time }}'
+  header_text: Casa Immaleix
   compact_mode: true
 animated_background:
   default_url: /community_plugin/lovelace-animated-background/background-animations/sunny.html
