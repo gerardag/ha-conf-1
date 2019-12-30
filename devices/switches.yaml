@@ -3,11 +3,6 @@
   mac: !secret mac_switch_calefaccio_menjador
   type: sp2
   friendly_name: 'Calefacció menjador'
-- platform: broadlink
-  host: !secret ip_switch_calefaccio_menjador
-  mac: !secret mac_switch_calefaccio_menjador
-  type: sp2
-  friendly_name: 'Ventilador'
 - platform: mqtt
   name: 'Árbol de Navidad'
   command_topic: 'wifi/switch/arbre/set'

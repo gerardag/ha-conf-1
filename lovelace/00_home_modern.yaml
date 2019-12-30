@@ -1,7 +1,7 @@
-icon: "mdi:tablet-dashboard"
+icon: 'mdi:home'
 panel: true
-path: tablet
-title: tablet
+path: home
+title: home
 badges: []
 cards:
   - type: vertical-stack

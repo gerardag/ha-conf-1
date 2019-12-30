@@ -1,5 +1,6 @@
 icon: 'mdi:thermometer'
 title: Termostats
+path: climates
 badges: []
 cards:
   - cards:

@@ -66,7 +66,7 @@ decluttering_templates:
       type: "custom:button-card"
       style: |
         ha-card {
-          font-family: 'Open Sans', sans-serif;
+          font-family: Roboto, 'Open Sans', sans-serif;
           padding-top: 15px !important;
           background-color: rgba(0, 0, 0, 0);
           -webkit-box-shadow: none;
@@ -112,7 +112,7 @@ decluttering_templates:
       type: "custom:button-card"
       style: |
         ha-card {
-          font-family: 'Open Sans', sans-serif;
+          font-family: Roboto, 'Open Sans', sans-serif;
           padding-top: 15px !important;
           background-color: rgba(0, 0, 0, 0);
           -webkit-box-shadow: none;
@@ -154,7 +154,7 @@ decluttering_templates:
       show_state: true
       style: |
         ha-card {
-          font-family: 'Open Sans', sans-serif;
+          font-family: Roboto, 'Open Sans', sans-serif;
           padding-top: 15px !important;
           background-color: rgba(0, 0, 0, 0);
           -webkit-box-shadow: none;
@@ -178,7 +178,7 @@ decluttering_templates:
       type: "custom:button-card"
 title: Casa
 views:
-  - !include lovelace/10_home_classic.yaml
   - !include lovelace/00_home_modern.yaml
   - !include lovelace/00_home_modern_mobile.yaml
+  - !include lovelace/10_home_classic.yaml
   - !include lovelace/30_climates.yaml

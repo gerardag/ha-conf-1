@@ -9,3 +9,16 @@ smart_home:
       - switch.ventilador
       - switch.calefaccio_menjador
       - switch.calefaccio_dormitori
+  entity_config:
+    scene.buenos_dias:
+      name: Escena buenos dias
+    scene.cena:
+      name: Escena cena
+    scene.con_amigos:
+      name: Escena con amigos
+    scene.juegos_de_mesa:
+      name: Escena juegos de mesa
+    scene.relax:
+      name: Escena relax
+    scene.tele:
+      name: Escena tele

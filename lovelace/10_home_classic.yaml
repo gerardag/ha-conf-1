@@ -1,7 +1,7 @@
-icon: 'mdi:home'
+icon: 'mdi:view-dashboard-variant'
 panel: false
-path: home
-title: test
+path: overview
+title: overview
 badges: []
 cards:
   - cards:
