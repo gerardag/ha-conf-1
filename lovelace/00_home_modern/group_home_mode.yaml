@@ -1,0 +1,230 @@
+- type: "custom:button-card"
+  entity: input_select.home_mode
+  name: Normal
+  show_icon: true
+  show_last_changed: false
+  show_name: true
+  show_state: false
+  state:
+    - color: "#ffffff"
+      icon: "mdi:home-map-marker"
+      operator: default
+    - color: "#00a1ff"
+      icon: "mdi:home-map-marker"
+      value: "Normal"
+  tap_action:
+    action: call-service
+    service: input_select.select_option
+    service_data:
+      entity_id: input_select.home_mode
+      option: Normal
+  style: |
+    ha-card {
+      font-family: Roboto, 'Open Sans', sans-serif;
+      padding-top: 15px !important;
+      background-color: rgba(0, 0, 0, 0);
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      padding: 10px !important;
+    }
+    ha-icon {
+      width: 60% !important;
+    }
+    img {
+      width: 100%;
+    }
+    .ellipsis {
+      color: #ddd;
+      font-size: 0.7em;
+      font-family: Roboto;
+    }
+    #img-cell {
+      border-radius: 50px;
+      height: 30px !important;
+      width: 30px !important;
+    }
+- type: "custom:button-card"
+  entity: input_select.home_mode
+  name: Ocult
+  show_icon: true
+  show_last_changed: false
+  show_name: true
+  show_state: false
+  state:
+    - color: "#ffffff"
+      icon: "mdi:eye-off"
+      operator: default
+    - color: "#00a1ff"
+      icon: "mdi:eye-off"
+      value: "Ocult"
+  tap_action:
+    action: call-service
+    service: input_select.select_option
+    service_data:
+      entity_id: input_select.home_mode
+      option: Ocult
+  style: |
+    ha-card {
+      font-family: Roboto, 'Open Sans', sans-serif;
+      padding-top: 15px !important;
+      background-color: rgba(0, 0, 0, 0);
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      padding: 10px !important;
+    }
+    ha-icon {
+      width: 60% !important;
+    }
+    img {
+      width: 100%;
+    }
+    .ellipsis {
+      color: #ddd;
+      font-size: 0.7em;
+      font-family: Roboto;
+    }
+    #img-cell {
+      border-radius: 50px;
+      height: 30px !important;
+      width: 30px !important;
+    }
+- type: "custom:button-card"
+  entity: input_select.home_mode
+  name: Inactiu
+  show_icon: true
+  show_last_changed: false
+  show_name: true
+  show_state: false
+  state:
+    - color: "#ffffff"
+      icon: "mdi:sleep"
+      operator: default
+    - color: "#00a1ff"
+      icon: "mdi:sleep"
+      value: "Inactiu"
+  tap_action:
+    action: call-service
+    service: input_select.select_option
+    service_data:
+      entity_id: input_select.home_mode
+      option: Inactiu
+  style: |
+    ha-card {
+      font-family: Roboto, 'Open Sans', sans-serif;
+      padding-top: 15px !important;
+      background-color: rgba(0, 0, 0, 0);
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      padding: 10px !important;
+    }
+    ha-icon {
+      width: 60% !important;
+    }
+    img {
+      width: 100%;
+    }
+    .ellipsis {
+      color: #ddd;
+      font-size: 0.7em;
+      font-family: Roboto;
+    }
+    #img-cell {
+      border-radius: 50px;
+      height: 30px !important;
+      width: 30px !important;
+    }
+- type: "custom:button-card"
+  entity: input_select.home_mode
+  name: Fora de casa
+  show_icon: true
+  show_last_changed: false
+  show_name: true
+  show_state: false
+  state:
+    - color: "#ffffff"
+      icon: "mdi:shield-home"
+      operator: default
+    - color: "#00a1ff"
+      icon: "mdi:shield-home"
+      value: "Fora de casa"
+  tap_action:
+    action: call-service
+    service: input_select.select_option
+    service_data:
+      entity_id: input_select.home_mode
+      option: "Fora de casa"
+  style: |
+    ha-card {
+      font-family: Roboto, 'Open Sans', sans-serif;
+      padding-top: 15px !important;
+      background-color: rgba(0, 0, 0, 0);
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      padding: 10px !important;
+    }
+    ha-icon {
+      width: 60% !important;
+    }
+    img {
+      width: 100%;
+    }
+    .ellipsis {
+      color: #ddd;
+      font-size: 0.7em;
+      font-family: Roboto;
+    }
+    #img-cell {
+      border-radius: 50px;
+      height: 30px !important;
+      width: 30px !important;
+    }
+- type: "custom:button-card"
+  entity: input_select.home_mode
+  name: Simular activitat
+  show_icon: true
+  show_last_changed: false
+  show_name: true
+  show_state: false
+  state:
+    - color: "#ffffff"
+      icon: "mdi:robot"
+      operator: default
+    - color: "#00a1ff"
+      icon: "mdi:robot"
+      value: "Simular activitat"
+  tap_action:
+    action: call-service
+    service: input_select.select_option
+    service_data:
+      entity_id: input_select.home_mode
+      option: "Simular activitat"
+  style: |
+    ha-card {
+      font-family: Roboto, 'Open Sans', sans-serif;
+      padding-top: 15px !important;
+      background-color: rgba(0, 0, 0, 0);
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      padding: 10px !important;
+    }
+    ha-icon {
+      width: 60% !important;
+    }
+    img {
+      width: 100%;
+    }
+    .ellipsis {
+      color: #ddd;
+      font-size: 0.7em;
+      font-family: Roboto;
+    }
+    #img-cell {
+      border-radius: 50px;
+      height: 30px !important;
+      width: 30px !important;
+    }

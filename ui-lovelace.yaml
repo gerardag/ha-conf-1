@@ -127,7 +127,7 @@ decluttering_templates:
           width: 100%;
         }
         #img-cell {
-          background-color: #FAFAFA;
+          background-color: [[background_color]];
           border-radius: 50px;
           height: 70px !important;
           width: 70px !important;
@@ -142,6 +142,7 @@ decluttering_templates:
       - show_state: true
       - show_name: false
       - show_last_changed: true
+      - background_color: "#FAFAFA"
       - tap_action:
           action: toggle
   nest_picture_button:

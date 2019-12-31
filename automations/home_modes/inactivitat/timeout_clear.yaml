@@ -1,0 +1,28 @@
+alias: 'Home Modes - Inactivitat - Clear timer'
+initial_state: false
+trigger:
+- platform: state
+  entity_id: media_player.tele
+  to: 'playing'
+- platform: state
+  entity_id: light.encimera
+  to: 'on'
+- platform: state
+  entity_id: light.entrada
+  to: 'on'
+- platform: state
+  entity_id: light.mesa
+  to: 'on'
+- platform: state
+  entity_id: light.sofa
+  to: 'on'
+- platform: state
+  entity_id: binary_sensor.motion_entrance
+  to: 'on'
+- platform: state
+  entity_id: binary_sensor.motion_kitchen
+  to: 'on'
+action:
+- service: timer.cancel
+  data:
+    entity_id: timer.inactivitat_casa

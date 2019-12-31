@@ -1,0 +1,19 @@
+alias: 'Home Modes - Normal - At morning'
+initial_state: true
+trigger:
+  - platform: time
+    at: "06:30:00"
+condition:
+  condition: or
+  conditions:
+  - condition: state
+    entity_id: 'input_select.home_mode'
+    state: 'Ocult'
+  - condition: state
+    entity_id: 'input_select.home_mode'
+    state: 'Inactiu'
+action:
+  - service: input_select.select_option
+    service_data:
+      entity_id: input_select.home_mode
+      option: Normal

@@ -11,9 +11,11 @@
       padding: 0px;
       margin: 0px;
     }
-  entities: 
+  entities:          
   - type: "custom:vertical-stack-in-card"
-    cards:
+    cards: 
+    - type: horizontal-stack
+      cards: !include group_home_mode.yaml
     - type: horizontal-stack
       cards:
         - type: markdown

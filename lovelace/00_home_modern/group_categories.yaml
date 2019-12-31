@@ -7,8 +7,9 @@
     - show_last_changed: false
     - name: Il·luminació
     - entity: input_text.selected_category
+    - background_color: "#FDEC9F"
     - state:
-        - color: "#FDEC9F"
+        - color: "#ffffff"
           icon: "mdi:lightbulb-outline"
           operator: default
     - tap_action:
@@ -26,8 +27,9 @@
     - show_last_changed: false
     - name: Seguretat
     - entity: input_text.selected_category
+    - background_color: "#C5E4B3"
     - state:
-        - color: "#C5E4B3"
+        - color: "#ffffff"
           icon: "mdi:shield-home"
           operator: default
     - tap_action:
@@ -45,8 +47,9 @@
     - show_last_changed: false
     - name: Temperatures
     - entity: input_text.selected_category
+    - background_color: "#FFCCBE"
     - state:
-        - color: "#FFCCBE"
+        - color: "#ffffff"
           icon: "mdi:thermometer"
           operator: default
     - tap_action:
@@ -64,8 +67,9 @@
     - show_last_changed: false
     - name: Escenes
     - entity: input_text.selected_category
+    - background_color: "#E8BEFF"
     - state:
-        - color: "#E8BEFF"
+        - color: "#ffffff"
           icon: "mdi:image"
           operator: default
     - tap_action:
@@ -83,8 +87,9 @@
     - show_last_changed: false
     - name: Activitat
     - entity: input_text.selected_category
+    - background_color: "#BEE7FF"
     - state:
-        - color: "#BEE7FF"
+        - color: "#ffffff"
           icon: "mdi:walk"
           operator: default
     - tap_action:

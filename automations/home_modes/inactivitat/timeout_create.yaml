@@ -1,0 +1,52 @@
+alias: 'Home Modes - Inactivitat - Start timer'
+initial_state: false
+trigger:
+- platform: state
+  entity_id: media_player.tele
+  to: 'off'
+- platform: state
+  entity_id: light.encimera
+  to: 'off'
+- platform: state
+  entity_id: light.entrada
+  to: 'off'
+- platform: state
+  entity_id: light.mesa
+  to: 'off'
+- platform: state
+  entity_id: light.sofa
+  to: 'off'
+- platform: state
+  entity_id: binary_sensor.motion_entrance
+  to: 'off'
+- platform: state
+  entity_id: binary_sensor.motion_kitchen
+  to: 'off'
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: media_player.tele
+      state: 'off'
+    - condition: state
+      entity_id: light.encimera
+      state: 'off'
+    - condition: state
+      entity_id: light.entrada
+      state: 'off'
+    - condition: state
+      entity_id: light.mesa
+      state: 'off'
+    - condition: state
+      entity_id: light.sofa
+      state: 'off'
+    - condition: state
+      entity_id: binary_sensor.motion_entrance
+      state: 'off'
+    - condition: state
+      entity_id: binary_sensor.motion_kitchen
+      state: 'off'
+action:
+- service: timer.start
+  data:
+    entity_id: timer.inactivitat_casa

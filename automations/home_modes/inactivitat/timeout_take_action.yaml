@@ -1,0 +1,15 @@
+alias: 'Home Modes - Inactivitat - Take action'
+trigger:
+- platform: event
+  event_type: timer.finished
+  event_data:
+    entity_id: timer.inactivitat_casa
+condition: []
+action:
+  - data:
+      message: "La casa ha passat a mode 'Inactiu'. S'han superat els 30 minuts d'inactivitat"
+      title: "Home mode changed"
+      target:
+        - 475501
+        - 417277407
+    service: telegram_bot.send_message

@@ -5,9 +5,20 @@ trigger:
   platform: state
   to: 'on'
 condition:
-- condition: time
-  after: "07:00:00"
-  before: "23:00:00"
+  condition: or
+  conditions:
+  - condition: state
+    entity_id: 'input_select.home_mode'
+    state: 'Normal'
+  - condition: state
+    entity_id: 'input_select.home_mode'
+    state: 'Inactiu'
+  - condition: state
+    entity_id: 'input_select.home_mode'
+    state: 'Fora de casa'
+  - condition: state
+    entity_id: 'input_select.home_mode'
+    state: 'Simular activitat'
 action:
 - service: light.turn_on
   data:
