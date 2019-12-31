@@ -1,5 +1,5 @@
 'tv_turn_on_dinner':
-  alias: Turn On TV for dinner
+  alias: Vamos a cenar
   sequence:
   - service: scene.turn_on
     data:

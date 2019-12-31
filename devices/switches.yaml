@@ -21,8 +21,8 @@
   payload_on: 'on'
   payload_off: 'off'
   retain: true
-#- platform: command_line
-#  switches:
-#    xbox:
-#      command_on: !secret xbox_command
-#      command_off: !secret xbox_command
+- platform: command_line
+  switches:
+    xbox:
+      command_on: !secret xbox_command
+      command_off: !secret xbox_command

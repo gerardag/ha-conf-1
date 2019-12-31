@@ -1,5 +1,5 @@
 'tv_turn_on_xbox':
-  alias: Turn On TV and select XBOX
+  alias: Vamos a jugar
   sequence:
   - service: switch.turn_on
     data:

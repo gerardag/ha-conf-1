@@ -9,6 +9,10 @@ smart_home:
       - switch.ventilador
       - switch.calefaccio_menjador
       - switch.calefaccio_dormitori
+    include_entities:
+      - script.tv_turn_on_dinner
+      - script.tv_turn_on_netflix
+      - script.tv_turn_on_xbox
   entity_config:
     scene.buenos_dias:
       name: Escena buenos dias
