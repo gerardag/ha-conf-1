@@ -6,4 +6,4 @@ trigger:
   topic: wifi/switch/calefaccions/menjador/set
 condition: []
 action:
-- service: script.calefaccio_mejador_turn_off_mqtt
+- service: script.calefaccio_menjador_turn_off_mqtt
