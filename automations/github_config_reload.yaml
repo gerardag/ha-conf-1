@@ -6,4 +6,4 @@ trigger:
   topic: wifi/switch/calefaccions/dormitori/set
 condition: []
 action:
-- service: script.calefaccio_mejador_turn_off
+- service: script.calefaccio_menjador_turn_off

@@ -19,9 +19,9 @@ cards:
           - entity: automation.on_encimera
         type: entities
       - entities:
-          - entity: script.calefaccio_mejador_turn_on
+          - entity: script.calefaccio_menjador_turn_on
           - entity: script.encimera_turn_on
-          - entity: script.calefaccio_mejador_turn_off
+          - entity: script.calefaccio_menjador_turn_off
           - entity: script.encimera_turn_off
           - entity: script.tv_turn_on_xbox
           - entity: script.tv_turn_on_netflix

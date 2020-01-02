@@ -13,8 +13,6 @@ homeassistant:
 
 logger:
   default: info
-  logs:
-    homeassistant.components.broadlink: debug
 
 config:
 
