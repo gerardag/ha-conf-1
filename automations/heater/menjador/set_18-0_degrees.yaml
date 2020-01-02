@@ -1,0 +1,19 @@
+alias: 'Climate menjador - Set 18.0 degrees'
+initial_state: true
+trigger:
+  - platform: time
+    at: "01:00:00"
+  - platform: homeassistant
+    event: start
+condition:
+  condition: and
+  conditions:
+    - condition: time
+      after: "01:00:00"
+    - condition: time
+      before: "07:00:00"
+action:
+  - service: climate.set_temperature
+    data:
+      entity_id: climate.menjador
+      temperature: 18.0

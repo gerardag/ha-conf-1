@@ -1,8 +1,8 @@
-alias: 'Set dormitori climate to 19 at night'
+alias: 'Climate menjador - Turn off'
 initial_state: true
 trigger:
   - platform: time
     at: "09:00:00"
 action:
   - service: climate.turn_off
-    entity_id: climate.dormitori
+    entity_id: climate.menjador

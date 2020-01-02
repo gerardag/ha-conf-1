@@ -1,14 +1,36 @@
-alias: 'Set dormitori climate to 19 at afternoon'
+alias: 'Climate menjador - Turn on'
 initial_state: true
 trigger:
-  - platform: time_pattern
-    minutes: "/5"
+  - platform: sun
+    event: sunset
+    offset: "00:30:00"
+  - platform: time
+    at: "19:00:00"
+  - platform: homeassistant
+    event: start
+  - platform: state
+    entity_id: media_player.tele
+    to: 'playing'
+  - platform: state
+    entity_id: light.encimera
+    to: 'on'
+  - platform: state
+    entity_id: light.entrada
+    to: 'on'
+  - platform: state
+    entity_id: light.mesa
+    to: 'on'
+  - platform: state
+    entity_id: light.sofa
+    to: 'on'
 condition:
   condition: and
   conditions:
+    - condition: sun
+      after: sunset
+      after_offset: "00:30:00"
     - condition: time
-      after: "22:00:00"
-      before: "22:59:00"
+      before: "23:00:00"
     - condition: numeric_state
       entity_id: sensor.exterior_temperature_mqtt
       below: 15
@@ -30,9 +52,6 @@ condition:
           entity_id: light.sofa
           state: 'on'
 action:
-  - service: climate.set_temperature
-    entity_id: climate.dormitori
-    data:
-      temperature: 19
   - service: climate.turn_on
-    entity_id: climate.dormitori
+    data:
+      entity_id: climate.menjador
