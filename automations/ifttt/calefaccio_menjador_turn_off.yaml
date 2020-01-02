@@ -1,0 +1,10 @@
+alias: IFTTT - Sending event (calefaccions/menjador/off)
+initial_state: true
+trigger:
+- platform: state
+  entity_id: switch.calefaccio_menjador
+  from: 'on'
+  to: 'off'
+condition: []
+action:
+- service: script.calefaccio_menjador_turn_off
