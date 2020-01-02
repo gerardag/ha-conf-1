@@ -1,0 +1,10 @@
+alias: IFTTT - Sending event (calefaccions/dormitori/on)
+initial_state: true
+trigger:
+- platform: state
+  entity_id: switch.calefaccio_dormitori
+  from: 'off'
+  to: 'on'
+condition: []
+action:
+- service: script.calefaccio_dormitori_turn_on_ifttt

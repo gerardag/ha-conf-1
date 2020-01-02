@@ -1,9 +1,9 @@
-alias: IFTTT - Sending event (cuina/off)
+alias: IFTTT - Sending event (cuina/on)
 initial_state: true
 trigger:
-- payload: 'on'
+- payload: 'off'
   platform: mqtt
   topic: wifi/switch/cuina/set
 condition: []
 action:
-- service: script.encimera_turn_on
+- service: script.encimera_turn_off_mqtt

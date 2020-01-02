@@ -1,0 +1,9 @@
+alias: MQTT - Sending event (calefaccions/dormitori/on)
+initial_state: true
+trigger:
+- payload: 'off'
+  platform: mqtt
+  topic: wifi/switch/calefaccions/dormitori/set
+condition: []
+action:
+- service: script.calefaccio_dormitori_turn_off_mqtt

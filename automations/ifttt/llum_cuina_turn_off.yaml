@@ -1,0 +1,10 @@
+alias: IFTTT - Sending event (cuina/off)
+initial_state: true
+trigger:
+- platform: state
+  entity_id: light.encimera
+  from: 'on'
+  to: 'off'
+condition: []
+action:
+- service: script.encimera_turn_off_ifttt

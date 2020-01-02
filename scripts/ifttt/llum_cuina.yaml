@@ -1,20 +1,22 @@
-'encimera_turn_on':
-  alias: On - Kitchen light (to MQTT)
+'encimera_turn_on_ifttt':
   sequence:
   - data:
       event: turn_on_encimera
     service: ifttt.trigger
+'encimera_turn_on_mqtt':
+  sequence:
   - service: mqtt.publish
     data:
       topic: wifi/switch/cuina
       payload: 'on'
       retain: true
-'encimera_turn_off':
-  alias: Off - Kitchen light (to MQTT)
+'encimera_turn_off_ifttt':
   sequence:
   - data:
       event: turn_off_encimera
     service: ifttt.trigger
+'encimera_turn_off_mqtt':
+  sequence:
   - service: mqtt.publish
     data:
       topic: wifi/switch/cuina
