@@ -20,7 +20,7 @@ cards:
             name: Sofà
             tap_action:
               action: toggle
-          - entity: light.detras_de_la_tele
+          - entity: light.mesita
             hold_action:
               action: more-info
             name: Tele

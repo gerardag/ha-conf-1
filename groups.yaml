@@ -10,7 +10,7 @@ menjador:
   name: Menjador
   view: true
   entities:
-    - light.detras_de_la_tele
+    - light.mesita
     - light.mesa
     - light.sofa
     - media_player.cuarto_de_estar

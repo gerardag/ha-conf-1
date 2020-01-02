@@ -26,7 +26,7 @@ condition:
           state: 'on'
 action:
   - service: light.turn_on
-    entity_id: light.detras_de_la_tele 
+    entity_id: light.mesita 
     data:
       brightness: 10
       color_temp: 454

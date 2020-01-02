@@ -1,6 +1,6 @@
 - name: Tele
   entities:
-    light.detras_de_la_tele:
+    light.mesita:
       state: true
       brightness: 10
       color_temp: 454
@@ -9,7 +9,7 @@
     light.mesa: false
 - name: Buenos días
   entities:
-    light.detras_de_la_tele:
+    light.mesita:
       state: true
       brightness: 1
       color_temp: 250
@@ -21,7 +21,7 @@
       state: true
 - name: Cena
   entities:
-    light.detras_de_la_tele:
+    light.mesita:
       state: true
       brightness: 254
       color_temp: 294
@@ -32,7 +32,7 @@
     light.mesa: false
 - name: Con amigos
   entities:
-    light.detras_de_la_tele:
+    light.mesita:
       state: true
       brightness: 254
       color_temp: 294
@@ -45,7 +45,7 @@
     switch.arbol_de_navidad: true
 - name: Relax
   entities:
-    light.detras_de_la_tele:
+    light.mesita:
       state: true
       brightness: 128
       color_temp: 454
@@ -56,7 +56,7 @@
     light.mesa: false
 - name: Juegos de mesa
   entities:
-    light.detras_de_la_tele:
+    light.mesita:
       state: true
       brightness: 64
       color_temp: 454
