@@ -1,4 +1,4 @@
-alias: On - Kitchen light (to IFTTT)
+alias: IFTTT - Sending event (cuina/off)
 initial_state: true
 trigger:
 - payload: 'on'

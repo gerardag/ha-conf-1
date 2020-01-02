@@ -1,0 +1,22 @@
+'calefaccio_dormitori_turn_on':
+  alias: On - Calefacció dormitori
+  sequence:
+  - data:
+      event: turn_on_calefaccio_dormitori
+    service: ifttt.trigger
+  - service: mqtt.publish
+    data:
+      topic: wifi/switch/calefaccions/dormitori
+      payload: 'on'
+      retain: true
+'calefaccio_dormitori_turn_off':
+  alias: Off - Calefacció dormitori
+  sequence:
+  - data:
+      event: turn_off_calefaccio_dormitori
+    service: ifttt.trigger
+  - service: mqtt.publish
+    data:
+      topic: wifi/switch/calefaccions/dormitori
+      payload: 'off'
+      retain: true

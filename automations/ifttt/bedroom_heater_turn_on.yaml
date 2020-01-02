@@ -1,12 +1,12 @@
-alias: On - Bedroom heater
+alias: On - IFTTT - Sending event (calefaccions/dormitori/off)
 initial_state: true
 trigger:
 - payload: 'on'
   platform: mqtt
-  topic: wifi/switch/dormitori_calefaccio/set
+  topic: wifi/switch/calefaccions/dormitori/set
 condition: 
 - condition: state
   entity_id: switch.calefaccio_dormitori 
   state: 'off'
 action:
-- service: script.bedroom_heater_turn_on
+- service: script.calefaccio_dormitori_turn_on

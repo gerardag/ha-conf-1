@@ -1,4 +1,4 @@
-alias: IFTTT Integration
+alias: IFTTT - Event received
 hide_entity: true
 initial_state: true
 trigger:

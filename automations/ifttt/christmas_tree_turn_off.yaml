@@ -1,12 +1,12 @@
-alias: Off - Christmas tree
+alias: IFTTT - Sending event (calefaccions/menjador/on)
 initial_state: true
 trigger:
 - payload: 'off'
   platform: mqtt
-  topic: wifi/switch/arbre/set
+  topic: wifi/switch/calefaccions/menjador/set
 condition: 
 - condition: state
-  entity_id: switch.arbol_de_navidad 
+  entity_id: switch.calefaccio_menjador 
   state: 'on'
 action:
-- service: script.christmas_tree_turn_off
+- service: script.calefaccio_mejador_turn_off

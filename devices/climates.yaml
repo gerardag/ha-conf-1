@@ -5,7 +5,7 @@
   min_temp: 7
   max_temp: 25
   ac_mode: false
-  target_temp: 18
+  target_temp: 18.5
   cold_tolerance: 0.4
   hot_tolerance: 0.2
   min_cycle_duration:
@@ -13,7 +13,7 @@
   keep_alive:
     minutes: 3
   initial_hvac_mode: "off"
-  away_temp: 16
+  away_temp: 18
   precision: 0.1
 - platform: generic_thermostat
   name: Dormitori
@@ -22,7 +22,7 @@
   min_temp: 7
   max_temp: 25
   ac_mode: false
-  target_temp: 18
+  target_temp: 18.5
   cold_tolerance: 0.4
   hot_tolerance: 0.2
   min_cycle_duration:
@@ -30,5 +30,5 @@
   keep_alive:
     minutes: 3
   initial_hvac_mode: "off"
-  away_temp: 16
+  away_temp: 18
   precision: 0.1

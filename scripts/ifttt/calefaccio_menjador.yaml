@@ -1,0 +1,22 @@
+'calefaccio_menjador_turn_on':
+  alias: On - Calefacció menjador
+  sequence:
+  - data:
+      event: turn_on_calefaccio_menjador
+    service: ifttt.trigger
+  - service: mqtt.publish
+    data:
+      topic: wifi/switch/calefaccions/menjador
+      payload: 'on'
+      retain: true
+'calefaccio_menjador_turn_off':
+  alias: Off - Calefacció menjador
+  sequence:
+  - data:
+      event: turn_off_calefaccio_menjador
+    service: ifttt.trigger
+  - service: mqtt.publish
+    data:
+      topic: wifi/switch/calefaccions/menjador
+      payload: 'off'
+      retain: true

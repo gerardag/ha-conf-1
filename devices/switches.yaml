@@ -2,11 +2,11 @@
   host: !secret ip_switch_calefaccio_menjador
   mac: !secret mac_switch_calefaccio_menjador
   type: sp2
-  friendly_name: 'Calefacció menjador'
+  friendly_name: 'Árbol de Navidad'
 - platform: mqtt
-  name: 'Árbol de Navidad'
-  command_topic: 'wifi/switch/arbre/set'
-  state_topic: 'wifi/switch/arbre'
+  name: 'Calefacció menjador'
+  command_topic: 'wifi/switch/calefaccions/menjador/set'
+  state_topic: 'wifi/switch/calefaccions/menjador'
   state_on: 'on'
   state_off: 'off'
   payload_on: 'on'
@@ -14,8 +14,8 @@
   retain: true
 - platform: mqtt
   name: 'Calefacció dormitori'
-  command_topic: 'wifi/switch/dormitori_calefaccio/set'
-  state_topic: 'wifi/switch/dormitori_calefaccio'
+  command_topic: 'wifi/switch/calefaccions/dormitori/set'
+  state_topic: 'wifi/switch/calefaccions/dormitori'
   state_on: 'on'
   state_off: 'off'
   payload_on: 'on'

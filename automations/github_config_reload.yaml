@@ -3,7 +3,7 @@ initial_state: true
 trigger:
 - payload: 'off'
   platform: mqtt
-  topic: wifi/switch/dormitori_calefaccio/set
+  topic: wifi/switch/calefaccions/dormitori/set
 condition: []
 action:
-- service: script.bedroom_heater_turn_off
+- service: script.calefaccio_mejador_turn_off
