@@ -5,56 +5,6 @@
       variables:
         - show_name: true
         - show_last_changed: false
-        - name: Dormitori
-        - entity: sensor.dormitori_temperature_mqtt
-        - tap_action:
-            action: more-info
-        - state:
-            - color: "#C993FE"
-              icon: "mdi:thermometer-low"
-              operator: "<"
-              value: 15
-            - color: "#93BCFE"
-              icon: "mdi:thermometer"
-              operator: "<"
-              value: 25
-            - color: "#FEBF93"
-              icon: "mdi:thermometer-high"
-              operator: "<"
-              value: 30
-            - color: "#FE9393"
-              icon: "mdi:thermometer-alert"
-              operator: ">="
-              value: 30
-            - color: "#BAC0C6"
-              icon: "mdi:thermometer"
-              operator: default
-    - template: nest_button
-      type: "custom:decluttering-card"
-      variables:
-        - show_name: true
-        - show_last_changed: false
-        - name: Dormitori
-        - entity: sensor.dormitori_humidity_mqtt
-        - tap_action:
-            action: more-info
-        - state:
-            - color: "#93BCFE"
-              icon: "mdi:water-percent"
-              operator: "<="
-              value: 75
-            - color: "#FE9393"
-              icon: "mdi:water-percent"
-              operator: ">"
-              value: 75
-            - color: "#BAC0C6"
-              icon: "mdi:water-percent"
-              operator: default
-    - template: nest_button
-      type: "custom:decluttering-card"
-      variables:
-        - show_name: true
-        - show_last_changed: false
         - name: Menjador
         - entity: sensor.menjador_temperature_mqtt
         - tap_action:
@@ -86,6 +36,56 @@
         - show_last_changed: false
         - name: Menjador
         - entity: sensor.menjador_humidity_mqtt
+        - tap_action:
+            action: more-info
+        - state:
+            - color: "#93BCFE"
+              icon: "mdi:water-percent"
+              operator: "<="
+              value: 75
+            - color: "#FE9393"
+              icon: "mdi:water-percent"
+              operator: ">"
+              value: 75
+            - color: "#BAC0C6"
+              icon: "mdi:water-percent"
+              operator: default
+    - template: nest_button
+      type: "custom:decluttering-card"
+      variables:
+        - show_name: true
+        - show_last_changed: false
+        - name: Dormitori
+        - entity: sensor.dormitori_temperature_mqtt
+        - tap_action:
+            action: more-info
+        - state:
+            - color: "#C993FE"
+              icon: "mdi:thermometer-low"
+              operator: "<"
+              value: 15
+            - color: "#93BCFE"
+              icon: "mdi:thermometer"
+              operator: "<"
+              value: 25
+            - color: "#FEBF93"
+              icon: "mdi:thermometer-high"
+              operator: "<"
+              value: 30
+            - color: "#FE9393"
+              icon: "mdi:thermometer-alert"
+              operator: ">="
+              value: 30
+            - color: "#BAC0C6"
+              icon: "mdi:thermometer"
+              operator: default
+    - template: nest_button
+      type: "custom:decluttering-card"
+      variables:
+        - show_name: true
+        - show_last_changed: false
+        - name: Dormitori
+        - entity: sensor.dormitori_humidity_mqtt
         - tap_action:
             action: more-info
         - state:
