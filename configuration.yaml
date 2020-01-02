@@ -160,6 +160,15 @@ cast:
     - host: !secret ip_chromecast
     - host: !secret ip_google_home
 
+sonoff:
+  username: !secret ewelink_username
+  password: !secret ewelink_password
+  scan_interval: 60
+  grace_period: 600
+  api_region: 'eu'
+  entity_prefix: True
+  debug: True
+
 alexa: !include devices/alexa.yaml
 
 light: !include devices/lights.yaml
