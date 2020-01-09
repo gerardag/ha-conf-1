@@ -1,9 +1,0 @@
-alias: Off - Bedroom heater
-initial_state: true
-trigger:
-- payload: 'off'
-  platform: mqtt
-  topic: wifi/switch/calefaccions/dormitori/set
-condition: []
-action:
-- service: script.calefaccio_menjador_turn_off
