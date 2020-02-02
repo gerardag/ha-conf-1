@@ -18,4 +18,4 @@ action:
   - service: climate.set_temperature
     data:
       entity_id: climate.dormitori
-      temperature: 19
+      temperature: 19.5

@@ -4,7 +4,6 @@
       state: true
       brightness: 10
       color_temp: 454
-    switch.arbol_de_navidad: true
     light.sofa: false
     light.mesa: false
 - name: Buenos días
@@ -28,7 +27,6 @@
     light.sofa:
       state: true
       brightness: 254
-    switch.arbol_de_navidad: true
     light.mesa: false
 - name: Con amigos
   entities:
@@ -42,7 +40,6 @@
     light.mesa: 
       state: true
       brightness: 200
-    switch.arbol_de_navidad: true
 - name: Relax
   entities:
     light.mesita:
@@ -52,7 +49,6 @@
     light.sofa:
       state: true
       brightness: 100
-    switch.arbol_de_navidad: true
     light.mesa: false
 - name: Juegos de mesa
   entities:
@@ -66,4 +62,3 @@
     light.mesa:
       state: true
       brightness: 200 
-    switch.arbol_de_navidad: true
