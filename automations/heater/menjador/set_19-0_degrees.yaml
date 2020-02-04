@@ -21,4 +21,4 @@ action:
   - service: climate.set_temperature
     data:
       entity_id: climate.menjador
-      temperature: 19.5
+      temperature: 19

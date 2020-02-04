@@ -1,5 +1,3 @@
-random_seed
-
 .HA_VERSION
 www/community
 .virtualenv
@@ -53,5 +51,3 @@ tele-menjador.conf
 .storage/
 .spotify-token-cache
 core
-.gitsecret/keys/random_seed
-!*.secret

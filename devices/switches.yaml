@@ -3,15 +3,15 @@
   mac: !secret mac_switch_calefaccio_menjador
   type: sp2
   friendly_name: 'Calefacció menjador'
-#- platform: mqtt
-#  name: 'Calefacció menjador'
-#  command_topic: 'wifi/switch/calefaccions/menjador/set'
-#  state_topic: 'wifi/switch/calefaccions/menjador'
-#  state_on: 'on'
-#  state_off: 'off'
-#  payload_on: 'on'
-#  payload_off: 'off'
-#  retain: true
+  #- platform: mqtt
+  #  name: 'Calefacció menjador'
+  #  command_topic: 'wifi/switch/calefaccions/menjador/set'
+  #  state_topic: 'wifi/switch/calefaccions/menjador'
+  #  state_on: 'on'
+  #  state_off: 'off'
+  #  payload_on: 'on'
+  #  payload_off: 'off'
+  #  retain: true
 - platform: mqtt
   name: 'Calefacció dormitori'
   command_topic: 'wifi/switch/calefaccions/dormitori/set'
