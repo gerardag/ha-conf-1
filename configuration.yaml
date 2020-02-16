@@ -148,6 +148,10 @@ speedtestdotnet:
 
 map:
 
+binary_sensor:
+  - platform: uptimerobot
+    api_key: !secret uptimerobot_api_key
+
 # Devices
 
 xiaomi_aqara:
