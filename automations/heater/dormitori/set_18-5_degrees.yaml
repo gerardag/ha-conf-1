@@ -6,7 +6,7 @@ trigger:
   - platform: homeassistant
     event: start
 condition:
-  condition: and
+  condition: or
   conditions:
     - condition: time
       after: "22:59:00"

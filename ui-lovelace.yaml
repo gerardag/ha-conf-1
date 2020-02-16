@@ -37,6 +37,8 @@ resources:
     type: module
   - url: /local/markdown-mod.js
     type: module
+  - url: /community_plugin/bar-card/bar-card.js
+    type: js
 custom_header: 
   header_text: Casa Immaleix
   compact_mode: true

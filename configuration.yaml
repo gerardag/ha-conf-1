@@ -84,6 +84,8 @@ alarm_control_panel:
     name: home
     code: 1234
 
+# shopping_list:
+
 #google:
 #  client_id: !secret google_oauth_calendar_id
 #  client_secret: !secret google_oauth_calendar_secret

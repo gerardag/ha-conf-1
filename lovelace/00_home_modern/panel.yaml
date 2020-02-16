@@ -136,6 +136,7 @@
             volume: true
           icon: 'mdi:google-home'
           name: Google Home
+
     - type: conditional
       conditions:
         - entity: input_text.selected_category
@@ -155,3 +156,16 @@
             volume: true
           icon: 'mdi:television-classic'
           name: Tele menjador
+
+    - type: conditional
+      conditions:
+        - entity: input_text.selected_category
+          state: none
+      card:
+        type: conditional
+        conditions:
+          - entity: light.entrada
+            state_not: "off"
+        card:
+          type: 'custom:bar-card'
+          entity: timer.llum_entrada_timeout
