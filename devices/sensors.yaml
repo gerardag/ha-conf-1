@@ -123,11 +123,11 @@
   app_id: !secret tmb_app_id
   app_key: !secret tmb_app_key
   stops:
-    - line: V25
-      stop: 1051
+    - line: V21
+      stop: 366
       name: Casa
-    - line: V25
-      stop: 3258
+    - line: H6
+      stop: 940
       name: Feina
 - platform: citybikes
   name: Horta
@@ -146,6 +146,70 @@
       unit_of_measurement: '°'
       value_template: "{{ '%+.1f'|format(state_attr('sun.sun', 'elevation')) }}"
 
+
+###############
+#  Templates  #
+###############
+- platform: template
+  sensors:
+    mesa_percent:
+      friendly_name: Taula %
+      unit_of_measurement: '%'
+      value_template: >-
+        {% if is_state('light.mesa', 'on') %}
+        {{ (state_attr('light.mesa', 'brightness') / (255/100)) | round(0, 'ceil') }}
+        {% else %}
+        0
+        {% endif %}
+    mesita_percent:
+      friendly_name: Tauleta %
+      unit_of_measurement: '%'
+      value_template: >-
+        {% if is_state('light.mesita', 'on') %}
+        {{ (state_attr('light.mesita', 'brightness') / (255/100)) | round(0, 'ceil') }}
+        {% else %}
+        0
+        {% endif %}
+    sofa_percent:
+      friendly_name: Sofà %
+      unit_of_measurement: '%'
+      value_template: >-
+        {% if is_state('light.sofa', 'on') %}
+        {{ (state_attr('light.sofa', 'brightness') / (255/100)) | round(0, 'ceil') }}
+        {% else %}
+        0
+        {% endif %}
+    entrada_percent:
+      friendly_name: Entrada %
+      unit_of_measurement: '%'
+      value_template: >-
+        {% if is_state('light.entrada', 'on') %}
+        {{ (state_attr('light.entrada', 'brightness') / (255/100)) | round(0, 'ceil') }}
+        {% else %}
+        0
+        {% endif %}
+    cuina_temps_restant_percent:
+      friendly_name: Cuina temps restant %
+      unit_of_measurement: '%'
+      value_template: |
+        {% if is_state('automation.cuina_quan_no_hi_hagi_moviment_activar_timer', 'on') %}
+        {% set v = (100 - (as_timestamp(now()) - as_timestamp(state_attr('automation.cuina_quan_no_hi_hagi_moviment_activar_timer', 'last_triggered'))) 
+          / (600/100)) | round(0, 'ceil') %}
+        {{ [([v, 0] | max), 100] | min}}
+        {% else %}
+        100
+        {% endif %}
+    entrada_temps_restant_percent:
+      friendly_name: Entrada temps restant %
+      unit_of_measurement: '%'
+      value_template: |
+        {% if is_state('automation.entrada_quan_no_hi_hagi_moviment_activar_timer', 'on') %}
+        {% set v = (100 - (as_timestamp(now()) - as_timestamp(state_attr('automation.entrada_quan_no_hi_hagi_moviment_activar_timer', 'last_triggered'))) 
+          / (300/100)) | round(0, 'ceil') %}
+        {{ [([v, 0] | max), 100] | min}}
+        {% else %}
+        100
+        {% endif %}
 
 ###############
 # SQL Queries #

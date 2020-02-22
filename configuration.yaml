@@ -50,10 +50,16 @@ history:
       - sensor.time_at_work
       - sensor.time_other
       - sensor.time_utc
+      - sensor.mesa_percent
+      - sensor.mesita_percent
+      - sensor.sofa_percent
+      - sensor.entrada_percent
+      - sensor.cuina_temps_restant_percent
+      - sensor.entrada_temps_restant_percent
 
 recorder:
   db_url: !secret db_mysql_url
-  purge_keep_days: 1
+  purge_keep_days: 7
   purge_interval: 1
 
 logbook:
@@ -72,12 +78,12 @@ lovelace:
 person:
   - name: Aleix
     id: aleix
-    user_id: b87122c56ad8422db17a948a2e61c407
+    user_id: 9b1b717615b5438b8f22bee0a1559b88
     device_trackers:
-      - device_tracker.aleix_mobil
+      - device_tracker.aleix_s10e
   - name: Imma
     id: imma
-    user_id: 3824b6d26b9e463e9b0627c658bca45b
+    user_id: 17da023a637a47d09761858054011d4b
 
 alarm_control_panel:
   - platform: manual
@@ -152,6 +158,8 @@ binary_sensor:
   - platform: uptimerobot
     api_key: !secret uptimerobot_api_key
 
+browser_mod:
+
 # Devices
 
 xiaomi_aqara:
@@ -165,15 +173,6 @@ cast:
   media_player:
     - host: !secret ip_chromecast
     - host: !secret ip_google_home
-
-sonoff:
-  username: !secret ewelink_username
-  password: !secret ewelink_password
-  scan_interval: 60
-  grace_period: 600
-  api_region: 'eu'
-  entity_prefix: True
-  debug: True
 
 alexa: !include devices/alexa.yaml
 

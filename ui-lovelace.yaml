@@ -1,47 +1,9 @@
-resources:
-  - url: /community_plugin/lovelace-layout-card/layout-card.js
-    type: module
-  - url: /community_plugin/vertical-stack-in-card/vertical-stack-in-card.js
-    type: js
-  - url: /community_plugin/lovelace-card-tools/card-tools.js
-    type: module
-  - url: /community_plugin/weather-card/weather-card.js
-    type: module
-  - url: /community_plugin/mini-media-player/mini-media-player-bundle.js
-    type: module
-  - url: /community_plugin/mini-graph-card/mini-graph-card-bundle.js
-    type: module
-  - url: /community_plugin/simple-weather-card/simple-weather-card-bundle.js
-    type: module
-  - url: /community_plugin/simple-thermostat/simple-thermostat.js
-    type: module
-  - url: /community_plugin/custom-header/custom-header.js
-    type: module
-  - url: /community_plugin/button-card/button-card.js
-    type: module
-  - url: /community_plugin/lovelace-card-mod/card-mod.js
-    type: js
-  - url: /community_plugin/decluttering-card/decluttering-card.js
-    type: module
-  - url: /community_plugin/atomic_calendar/atomic_calendar.js
-    type: module
-  - url: /community_plugin/lovelace-animated-background/animated-background.js
-    type: module
-  - url: /community_plugin/lovelace-gui-sandbox/gui-sandbox.js
-    type: module
-  - url: /local/nest-layout-card.js
-    type: js
-  - url: /local/weather-card-ws-mod.js
-    type: module
-  - url: /local/smhi-forecast-card.js
-    type: module
-  - url: /local/markdown-mod.js
-    type: module
-  - url: /community_plugin/bar-card/bar-card.js
-    type: js
+resources: !include lovelace/resources.yaml
+
 custom_header: 
   header_text: Casa Immaleix
   compact_mode: true
+
 animated_background:
   default_url: /community_plugin/lovelace-animated-background/background-animations/sunny.html
   entity: "weather.dark_sky"
@@ -52,136 +14,16 @@ animated_background:
       'mostlycloudy': /community_plugin/lovelace-animated-background/background-animations/mostlycloudy.html
       'clear-night': /community_plugin/lovelace-animated-background/background-animations/night.html
       'fog': /community_plugin/lovelace-animated-background/background-animations/fog.html
+
 decluttering_templates:
-  nest_button:
-    card:
-      entity: "[[entity]]"
-      name: "[[name]]"
-      show_icon: true
-      show_last_changed: "[[show_last_changed]]"
-      show_name: "[[show_name]]"
-      show_state: "[[show_state]]"
-      state: "[[state]]"
-      tap_action: "[[tap_action]]"
-      hold_action:
-        action: more-info
-      type: "custom:button-card"
-      style: |
-        ha-card {
-          font-family: Roboto, 'Open Sans', sans-serif;
-          padding-top: 15px !important;
-          background-color: rgba(0, 0, 0, 0);
-          -webkit-box-shadow: none;
-          -moz-box-shadow: none;
-          box-shadow: none;
-        }
-        ha-icon {
-          width: 60% !important;
-        }
-        img {
-          width: 100%;
-        }
-        #img-cell {
-          background-color: #F5F5F5;
-          border-radius: 50px;
-          height: 50px !important;
-          width: 50px !important;
-        }
-        #state {
-          padding-top: 5px;
-        }
-        #label {
-          font-size: 70%;
-        }
-    default:
-      - show_state: true
-      - show_name: false
-      - show_last_changed: true
-      - tap_action:
-          action: toggle
-  nest_button_category:
-    card:
-      entity: "[[entity]]"
-      name: "[[name]]"
-      show_icon: true
-      show_last_changed: "[[show_last_changed]]"
-      show_name: "[[show_name]]"
-      show_state: "[[show_state]]"
-      state: "[[state]]"
-      tap_action: "[[tap_action]]"
-      hold_action:
-        action: more-info
-      type: "custom:button-card"
-      style: |
-        ha-card {
-          font-family: Roboto, 'Open Sans', sans-serif;
-          padding-top: 15px !important;
-          background-color: rgba(0, 0, 0, 0);
-          -webkit-box-shadow: none;
-          -moz-box-shadow: none;
-          box-shadow: none;
-          margin-bottom: 30px;
-        }
-        ha-icon {
-          width: 60% !important;
-        }
-        img {
-          width: 100%;
-        }
-        #img-cell {
-          background-color: [[background_color]];
-          border-radius: 50px;
-          height: 70px !important;
-          width: 70px !important;
-        }
-        #state {
-          padding-top: 5px;
-        }
-        #label {
-          font-size: 70%;
-        }
-    default:
-      - show_state: true
-      - show_name: false
-      - show_last_changed: true
-      - background_color: "#FAFAFA"
-      - tap_action:
-          action: toggle
-  nest_picture_button:
-    card:
-      entity: "[[entity]]"
-      entity_picture: "[[entity_picture]]"
-      show_entity_picture: true
-      show_icon: true
-      show_name: false
-      show_state: true
-      style: |
-        ha-card {
-          font-family: Roboto, 'Open Sans', sans-serif;
-          padding-top: 15px !important;
-          background-color: rgba(0, 0, 0, 0);
-          -webkit-box-shadow: none;
-          -moz-box-shadow: none;
-          box-shadow: none;
-        }
-        img {
-          width: 100% !important;
-        }
-        #img-cell {
-          background-color: #F5F5F5;
-          border-radius: 50px;
-          height: 50px !important;
-          width: 50px !important;
-        }
-        #state {
-          padding-top: 5px;
-        }
-      tap_action:
-        action: more-info
-      type: "custom:button-card"
+  nest_button: !include lovelace/decluttering_templates/nest_button.yaml
+  nest_button_category: !include lovelace/decluttering_templates/nest_button_category.yaml
+  nest_picture_button: !include lovelace/decluttering_templates/nest_picture_button.yaml
+
 title: Casa
 views:
-  - !include lovelace/00_home_modern.yaml
-  - !include lovelace/00_home_modern_mobile.yaml
-  - !include lovelace/10_home_classic.yaml
-  - !include lovelace/30_climates.yaml
+  - !include lovelace/views/00_home_modern.yaml
+  - !include lovelace/views/00_home_modern_mobile.yaml
+  - !include lovelace/views/10_home_classic.yaml
+  - !include lovelace/views/30_climates.yaml
+  - !include lovelace/views/50_systems.yaml

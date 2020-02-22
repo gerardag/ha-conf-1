@@ -1,0 +1,281 @@
+icon: 'mdi:thermometer'
+title: Termostats
+path: climates
+badges: []
+cards:
+
+
+
+  - type: vertical-stack
+    cards:
+      - type: "custom:vertical-stack-in-card"
+        style: |
+          ha-card {
+            margin-top: 30px;
+            margin-right: 30px;
+            padding: 10px;
+          }
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: markdown
+                content: |
+                  ## Exterior
+                style: |
+                  ha-card {
+                    font-family: Roboto, 'Open Sans', sans-serif;
+                    -webkit-box-shadow: none;
+                    -moz-box-shadow: none;
+                    box-shadow: none;
+                    text-align: left;
+                  }
+                  h2 {
+                    color: black;
+                    font-weight: 300 !important;
+                    margin: 0px;
+                  }
+          - type: "horizontal-stack"
+            cards:
+              - entities:
+                  - entity: sensor.exterior_temperature_mqtt
+                    show_fill: false
+                icon: 'mdi:thermometer'
+                line_color: orange
+                line_width: 5
+                name: exterior
+                type: 'custom:mini-graph-card'
+                show:
+                  icon: true
+                  name: false
+                style: |
+                  ha-card {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                  }
+              - entities:
+                  - entity: sensor.exterior_humidity_mqtt
+                    show_fill: false
+                icon: 'mdi:water'
+                line_color: '#00C6C5'
+                line_width: 5
+                name: exterior
+                type: 'custom:mini-graph-card'
+                show:
+                  icon: true
+                  name: false
+                style: |
+                  ha-card {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                  }
+
+
+
+
+
+      - type: "custom:vertical-stack-in-card"
+        style: |
+          ha-card {
+            margin-top: 30px;
+            margin-right: 30px;
+            padding: 10px;
+          }
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: markdown
+                content: |
+                  ## Menjador
+                style: |
+                  ha-card {
+                    font-family: Roboto, 'Open Sans', sans-serif;
+                    -webkit-box-shadow: none;
+                    -moz-box-shadow: none;
+                    box-shadow: none;
+                    text-align: left;
+                  }
+                  h2 {
+                    color: black;
+                    font-weight: 300 !important;
+                    margin: 0px;
+                  }
+              - entity: climate.menjador
+                type: 'custom:simple-thermostat'
+                step_layout: row
+                name: false
+                style: |
+                  ha-card {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                  }
+                icon: false
+                control: false
+                hide:
+                  temperature: true
+                  state: true
+                type: 'custom:simple-thermostat'
+                style: |
+                  ha-card {
+                    --st-font-size-xl: 24px;
+                    --st-font-size-m: 20px;
+                    --st-font-size-title: 20px;
+                    --st-font-size-sensors: 30px;
+                    --st-spacing: 2px;
+                  }
+          - type: "horizontal-stack"
+            cards:
+              - entities:
+                  - entity: sensor.menjador_temperature_mqtt
+                    show_fill: false
+                icon: 'mdi:thermometer'
+                line_color: orange
+                line_width: 5
+                type: 'custom:mini-graph-card'
+                show:
+                  icon: true
+                  name: false
+                style: |
+                  ha-card {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                  }
+              - entities:
+                  - entity: sensor.menjador_humidity_mqtt
+                    show_fill: false
+                icon: 'mdi:water'
+                line_color: '#00C6C5'
+                line_width: 5
+                type: 'custom:mini-graph-card'
+                show:
+                  icon: true
+                  name: false
+                style: |
+                  ha-card {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                  }
+
+
+
+
+      - type: "custom:vertical-stack-in-card"
+        style: |
+          ha-card {
+            margin-top: 30px;
+            margin-right: 30px;
+            padding: 10px;
+          }
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: markdown
+                content: |
+                  ## Dormitori
+                style: |
+                  ha-card {
+                    font-family: Roboto, 'Open Sans', sans-serif;
+                    -webkit-box-shadow: none;
+                    -moz-box-shadow: none;
+                    box-shadow: none;
+                    text-align: left;
+                  }
+                  h2 {
+                    color: black;
+                    font-weight: 300 !important;
+                    margin: 0px;
+                  }
+              - entity: climate.dormitori
+                type: 'custom:simple-thermostat'
+                step_layout: row
+                name: false
+                style: |
+                  ha-card {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                  }
+                icon: false
+                control: false
+                hide:
+                  temperature: true
+                  state: true
+                type: 'custom:simple-thermostat'
+                style: |
+                  ha-card {
+                    --st-font-size-xl: 24px;
+                    --st-font-size-m: 20px;
+                    --st-font-size-title: 20px;
+                    --st-font-size-sensors: 30px;
+                    --st-spacing: 2px;
+                  }
+          - type: "horizontal-stack"
+            cards:
+              - entities:
+                  - entity: sensor.dormitori_temperature_mqtt
+                    show_fill: false
+                icon: 'mdi:thermometer'
+                line_color: orange
+                line_width: 5
+                name: Dormitori
+                type: 'custom:mini-graph-card'
+                show:
+                  icon: true
+                  name: false
+                style: |
+                  ha-card {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                  }
+              - entities:
+                  - entity: sensor.dormitori_humidity_mqtt
+                    show_fill: false
+                icon: 'mdi:water'
+                line_color: '#00C6C5'
+                line_width: 5
+                name: Dormitori
+                type: 'custom:mini-graph-card'
+                show:
+                  icon: true
+                  name: false
+                style: |
+                  ha-card {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  - entities:
+      - entity: switch.calefaccio_menjador
+        name: Menjador
+      - entity: switch.calefaccio_dormitori
+        name: Dormitori
+      - entity: sensor.menjador_temperature_mqtt
+        name: Menjador
+      - entity: sensor.dormitori_temperature_mqtt
+        name: Dormitori
+      - entity: sensor.exterior_temperature_mqtt
+        name: Exterior
+    title: Temperatures
+    type: history-graph

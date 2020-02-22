@@ -3,7 +3,7 @@ nest:
 
   # Card-Specific Modifications
   # ha-card-box-shadow: "10px 10px 17px -8px #A9A9A9" # Shadows on cards. Same as `shadow-elevation-2dp_-_box-shadow:
-  ha-card-box-shadow: "2px 2px 5px rgba(50,50,50,0.8)"
+  #ha-card-box-shadow: "2px 2px 5px rgba(50,50,50,0.8)"
   ha-card-border-radius: "10px" # Rounded corners on cards. NOTE: may not work with custom cards.
   # ha-card-background: # Defines the background for cards.
 

@@ -1,0 +1,71 @@
+icon: 'mdi:engine'
+title: System
+path: system
+badges: []
+cards:
+  - type: horizontal-stack
+    cards:
+      - type: 'custom:mini-graph-card'
+        name: CPU
+        hours_to_show: 1
+        color_thresholds:
+          - value: 0
+            color: "#37c23b"
+          - value: 50
+            color: "#f8841e"
+          - value: 80
+            color: "#eb0c0c"
+        points_per_hour: 60
+        entities:
+          - entity: sensor.glances_cpu_used
+            show_fill: false
+            show_points: false
+        line_color: orange
+        line_width: 7
+      - type: 'custom:mini-graph-card'
+        name: RAM
+        hours_to_show: 1
+        color_thresholds:
+          - value: 0
+            color: "#37c23b"
+          - value: 50
+            color: "#f8841e"
+          - value: 80
+            color: "#eb0c0c"
+        points_per_hour: 60
+        entities:
+          - entity: sensor.glances_ram_used_percent
+            show_fill: false
+            show_points: false
+        line_color: orange
+        line_width: 7
+      - type: 'custom:mini-graph-card'
+        name: Disk
+        hours_to_show: 1
+        color_thresholds:
+          - value: 0
+            color: "#37c23b"
+          - value: 50
+            color: "#f8841e"
+          - value: 80
+            color: "#eb0c0c"
+        points_per_hour: 60
+        entities:
+          - entity: sensor.glances_disk_used_percent
+            show_fill: false
+            show_points: false
+        line_color: orange
+        line_width: 7
+
+  - type: entities
+    entities: 
+      - sensor.glances_cpu_load
+      - sensor.glances_thread
+      - sensor.glances_ram_free
+      - sensor.glances_ram_used
+      - sensor.glances_disk_free
+      - sensor.glances_disk_used
+      - sensor.speedtest_download
+      - sensor.speedtest_upload
+      - sensor.speedtest_ping
+

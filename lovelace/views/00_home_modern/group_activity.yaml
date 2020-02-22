@@ -68,8 +68,8 @@
       variables:
         - show_name: true
         - show_last_changed: false
-        - name: V25 Casa
-        - entity: sensor.v25_1051
+        - name: V21 Casa
+        - entity: sensor.v21_casa_366
         - tap_action:
             action: more-info
         - state:
@@ -138,8 +138,8 @@
       variables:
         - show_name: true
         - show_last_changed: false
-        - name: "C/ Pallars"
-        - entity: sensor.bicing_feina_fba9e99bbd040d256eea48be1e55f488
+        - name: "Av. Diagonal 650"
+        - entity: sensor.bicing_feina_9dcf84478cd998e6d87d63d6babec515
         - tap_action:
             action: more-info
         - state:
@@ -159,8 +159,8 @@
       variables:
         - show_name: true
         - show_last_changed: false
-        - name: "C/ Llacuna"
-        - entity: sensor.bicing_feina_0d18aea21093f707b08ac0e03177434c
+        - name: "Av. Diagonal 652"
+        - entity: sensor.bicing_feina_6289afec87ed8628a7a79cadb10db19a
         - tap_action:
             action: more-info
         - state:
@@ -180,8 +180,8 @@
       variables:
         - show_name: true
         - show_last_changed: false
-        - name: Poble Nou
-        - entity: sensor.waqi_barcelona_poblenou_catalunya_spain
+        - name: Palau Reial
+        - entity: sensor.waqi_barcelona_palau_reial_catalunya_spain
         - tap_action:
             action: more-info
         - state:
@@ -201,8 +201,8 @@
       variables:
         - show_name: true
         - show_last_changed: false
-        - name: V25 Feina
-        - entity: sensor.v25_3258
+        - name: H6 Feina
+        - entity: sensor.h6_feina_940
         - tap_action:
             action: more-info
         - state:
