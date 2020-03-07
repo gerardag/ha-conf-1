@@ -3,6 +3,19 @@ resources: !include lovelace/resources.yaml
 custom_header: 
   header_text: Casa Immaleix
   compact_mode: true
+  hide_tabs: mobile
+  exceptions:
+    - conditions:
+        query_string: develop
+    - conditions:
+        user_agent: Mobile
+      config:
+        default_tab: mobile
+        hide_tabs: home
+    - conditions:
+        query_string: kiosk
+      config:
+        kiosk_mode: true
 
 animated_background:
   default_url: /community_plugin/lovelace-animated-background/background-animations/sunny.html

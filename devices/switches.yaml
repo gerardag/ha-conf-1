@@ -3,6 +3,11 @@
   mac: !secret mac_switch_calefaccio_menjador
   type: sp2
   friendly_name: 'Calefacció menjador'
+- platform: broadlink
+  host: !secret ip_remote
+  mac: !secret mac_remote
+  type: rm_mini
+  friendly_name: 'Aspirador'
   #- platform: mqtt
   #  name: 'Calefacció menjador'
   #  command_topic: 'wifi/switch/calefaccions/menjador/set'

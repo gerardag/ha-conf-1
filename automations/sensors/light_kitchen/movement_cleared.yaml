@@ -1,4 +1,5 @@
 alias: Cuina - Quan no hi hagi moviment, activar timer
+initial_state: false
 trigger:
 - entity_id: binary_sensor.motion_kitchen 
   from: 'on'

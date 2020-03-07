@@ -1,4 +1,5 @@
 alias: Cuina - Encendre llum amb moviment
+initial_state: false
 trigger:
 - entity_id: binary_sensor.motion_kitchen 
   from: 'off'

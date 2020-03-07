@@ -115,6 +115,16 @@ notify:
   - name: "Grup casa"
     platform: telegram
     chat_id: !secret telegram_chat_casa
+  - name: Gotify high priority
+    platform: rest
+    resource: https://gotify.aleix.cloud/message
+    method: POST_JSON
+    headers:
+      X-Gotify-Key: !secret gotify_key
+    message_param_name: message
+    title_param_name: title
+    data:
+      priority: 8
 
 # Variables
 

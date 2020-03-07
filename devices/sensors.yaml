@@ -145,6 +145,10 @@
       friendly_name: "Sun Angle"
       unit_of_measurement: '°'
       value_template: "{{ '%+.1f'|format(state_attr('sun.sun', 'elevation')) }}"
+    aleix_velocity:
+      friendly_name: "Aleix velocity"
+      unit_of_measurement: 'km/h'
+      value_template: "{{ state_attr('device_tracker.aleix_s10e', 'velocity') }}"
 
 
 ###############

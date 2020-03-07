@@ -1,5 +1,5 @@
 alias: 'Home Modes - Ocult - At night'
-initial_state: true
+initial_state: false
 trigger:
   - platform: time
     at: "22:00:00"

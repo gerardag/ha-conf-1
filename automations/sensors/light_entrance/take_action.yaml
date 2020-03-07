@@ -1,4 +1,5 @@
 alias: Entrada - Apagar llum quan timer sigui 0
+initial_state: false
 trigger:
 - platform: event
   event_type: timer.finished
