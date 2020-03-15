@@ -1,0 +1,182 @@
+- template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_last_changed: false
+    - show_state: false
+    - name: Replà
+    - entity: camera.escala
+    - tap_action:
+        action: more-info
+    - state:
+        - color: "#999999"
+          icon: "mdi:cctv"
+          operator: default
+
+- show_name: true
+  template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_state: false
+    - name: Entrada
+    - entity: binary_sensor.door_main_entrance 
+    - tap_action:
+        action: more-info
+    - state:
+        - color: "#999999"
+          icon: "mdi:door-closed"
+          value: "off"
+        - color: "#93BCFE"
+          icon: "mdi:door-open"
+          value: "on"
+
+- show_name: true
+  template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_state: false
+    - name: Entrada
+    - entity:  binary_sensor.motion_entrance 
+    - tap_action:
+        action: more-info
+    - state:
+        - color: "#999999"
+          icon: "mdi:motion-sensor"
+          value: "off"
+        - color: "#93BCFE"
+          icon: "mdi:motion-sensor"
+          value: "on"
+
+- show_name: true
+  template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_state: false
+    - name: Cuina
+    - entity:  binary_sensor.motion_kitchen 
+    - tap_action:
+        action: more-info
+    - state:
+        - color: "#999999"
+          icon: "mdi:motion-sensor"
+          value: "off"
+        - color: "#93BCFE"
+          icon: "mdi:motion-sensor"
+          value: "on"
+          
+- show_name: true
+  template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_state: false
+    - name: Menjador
+    - entity:  binary_sensor.window_dinningroom 
+    - tap_action:
+        action: more-info
+    - state:
+        - color: "#999999"
+          icon: "mdi:window-closed"
+          value: "off"
+        - color: "#93BCFE"
+          icon: "mdi:window-open"
+          value: "on"
+          
+- show_name: true
+  template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_state: false
+    - name: Dormitori
+    - entity:  binary_sensor.window_bedroom 
+    - tap_action:
+        action: more-info
+    - state:
+        - color: "#999999"
+          icon: "mdi:window-closed"
+          value: "off"
+        - color: "#93BCFE"
+          icon: "mdi:window-open"
+          value: "on"
+
+
+- template: nest_button
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_last_changed: false
+    - show_state: true
+    - name: "Change mode:"
+    - entity: input_select.home_mode
+    - tap_action:
+        action: call-service
+        service: input_select.select_next
+        service_data:
+          entity_id: input_select.home_mode
+    - state:        
+        - color: "#999999"
+          icon: "mdi:home-map-marker"
+          operator: "=="
+          value: Normal
+        - color: "#999999"
+          icon: "mdi:eye-off"
+          operator: "=="
+          value: Ocult
+        - color: "#999999"
+          icon: "mdi:sleep"
+          operator: "=="
+          value: Inactiu
+        - color: "#999999"
+          icon: "mdi:shield-home"
+          operator: "=="
+          value: Fora de casa
+        - color: "#999999"
+          icon: "mdi:robot"
+          operator: "=="
+          value: Simular activitat
+
+
+
+# - template: nest_picture_button
+#   type: "custom:decluttering-card"
+#   variables:
+#     - entity: person.aleix
+#     - entity_picture: /local/aleix.jpg
+# - template: nest_picture_button
+#   type: "custom:decluttering-card"
+#   variables:
+#     - entity: person.imma
+#     - entity_picture: /local/imma2.jpg
+
+# - template: nest_button
+#   type: "custom:decluttering-card"
+#   style: |
+    
+#   variables:
+#     - entity: alarm_control_panel.home
+#     - state:
+#         - color: "rgb(152,251,152)"
+#           icon: "mdi:shield-lock"
+#           value: armed_away
+#         - color: "#93BCFE"
+#           icon: "mdi:shield-home"
+#           value: armed_home
+#         - color: "rgb(255, 0, 0)"
+#           icon: "mdi:shield-alert"
+#           styles:
+#             icon:
+#               - animation: blink 2s ease infinite
+#           value: triggered
+#         - color: "rgb(169,169,169)"
+#           icon: "mdi:shield-off"
+#           value: disarmed
+#         - color: "rgb(169,169,169)"
+#           icon: "mdi:shield-half-full"
+#           styles:
+#             icon:
+#               - animation: blink 2s ease infinite
+#           value: pending

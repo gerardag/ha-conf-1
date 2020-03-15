@@ -5,8 +5,8 @@
       variables:
         - show_name: true
         - show_last_changed: false
-        - name: "C/ Fulton"
-        - entity: sensor.bicing_horta_da3eabed50f10a0ec8ebdc51a3fea6df
+        - name: "C/ Porto"
+        - entity: sensor.bicing_horta_a512a25dc72978e08e197d1f2f20ae5b
         - tap_action:
             action: more-info
         - state:
@@ -26,8 +26,8 @@
       variables:
         - show_name: true
         - show_last_changed: false
-        - name: "C/ Granollers"
-        - entity: sensor.bicing_horta_47af314f73b4b5b03d6fc0789257b443
+        - name: "C/ Lisboa"
+        - entity: sensor.bicing_horta_01e4519ab65b0f7d18a47d36a7ac9db2
         - tap_action:
             action: more-info
         - state:
@@ -73,7 +73,7 @@
         - tap_action:
             action: more-info
         - state:
-            - color: "#BAC0C6"
+            - color: "#999999"
               icon: "mdi:bus-stop"
               operator: default
     - template: nest_button
@@ -206,7 +206,7 @@
         - tap_action:
             action: more-info
         - state:
-            - color: "#BAC0C6"
+            - color: "#999999"
               icon: "mdi:bus-stop"
               operator: default
     - template: nest_button

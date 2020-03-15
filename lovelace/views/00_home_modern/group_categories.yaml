@@ -25,26 +25,6 @@
     - show_name: true
     - show_state: false
     - show_last_changed: false
-    - name: Seguretat
-    - entity: input_text.selected_category
-    - background_color: "#C5E4B3"
-    - state:
-        - color: "#ffffff"
-          icon: "mdi:shield-home"
-          operator: default
-    - tap_action:
-        action: call-service
-        service: input_text.set_value
-        service_data:
-          entity_id: input_text.selected_category
-          value: altres
-- show_name: true
-  template: nest_button_category
-  type: "custom:decluttering-card"
-  variables:
-    - show_name: true
-    - show_state: false
-    - show_last_changed: false
     - name: Temperatures
     - entity: input_text.selected_category
     - background_color: "#FFCCBE"
@@ -85,7 +65,44 @@
     - show_name: true
     - show_state: false
     - show_last_changed: false
-    - name: Activitat
+    - name: Casa
+    - entity: input_select.home_mode
+    - background_color: "#C5E4B3"
+    - state:        
+        - color: "#ffffff"
+          icon: "mdi:home-map-marker"
+          operator: "=="
+          value: Normal
+        - color: "#ffffff"
+          icon: "mdi:eye-off"
+          operator: "=="
+          value: Ocult
+        - color: "#ffffff"
+          icon: "mdi:sleep"
+          operator: "=="
+          value: Inactiu
+        - color: "#ffffff"
+          icon: "mdi:shield-home"
+          operator: "=="
+          value: Fora de casa
+        - color: "#ffffff"
+          icon: "mdi:robot"
+          operator: "=="
+          value: Simular activitat
+    - tap_action:
+        action: call-service
+        service: input_text.set_value
+        service_data:
+          entity_id: input_text.selected_category
+          value: casa
+- show_name: true
+  template: nest_button_category
+  type: "custom:decluttering-card"
+  variables:
+    - show_name: true
+    - show_state: false
+    - show_last_changed: false
+    - name: Vida
     - entity: input_text.selected_category
     - background_color: "#BEE7FF"
     - state:

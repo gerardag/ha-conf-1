@@ -42,10 +42,10 @@
     - type: conditional
       conditions:
         - entity: input_text.selected_category
-          state: altres
+          state: casa
       card:
         type: horizontal-stack
-        cards: !include group_cameras.yaml
+        cards: !include group_casa.yaml
     - type: conditional
       conditions:
         - entity: input_text.selected_category
