@@ -1,6 +1,5 @@
 habitacio:
   name: Habitació
-  view: true
   entities:
     - media_player.el_lado_oscuro
     - sensor.dormitori_humidity
@@ -8,7 +7,6 @@ habitacio:
 
 menjador:
   name: Menjador
-  view: true
   entities:
     - light.mesita
     - light.mesa
@@ -25,7 +23,6 @@ menjador:
 
 exterior:
   name: Exterior
-  view: true
   entities:
     - camera.raspberry_pi_camera
     - sensor.exterior_humidity_2
@@ -33,6 +30,5 @@ exterior:
 
 entrada:
   name: Entrada
-  view: true
   entities:
     - light.entrada

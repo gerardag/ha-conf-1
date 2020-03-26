@@ -74,6 +74,13 @@ duckdns:
 
 lovelace:
   mode: yaml
+  dashboards:
+    clean:
+      mode: yaml
+      filename: ui-lovelace-clean.yaml
+      title: Clean (testing)
+      show_in_sidebar: true
+      require_admin: true
 
 person:
   - name: Aleix
@@ -147,10 +154,10 @@ tts:
     service_name: google_say
     language: es
 
-google_assistant:
-  project_id: !secret google_project_id
-  api_key: !secret google_api_key
-  expose_by_default: true
+# google_assistant:
+#   project_id: !secret google_project_id
+#   api_key: !secret google_api_key
+#   expose_by_default: true
 
 wake_on_lan:
 

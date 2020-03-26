@@ -1,0 +1,101 @@
+default:
+  - system: pi4
+card:
+  type: vertical-stack
+  cards:
+    - type: markdown
+      content: |
+        # [[system]].sys.aleix.cloud
+      style: |
+        ha-card {
+          font-family: Roboto, 'Open Sans', sans-serif;
+          font-size: 100%;
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+          text-align: left;
+          background: rgba(0,0,0,0);
+          text-align: center;
+        }
+        h1 {
+          color: white;
+          font-weight: 300 !important;
+          margin: 0px;
+        }
+    - type: horizontal-stack
+      cards:
+        - type: 'custom:mini-graph-card'
+          name: CPU
+          hours_to_show: 6
+          lower_bound: 0
+          upper_bound: 100
+          color_thresholds:
+            - value: 0
+              color: "#37c23b"
+            - value: 50
+              color: "#37c23b"
+            - value: 70
+              color: "#f8841e"
+            - value: 90
+              color: "#eb0c0c"
+          points_per_hour: 10
+          entities:
+            - entity: 'sensor.[[system]]_cpu_used'
+              show_fill: false
+              show_points: true
+          line_color: orange
+          line_width: 7
+        - type: 'custom:mini-graph-card'
+          name: RAM
+          hours_to_show: 6
+          lower_bound: 0
+          upper_bound: 100
+          color_thresholds:
+            - value: 0
+              color: "#37c23b"
+            - value: 50
+              color: "#37c23b"
+            - value: 70
+              color: "#f8841e"
+            - value: 90
+              color: "#eb0c0c"
+          points_per_hour: 10
+          entities:
+            - entity: 'sensor.[[system]]_ram_used_percent'
+              show_fill: false
+              show_points: true
+          line_color: orange
+          line_width: 7
+        - type: 'custom:mini-graph-card'
+          name: Disk
+          hours_to_show: 6
+          lower_bound: 0
+          upper_bound: 100
+          color_thresholds:
+            - value: 0
+              color: "#37c23b"
+            - value: 50
+              color: "#37c23b"
+            - value: 70
+              color: "#f8841e"
+            - value: 90
+              color: "#eb0c0c"
+          points_per_hour: 10
+          entities:
+            - entity: 'sensor.[[system]]_used_percent'
+              show_fill: false
+              show_points: true
+          line_color: orange
+          line_width: 7
+
+    - type: entities
+      entities: 
+        - 'sensor.[[system]]_cpu_load'
+        - 'sensor.[[system]]_thread'
+        - 'sensor.[[system]]_ram_free'
+        - 'sensor.[[system]]_ram_used'
+        - 'sensor.[[system]]_free'
+        - 'sensor.[[system]]_used'
+        - 'sensor.[[system]]_speedtest_download'
+        - 'sensor.[[system]]_speedtest_upload'
+        - 'sensor.[[system]]_speedtest_ping'

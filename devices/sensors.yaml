@@ -23,6 +23,42 @@
   name: Menjador Humidity MQTT
   state_topic: "ble/menjador/humidity"
   unit_of_measurement: "%"
+- platform: mqtt
+  name: pi4 speedtest download
+  state_topic: "system/pi4/speedtest/download"
+  unit_of_measurement: "Mbps"
+- platform: mqtt
+  name: pi4 speedtest upload
+  state_topic: "system/pi4/speedtest/upload"
+  unit_of_measurement: "Mbps"
+- platform: mqtt
+  name: pi4 speedtest ping
+  state_topic: "system/pi4/speedtest/ping"
+  unit_of_measurement: "ms"
+- platform: mqtt
+  name: pi3a speedtest download
+  state_topic: "system/pi3a/speedtest/download"
+  unit_of_measurement: "Mbps"
+- platform: mqtt
+  name: pi3a speedtest upload
+  state_topic: "system/pi3a/speedtest/upload"
+  unit_of_measurement: "Mbps"
+- platform: mqtt
+  name: pi3a speedtest ping
+  state_topic: "system/pi3a/speedtest/ping"
+  unit_of_measurement: "ms"
+- platform: mqtt
+  name: pizw speedtest download
+  state_topic: "system/pizw/speedtest/download"
+  unit_of_measurement: "Mbps"
+- platform: mqtt
+  name: pizw speedtest upload
+  state_topic: "system/pizw/speedtest/upload"
+  unit_of_measurement: "Mbps"
+- platform: mqtt
+  name: pizw speedtest ping
+  state_topic: "system/pizw/speedtest/ping"
+  unit_of_measurement: "ms"
 # - platform: mitemp_bt
 #   mac: !secret mac_temp_mi_dormitori
 #   monitored_conditions:
