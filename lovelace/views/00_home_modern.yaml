@@ -1,7 +1,7 @@
-icon: 'mdi:home'
+icon: 'mdi:test-tube-empty'
 panel: true
-path: home
-title: home
+path: oldui
+title: oldui
 badges: []
 cards:
   - type: vertical-stack

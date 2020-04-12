@@ -3,25 +3,10 @@ default:
 card:
   type: vertical-stack
   cards:
-    - type: markdown
-      content: |
-        # [[system]].sys.aleix.cloud
-      style: |
-        ha-card {
-          font-family: Roboto, 'Open Sans', sans-serif;
-          font-size: 100%;
-          -webkit-box-shadow: none;
-          -moz-box-shadow: none;
-          box-shadow: none;
-          text-align: left;
-          background: rgba(0,0,0,0);
-          text-align: center;
-        }
-        h1 {
-          color: white;
-          font-weight: 300 !important;
-          margin: 0px;
-        }
+    - template: title_h1
+      type: "custom:decluttering-card"
+      variables:
+        - title: "[[system]].sys.aleix.cloud"
     - type: horizontal-stack
       cards:
         - type: 'custom:mini-graph-card'

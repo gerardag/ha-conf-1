@@ -1,6 +1,7 @@
 icon: 'mdi:thermometer'
 title: Termostats
 path: climates
+panel: false
 badges: []
 cards:
 
@@ -105,18 +106,17 @@ cards:
                 type: 'custom:simple-thermostat'
                 step_layout: row
                 name: false
-                style: |
-                  ha-card {
-                    margin-left: 10px;
-                    margin-right: 10px;
-                    margin-bottom: 10px;
-                  }
+                # style: |
+                #   ha-card {
+                #     margin-left: 10px;
+                #     margin-right: 10px;
+                #     margin-bottom: 10px;
+                #   }
                 icon: false
                 control: false
                 hide:
                   temperature: true
                   state: true
-                type: 'custom:simple-thermostat'
                 style: |
                   ha-card {
                     --st-font-size-xl: 24px;
@@ -193,18 +193,18 @@ cards:
                 type: 'custom:simple-thermostat'
                 step_layout: row
                 name: false
-                style: |
-                  ha-card {
-                    margin-left: 10px;
-                    margin-right: 10px;
-                    margin-bottom: 10px;
-                  }
+                # style: |
+                #   ha-card {
+                #     margin-left: 10px;
+                #     margin-right: 10px;
+                #     margin-bottom: 10px;
+                #   }
                 icon: false
                 control: false
                 hide:
                   temperature: true
                   state: true
-                type: 'custom:simple-thermostat'
+                # type: 'custom:simple-thermostat'
                 style: |
                   ha-card {
                     --st-font-size-xl: 24px;

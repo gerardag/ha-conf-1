@@ -72,15 +72,16 @@ duckdns:
   domain: hass-amurtra
   access_token: !secret duckdns_api_key
 
+cloudflare:
+  email: !secret cloudflare_email
+  api_key: !secret cloudflare_token
+  zone: aleix.cloud
+  records:
+    - casa.sys
+
 lovelace:
   mode: yaml
-  dashboards:
-    clean:
-      mode: yaml
-      filename: ui-lovelace-clean.yaml
-      title: Clean (testing)
-      show_in_sidebar: true
-      require_admin: true
+
 
 person:
   - name: Aleix
@@ -154,10 +155,11 @@ tts:
     service_name: google_say
     language: es
 
-# google_assistant:
-#   project_id: !secret google_project_id
-#   api_key: !secret google_api_key
-#   expose_by_default: true
+google_assistant:
+  project_id: !secret google_project_id
+  service_account: !include google-home-serviceaccount.json
+  report_state: true
+  expose_by_default: true
 
 wake_on_lan:
 
@@ -207,6 +209,10 @@ webostv:
     service: wake_on_lan.send_magic_packet
     data:
       mac: "A8-23-FE-27-CB-A5"
+
+spotify:
+  client_id: !secret spotify_client_id
+  client_secret: !secret spotify_client_secret
 
 # Other config
 

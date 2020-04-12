@@ -6,15 +6,15 @@ preload:
 custom_header: 
   header_text: Casa Immaleix
   compact_mode: true
-  hide_tabs: mobile
+  # hide_tabs: mobile
   exceptions:
-    - conditions:
-        query_string: develop
-    - conditions:
-        user_agent: Mobile
-      config:
-        default_tab: mobile
-        hide_tabs: home
+    # - conditions:
+    #     query_string: develop
+    # - conditions:
+    #     user_agent: Mobile
+    #   config:
+    #     default_tab: mobile
+    #     hide_tabs: home
     - conditions:
         query_string: kiosk
       config:
@@ -36,11 +36,14 @@ decluttering_templates:
   nest_button_category: !include lovelace/decluttering_templates/nest_button_category.yaml
   nest_picture_button: !include lovelace/decluttering_templates/nest_picture_button.yaml
   sys_monitoring_stack: !include lovelace/decluttering_templates/sys_monitoring_stack.yaml
+  title_h1: !include lovelace/decluttering_templates/title_h1.yaml
+  title_h2: !include lovelace/decluttering_templates/title_h2.yaml
 
 title: Casa
 views:
-  - !include lovelace/views/00_home_modern.yaml
-  - !include lovelace/views/00_home_modern_mobile.yaml
-  - !include lovelace/views/10_home_classic.yaml
-  - !include lovelace/views/30_climates.yaml
+  # - !include lovelace/views/00_home_modern_mobile.yaml
+  - !include lovelace/views/60_clean.yaml
+  # - !include lovelace/views/10_home_classic.yaml
+  # - !include lovelace/views/30_climates.yaml
   - !include lovelace/views/50_systems.yaml
+  - !include lovelace/views/00_home_modern.yaml

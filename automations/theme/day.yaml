@@ -13,4 +13,4 @@ initial_state: true
 action:
   - service: frontend.set_theme
     data:
-      name: nest
+      name: "Google Light Theme"

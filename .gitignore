@@ -1,6 +1,7 @@
 .HA_VERSION
 www/community
 .virtualenv
+google-home-serviceaccount.json
 
 # Created by https://www.gitignore.io/api/homeassistant
 # Edit at https://www.gitignore.io/?templates=homeassistant

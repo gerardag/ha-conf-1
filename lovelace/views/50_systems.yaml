@@ -1,23 +1,28 @@
-icon: 'mdi:engine'
+icon: 'mdi:speedometer'
 title: System
 path: system
 badges: []
+panel: true
 cards:
+  - type: custom:layout-card
+    layout: horizontal
+    min_columns: 1
+    max_columns: 3
+    cards:
+
+      - template: sys_monitoring_stack
+        type: "custom:decluttering-card"
+        variables:
+          - system: pi4
 
 
-  - template: sys_monitoring_stack
-    type: "custom:decluttering-card"
-    variables:
-      - system: pi4
+      - template: sys_monitoring_stack
+        type: "custom:decluttering-card"
+        variables:
+          - system: pi3a
 
-
-  - template: sys_monitoring_stack
-    type: "custom:decluttering-card"
-    variables:
-      - system: pi3a
-
-      
-  - template: sys_monitoring_stack
-    type: "custom:decluttering-card"
-    variables:
-      - system: pizw
+          
+      - template: sys_monitoring_stack
+        type: "custom:decluttering-card"
+        variables:
+          - system: pizw

@@ -25,4 +25,4 @@ smart_home:
     scene.relax:
       name: Escena relax
     scene.tele:
-      name: Escena tele
+      name: Escena cine
