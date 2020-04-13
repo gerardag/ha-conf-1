@@ -1,0 +1,9 @@
+'tv_volume_down':
+  alias: TV Volume down
+  sequence:
+  - service: media_player.volume_down
+    data: 
+      entity_id: media_player.tele
+  - service: media_player.volume_down
+    data: 
+      entity_id: media_player.tele

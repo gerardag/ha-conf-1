@@ -10,9 +10,16 @@ smart_home:
       - switch.calefaccio_menjador
       - switch.calefaccio_dormitori
     include_entities:
-      - script.tv_turn_on_dinner
+      - script.tv_turn_on_disney
       - script.tv_turn_on_netflix
+      - script.tv_turn_on_dinner
+      - script.tv_turn_on_prime
+      - script.tv_turn_on_switch
+      - script.tv_turn_on_wii
       - script.tv_turn_on_xbox
+      - script.tv_turn_on_youtube
+      - script.tv_volume_up
+      - script.tv_volume_down
   entity_config:
     scene.buenos_dias:
       name: Escena buenos dias

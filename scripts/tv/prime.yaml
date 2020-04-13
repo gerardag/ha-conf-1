@@ -1,5 +1,5 @@
-'tv_turn_on_netflix':
-  alias: TV Netflix
+'tv_turn_on_prime':
+  alias: TV Amazon Prime Video
   sequence:
   - service: scene.turn_on
     data: 
@@ -11,7 +11,7 @@
   - service: media_player.select_source
     data: 
       entity_id: media_player.tele
-      source: 'Netflix'
+      source: 'Amazon Prime Video'
   - service: media_player.volume_mute
     data:
       entity_id: media_player.tele
