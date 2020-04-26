@@ -89,7 +89,7 @@ cards:
       - type: custom:layout-card
         layout: vertical
         min_columns: 1
-        max_columns: 2
+        max_columns: 3
         cards:
 
 
@@ -174,6 +174,7 @@ cards:
                           service: light.turn_on                 
                           service_data:
                             entity_id: light.mesita
+                  - type: section
                   - entity: light.encimera
                     name: Marbre cuina
                     show_state: false
@@ -194,6 +195,7 @@ cards:
                           service: light.turn_on
                           service_data:
                             entity_id: light.encimera
+                  - type: section
                   - entity: light.entrada
                     name: Entrada
                     show_state: false
@@ -392,3 +394,190 @@ cards:
                   - entity: binary_sensor.window_bedroom 
                     icon: "mdi:window-closed"
 
+          - break
+
+          ##################
+          ##  ASPIRADOR   ##
+          ##################
+          - type: vertical-stack
+            cards:
+              - template: title_h2
+                type: "custom:decluttering-card"
+                variables:
+                  - title: Aspirador
+
+              - type: entities
+                show_header_toggle: false
+                style: |
+                  ha-card {
+                    margin-left: 5px;
+                    margin-right: 5px;
+                  }
+                entities:
+                  - entity: input_boolean.vacuum_enable_mon
+                    name: Control
+                    show_state: false
+                    icon: "mdi:robot-vacuum"
+                    type: "custom:multiple-entity-row"
+                    entities:
+                      - entity: input_boolean.vacuum_enable_turbo_mon
+                        name: false
+                        icon: "mdi:fan"
+                        tap_action:
+                          action: call-service
+                          service: shell_command.aspirador_turbo
+                      - entity: input_boolean.vacuum_enable_turbo_mon
+                        name: false
+                        icon: "mdi:flash-off"
+                        tap_action:
+                          action: call-service
+                          service: shell_command.aspirador_off
+                      - entity: input_boolean.vacuum_enable_turbo_mon
+                        name: false
+                        icon: "mdi:flash"
+                        tap_action:
+                          action: call-service
+                          service: shell_command.aspirador_on
+
+                  - type: section
+
+                  - entity: input_boolean.vacuum_enable_mon
+                    name: Dilluns
+                    show_state: false
+                    icon: "mdi:robot-vacuum"
+                    type: "custom:multiple-entity-row"
+                    entities:
+                      - entity: input_datetime.vacuum_schedule_time_mon
+                        name: false
+                      - entity: input_boolean.vacuum_enable_turbo_mon
+                        name: false
+                        icon: "mdi:fan"
+                        state_color: true
+                        tap_action:
+                          action: toggle
+                      - entity: input_boolean.vacuum_enable_mon
+                        name: false
+                        icon: "mdi:clock-outline"
+                        state_color: true
+                        tap_action:
+                          action: toggle
+                  - entity: input_boolean.vacuum_enable_tue
+                    name: Dimarts
+                    show_state: false
+                    icon: "mdi:robot-vacuum"
+                    type: "custom:multiple-entity-row"
+                    entities:
+                      - entity: input_datetime.vacuum_schedule_time_tue
+                        name: false
+                      - entity: input_boolean.vacuum_enable_turbo_tue
+                        name: false
+                        icon: "mdi:fan"
+                        state_color: true
+                        tap_action:
+                          action: toggle
+                      - entity: input_boolean.vacuum_enable_tue
+                        name: false
+                        icon: "mdi:clock-outline"
+                        state_color: true
+                        tap_action:
+                          action: toggle
+                  - entity: input_boolean.vacuum_enable_wed
+                    name: Dimecres
+                    show_state: false
+                    icon: "mdi:robot-vacuum"
+                    type: "custom:multiple-entity-row"
+                    entities:
+                      - entity: input_datetime.vacuum_schedule_time_wed
+                        name: false
+                      - entity: input_boolean.vacuum_enable_turbo_wed
+                        name: false
+                        icon: "mdi:fan"
+                        state_color: true
+                        tap_action:
+                          action: toggle
+                      - entity: input_boolean.vacuum_enable_wed
+                        name: false
+                        icon: "mdi:clock-outline"
+                        state_color: true
+                        tap_action:
+                          action: toggle
+                  - entity: input_boolean.vacuum_enable_thu
+                    name: Dijous
+                    show_state: false
+                    icon: "mdi:robot-vacuum"
+                    type: "custom:multiple-entity-row"
+                    entities:
+                      - entity: input_datetime.vacuum_schedule_time_thu
+                        name: false
+                      - entity: input_boolean.vacuum_enable_turbo_thu
+                        name: false
+                        icon: "mdi:fan"
+                        state_color: true
+                        tap_action:
+                          action: toggle
+                      - entity: input_boolean.vacuum_enable_thu
+                        name: false
+                        icon: "mdi:clock-outline"
+                        state_color: true
+                        tap_action:
+                          action: toggle
+                  - entity: input_boolean.vacuum_enable_fri
+                    name: Divendres
+                    show_state: false
+                    icon: "mdi:robot-vacuum"
+                    type: "custom:multiple-entity-row"
+                    entities:
+                      - entity: input_datetime.vacuum_schedule_time_fri
+                        name: false
+                      - entity: input_boolean.vacuum_enable_turbo_fri
+                        name: false
+                        icon: "mdi:fan"
+                        state_color: true
+                        tap_action:
+                          action: toggle
+                      - entity: input_boolean.vacuum_enable_fri
+                        name: false
+                        icon: "mdi:clock-outline"
+                        state_color: true
+                        tap_action:
+                          action: toggle
+                  - entity: input_boolean.vacuum_enable_sat
+                    name: Dissabte
+                    show_state: false
+                    icon: "mdi:robot-vacuum"
+                    type: "custom:multiple-entity-row"
+                    entities:
+                      - entity: input_datetime.vacuum_schedule_time_sat
+                        name: false
+                      - entity: input_boolean.vacuum_enable_turbo_sat
+                        name: false
+                        icon: "mdi:fan"
+                        state_color: true
+                        tap_action:
+                          action: toggle
+                      - entity: input_boolean.vacuum_enable_sat
+                        name: false
+                        icon: "mdi:clock-outline"
+                        state_color: true
+                        tap_action:
+                          action: toggle
+                  - entity: input_boolean.vacuum_enable_sun
+                    name: Diumenge
+                    show_state: false
+                    icon: "mdi:robot-vacuum"
+                    type: "custom:multiple-entity-row"
+                    entities:
+                      - entity: input_datetime.vacuum_schedule_time_sun
+                        name: false
+                      - entity: input_boolean.vacuum_enable_turbo_sun
+                        name: false
+                        icon: "mdi:fan"
+                        state_color: true
+                        tap_action:
+                          action: toggle
+                      - entity: input_boolean.vacuum_enable_sun
+                        name: false
+                        icon: "mdi:clock-outline"
+                        state_color: true
+                        tap_action:
+                          action: toggle

@@ -1,0 +1,41 @@
+## mon
+vacuum_schedule_time_mon:
+  name: Programar aspirador (mon)
+  has_date: false
+  has_time: true
+
+## tue
+vacuum_schedule_time_tue:
+  name: Programar aspirador (tue)
+  has_date: false
+  has_time: true
+
+## wed
+vacuum_schedule_time_wed:
+  name: Programar aspirador (wed)
+  has_date: false
+  has_time: true
+
+## thu
+vacuum_schedule_time_thu:
+  name: Programar aspirador (thu)
+  has_date: false
+  has_time: true
+
+## fri
+vacuum_schedule_time_fri:
+  name: Programar aspirador (fri)
+  has_date: false
+  has_time: true
+
+## sat
+vacuum_schedule_time_sat:
+  name: Programar aspirador (sat)
+  has_date: false
+  has_time: true
+
+## sun
+vacuum_schedule_time_sun:
+  name: Programar aspirador (sun)
+  has_date: false
+  has_time: true

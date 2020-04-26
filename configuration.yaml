@@ -134,11 +134,6 @@ notify:
     data:
       priority: 8
 
-# Variables
-
-input_text: !include devices/input_text.yaml
-input_select: !include devices/input_select.yaml
-
 # Services
 
 sun:
@@ -195,13 +190,6 @@ cast:
 
 alexa: !include devices/alexa.yaml
 
-light: !include devices/lights.yaml
-switch: !include devices/switches.yaml
-sensor: !include devices/sensors.yaml
-camera: !include devices/cameras.yaml
-climate: !include devices/climates.yaml
-media_player: !include devices/media_players.yaml
-
 webostv:
   host: !secret ip_tele_menjador
   name: Tele
@@ -214,7 +202,37 @@ spotify:
   client_id: !secret spotify_client_id
   client_secret: !secret spotify_client_secret
 
-# Other config
+shell_command:
+  aspirador_on: "/usr/local/bin/broadlink_cli --type 0x5f36 --host 192.168.4.3 --mac 89068e770f78 --send 26008a0062521031101110311011103111101031111010111011101010111011101011311031103111311031103210000453625210311011103110111031101110311011101110101011101110101110103111311031103210310e331000045361530f330e120f330e130e330e130e330e130e120f120e130e130f1110110f3210320f3210311131103111000d05000000000000000000000000"
+  aspirador_off: "/usr/local/bin/broadlink_cli --type 0x5f36 --host 192.168.4.3 --mac 89068e770f78 --send 26008a005f540e330f120f320f120f330e120f330e330e130e120f120f120e130e120f120e330f330e330e330f330e000455625210311011103110111031101110311131101011101011101011101110101110311031113110311032100004536251113110111031101110310e130e3310320e1210111011101010111011101010320e330f330e330e3310000d05000000000000000000000000"
+  aspirador_turbo: "/usr/local/bin/broadlink_cli --type 0x5f36 --host 192.168.4.3 --mac 89068e770f78 --send 26008a006152103111101032101010321010101110111031101110101110101110311131101011311031103210311000045362520e330f120e330f120e330f120f120e130e330e130e120f120e130e330e330f120f330e330e330f330e00045562520e330e130e330f120e330f120e130e120f330e120f120e130e120f330e330f120e330f330e330e330f000d05000000000000000000000000"
+  tele_volume_up: "/usr/local/bin/broadlink_cli --type 0x5f36 --host 192.168.4.3 --mac 89068e770f78 --send 260050000001269610141114103a10141114101510151015103910391114103a1039103a1039103911141139101411141114101510151014113910151039103a10391039113910391100052d0001274b10000d05000000000000"
+  tele_volume_down: "/usr/local/bin/broadlink_cli --type 0x5f36 --host 192.168.4.3 --mac 89068e770f78 --send 26005000000126951114101510391114101510151014111411391039101510391139103911391039103a103910151015101411141015101510141114103a1039103a1039103911391000052c0001284c10000d05000000000000"
+
+remote:
+- platform: broadlink
+  host: !secret ip_remote
+  mac: !secret mac_remote
+  name: Broadlink IR
+
+# Devices (external file)
+
+light: !include devices/lights.yaml
+switch: !include devices/switches.yaml
+sensor: !include devices/sensors.yaml
+camera: !include devices/cameras.yaml
+climate: !include devices/climates.yaml
+media_player: !include devices/media_players.yaml
+
+
+# Variables
+
+input_text: !include devices/input_text.yaml
+input_select: !include devices/input_select.yaml
+input_boolean: !include devices/input_boolean.yaml
+input_datetime: !include devices/input_datetime.yaml
+
+# Other
 
 scene: !include scenes.yaml
 group: !include groups.yaml

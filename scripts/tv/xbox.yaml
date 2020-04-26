@@ -4,9 +4,9 @@
   - service: switch.turn_on
     data:
       entity_id: switch.xbox
-  - service: scene.turn_on
-    data:
-      entity_id: scene.relax
+  # - service: scene.turn_on
+  #   data:
+  #     entity_id: scene.relax
   - service: media_player.turn_on
     data: 
       entity_id: media_player.tele
@@ -22,4 +22,4 @@
   - service: media_player.volume_set
     data:
       entity_id: media_player.tele
-      volume_level: 0.02
+      volume_level: 0.09

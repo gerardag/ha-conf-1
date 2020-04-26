@@ -1,0 +1,41 @@
+## mon
+vacuum_enable_mon:
+  name: Passar aspirador (mon)
+vacuum_enable_turbo_mon:
+  name: Activar mode turbo (mon)
+
+## tue
+vacuum_enable_tue:
+  name: Passar aspirador (tue)
+vacuum_enable_turbo_tue:
+  name: Activar mode turbo (tue)
+
+## wed
+vacuum_enable_wed:
+  name: Passar aspirador (wed)
+vacuum_enable_turbo_wed:
+  name: Activar mode turbo (wed)
+
+## thu
+vacuum_enable_thu:
+  name: Passar aspirador (thu)
+vacuum_enable_turbo_thu:
+  name: Activar mode turbo (thu)
+
+## fri
+vacuum_enable_fri:
+  name: Passar aspirador (fri)
+vacuum_enable_turbo_fri:
+  name: Activar mode turbo (fri)
+
+## sat
+vacuum_enable_sat:
+  name: Passar aspirador (sat)
+vacuum_enable_turbo_sat:
+  name: Activar mode turbo (sat)
+
+## sun
+vacuum_enable_sun:
+  name: Passar aspirador (sun)
+vacuum_enable_turbo_sun:
+  name: Activar mode turbo (sun)

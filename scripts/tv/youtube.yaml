@@ -1,9 +1,9 @@
 'tv_turn_on_youtube':
   alias: TV Youtube
   sequence:
-  - service: scene.turn_on
-    data: 
-      entity_id: scene.tele
+  # - service: scene.turn_on
+  #   data: 
+  #     entity_id: scene.tele
   - service: media_player.turn_on
     data: 
       entity_id: media_player.tele
@@ -19,4 +19,4 @@
   - service: media_player.volume_set
     data:
       entity_id: media_player.tele
-      volume_level: 0.13
+      volume_level: 0.11
