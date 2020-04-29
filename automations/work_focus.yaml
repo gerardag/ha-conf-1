@@ -1,0 +1,12 @@
+alias: Work focus
+initial_state: true
+trigger:
+  - platform: state
+    entity_id: input_boolean.work_focus
+    to: 'on'
+action:
+  - service: light.turn_on 
+    data:
+      entity_id: light.gateway_light
+      rgb_color: [255, 0, 0]
+      brightness: "255"

@@ -51,3 +51,5 @@
   type: js
 - url: /hacsfiles/lovelace-multiple-entity-row/multiple-entity-row.js
   type: module
+- url: /hacsfiles/button-text-card/button-text-card.js
+  type: module

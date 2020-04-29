@@ -1,0 +1,10 @@
+alias: Work focus
+initial_state: true
+trigger:
+  - platform: state
+    entity_id: input_boolean.work_focus
+    to: 'off'
+action:
+  - service: light.turn_off
+    data:
+      entity_id: light.gateway_light

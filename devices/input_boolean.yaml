@@ -1,3 +1,10 @@
+work_focus:
+  name: Mode concentració
+
+###############
+## ASPIRADOR ##
+###############
+
 ## mon
 vacuum_enable_mon:
   name: Passar aspirador (mon)
