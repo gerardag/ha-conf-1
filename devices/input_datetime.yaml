@@ -1,3 +1,20 @@
+####################################################################
+## Home cleaning routines
+rutina_fregar:
+  name: Aspirar i fregar
+  has_date: true
+  has_time: false
+
+rutina_netejar_labavo:
+  has_date: true
+  has_time: false
+rutina_llencols:
+  has_date: true
+  has_time: false
+
+####################################################################
+## Vacuum
+
 ## mon
 vacuum_schedule_time_mon:
   name: Programar aspirador (mon)

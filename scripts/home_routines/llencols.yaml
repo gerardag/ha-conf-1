@@ -1,0 +1,7 @@
+rutina_llencols:
+  alias: "Actualitzar timestamp llençols"
+  sequence:
+  - service: input_datetime.set_datetime
+    entity_id: input_datetime.rutina_llencols
+    data_template:
+      datetime: "{{ now().strftime('%Y-%m-%d %H:%M:%S') }}"

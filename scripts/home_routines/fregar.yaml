@@ -1,0 +1,7 @@
+rutina_fregar:
+  alias: "Actualitzar timestamp fregar"
+  sequence:
+  - service: input_datetime.set_datetime
+    entity_id: input_datetime.rutina_fregar
+    data_template:
+      datetime: "{{ now().strftime('%Y-%m-%d %H:%M:%S') }}"

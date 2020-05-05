@@ -38,11 +38,13 @@ decluttering_templates:
   sys_monitoring_stack: !include lovelace/decluttering_templates/sys_monitoring_stack.yaml
   title_h1: !include lovelace/decluttering_templates/title_h1.yaml
   title_h2: !include lovelace/decluttering_templates/title_h2.yaml
+  area_overview: !include lovelace/decluttering_templates/area_overview.yaml
 
 title: Casa
 views:
   # - !include lovelace/views/00_home_modern_mobile.yaml
   - !include lovelace/views/60_clean.yaml
+  - !include lovelace/views/61_routines.yaml
   # - !include lovelace/views/10_home_classic.yaml
   # - !include lovelace/views/30_climates.yaml
   - !include lovelace/views/50_systems.yaml
