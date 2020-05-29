@@ -8,15 +8,97 @@ cards:
   - type: vertical-stack
     cards:
 
-      - template: area_overview
-        type: "custom:decluttering-card"  
+      # - template: area_overview
+      #   type: "custom:decluttering-card"  
 
       - type: custom:layout-card
         layout: vertical
         min_columns: 1
-        max_columns: 2
+        max_columns: 3
         cards:
+          - template: title_h1
+            type: "custom:decluttering-card"
+            variables:
+              - title: Bon dia
+          - type: custom:simple-weather-card
+            entity: weather.dark_sky
+            name: "Horta (Barcelona)"
+            backdrop: true
+            style: |
+              ha-card {
+                margin-left: 5px;
+                margin-right: 5px;
+              }
 
+          - type: conditional
+            conditions:
+              - entity: media_player.tele
+                state_not: "off"
+            card:
+              type: "custom:mini-media-player"
+              entity: media_player.tele
+              icon: 'mdi:television-classic'
+              artwork: cover
+              name: Televisor menjador
+              hide:
+                volume: true
+                source: false
+                progress: true
+                power_state: true
+                controls: true
+              style: |
+                ha-card {
+                  margin-left: 5px;
+                  margin-right: 5px;
+                }
+
+          - type: conditional
+            conditions:
+              - entity: media_player.spotify_aleix_murtra
+                state_not: "idle"
+            card:
+              type: custom:mini-media-player
+              entity: media_player.spotify_aleix_murtra
+              icon: mdi:spotify
+              artwork: cover
+              hide:
+                volume: true
+                source: true
+                progress: true
+                power_state: true
+              style: |
+                ha-card {
+                  margin-left: 5px;
+                  margin-right: 5px;
+                }
+
+          - type: conditional
+            conditions:
+              - entity: input_boolean.work_focus
+                state: "on"
+            card:
+              type: markdown
+              content: |
+                ### Mode concentració: **Activat**
+                Si us plau, no entreu al despatx.
+              style: |
+                ha-card {
+                  text-align: center;
+                  margin-left: 5px;
+                  margin-right: 5px;
+                  background-color: #A81419;
+                  color: #ffffff;
+                }
+                h3 {
+                  font-weight: 400 !important;
+                  margin: 0px;
+                }
+                p {
+                  font-weight: 300 !important;
+                  margin: 0px;
+                }
+
+          - break
 
 
 

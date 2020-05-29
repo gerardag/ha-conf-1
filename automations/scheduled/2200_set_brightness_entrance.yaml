@@ -14,4 +14,3 @@ action:
       entity_id: light.entrada
     service: light.turn_on
 initial_state: true
-hide_entity: true
