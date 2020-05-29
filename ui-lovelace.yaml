@@ -1,51 +1,8 @@
+title: Casa
 resources: !include lovelace/resources.yaml
-
 preload:
   - conditional
-
-custom_header: 
-  header_text: Casa Immaleix
-  compact_mode: true
-  # hide_tabs: mobile
-  exceptions:
-    # - conditions:
-    #     query_string: develop
-    # - conditions:
-    #     user_agent: Mobile
-    #   config:
-    #     default_tab: mobile
-    #     hide_tabs: home
-    - conditions:
-        query_string: kiosk
-      config:
-        kiosk_mode: true
-
-# animated_background:
-#   default_url: /community_plugin/lovelace-animated-background/background-animations/sunny.html
-#   entity: "weather.dark_sky"
-#   state_url:
-#       'sunny': /community_plugin/lovelace-animated-background/background-animations/sunny.html
-#       'partlycloudy': /community_plugin/lovelace-animated-background/background-animations/cloudy.html
-#       'cloudy': /community_plugin/lovelace-animated-background/background-animations/cloudy.html
-#       'mostlycloudy': /community_plugin/lovelace-animated-background/background-animations/mostlycloudy.html
-#       'clear-night': /community_plugin/lovelace-animated-background/background-animations/night.html
-#       'fog': /community_plugin/lovelace-animated-background/background-animations/fog.html
-
-decluttering_templates:
-  nest_button: !include lovelace/decluttering_templates/nest_button.yaml
-  nest_button_category: !include lovelace/decluttering_templates/nest_button_category.yaml
-  nest_picture_button: !include lovelace/decluttering_templates/nest_picture_button.yaml
-  sys_monitoring_stack: !include lovelace/decluttering_templates/sys_monitoring_stack.yaml
-  title_h1: !include lovelace/decluttering_templates/title_h1.yaml
-  title_h2: !include lovelace/decluttering_templates/title_h2.yaml
-  area_overview: !include lovelace/decluttering_templates/area_overview.yaml
-
-title: Casa
-views:
-  # - !include lovelace/views/00_home_modern_mobile.yaml
-  - !include lovelace/views/60_clean.yaml
-  - !include lovelace/views/61_routines.yaml
-  # - !include lovelace/views/10_home_classic.yaml
-  # - !include lovelace/views/30_climates.yaml
-  - !include lovelace/views/50_systems.yaml
-  - !include lovelace/views/00_home_modern.yaml
+custom_header: !include lovelace/custom_header.yaml
+# animated_background: !include lovelace/animated_backgrounds.yaml
+decluttering_templates: !include lovelace/decluttering_templates.yaml
+views: !include lovelace/views.yaml
