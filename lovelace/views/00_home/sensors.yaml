@@ -1,0 +1,26 @@
+type: vertical-stack
+cards:
+  - template: title_h2
+    type: "custom:decluttering-card"
+    variables:
+      - title: Sensors
+
+  - type: entities
+    style: |
+      ha-card {
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+    entities:
+      - entity: camera.escala
+        icon: "mdi:cctv"
+      - entity: binary_sensor.door_main_entrance 
+        icon: "mdi:door-closed"
+      - entity: binary_sensor.motion_entrance 
+        icon: "mdi:motion-sensor"
+      - entity: binary_sensor.motion_kitchen 
+        icon: "mdi:motion-sensor"
+      - entity: binary_sensor.window_dinningroom 
+        icon: "mdi:window-closed"
+      - entity: binary_sensor.window_bedroom 
+        icon: "mdi:window-closed"

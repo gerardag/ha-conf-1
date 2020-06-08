@@ -1,0 +1,138 @@
+type: vertical-stack
+cards:
+  - template: title_h2
+    type: "custom:decluttering-card"
+    variables:
+      - title: Dispositius
+
+  - type: entities
+    show_header_toggle: false
+    style: |
+      ha-card {
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+    entities:
+      - entity: light.mesa
+        name: Taula
+        show_state: false
+        icon: "mdi:ceiling-light"
+        type: "custom:multiple-entity-row"
+        entities:
+          - icon: "mdi:lightbulb-off-outline"
+            state_color: false
+            tap_action:
+              action: call-service
+              service: light.turn_off
+              service_data:
+                entity_id: light.mesa
+          - icon: "mdi:lightbulb-outline"
+            state_color: true
+            tap_action:
+              action: call-service
+              service: light.turn_on
+              service_data:
+                entity_id: light.mesa
+      - entity: light.sofa
+        name: Sofà
+        show_state: false
+        icon: "mdi:floor-lamp"
+        type: "custom:multiple-entity-row"
+        entities:
+          - icon: "mdi:lightbulb-off-outline"
+            state_color: false
+            tap_action:
+              action: call-service
+              service: light.turn_off
+              service_data:
+                entity_id: light.sofa
+          - icon: "mdi:lightbulb-outline"
+            state_color: true
+            tap_action:
+              action: call-service
+              service: light.turn_on
+              service_data:
+                entity_id: light.sofa
+      - entity: light.mesita
+        name: Tauleta
+        show_state: false
+        icon: "mdi:lightbulb"
+        type: "custom:multiple-entity-row"
+        entities:
+          - icon: "mdi:lightbulb-off-outline"
+            state_color: false
+            tap_action:
+              action: call-service
+              service: light.turn_off
+              service_data:
+                entity_id: light.mesita
+          - icon: "mdi:lightbulb-outline"
+            state_color: true
+            tap_action:
+              action: call-service
+              service: light.turn_on                 
+              service_data:
+                entity_id: light.mesita
+      - type: section
+      - entity: light.encimera
+        name: Marbre cuina
+        show_state: false
+        icon: "mdi:lightbulb"
+        type: "custom:multiple-entity-row"
+        entities:
+          - icon: "mdi:lightbulb-off-outline"
+            state_color: false
+            tap_action:
+              action: call-service
+              service: light.turn_off
+              service_data:
+                entity_id: light.encimera
+          - icon: "mdi:lightbulb-outline"
+            state_color: true
+            tap_action:
+              action: call-service
+              service: light.turn_on
+              service_data:
+                entity_id: light.encimera
+      - type: section
+      - entity: light.entrada
+        name: Entrada
+        show_state: false
+        icon: "mdi:lightbulb"
+        type: "custom:multiple-entity-row"
+        entities:
+          - icon: "mdi:lightbulb-off-outline"
+            state_color: false
+            tap_action:
+              action: call-service
+              service: light.turn_off
+              service_data:
+                entity_id: light.entrada
+          - icon: "mdi:lightbulb-outline"
+            state_color: true
+            tap_action:
+              action: call-service
+              service: light.turn_on
+              service_data:
+                entity_id: light.entrada
+
+      - entity: light.gateway_light
+        name: Entrada petita
+        show_state: false
+        icon: "mdi:hubspot"
+        type: "custom:multiple-entity-row"
+        entities:
+          - icon: "mdi:lightbulb-off-outline"
+            state_color: false
+            tap_action:
+              action: call-service
+              service: light.turn_off
+              service_data:
+                entity_id: light.gateway_light
+          - icon: "mdi:lightbulb-outline"
+            state_color: true
+            tap_action:
+              action: call-service
+              service: light.turn_on
+              service_data:
+                entity_id: light.gateway_light

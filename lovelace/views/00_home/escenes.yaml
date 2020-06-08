@@ -1,0 +1,64 @@
+type: vertical-stack
+cards:
+  - template: title_h2
+    type: "custom:decluttering-card"
+    variables:
+      - title: Escenes
+
+  - type: glance
+    show_state: false
+    columns: 6
+    style: |
+      ha-card {
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+    entities:
+      - entity: scene.buenos_dias
+        icon: "mdi:weather-sunny"
+        name: Bon dia
+        tap_action:
+          action: call-service
+          service: scene.turn_on
+          service_data:
+            entity_id: scene.buenos_dias
+      - entity: scene.juegos_de_mesa
+        icon: "mdi:chess-knight"
+        name: Jocs
+        tap_action:
+          action: call-service
+          service: scene.turn_on
+          service_data:
+            entity_id: scene.juegos_de_mesa
+      - entity: scene.con_amigos
+        icon: "mdi:account-group"
+        name: Amics
+        tap_action:
+          action: call-service
+          service: scene.turn_on
+          service_data:
+            entity_id: scene.con_amigos
+      - entity: scene.relax
+        icon: "mdi:book-open-page-variant"
+        name: Relax
+        tap_action:
+          action: call-service
+          service: scene.turn_on
+          service_data:
+            entity_id: scene.relax
+      - entity: scene.cena
+        icon: "mdi:silverware-fork-knife"
+        name: Sopar
+        tap_action:
+          action: call-service
+          service: scene.turn_on
+          service_data:
+            entity_id: scene.cena
+      - entity: scene.tele
+        icon: "mdi:television-classic"
+        name: Cine
+        tap_action:
+          action: call-service
+          service: scene.turn_on
+          service_data:
+            entity_id: scene.tele

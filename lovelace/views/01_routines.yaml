@@ -8,14 +8,21 @@ cards:
   - type: vertical-stack
     cards:
 
-      - template: area_overview
-        type: "custom:decluttering-card"  
-
       - type: custom:layout-card
         layout: vertical
         min_columns: 1
-        max_columns: 2
+        max_columns: 3
         cards:
+
+          - !include 00_home/notificacions.yaml
+
+          ######################
+          ## ACCIONS RÀPIDES  ##
+          ######################
+
+          - !include 00_home/accions_rapides.yaml
+
+          - break
 
           ##################
           ##    Rutines    ##

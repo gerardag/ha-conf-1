@@ -1,0 +1,90 @@
+type: vertical-stack
+cards:
+  - template: title_h2
+    type: "custom:decluttering-card"
+    variables:
+      - title: Accions ràpides
+
+  - type: custom:layout-card
+    layout: horizontal
+    min_columns: 5
+    max_columns: 5
+    column_width: 100px
+    justify_content: left
+    cards:
+      - show_name: true
+        template: nest_button
+        type: "custom:decluttering-card"
+        variables:
+          - show_name: true
+          - show_state: false
+          - show_last_changed: false
+          - name: Sopar + Netflix
+          - entity: script.tv_turn_on_netflix
+          - tap_action: 
+              action: call-service
+              service: script.tv_turn_on_netflix
+          - state:
+              - color: "#999999"
+                icon: "mdi:netflix"
+                operator: default
+          - background: "#ffffff"
+          - title-font-size: "0.9rem"
+      - show_name: true
+        template: nest_button
+        type: "custom:decluttering-card"
+        variables:
+          - show_name: true
+          - show_state: false
+          - show_last_changed: false
+          - name: Sopar + Notícies
+          - entity: script.tv_turn_on_dinner
+          - tap_action: 
+              action: call-service
+              service: script.tv_turn_on_dinner
+          - state:
+              - color: "#999999"
+                icon: "mdi:television-classic"
+                operator: default
+          - background: "#ffffff"
+          - title-font-size: "0.9rem"
+      - show_name: true
+        template: nest_button
+        type: "custom:decluttering-card"
+        variables:
+          - show_name: true
+          - show_state: false
+          - show_last_changed: false
+          - name: Escena sopar
+          - entity: scene.cena
+          - tap_action: 
+              action: call-service
+              service: scene.turn_on
+              service_data:
+                entity_id: scene.cena
+          - state:
+              - color: "#999999"
+                icon: "mdi:silverware-fork-knife"
+                operator: default
+          - background: "#ffffff"
+          - title-font-size: "0.9rem"
+      - show_name: true
+        template: nest_button
+        type: "custom:decluttering-card"
+        variables:
+          - show_name: true
+          - show_state: false
+          - show_last_changed: false
+          - name: Escena relax
+          - entity: scene.relax
+          - tap_action: 
+              action: call-service
+              service: scene.turn_on
+              service_data:
+                entity_id: scene.relax
+          - state:
+              - color: "#999999"
+                icon: "mdi:book-open-page-variant"
+                operator: default
+          - background: "#ffffff"
+          - title-font-size: "0.9rem"

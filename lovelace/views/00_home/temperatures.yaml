@@ -1,0 +1,36 @@
+type: vertical-stack
+cards:
+  - template: title_h2
+    type: "custom:decluttering-card"
+    variables:
+      - title: Temperatures
+
+  - type: entities
+    style: |
+      ha-card {
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+    entities:
+      - entity: sensor.menjador_temperature_mqtt                    
+        type: custom:multiple-entity-row
+        name: Menjador
+        entities:
+          - entity: climate.menjador
+            name: false
+          - entity: sensor.menjador_humidity_mqtt
+            name: false
+      - entity: sensor.dormitori_temperature_mqtt                    
+        type: custom:multiple-entity-row
+        name: Dormitori
+        entities:
+          - entity: climate.dormitori
+            name: false
+          - entity: sensor.dormitori_humidity_mqtt
+            name: false
+      - entity: sensor.exterior_temperature_mqtt
+        type: custom:multiple-entity-row
+        name: Exterior
+        entities:
+          - entity: sensor.exterior_humidity_mqtt
+            name: false

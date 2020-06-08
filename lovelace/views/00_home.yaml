@@ -1,0 +1,62 @@
+icon: 'mdi:home'
+title: Casa
+path: home
+badges: []
+panel: true
+cards:
+
+  - type: vertical-stack
+    cards:
+
+      - type: custom:layout-card
+        layout: vertical
+        min_columns: 1
+        max_columns: 3
+        cards:
+
+          - !include 00_home/notificacions.yaml
+
+          ######################
+          ## ACCIONS RÀPIDES  ##
+          ######################
+
+          - !include 00_home/accions_rapides.yaml
+
+
+
+          - break
+
+
+          ##################
+          ## DISPOSITIUS  ##
+          ##################
+
+          - !include 00_home/dispositius.yaml
+
+
+          ##################
+          ## SCENES / AUT ##
+          ##################
+
+          - !include 00_home/escenes.yaml
+
+          - break
+
+
+          ##################
+          ## TEMPERATURES ##
+          ##################
+
+          - !include 00_home/temperatures.yaml
+
+          ##################
+          ##   SENSORS    ##
+          ##################
+
+          - !include 00_home/sensors.yaml
+
+          ##################
+          ##    ALTRES    ##
+          ##################
+
+          - !include 00_home/altres.yaml

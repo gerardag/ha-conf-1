@@ -4,4 +4,3 @@ nest_picture_button: !include decluttering_templates/nest_picture_button.yaml
 sys_monitoring_stack: !include decluttering_templates/sys_monitoring_stack.yaml
 title_h1: !include decluttering_templates/title_h1.yaml
 title_h2: !include decluttering_templates/title_h2.yaml
-area_overview: !include decluttering_templates/area_overview.yaml

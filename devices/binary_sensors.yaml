@@ -1,0 +1,7 @@
+- platform: uptimerobot
+  api_key: !secret uptimerobot_api_key
+- platform: mqtt
+  name: Moviment exterior
+  state_topic: "camera/outside/movement"
+  payload_on: 'on'
+  payload_off: 'off'

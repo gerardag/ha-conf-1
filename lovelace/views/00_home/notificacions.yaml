@@ -1,0 +1,119 @@
+type: vertical-stack
+cards:
+  # - template: title_h1
+  #   type: "custom:decluttering-card"
+  #   variables:
+  #     - title: |
+  #         {%- if is_state("sensor.moment_dia", "Matí") -%}Bon dia
+  #         {%- elif is_state("sensor.moment_dia", "Migdia") -%}Bon dia
+  #         {%- elif is_state("sensor.moment_dia", "Tarda") -%}Bona tarda
+  #         {%- elif is_state("sensor.moment_dia", "Vespre") -%}Bona tarda
+  #         {%- else -%}Bona nit{%- endif -%}
+  - type: markdown
+    content: |
+      [[ if(sensor.moment_dia == "Matí",    "# Bon dia", "") ]][[ if(sensor.moment_dia == "Migdia",  "# Bon dia", "") ]][[ if(sensor.moment_dia == "Tarda",   "# Bona tarda", "") ]][[ if(sensor.moment_dia == "Vespre",  "# Bona tarda", "") ]][[ if(sensor.moment_dia == "Nit",     "# Bona nit", "") ]][[ if(sensor.moment_dia == "Matinada","# Bona nit", "") ]] [[ {user} ]]
+    style: >
+      ha-card {
+        font-family: Roboto, 'Open Sans', sans-serif;
+        font-size: 100%;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        text-align: left;
+        background: rgba(0,0,0,0);
+      }
+      h1 {
+        color: #333;
+        font-weight: 300 !important;
+        margin: 0px;
+      }
+  - type: custom:simple-weather-card
+    entity: weather.dark_sky
+    name: "Horta (Barcelona)"
+    backdrop: true
+    style: |
+      ha-card {
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+
+  - type: conditional
+    conditions:
+      - entity: media_player.tele
+        state_not: "off"
+    card:
+      type: "custom:mini-media-player"
+      entity: media_player.tele
+      icon: 'mdi:television-classic'
+      artwork: cover
+      name: Televisor menjador
+      hide:
+        volume: true
+        source: false
+        progress: true
+        power_state: true
+        controls: true
+      style: |
+        ha-card {
+          margin-left: 5px;
+          margin-right: 5px;
+        }
+
+  - type: conditional
+    conditions:
+      - entity: media_player.spotify_aleix_murtra
+        state_not: "idle"
+    card:
+      type: custom:mini-media-player
+      entity: media_player.spotify_aleix_murtra
+      icon: mdi:spotify
+      artwork: cover
+      hide:
+        volume: true
+        source: true
+        progress: true
+        power_state: true
+      style: |
+        ha-card {
+          margin-left: 5px;
+          margin-right: 5px;
+        }
+
+  - type: conditional
+    conditions:
+      - entity: input_boolean.work_focus
+        state: "on"
+    card:
+      type: markdown
+      content: |
+        ### Mode concentració: **Activat**
+        Si us plau, no entreu al despatx.
+      style: |
+        ha-card {
+          text-align: center;
+          margin-left: 5px;
+          margin-right: 5px;
+          background-color: #A81419;
+          color: #ffffff;
+        }
+        h3 {
+          font-weight: 400 !important;
+          margin: 0px;
+        }
+        p {
+          font-weight: 300 !important;
+          margin: 0px;
+        }
+
+  - type: conditional
+    conditions:
+      - entity: binary_sensor.moviment_exterior
+        state_not: "off"
+    card:
+      type: picture
+      image: http://192.168.1.134/image.jpg
+      style: |
+        ha-card {
+          margin-left: 5px;
+          margin-right: 5px;
+        }
