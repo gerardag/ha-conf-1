@@ -86,6 +86,12 @@ cards:
                           action: call-service
                           service: script.rutina_llencols
 
+                  - template: rutina
+                    type: "custom:decluttering-card"
+                    variables:
+                      - rutina: rutina_filtre_aigua
+                      - name: Canvi filtre aigua
+
           - break
 
           ##################

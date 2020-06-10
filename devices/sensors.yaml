@@ -252,6 +252,7 @@
         {% endif %}
     moment_dia:
       friendly_name: Moment del dia
+      entity_id: sensor.time
       value_template: |
         {%- if as_timestamp(now()) | timestamp_custom('%H') | int < 7 -%}Matinada
         {%- elif as_timestamp(now()) | timestamp_custom('%H') | int < 12 -%}Matí
@@ -259,6 +260,10 @@
         {%- elif as_timestamp(now()) | timestamp_custom('%H') | int < 20 -%}Tarda
         {%- elif as_timestamp(now()) | timestamp_custom('%H') | int < 22 -%}Vespre
         {%- else -%}Nit{%- endif -%}
+    debug_sensor:
+      entity_id: sensor.time
+      value_template: |
+        {{ as_timestamp(now()) | timestamp_custom('%H:%M')  }}
 
 ###############
 # SQL Queries #

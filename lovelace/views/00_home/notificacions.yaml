@@ -11,7 +11,7 @@ cards:
   #         {%- else -%}Bona nit{%- endif -%}
   - type: markdown
     content: |
-      [[ if(sensor.moment_dia == "Matí",    "# Bon dia", "") ]][[ if(sensor.moment_dia == "Migdia",  "# Bon dia", "") ]][[ if(sensor.moment_dia == "Tarda",   "# Bona tarda", "") ]][[ if(sensor.moment_dia == "Vespre",  "# Bona tarda", "") ]][[ if(sensor.moment_dia == "Nit",     "# Bona nit", "") ]][[ if(sensor.moment_dia == "Matinada","# Bona nit", "") ]], [[ {user} ]]
+      # [[ if(sensor.moment_dia == "Matí",    "Bon dia", "") ]][[ if(sensor.moment_dia == "Migdia",  "Bon dia", "") ]][[ if(sensor.moment_dia == "Tarda",   "Bona tarda", "") ]][[ if(sensor.moment_dia == "Vespre",  "Bona tarda", "") ]][[ if(sensor.moment_dia == "Nit",     "Bona nit", "") ]][[ if(sensor.moment_dia == "Matinada","Bona nit", "") ]], [[ {user} ]]
     style: >
       ha-card {
         font-family: Roboto, 'Open Sans', sans-serif;

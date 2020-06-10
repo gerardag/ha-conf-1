@@ -8,7 +8,12 @@ rutina_fregar:
 rutina_netejar_labavo:
   has_date: true
   has_time: false
+
 rutina_llencols:
+  has_date: true
+  has_time: false
+
+rutina_filtre_aigua:
   has_date: true
   has_time: false
 

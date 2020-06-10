@@ -1,0 +1,7 @@
+rutina_filtre_aigua:
+  alias: "Actualitzar timestamp filtre aigua"
+  sequence:
+  - service: input_datetime.set_datetime
+    entity_id: input_datetime.rutina_filtre_aigua
+    data_template:
+      datetime: "{{ now().strftime('%Y-%m-%d %H:%M:%S') }}"
