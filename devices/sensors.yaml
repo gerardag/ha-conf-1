@@ -341,3 +341,10 @@
         WHERE now.entity_id = 'sensor.menjador_temperature_mqtt' AND state <> 0
         ORDER BY now.created DESC LIMIT 1;
       column: 'state'
+
+
+## Zigbee2mqtt
+- platform: mqtt
+  name: Bridge state
+  state_topic: "zigbee2mqtt/bridge/state"
+  icon: mdi:router-wireless

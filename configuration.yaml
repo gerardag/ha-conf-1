@@ -196,12 +196,12 @@ calendar:
 
 # Devices
 
-xiaomi_aqara:
-  discovery_retry: 10
-  gateways:
-    - key: !secret xiaomi_gateway_key
-      mac: !secret xiaomi_gateway_mac
-      host: !secret xiaomi_gateway_ip
+# xiaomi_aqara:
+#   discovery_retry: 10
+#   gateways:
+#     - key: !secret xiaomi_gateway_key
+#       mac: !secret xiaomi_gateway_mac
+#       host: !secret xiaomi_gateway_ip
 
 cast:
   media_player:

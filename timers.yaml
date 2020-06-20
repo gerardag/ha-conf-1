@@ -1,10 +1,17 @@
 llum_entrada_timeout:
-  duration: '00:04:30'
+  name: Temps restant llum entrada
+  duration: 300
 llum_cuina_timeout:
-  duration: '00:10:00'
+  name: Temps restant llum cuina
+  duration: 600
 sensor_finestra_habitacio_timeout:
   duration: '00:00:30'
 sensor_finestra_menjador_timeout:
   duration: '00:00:30'
 inactivitat_casa:
   duration: '00:30:00'
+
+## Zigbee2mqtt
+zigbee_permit_join:
+  name: Time remaining
+  duration: 600 # Updated this to the number of seconds you wish

@@ -115,24 +115,3 @@ cards:
               service: light.turn_on
               service_data:
                 entity_id: light.entrada
-
-      - entity: light.gateway_light
-        name: Entrada petita
-        show_state: false
-        icon: "mdi:hubspot"
-        type: "custom:multiple-entity-row"
-        entities:
-          - icon: "mdi:lightbulb-off-outline"
-            state_color: false
-            tap_action:
-              action: call-service
-              service: light.turn_off
-              service_data:
-                entity_id: light.gateway_light
-          - icon: "mdi:lightbulb-outline"
-            state_color: true
-            tap_action:
-              action: call-service
-              service: light.turn_on
-              service_data:
-                entity_id: light.gateway_light

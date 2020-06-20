@@ -46,3 +46,10 @@ vacuum_enable_sun:
   name: Passar aspirador (sun)
 vacuum_enable_turbo_sun:
   name: Activar mode turbo (sun)
+
+
+## Zigbee2mqtt
+zigbee_permit_join:
+  name: Allow devices to join
+  initial: off
+  icon: mdi:cellphone-wireless

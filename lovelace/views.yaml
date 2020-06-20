@@ -5,3 +5,4 @@
 # - !include views/30_climates.yaml
 - !include views/50_systems.yaml
 # - !include views/inactive/00_home_modern.yaml
+- !include views/99_settings.yaml

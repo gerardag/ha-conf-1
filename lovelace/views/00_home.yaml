@@ -59,4 +59,4 @@ cards:
           ##    ALTRES    ##
           ##################
 
-          - !include 00_home/altres.yaml
+          # - !include 00_home/altres.yaml

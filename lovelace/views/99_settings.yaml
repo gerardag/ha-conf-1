@@ -1,0 +1,27 @@
+icon: 'mdi:cogs'
+title: Configuració
+path: settings
+badges: []
+panel: true
+cards:
+
+  - type: vertical-stack
+    cards:
+
+      - type: custom:layout-card
+        layout: vertical
+        min_columns: 1
+        max_columns: 1
+        cards:
+
+          - template: title_h2
+            type: "custom:decluttering-card"
+            variables:
+              - title: Zigbee
+
+          - type: entities
+            entities:
+              - entity: input_boolean.zigbee_permit_join
+              - entity: timer.zigbee_permit_join
+              - entity: sensor.bridge_state
+            show_header_toggle: false
