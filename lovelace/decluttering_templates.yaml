@@ -5,3 +5,4 @@ sys_monitoring_stack: !include decluttering_templates/sys_monitoring_stack.yaml
 title_h1: !include decluttering_templates/title_h1.yaml
 title_h2: !include decluttering_templates/title_h2.yaml
 rutina: !include decluttering_templates/rutina.yaml
+quick_action: !include decluttering_templates/quick_action.yaml

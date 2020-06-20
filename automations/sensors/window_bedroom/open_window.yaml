@@ -1,6 +1,6 @@
 alias: Bedroom - Open window
 trigger:
-- entity_id: binary_sensor.window_bedroom
+- entity_id: binary_sensor.window_dormitori
   from: 'off'
   platform: state
   to: 'on'

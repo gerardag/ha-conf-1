@@ -1,0 +1,33 @@
+card:
+  type: conditional
+  conditions:
+    - entity: sensor.moment_dia
+      state: "[[when]]"
+  card:
+    show_name: true
+    template: nest_button
+    type: "custom:decluttering-card"
+    variables:
+      - show_name: true
+      - show_state: false
+      - show_last_changed: false
+      - name: "[[title]]"
+      - entity: "[[entity_id]]"
+      - tap_action: 
+          action: call-service
+          service: "[[service]]"
+          service_data: 
+            entity_id: "[[entity_id]]"
+      - state:
+          - color: "#999999"
+            icon: "[[icon]]"
+            operator: default
+      - background: "#ffffff"
+      - title-font-size: "0.9rem"
+default:
+  title: "NOT_DEFINED"
+  service: "NOT_DEFINED"
+  icon: "mdi:netflix"
+  service_data: ""
+  entity_id: "NOT_DEFINED"
+  when: "Matí"

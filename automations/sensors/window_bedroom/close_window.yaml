@@ -1,6 +1,6 @@
 alias: Bedroom - Close window
 trigger:
-- entity_id: binary_sensor.window_bedroom
+- entity_id: binary_sensor.window_dormitori
   from: 'on'
   platform: state
   to: 'off'

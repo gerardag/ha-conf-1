@@ -5,6 +5,17 @@ cards:
     variables:
       - title: Accions ràpides
 
+    # 00:00 - 07:00 --> Matinada
+    # 07:00 - 12:00 --> Matí
+    # 12:00 - 14:00 --> Migdia
+    # 14:00 - 20:00 --> Tarda
+    # 20:00 - 22:00 --> Vespre
+    # 22:00 - 00:00 --> Nit
+
+    ###############################################
+    #                  Matinada 
+    ###############################################
+
   - type: custom:layout-card
     layout: horizontal
     min_columns: 5
@@ -12,79 +23,167 @@ cards:
     column_width: 100px
     justify_content: left
     cards:
-      - show_name: true
-        template: nest_button
+
+      - break
+
+    ###############################################
+    #                  Matí 
+    ###############################################
+
+  - type: custom:layout-card
+    layout: horizontal
+    min_columns: 5
+    max_columns: 5
+    column_width: 100px
+    justify_content: left
+    cards:
+
+      - template: quick_action
         type: "custom:decluttering-card"
         variables:
-          - show_name: true
-          - show_state: false
-          - show_last_changed: false
-          - name: Sopar + Netflix
-          - entity: script.tv_turn_on_netflix
-          - tap_action: 
-              action: call-service
-              service: script.tv_turn_on_netflix
-          - state:
-              - color: "#999999"
-                icon: "mdi:netflix"
-                operator: default
-          - background: "#ffffff"
-          - title-font-size: "0.9rem"
-      - show_name: true
-        template: nest_button
+          - title: Escena relax
+          - service: scene.turn_on
+          - entity_id: scene.buenos_dias
+          - icon: "mdi:weather-sunny"
+          - when: "Matí"
+
+      - template: quick_action
         type: "custom:decluttering-card"
         variables:
-          - show_name: true
-          - show_state: false
-          - show_last_changed: false
-          - name: Sopar + Notícies
-          - entity: script.tv_turn_on_dinner
-          - tap_action: 
-              action: call-service
-              service: script.tv_turn_on_dinner
-          - state:
-              - color: "#999999"
-                icon: "mdi:television-classic"
-                operator: default
-          - background: "#ffffff"
-          - title-font-size: "0.9rem"
-      - show_name: true
-        template: nest_button
+          - title: En reunió
+          - service: input_boolean.toggle
+          - entity_id: input_boolean.work_focus
+          - icon: "mdi:calendar"
+          - when: "Matí"
+
+    ###############################################
+    #                  MIGDIA 
+    ###############################################
+
+  - type: custom:layout-card
+    layout: horizontal
+    min_columns: 5
+    max_columns: 5
+    column_width: 100px
+    justify_content: left
+    cards:
+
+      - template: quick_action
         type: "custom:decluttering-card"
         variables:
-          - show_name: true
-          - show_state: false
-          - show_last_changed: false
-          - name: Escena sopar
-          - entity: scene.cena
-          - tap_action: 
-              action: call-service
-              service: scene.turn_on
-              service_data:
-                entity_id: scene.cena
-          - state:
-              - color: "#999999"
-                icon: "mdi:silverware-fork-knife"
-                operator: default
-          - background: "#ffffff"
-          - title-font-size: "0.9rem"
-      - show_name: true
-        template: nest_button
+          - title: Dinar + Netflix
+          - service: script.tv_turn_on_netflix
+          - entity_id: script.tv_turn_on_netflix
+          - icon: "mdi:netflix"
+          - when: "Migdia"
+
+      - template: quick_action
         type: "custom:decluttering-card"
         variables:
-          - show_name: true
-          - show_state: false
-          - show_last_changed: false
-          - name: Escena relax
-          - entity: scene.relax
-          - tap_action: 
-              action: call-service
-              service: scene.turn_on
-              service_data:
-                entity_id: scene.relax
-          - state:
-              - color: "#999999"
-                icon: "mdi:book-open-page-variant"
-                operator: default
-          - background: "#ffffff"
-          - title-font-size: "0.9rem"
+          - title: En reunió
+          - service: input_boolean.toggle
+          - entity_id: input_boolean.work_focus
+          - icon: "mdi:calendar"
+          - when: "Migdia"
+
+    ###############################################
+    #                  TARDA 
+    ###############################################
+
+  - type: custom:layout-card
+    layout: horizontal
+    min_columns: 5
+    max_columns: 5
+    column_width: 100px
+    justify_content: left
+    cards:
+
+      - template: quick_action
+        type: "custom:decluttering-card"
+        variables:
+          - title: Jugar Xbox
+          - service: script.tv_turn_on_xbox
+          - entity_id: script.tv_turn_on_xbox
+          - icon: "mdi:gamepad-variant"
+          - when: "Tarda"
+
+      - template: quick_action
+        type: "custom:decluttering-card"
+        variables:
+          - title: Escena relax
+          - service: scene.turn_on
+          - entity_id: scene.relax
+          - icon: "mdi:book-open-page-variant"
+          - when: "Tarda"
+
+      - template: quick_action
+        type: "custom:decluttering-card"
+        variables:
+          - title: En reunió
+          - service: input_boolean.toggle
+          - entity_id: input_boolean.work_focus
+          - icon: "mdi:calendar"
+          - when: "Tarda"
+
+    ###############################################
+    #                  VESPRE 
+    ###############################################
+    
+  - type: custom:layout-card
+    layout: horizontal
+    min_columns: 5
+    max_columns: 5
+    column_width: 100px
+    justify_content: left
+    cards:
+
+      - template: quick_action
+        type: "custom:decluttering-card"
+        variables:
+          - title: Sopar + Netflix
+          - service: script.tv_turn_on_netflix
+          - entity_id: script.tv_turn_on_netflix
+          - icon: "mdi:netflix"
+          - when: "Vespre"
+
+      - template: quick_action
+        type: "custom:decluttering-card"
+        variables:
+          - title: Sopar + Notícies
+          - service: script.tv_turn_on_dinner
+          - entity_id: script.tv_turn_on_dinner
+          - icon: "mdi:television-classic"
+          - when: "Vespre"
+
+      - template: quick_action
+        type: "custom:decluttering-card"
+        variables:
+          - title: Escena sopar
+          - service: "scene.turn_on"
+          - entity_id: scene.cena
+          - icon: "mdi:silverware-fork-knife"
+          - when: "Vespre"
+
+      - template: quick_action
+        type: "custom:decluttering-card"
+        variables:
+          - title: Escena relax
+          - service: scene.turn_on
+          - entity_id: scene.relax
+          - icon: "mdi:book-open-page-variant"
+          - when: "Vespre"
+
+
+    ###############################################
+    #                  Nit 
+    ###############################################
+
+  - type: custom:layout-card
+    layout: horizontal
+    min_columns: 5
+    max_columns: 5
+    column_width: 100px
+    justify_content: left
+    cards:
+
+      - break

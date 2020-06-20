@@ -22,5 +22,5 @@ cards:
         icon: "mdi:motion-sensor"
       - entity: binary_sensor.window_dinningroom 
         icon: "mdi:window-closed"
-      - entity: binary_sensor.window_bedroom 
+      - entity: binary_sensor.window_dormitori 
         icon: "mdi:window-closed"

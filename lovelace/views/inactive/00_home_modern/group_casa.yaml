@@ -92,7 +92,7 @@
     - show_name: true
     - show_state: false
     - name: Dormitori
-    - entity:  binary_sensor.window_bedroom 
+    - entity:  binary_sensor.window_dormitori 
     - tap_action:
         action: more-info
     - state:

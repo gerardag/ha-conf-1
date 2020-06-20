@@ -28,11 +28,11 @@ http:
   # ip_ban_enabled: true
   # login_attempts_threshold: 3
 
-# prometheus:
-#   namespace: hass
-#   component_config_glob:
-#     sensor.solar_angle:
-#       override_metric: sensor_unit_degrees
+prometheus:
+  namespace: hass
+  component_config_glob:
+    sensor.solar_angle:
+      override_metric: sensor_unit_degrees
 
 history:
   exclude:
@@ -159,10 +159,17 @@ google_assistant:
 wake_on_lan:
 
 mqtt:
+  discovery: true
   broker: !secret mqtt_ip
   port: !secret mqtt_port
   username: !secret mqtt_username
   password: !secret mqtt_password
+  birth_message:
+    topic: 'hass/status'
+    payload: 'online'
+  will_message:
+    topic: 'hass/status'
+    payload: 'offline'
 
 speedtestdotnet:
 
