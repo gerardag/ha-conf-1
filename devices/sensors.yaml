@@ -260,10 +260,6 @@
         {%- elif as_timestamp(now()) | timestamp_custom('%H') | int < 20 -%}Tarda
         {%- elif as_timestamp(now()) | timestamp_custom('%H') | int < 22 -%}Vespre
         {%- else -%}Nit{%- endif -%}
-    debug_sensor:
-      entity_id: sensor.time
-      value_template: |
-        {{ as_timestamp(now()) | timestamp_custom('%H:%M')  }}
 
 ###############
 # SQL Queries #

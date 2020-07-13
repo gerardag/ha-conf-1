@@ -16,6 +16,17 @@ cards:
         type: custom:multiple-entity-row
         name: Menjador
         entities:
+          - icon: "mdi:fan"
+            state_color: true
+            name: false
+            entity: switch.calefaccio_menjador
+            tap_action: 
+              action: toggle
+            # tap_action:
+            #   action: call-service
+            #   service: light.turn_off
+            #   service_data:
+            #     entity_id: light.sofa
           - entity: climate.menjador
             name: false
           - entity: sensor.menjador_humidity_mqtt
