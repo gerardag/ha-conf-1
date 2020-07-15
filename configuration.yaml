@@ -63,6 +63,26 @@ recorder:
   purge_interval: 1
 
 logbook:
+  exclude:
+    entity_globs:
+      - binary_sensor.*_update_available
+    entities:
+      - sensor.date
+      - sensor.date_time
+      - sensor.date_time_iso
+      - sensor.time_date
+      - sensor.internet_time
+      - sensor.time
+      - sensor.time_at_home
+      - sensor.time_at_work
+      - sensor.time_other
+      - sensor.time_utc
+      - sensor.mesa_percent
+      - sensor.mesita_percent
+      - sensor.sofa_percent
+      - sensor.entrada_percent
+      - sensor.cuina_temps_restant_percent
+      - sensor.entrada_temps_restant_percent
 
 api:
 

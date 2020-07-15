@@ -65,7 +65,7 @@
         - show_name: true
         - show_state: false
         - name: Cuina
-        - entity: light.encimera
+        - entity: switch.llum_cuina
         - state:
             - color: "#999999"
               icon: "mdi:lightbulb"

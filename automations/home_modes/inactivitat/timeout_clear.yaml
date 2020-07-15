@@ -5,7 +5,7 @@ trigger:
   entity_id: media_player.tele
   to: 'playing'
 - platform: state
-  entity_id: light.encimera
+  entity_id: switch.llum_cuina
   to: 'on'
 - platform: state
   entity_id: light.entrada

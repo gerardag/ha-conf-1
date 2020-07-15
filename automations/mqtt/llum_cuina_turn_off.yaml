@@ -1,9 +1,0 @@
-alias: IFTTT - Sending event (cuina/on)
-initial_state: true
-trigger:
-- payload: 'off'
-  platform: mqtt
-  topic: wifi/switch/cuina/set
-condition: []
-action:
-- service: script.encimera_turn_off_mqtt

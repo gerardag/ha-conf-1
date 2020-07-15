@@ -14,7 +14,7 @@
       color_temp: 250
     light.sofa: false
     light.mesa: false
-    light.encimera:
+    switch.llum_cuina:
       state: true
     light.entrada:
       state: true

@@ -56,7 +56,7 @@ cards:
             type: glance
           - columns: 2
             entities:
-              - entity: light.encimera
+              - entity: switch.llum_cuina
                 hold_action:
                   action: more-info
                 name: Cuina

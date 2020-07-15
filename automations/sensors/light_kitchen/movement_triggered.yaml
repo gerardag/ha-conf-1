@@ -23,7 +23,7 @@ condition:
 action:
 - service: light.turn_on
   data:
-    entity_id: light.encimera
+    entity_id: switch.llum_cuina
 - service: timer.cancel
   data:
     entity_id: timer.llum_cuina_timeout

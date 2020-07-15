@@ -74,7 +74,7 @@ cards:
               service_data:
                 entity_id: light.mesita
       - type: section
-      - entity: light.encimera
+      - entity: switch.llum_cuina
         name: Marbre cuina
         show_state: false
         icon: "mdi:lightbulb"
@@ -84,16 +84,16 @@ cards:
             state_color: false
             tap_action:
               action: call-service
-              service: light.turn_off
+              service: switch.turn_off
               service_data:
-                entity_id: light.encimera
+                entity_id: switch.llum_cuina
           - icon: "mdi:lightbulb-outline"
             state_color: true
             tap_action:
               action: call-service
-              service: light.turn_on
+              service: switch.turn_on
               service_data:
-                entity_id: light.encimera
+                entity_id: switch.llum_cuina
       - type: section
       - entity: light.entrada
         name: Entrada
