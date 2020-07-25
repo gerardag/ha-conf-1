@@ -195,7 +195,7 @@ speedtestdotnet:
 
 map:
 
-browser_mod:
+# browser_mod:
 
 # o365:
 #   client_secret: !secret o365_client_secret
