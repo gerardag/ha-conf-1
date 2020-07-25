@@ -1,0 +1,27 @@
+alias: Cuina - Encendre llum amb moviment
+initial_state: true
+mode: restart
+trigger:
+  - entity_id: binary_sensor.motion_entrance 
+    from: 'off'
+    platform: state
+    to: 'on'
+condition:
+  condition: or
+  conditions:
+  - condition: state
+    entity_id: input_select.home_mode
+    state:
+      - Normal
+      - Inactiu
+      - Fora de casa
+      - Simular activitat
+action:
+  - service: switch.turn_on
+    data:
+      entity_id: switch.llum_cuina
+  - delay:
+      minutes: 10
+  - service: switch.turn_off
+    data:
+      entity_id: switch.llum_cuina

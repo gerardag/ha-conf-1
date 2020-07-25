@@ -1,0 +1,28 @@
+alias: Entrada - Encendre llum amb moviment
+initial_state: true
+mode: restart
+trigger:
+  - entity_id: binary_sensor.motion_entrance 
+    from: 'off'
+    platform: state
+    to: 'on'
+condition:
+  condition: or
+  conditions:
+  - condition: state
+    entity_id: input_select.home_mode
+    state:
+      - Normal
+      - Inactiu
+      - Fora de casa
+      - Simular activitat
+action:
+  - service: light.turn_on
+    data:
+      entity_id: light.entrada
+  - delay:
+      minutes: 5
+  - service: light.turn_off
+    data:
+      entity_id: light.entrada
+      transition: 30

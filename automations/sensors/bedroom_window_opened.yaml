@@ -1,4 +1,4 @@
-alias: Bedroom - Open window
+alias: Dormitori - Finestra oberta
 trigger:
 - entity_id: binary_sensor.window_dormitori
   from: 'off'
@@ -6,6 +6,7 @@ trigger:
   to: 'on'
 condition: []
 action:
-- service: timer.start
-  data:
-    entity_id: timer.sensor_finestra_habitacio_timeout
+- delay:
+    seconds: 1
+- service: climate.turn_off
+  entity_id: climate.dormitori
