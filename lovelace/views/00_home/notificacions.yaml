@@ -105,37 +105,6 @@ cards:
           margin: 0px;
         }
 
-  - type: conditional
-    conditions:
-      - entity: timer.llum_cuina_timeout
-        state_not: "idle"
-    card:
-      type: entities
-      entities:
-        - entity: timer.llum_cuina_timeout
-      show_header_toggle: false
-      style: |
-          ha-card {
-            text-align: left;
-            margin-left: 5px;
-            margin-right: 5px;
-          }
-
-  - type: conditional
-    conditions:
-      - entity: timer.llum_entrada_timeout
-        state_not: "idle"
-    card:
-      type: entities
-      entities:
-        - entity: timer.llum_entrada_timeout
-      show_header_toggle: false
-      style: |
-          ha-card {
-            text-align: left;
-            margin-left: 5px;
-            margin-right: 5px;
-          }
 
   - type: conditional
     conditions:

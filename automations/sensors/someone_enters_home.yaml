@@ -1,0 +1,18 @@
+alias: Casa - Algú entra
+initial_state: false
+mode: single
+trigger:
+  - entity_id: binary_sensor.motion_entrance 
+    from: 'off'
+    platform: state
+    to: 'on'
+condition:
+  condition: state
+  entity_id: binary_sensor.door_main_entrance
+  state: 'on'
+action:
+  # Send notification
+  - service: notify.gotify_high_priority
+    data: 
+      title: "Casa"
+      message: "Algú entra a casa."
