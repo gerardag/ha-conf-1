@@ -1,9 +1,0 @@
-alias: IFTTT - Sending event (calefaccions/menjador/off)
-initial_state: true
-trigger:
-- payload: 'on'
-  platform: mqtt
-  topic: wifi/switch/calefaccions/menjador/set
-condition: []
-action:
-- service: script.calefaccio_menjador_turn_on_mqtt

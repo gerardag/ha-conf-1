@@ -1,9 +1,0 @@
-alias: On - IFTTT - Sending event (calefaccions/dormitori/off)
-initial_state: true
-trigger:
-- payload: 'on'
-  platform: mqtt
-  topic: wifi/switch/calefaccions/dormitori/set
-condition: []
-action:
-- service: script.calefaccio_dormitori_turn_on_mqtt
