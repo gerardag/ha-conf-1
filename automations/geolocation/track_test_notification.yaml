@@ -3,19 +3,15 @@ initial_state: false
 trigger:
   - platform: zone
     entity_id: device_tracker.aleix_mobil
-    zone: zone.home
+    zone: 
+      - zone.home
+      - zone.feina
     event: leave
   - platform: zone
     entity_id: device_tracker.aleix_mobil
-    zone: zone.home
-    event: enter
-  - platform: zone
-    entity_id: device_tracker.aleix_mobil
-    zone: zone.feina
-    event: leave
-  - platform: zone
-    entity_id: device_tracker.aleix_mobil
-    zone: zone.feina
+    zone: 
+      - zone.home
+      - zone.feina
     event: enter
 action:
   - data:

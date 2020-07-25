@@ -13,20 +13,15 @@ condition:
     - condition: or
       conditions:
         - condition: state
-          entity_id: media_player.tele
-          state: 'playing'
-        - condition: state
-          entity_id: switch.llum_cuina
-          state: 'on'
-        - condition: state
-          entity_id: light.entrada
-          state: 'on'
-        - condition: state
-          entity_id: light.mesa
-          state: 'on'
-        - condition: state
-          entity_id: light.sofa
-          state: 'on'
+          entity_id: 
+            - media_player.tele
+            - switch.llum_cuina
+            - light.entrada
+            - light.mesa
+            - light.sofa
+          state: 
+            - "on"
+            - "playing"
 action:
   - service: light.turn_on
     entity_id: light.mesita 
