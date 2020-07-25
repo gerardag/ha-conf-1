@@ -1,13 +1,3 @@
-llum_entrada_timeout:
-  name: Temps restant llum entrada
-  duration: 300
-llum_cuina_timeout:
-  name: Temps restant llum cuina
-  duration: 600
-sensor_finestra_habitacio_timeout:
-  duration: '00:00:30'
-sensor_finestra_menjador_timeout:
-  duration: '00:00:30'
 inactivitat_casa:
   duration: '00:30:00'
 
