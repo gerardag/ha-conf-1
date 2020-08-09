@@ -1,2 +1,14 @@
 selected_category:
   initial: none
+
+
+## Zigbee2Mqtt
+zigbee2mqtt_old_name:
+  name: Zigbee2mqtt Old Name
+  initial: none
+zigbee2mqtt_new_name:
+  name: Zigbee2mqtt New Name
+  initial: none
+zigbee2mqtt_remove:
+  name: Zigbee2mqtt Remove
+  initial: none

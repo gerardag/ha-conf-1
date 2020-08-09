@@ -39,9 +39,25 @@ cards:
             name: false
           - entity: sensor.dormitori_humidity_mqtt
             name: false
+
+      - entity: sensor.0x00158d0005404a6d_temperature                    
+        type: custom:multiple-entity-row
+        name: Cuina
+        entities:
+          - entity: sensor.0x00158d0005404a6d_humidity
+            name: false
+
+      - entity: sensor.0x00158d00051e3de0_temperature                    
+        type: custom:multiple-entity-row
+        name: Despatx
+        entities:
+          - entity: sensor.0x00158d00051e3de0_humidity
+            name: false
+
       - entity: sensor.exterior_temperature_mqtt
         type: custom:multiple-entity-row
         name: Exterior
         entities:
           - entity: sensor.exterior_humidity_mqtt
             name: false
+

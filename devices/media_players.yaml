@@ -3,3 +3,5 @@
 #   client_secret: !secret spotify_client_secret
 #   aliases:
 #     8c841749fa5941dda9b54d94054769e0: 'Cuarto de estar'
+- platform: kodi
+  host: pi3a.sys.aleix.cloud

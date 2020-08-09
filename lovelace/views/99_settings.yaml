@@ -20,8 +20,22 @@ cards:
               - title: Zigbee
 
           - type: entities
+            show_header_toggle: false
             entities:
               - entity: input_boolean.zigbee_permit_join
               - entity: timer.zigbee_permit_join
               - entity: sensor.bridge_state
+              - entity: sensor.zigbee2mqtt_version
+
+          - type: entities
             show_header_toggle: false
+            entities:
+              - entity: input_text.zigbee2mqtt_old_name
+              - entity: input_text.zigbee2mqtt_new_name
+              - entity: script.zigbee2mqtt_rename
+
+          - type: entities
+            show_header_toggle: false
+            entities:
+              - entity: input_text.zigbee2mqtt_remove
+              - entity: script.zigbee2mqtt_remove
