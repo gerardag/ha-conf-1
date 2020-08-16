@@ -1,58 +1,59 @@
-card:
-  entity: "[[entity]]"
-  name: "[[name]]"
-  show_icon: true
-  show_last_changed: "[[show_last_changed]]"
-  show_name: "[[show_name]]"
-  show_state: "[[show_state]]"
-  state:
-    - color: "#999999"
-      icon: "[[icon]]"
-      value: "off"
-    - color: "#ffffff"
-      icon: "[[icon]]"
-      value: "on"
-  tap_action: "[[tap_action]]"
-  hold_action:
-    action: more-info
-  type: "custom:button-card"
-  style: |
-    ha-card {
-      font-family: Roboto, 'Open Sans', sans-serif;
-      /* padding-top: 15px !important; */
-      background-color: rgba(0, 0, 0, 0);
-      -webkit-box-shadow: none;
-      -moz-box-shadow: none;
-      box-shadow: none;
-    }
-    ha-icon {
-      width: 60% !important;
-    }
-    img {
-      width: 100%;
-    }
-    #img-cell {
-      background-color: {% if is_state('[[entity]]', 'on') %}[[color]]{% else %}#F5F5F5{% endif %};
-      border-radius: 50px;
-      height: 50px !important;
-      width: 50px !important;
-    }
-    #state {
-      padding-top: 5px;
-    }
-    #label {
-      font-size: 70%;
-    }
-    #name {
-      margin-top:5px;
-      font-size: [[title-font-size]];
-    }
-default:
-  - show_state: true
-  - show_name: false
-  - show_last_changed: true
-  - background: "#F5F5F5"
-  - title-font-size: "1.0rem"
-  - color: rgb(251, 210, 41)
-  - tap_action:
-      action: toggle
+nest_button:
+  card:
+    entity: "[[entity]]"
+    name: "[[name]]"
+    show_icon: true
+    show_last_changed: "[[show_last_changed]]"
+    show_name: "[[show_name]]"
+    show_state: "[[show_state]]"
+    state:
+      - color: "#999999"
+        icon: "[[icon]]"
+        value: "off"
+      - color: "#ffffff"
+        icon: "[[icon]]"
+        value: "on"
+    tap_action: "[[tap_action]]"
+    hold_action:
+      action: more-info
+    type: "custom:button-card"
+    style: |
+      ha-card {
+        font-family: Roboto, 'Open Sans', sans-serif;
+        /* padding-top: 15px !important; */
+        background-color: rgba(0, 0, 0, 0);
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+      }
+      ha-icon {
+        width: 60% !important;
+      }
+      img {
+        width: 100%;
+      }
+      #img-cell {
+        background-color: {% if is_state('[[entity]]', 'on') %}[[color]]{% else %}#F5F5F5{% endif %};
+        border-radius: 50px;
+        height: 50px !important;
+        width: 50px !important;
+      }
+      #state {
+        padding-top: 5px;
+      }
+      #label {
+        font-size: 70%;
+      }
+      #name {
+        margin-top:5px;
+        font-size: [[title-font-size]];
+      }
+  default:
+    - show_state: true
+    - show_name: false
+    - show_last_changed: true
+    - background: "#F5F5F5"
+    - title-font-size: "1.0rem"
+    - color: rgb(251, 210, 41)
+    - tap_action:
+        action: toggle

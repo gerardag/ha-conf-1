@@ -4,5 +4,5 @@ preload:
   - conditional
 custom_header: !include lovelace/custom_header.yaml
 # animated_background: !include lovelace/animated_backgrounds.yaml
-decluttering_templates: !include lovelace/decluttering_templates.yaml
+decluttering_templates: !include_dir_merge_named lovelace/decluttering_templates/
 views: !include lovelace/views.yaml

@@ -10,7 +10,7 @@ cards:
       ha-card {
         margin-left: 5px;
         margin-right: 5px;
-        padding: 10px;
+        padding-top: 10px;
       }
     cards:
       - type: custom:layout-card
@@ -19,6 +19,10 @@ cards:
         max_columns: 5
         column_width: 100px
         justify_content: left
+        style: |
+          ha-card {
+            padding: 10px;
+          }
         cards:
           - template: nest_button
             type: "custom:decluttering-card"
@@ -66,3 +70,15 @@ cards:
               - entity: light.entrada
               - icon: "mdi:lightbulb"
 
+      - type: custom:mini-graph-card
+        entities: 
+          - entity: sensor.menjador_temperature_mqtt
+            name: Temperatura
+            color: "#ff9933"
+          - entity: sensor.menjador_humidity_mqtt
+            name: Humitat
+            y_axis: secondary
+            show_fill: false
+        show:
+          name: false
+          icon: false

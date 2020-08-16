@@ -1,14 +1,15 @@
-card:
-  entity: input_datetime.[[rutina]]
-  name: "[[name]]"
-  show_state: true
-  icon: "mdi:calendar"
-  type: "custom:multiple-entity-row"
-  entities:
-    - entity: input_boolean.work_focus
-      name: false
-      state_color: true
-      icon: "mdi:refresh"
-      tap_action:
-        action: call-service
-        service: "script.[[rutina]]"
+rutina:
+  card:
+    entity: input_datetime.[[rutina]]
+    name: "[[name]]"
+    show_state: true
+    icon: "mdi:calendar"
+    type: "custom:multiple-entity-row"
+    entities:
+      - entity: input_boolean.work_focus
+        name: false
+        state_color: true
+        icon: "mdi:refresh"
+        tap_action:
+          action: call-service
+          service: "script.[[rutina]]"
