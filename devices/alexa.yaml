@@ -5,11 +5,19 @@ smart_home:
       - script
       - input_boolean
       - group
+      - binary_sensor
+      - sensor
+      - media_player
     exclude_entities:
       - switch.ventilador
       - switch.calefaccio_menjador
       - switch.calefaccio_dormitori
+    include_domains:
+      - light
+    include_entity_globs:
+      - sensor.*_temperature
     include_entities:
+      - switch.llum_cuina
       - script.tv_turn_on_disney
       - script.tv_turn_on_netflix
       - script.tv_turn_on_dinner
@@ -20,6 +28,7 @@ smart_home:
       - script.tv_turn_on_youtube
       - script.tv_volume_up
       - script.tv_volume_down
+      - script.vacuum_start
   entity_config:
     scene.buenos_dias:
       name: Escena buenos dias
@@ -33,3 +42,17 @@ smart_home:
       name: Escena relax
     scene.tele:
       name: Escena cine
+    script.vacuum_start:
+      name: Aspirador
+      display_categories: SWITCH
+    light.entrada:
+      name: Entrada
+    light.mesa:
+      name: Mesa
+    light.sofa:
+      name: Sofá
+    light.mesita:
+      name: Mesita
+    switch.llum_cuina:
+      name: Cocina
+      display_categories: LIGHT

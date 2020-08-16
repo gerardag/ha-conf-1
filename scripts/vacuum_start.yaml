@@ -1,0 +1,3 @@
+vacuum_start:
+    sequence:
+    - service: shell_command.aspirador_on

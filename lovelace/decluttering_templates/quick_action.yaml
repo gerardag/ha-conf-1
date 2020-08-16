@@ -13,6 +13,7 @@ card:
       - show_last_changed: false
       - name: "[[title]]"
       - entity: "[[entity_id]]"
+      - icon: "[[icon]]"
       - tap_action: 
           action: call-service
           service: "[[service]]"

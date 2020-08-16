@@ -5,7 +5,13 @@ card:
   show_last_changed: "[[show_last_changed]]"
   show_name: "[[show_name]]"
   show_state: "[[show_state]]"
-  state: "[[state]]"
+  state:
+    - color: "#999999"
+      icon: "[[icon]]"
+      value: "off"
+    - color: "#ffffff"
+      icon: "[[icon]]"
+      value: "on"
   tap_action: "[[tap_action]]"
   hold_action:
     action: more-info
@@ -26,7 +32,7 @@ card:
       width: 100%;
     }
     #img-cell {
-      background-color: [[background]];
+      background-color: {% if is_state('[[entity]]', 'on') %}[[color]]{% else %}#F5F5F5{% endif %};
       border-radius: 50px;
       height: 50px !important;
       width: 50px !important;
@@ -46,6 +52,7 @@ default:
   - show_name: false
   - show_last_changed: true
   - background: "#F5F5F5"
-  - title-font-size: "1.2rem"
+  - title-font-size: "1.0rem"
+  - color: rgb(251, 210, 41)
   - tap_action:
       action: toggle

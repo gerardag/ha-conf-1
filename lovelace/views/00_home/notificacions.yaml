@@ -11,22 +11,20 @@ cards:
   #         {%- else -%}Bona nit{%- endif -%}
   - type: markdown
     content: |
-      # [[ if(sensor.moment_dia == "Matí",    "Bon dia", "") ]][[ if(sensor.moment_dia == "Migdia",  "Bon dia", "") ]][[ if(sensor.moment_dia == "Tarda",   "Bona tarda", "") ]][[ if(sensor.moment_dia == "Vespre",  "Bona tarda", "") ]][[ if(sensor.moment_dia == "Nit",     "Bona nit", "") ]][[ if(sensor.moment_dia == "Matinada","Bona nit", "") ]], [[ {user} ]]
-    style: >
-      ha-card {
-        font-family: Roboto, 'Open Sans', sans-serif;
-        font-size: 100%;
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
-        box-shadow: none;
-        text-align: left;
-        background: rgba(0,0,0,0);
-      }
-      h1 {
-        color: #333;
-        font-weight: 300 !important;
-        margin: 0px;
-      }
+      [[ if(sensor.moment_dia == "Matí",    "Bon dia", "") ]][[ if(sensor.moment_dia == "Migdia",  "Bon dia", "") ]][[ if(sensor.moment_dia == "Tarda",   "Bona tarda", "") ]][[ if(sensor.moment_dia == "Vespre",  "Bona tarda", "") ]][[ if(sensor.moment_dia == "Nit",     "Bona nit", "") ]][[ if(sensor.moment_dia == "Matinada","Bona nit", "") ]], [[ {user} ]]
+    style: |
+        ha-card {
+          font-family: Roboto, 'Open Sans', sans-serif;
+          font-size: 100%;
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+          text-align: left;
+          background: rgba(0,0,0,0);
+          color: var(--card-header-text-color);;
+          font-weight: 300 !important;
+          font-size: 2em;
+        }
   - type: custom:simple-weather-card
     entity: weather.dark_sky
     name: "Horta (Barcelona)"
