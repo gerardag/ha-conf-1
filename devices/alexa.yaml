@@ -14,10 +14,14 @@ smart_home:
       - switch.calefaccio_dormitori
     include_domains:
       - light
+      - scene
+      - climate
     include_entity_globs:
       - sensor.*_temperature
+      - sensor.*_temperature_mqtt
     include_entities:
       - switch.llum_cuina
+      - switch.calefaccio_menjador
       - script.tv_turn_on_disney
       - script.tv_turn_on_netflix
       - script.tv_turn_on_dinner
@@ -29,7 +33,12 @@ smart_home:
       - script.tv_volume_up
       - script.tv_volume_down
       - script.vacuum_start
+      - script.menjador_dynamic_scene
   entity_config:
+    climate.menjador:
+      name: Comedor
+    climate.dormitori:
+      name: Dormitorio
     scene.buenos_dias:
       name: Escena buenos dias
     scene.cena:
@@ -45,6 +54,8 @@ smart_home:
     script.vacuum_start:
       name: Aspirador
       display_categories: SWITCH
+    script.menjador_dynamic_scene:
+      name: Lo que tu creas
     light.entrada:
       name: Entrada
     light.mesa:
@@ -53,6 +64,8 @@ smart_home:
       name: Sofá
     light.mesita:
       name: Mesita
+    switch.calefaccio_menjador:
+      name: Ventilador
     switch.llum_cuina:
       name: Cocina
       display_categories: LIGHT

@@ -1,0 +1,43 @@
+type: vertical-stack
+cards:
+  - template: title_h2
+    type: "custom:decluttering-card"
+    variables:
+      - title: Despatx
+
+  - type: "custom:vertical-stack-in-card"
+    style: |
+      ha-card {
+        margin-left: 5px;
+        margin-right: 5px;
+        padding-top: 10px;
+      }
+    cards:
+      # - type: custom:layout-card
+      #   layout: horizontal
+      #   min_columns: 5
+      #   max_columns: 5
+      #   column_width: 100px
+      #   justify_content: left
+      #   style: |
+      #     ha-card {
+      #       padding: 10px;
+      #     }
+      #   cards:
+      #     - break
+
+      # - type: custom:mini-graph-card
+      #   entities: 
+      #     - entity: sensor.0x00158d00051e3de0_temperature
+      #       name: Temperatura
+      #       color: "#ff9933"
+      #     - entity: sensor.0x00158d00051e3de0_humidity
+      #       name: Humitat
+      #       y_axis: secondary
+      #       show_fill: false
+      #   height: 75
+      #   animate: true
+      #   show:
+      #     legend: false
+      #     name: false
+      #     icon: false

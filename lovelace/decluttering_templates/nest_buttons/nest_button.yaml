@@ -7,13 +7,12 @@ nest_button:
     show_name: "[[show_name]]"
     show_state: "[[show_state]]"
     state:
-      - color: "#999999"
-        icon: "[[icon]]"
-        value: "off"
       - color: "#ffffff"
-        icon: "[[icon]]"
-        value: "on"
+        value: "[[state_enabled]]"
+      - color: "#999999"
+        operator: default
     tap_action: "[[tap_action]]"
+    icon: "[[icon]]"
     hold_action:
       action: more-info
     type: "custom:button-card"
@@ -33,7 +32,7 @@ nest_button:
         width: 100%;
       }
       #img-cell {
-        background-color: {% if is_state('[[entity]]', 'on') %}[[color]]{% else %}#F5F5F5{% endif %};
+        background-color: {% if is_state('[[entity]]', '[[state_enabled]]') %}[[background_on]]{% else %}[[background_off]]{% endif %};
         border-radius: 50px;
         height: 50px !important;
         width: 50px !important;
@@ -52,8 +51,10 @@ nest_button:
     - show_state: true
     - show_name: false
     - show_last_changed: true
-    - background: "#F5F5F5"
+    - background_off: "#F5F5F5"
+    - background_on: "#fbd229"
     - title-font-size: "1.0rem"
     - color: rgb(251, 210, 41)
     - tap_action:
         action: toggle
+    - state_enabled: "on"

@@ -1,0 +1,15 @@
+nest_button_light:
+  card:
+    template: nest_button
+    type: "custom:decluttering-card"
+    variables:
+      - name: "[[name]]"
+      - show_name: true
+      - show_state: false 
+      - show_last_changed: false
+      - entity: "[[entity]]"
+      - icon: "[[icon]]"
+      - background_on: "#fbd229"
+      - state_enabled: "[[state_enabled]]"
+  default:
+    - state_enabled: "on"

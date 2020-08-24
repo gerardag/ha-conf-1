@@ -57,14 +57,34 @@ cards:
           margin-right: 5px;
         }
 
+  # - type: conditional
+  #   conditions:
+  #     - entity: media_player.spotify_aleix_murtra
+  #       state_not: "idle"
+  #   card:
+  #     type: custom:mini-media-player
+  #     entity: media_player.spotify_aleix_murtra
+  #     icon: mdi:spotify
+  #     artwork: cover
+  #     hide:
+  #       volume: true
+  #       source: true
+  #       progress: true
+  #       power_state: true
+  #     style: |
+  #       ha-card {
+  #         margin-left: 5px;
+  #         margin-right: 5px;
+  #       }
+
   - type: conditional
     conditions:
-      - entity: media_player.spotify_aleix_murtra
-        state_not: "idle"
+      - entity: media_player.echo_dot_de_immaleix
+        state: "playing"
     card:
       type: custom:mini-media-player
-      entity: media_player.spotify_aleix_murtra
-      icon: mdi:spotify
+      entity: media_player.echo_dot_de_immaleix
+      icon: mdi:amazon-alexa
       artwork: cover
       hide:
         volume: true

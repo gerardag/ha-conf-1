@@ -17,3 +17,6 @@ title_h2:
         margin: 0px;
         font-size: 1.5em;
       }
+      .no-header {
+        padding-bottom: 7px;
+      }

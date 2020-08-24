@@ -1,0 +1,66 @@
+type: vertical-stack
+cards:
+  - template: title_h2
+    type: "custom:decluttering-card"
+    variables:
+      - title: Dormitori
+
+  - type: "custom:vertical-stack-in-card"
+    style: |
+      ha-card {
+        margin-left: 5px;
+        margin-right: 5px;
+        padding-top: 10px;
+      }
+    cards:
+      - type: custom:layout-card
+        layout: horizontal
+        min_columns: 5
+        max_columns: 5
+        column_width: 100px
+        justify_content: left
+        style: |
+          ha-card {
+            padding: 10px;
+          }
+        cards:
+          - template: nest_button_light
+            type: "custom:decluttering-card"
+            variables:
+              - name: Calefacció
+              - entity: climate.dormitori
+              - icon: "mdi:home-thermometer-outline"
+              - state_enabled: "heat"
+          - template: nest_button_binary_sensor
+            type: "custom:decluttering-card"
+            variables:
+              - name: Finestra
+              - entity: binary_sensor.window_dormitori
+              - icon: "mdi:window-closed"
+          - template: nest_button_media_player
+            type: "custom:decluttering-card"
+            variables:
+              - name: Chromecast
+              - entity: media_player.el_lado_oscuro
+              - icon: "mdi:cast"
+          # - template: nest_button_media_player
+          #   type: "custom:decluttering-card"
+          #   variables:
+          #     - name: Tele
+          #     - entity: media_player.tele
+          #     - icon: "mdi:television"
+
+      - type: custom:mini-graph-card
+        entities: 
+          - entity: sensor.menjador_temperature
+            name: Temperatura
+            color: "#ff9933"
+          - entity: sensor.menjador_humidity
+            name: Humitat
+            y_axis: secondary
+            show_fill: false
+        height: 75
+        show:
+          legend: false
+          name: false
+          icon: false

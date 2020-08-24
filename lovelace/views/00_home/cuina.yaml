@@ -1,0 +1,59 @@
+type: vertical-stack
+cards:
+  - template: title_h2
+    type: "custom:decluttering-card"
+    variables:
+      - title: Cuina
+
+  - type: "custom:vertical-stack-in-card"
+    style: |
+      ha-card {
+        margin-left: 5px;
+        margin-right: 5px;
+        padding-top: 10px;
+      }
+    cards:
+      - type: custom:layout-card
+        layout: horizontal
+        min_columns: 5
+        max_columns: 5
+        column_width: 100px
+        justify_content: left
+        style: |
+          ha-card {
+            padding: 10px;
+          }
+        cards:
+          - template: nest_button_light
+            type: "custom:decluttering-card"
+            variables:
+              - name: Marbre
+              - entity: switch.llum_cuina
+              - icon: "mdi:lightbulb"
+          - template: nest_button_binary_sensor
+            type: "custom:decluttering-card"
+            variables:
+              - name: Moviment
+              - entity: binary_sensor.motion_kitchen
+              - icon: "mdi:motion-sensor"
+          - template: nest_button_media_player
+            type: "custom:decluttering-card"
+            variables:
+              - name: Nest Mini
+              - entity: media_player.kodi
+              - icon: "mdi:google-home"
+
+      - type: custom:mini-graph-card
+        height: 75
+        entities: 
+          - entity: sensor.0x00158d0005404a6d_temperature
+            name: Temperatura
+            color: "#ff9933"
+          - entity: sensor.0x00158d0005404a6d_humidity
+            name: Humitat
+            y_axis: secondary
+            show_fill: false
+        show:
+          legend: false
+          name: false
+          icon: false

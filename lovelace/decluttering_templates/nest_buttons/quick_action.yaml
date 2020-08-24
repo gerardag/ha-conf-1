@@ -24,7 +24,7 @@ quick_action:
             - color: "#999999"
               icon: "[[icon]]"
               operator: default
-        - background: "#ffffff"
+        - background_off: "#ffffff"
         - title-font-size: "0.9rem"
   default:
     title: "NOT_DEFINED"

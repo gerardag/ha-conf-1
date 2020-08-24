@@ -1,0 +1,54 @@
+menjador_dynamic_scene:
+  alias: Menjador - Activar escena dinàmica
+  sequence:
+    - choose:
+      - conditions:
+          - condition: state
+            entity_id: sensor.moment_dia
+            state: Vespre
+        sequence:
+        - service: scene.turn_on
+          data:
+            entity_id: scene.cena
+            transition: 5      
+
+      - conditions:
+          - condition: state
+            entity_id: sensor.moment_dia
+            state: Migdia
+        sequence:
+        - service: scene.turn_on
+          data:
+            entity_id: scene.con_amigos
+            transition: 5
+
+      - conditions:
+          - condition: or
+            conditions:
+              - condition: state
+                entity_id: sensor.moment_dia
+                state: Matí
+              - condition: state
+                entity_id: sensor.moment_dia
+                state: Tarda
+        sequence:
+        - service: scene.turn_on
+          data:
+            entity_id: scene.relax
+            transition: 5
+
+      - conditions:
+          - condition: state
+            entity_id: sensor.moment_dia
+            state: Nit
+        sequence:
+        - service: scene.turn_on
+          data:
+            entity_id: scene.tele
+            transition: 5
+
+      default:
+        - service: scene.turn_on
+          data:
+            entity_id: scene.buenos_dias
+            transition: 5

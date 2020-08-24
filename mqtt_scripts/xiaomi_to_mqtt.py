@@ -8,7 +8,7 @@ def mqttPutMetric(mqttid, data):
     #publish.single(mqttid, payload=data, hostname="192.168.1.142", port=8883, auth={'username':'hassio','password':'aleixo'})
     client = paho.Client("mqtt-ble-sensor-com")
     client.username_pw_set('hassio', 'aleixo')
-    client.connect('192.168.1.142', 8883)
+    client.connect('192.168.1.2', 1883)
     ret = client.publish(mqttid, payload=data, qos=0, retain=True)
     print("Added data '%s' to '%s'" % (data, mqttid))
 

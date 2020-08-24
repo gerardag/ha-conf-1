@@ -1,0 +1,65 @@
+type: vertical-stack
+cards:
+  - template: title_h2
+    type: "custom:decluttering-card"
+    variables:
+      - title: Entrada
+
+  - type: "custom:vertical-stack-in-card"
+    style: |
+      ha-card {
+        margin-left: 5px;
+        margin-right: 5px;
+        padding-top: 10px;
+      }
+    cards:
+      - type: custom:layout-card
+        layout: horizontal
+        min_columns: 5
+        max_columns: 5
+        column_width: 100px
+        justify_content: left
+        style: |
+          ha-card {
+            padding: 10px;
+          }
+        cards:
+          - template: nest_button_light
+            type: "custom:decluttering-card"
+            variables:
+              - name: Llum
+              - entity: light.entrada
+              - icon: "mdi:lightbulb"
+          - template: nest_button_binary_sensor
+            type: "custom:decluttering-card"
+            variables:
+              - name: Porta
+              - entity: binary_sensor.door_main_entrance
+              - icon: "mdi:door-closed"
+          - template: nest_button_binary_sensor
+            type: "custom:decluttering-card"
+            variables:
+              - name: Moviment
+              - entity: binary_sensor.motion_entrance
+              - icon: "mdi:motion-sensor"
+          - template: nest_button_binary_sensor
+            type: "custom:decluttering-card"
+            variables:
+              - name: Càmera
+              - entity: camera.escala
+              - icon: "mdi:cctv"
+
+      - type: custom:mini-graph-card
+        entities: 
+          - entity: sensor.0x00158d00051e3de0_temperature
+            name: Temperatura
+            color: "#ff9933"
+          - entity: sensor.0x00158d00051e3de0_humidity
+            name: Humitat
+            y_axis: secondary
+            show_fill: false
+        height: 75
+        show:
+          legend: false
+          name: false
+          icon: false

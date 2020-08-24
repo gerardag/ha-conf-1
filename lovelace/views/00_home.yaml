@@ -16,6 +16,12 @@ cards:
 
           - !include 00_home/notificacions.yaml
 
+          ##################
+          ## SCENES / AUT ##
+          ##################
+
+          - !include 00_home/escenes.yaml
+
           ######################
           ## ACCIONS RÀPIDES  ##
           ######################
@@ -31,29 +37,27 @@ cards:
           ## DISPOSITIUS  ##
           ##################
 
-          - !include 00_home/dispositius.yaml
-
-
-          ##################
-          ## SCENES / AUT ##
-          ##################
-
-          - !include 00_home/escenes.yaml
+          - !include 00_home/menjador.yaml
+          - !include 00_home/cuina.yaml
 
           - break
+
+          - !include 00_home/entrada.yaml
+
+          - !include 00_home/dormitori.yaml
 
 
           ##################
           ## TEMPERATURES ##
           ##################
 
-          - !include 00_home/temperatures.yaml
+          # - !include 00_home/temperatures.yaml
 
           ##################
           ##   SENSORS    ##
           ##################
 
-          - !include 00_home/sensors.yaml
+          # - !include 00_home/sensors.yaml
 
           ##################
           ##    ALTRES    ##

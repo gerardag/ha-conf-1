@@ -5,3 +5,6 @@
 #     8c841749fa5941dda9b54d94054769e0: 'Cuarto de estar'
 - platform: kodi
   host: pi3a.sys.aleix.cloud
+  port: 8080
+  username: kodi
+  password: kodi
