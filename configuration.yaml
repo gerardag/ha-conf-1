@@ -88,6 +88,8 @@ api:
 
 auth:
 
+media_source:
+
 duckdns:
   domain: hass-amurtra
   access_token: !secret duckdns_api_key
@@ -192,18 +194,18 @@ map:
 #   client_secret: !secret o365_client_secret
 #   client_id: !secret o365_client_id
 
-calendar:
-  - platform: ics
-    calendars:
-      - name: CAPSiDE Holidays
-        url: !secret calendar_capside_holidays
-        includeAllDay: true
-      - name: CAPSiDE Oncall
-        url: !secret calendar_capside_oncall
-        includeAllDay: true
-      - name: FCBarcelona matches
-        url: !secret calendar_fcbarcelona
-        includeAllDay: true
+# calendar:
+#   - platform: ics
+#     calendars:
+#       - name: CAPSiDE Holidays
+#         url: !secret calendar_capside_holidays
+#         includeAllDay: true
+#       - name: CAPSiDE Oncall
+#         url: !secret calendar_capside_oncall
+#         includeAllDay: true
+#       - name: FCBarcelona matches
+#         url: !secret calendar_fcbarcelona
+#         includeAllDay: true
 
 # Devices
 

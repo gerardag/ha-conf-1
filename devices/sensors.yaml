@@ -1,28 +1,28 @@
 - platform: yr
-- platform: mqtt
-  name: Exterior Temperature MQTT
-  state_topic: "ble/exterior/temperature"
-  unit_of_measurement: "°C"
-- platform: mqtt
-  name: Exterior Humidity MQTT
-  state_topic: "ble/exterior/humidity"
-  unit_of_measurement: "%"
-- platform: mqtt
-  name: Dormitori Temperature MQTT
-  state_topic: "ble/dormitori/temperature"
-  unit_of_measurement: "°C"
-- platform: mqtt
-  name: Dormitori Humidity MQTT
-  state_topic: "ble/dormitori/humidity"
-  unit_of_measurement: "%"
-- platform: mqtt
-  name: Menjador Temperature MQTT
-  state_topic: "ble/menjador/temperature"
-  unit_of_measurement: "°C"
-- platform: mqtt
-  name: Menjador Humidity MQTT
-  state_topic: "ble/menjador/humidity"
-  unit_of_measurement: "%"
+# - platform: mqtt
+#   name: Exterior Temperature MQTT
+#   state_topic: "ble/exterior/temperature"
+#   unit_of_measurement: "°C"
+# - platform: mqtt
+#   name: Exterior Humidity MQTT
+#   state_topic: "ble/exterior/humidity"
+#   unit_of_measurement: "%"
+# - platform: mqtt
+#   name: Dormitori Temperature MQTT
+#   state_topic: "ble/dormitori/temperature"
+#   unit_of_measurement: "°C"
+# - platform: mqtt
+#   name: Dormitori Humidity MQTT
+#   state_topic: "ble/dormitori/humidity"
+#   unit_of_measurement: "%"
+# - platform: mqtt
+#   name: Menjador Temperature MQTT
+#   state_topic: "ble/menjador/temperature"
+#   unit_of_measurement: "°C"
+# - platform: mqtt
+#   name: Menjador Humidity MQTT
+#   state_topic: "ble/menjador/humidity"
+#   unit_of_measurement: "%"
 - platform: mqtt
   name: pi4 speedtest download
   state_topic: "system/pi4/speedtest/download"
@@ -59,26 +59,26 @@
   name: pizw speedtest ping
   state_topic: "system/pizw/speedtest/ping"
   unit_of_measurement: "ms"
-- platform: mitemp_bt
-  mac: !secret mac_temp_mi_dormitori
-  monitored_conditions:
-    - temperature
-    - humidity
-  scan_interval: 120
-  retries: 1
-  timeout: 10
-  median: 1
-  name: Dormitori
-- platform: mitemp_bt
-  mac: !secret mac_temp_mi_menjador
-  monitored_conditions:
-    - temperature
-    - humidity
-  scan_interval: 120
-  retries: 1
-  timeout: 10
-  median: 1
-  name: Menjador
+# - platform: mitemp_bt
+#   mac: !secret mac_temp_mi_dormitori
+#   monitored_conditions:
+#     - temperature
+#     - humidity
+#   scan_interval: 120
+#   retries: 1
+#   timeout: 10
+#   median: 1
+#   name: Dormitori
+# - platform: mitemp_bt
+#   mac: !secret mac_temp_mi_menjador
+#   monitored_conditions:
+#     - temperature
+#     - humidity
+#   scan_interval: 120
+#   retries: 1
+#   timeout: 10
+#   median: 1
+#   name: Menjador
 - platform: beewi_smartclim
   mac: !secret mac_temp_beewi_exterior
   name: Exterior

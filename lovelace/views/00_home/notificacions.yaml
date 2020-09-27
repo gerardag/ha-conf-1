@@ -99,6 +99,67 @@ cards:
 
   - type: conditional
     conditions:
+      - entity: media_player.cuina
+        state: "playing"
+    card:
+      type: custom:mini-media-player
+      entity: media_player.cuina
+      icon: mdi:google-home
+      artwork: cover
+      hide:
+        volume: true
+        source: true
+        progress: true
+        power_state: true
+      style: |
+        ha-card {
+          margin-left: 5px;
+          margin-right: 5px;
+        }
+
+  - type: conditional
+    conditions:
+      - entity: media_player.xbox_one_menjador
+        state: "on"
+    card:
+      type: custom:mini-media-player
+      entity: media_player.xbox_one_menjador
+      icon: mdi:microsoft-xbox
+      artwork: cover
+      hide:
+        controls: true
+        volume: true
+        source: true
+        progress: true
+        power_state: true
+      style: |
+        ha-card {
+          margin-left: 5px;
+          margin-right: 5px;
+        }
+
+  - type: conditional
+    conditions:
+      - entity: media_player.el_lado_oscuro
+        state: "playing"
+    card:
+      type: custom:mini-media-player
+      entity: media_player.el_lado_oscuro
+      icon: mdi:cast
+      artwork: cover
+      hide:
+        volume: true
+        source: true
+        progress: true
+        power_state: true
+      style: |
+        ha-card {
+          margin-left: 5px;
+          margin-right: 5px;
+        }
+
+  - type: conditional
+    conditions:
       - entity: input_boolean.work_focus
         state: "on"
     card:

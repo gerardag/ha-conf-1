@@ -30,10 +30,13 @@ smart_home:
       - script.tv_turn_on_wii
       - script.tv_turn_on_xbox
       - script.tv_turn_on_youtube
+      - script.tv_antena3
       - script.tv_volume_up
       - script.tv_volume_down
       - script.vacuum_start
       - script.menjador_dynamic_scene
+      - media_player.tele
+      - media_player.xbox_one_menjador
   entity_config:
     climate.menjador:
       name: Comedor
@@ -69,3 +72,5 @@ smart_home:
     switch.llum_cuina:
       name: Cocina
       display_categories: LIGHT
+    media_player.xbox_one_menjador:
+      name: Consola

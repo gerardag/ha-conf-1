@@ -8,3 +8,8 @@
   port: 8080
   username: kodi
   password: kodi
+
+- platform: xboxone
+  device: !secret xbox_deviceid
+  ip_address: !secret xbox_ip
+  name: Xbox One Menjador

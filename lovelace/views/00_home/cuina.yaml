@@ -40,20 +40,5 @@ cards:
             type: "custom:decluttering-card"
             variables:
               - name: Nest Mini
-              - entity: media_player.kodi
+              - entity: media_player.cuina
               - icon: "mdi:google-home"
-
-      - type: custom:mini-graph-card
-        height: 75
-        entities: 
-          - entity: sensor.0x00158d0005404a6d_temperature
-            name: Temperatura
-            color: "#ff9933"
-          - entity: sensor.0x00158d0005404a6d_humidity
-            name: Humitat
-            y_axis: secondary
-            show_fill: false
-        show:
-          legend: false
-          name: false
-          icon: false

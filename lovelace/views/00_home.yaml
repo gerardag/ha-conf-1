@@ -42,10 +42,8 @@ cards:
 
           - break
 
-          - !include 00_home/entrada.yaml
-
           - !include 00_home/dormitori.yaml
-
+          - !include 00_home/entrada.yaml
 
           ##################
           ## TEMPERATURES ##

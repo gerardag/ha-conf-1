@@ -31,6 +31,8 @@ cards:
               - entity: climate.dormitori
               - icon: "mdi:home-thermometer-outline"
               - state_enabled: "heat"
+              - tap_action:
+                  action: more-info
           - template: nest_button_binary_sensor
             type: "custom:decluttering-card"
             variables:
@@ -52,10 +54,10 @@ cards:
 
       - type: custom:mini-graph-card
         entities: 
-          - entity: sensor.menjador_temperature
+          - entity: sensor.dormitori_temperature
             name: Temperatura
             color: "#ff9933"
-          - entity: sensor.menjador_humidity
+          - entity: sensor.dormitori_humidity
             name: Humitat
             y_axis: secondary
             show_fill: false

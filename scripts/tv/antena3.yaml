@@ -1,12 +1,9 @@
-'tv_turn_on_xbox':
-  alias: Vamos a jugar
+'tv_antena3':
+  alias: TV - Antena3
   sequence:
-  - service: media_player.turn_on
-    data: 
-      entity_id: media_player.xbox_one_menjador
-  # - service: scene.turn_on
-  #   data:
-  #     entity_id: scene.relax
+  - service: scene.turn_on
+    data:
+      entity_id: scene.cena
   - service: media_player.turn_on
     data: 
       entity_id: media_player.tele
@@ -14,7 +11,12 @@
   - service: media_player.select_source
     data: 
       entity_id: media_player.tele
-      source: 'Xbox One'
+      source: 'Live TV'
+  - service: media_player.play_media
+    data: 
+      entity_id: media_player.tele
+      media_content_id: "Antena3 HD"
+      media_content_type: "channel"
   - service: media_player.volume_mute
     data:
       entity_id: media_player.tele
@@ -22,4 +24,5 @@
   - service: media_player.volume_set
     data:
       entity_id: media_player.tele
-      volume_level: 0.09
+      volume_level: 0.1
+

@@ -1,8 +1,3 @@
-- platform: broadlink
-  host: !secret ip_switch_calefaccio_menjador
-  mac: !secret mac_switch_calefaccio_menjador
-  type: sp2
-  friendly_name: 'Calefacció menjador'
 # - platform: broadlink
 #   host: !secret ip_remote
 #   mac: !secret mac_remote
@@ -16,24 +11,24 @@
 #       command_on: 'JgBQAAABKJMQFRITEjcQFRITEhITEhITEjcSOBAVEjcSOBI3EjcSOBITEjcSExITEhITEhMSExITNhITEzYSOBI3EjgSNxI4EwAFKgABJkwSAA0FAAAAAAAA=='
 #       command_off: 'JgBQAAABJpUSExAVEDkQFRAVEBQRFBAVEDkRORAVEDkQORE3EjkRORA5ETkQFBEUERQQFRAUERQRFBAVEDkRORA5EDoQORA5EQAFLQABJkoSAA0FAAAAAAAA=='
 #       friendly_name: test_broadlink
-  #- platform: mqtt
-  #  name: 'Calefacció menjador'
-  #  command_topic: 'wifi/switch/calefaccions/menjador/set'
-  #  state_topic: 'wifi/switch/calefaccions/menjador'
-  #  state_on: 'on'
-  #  state_off: 'off'
-  #  payload_on: 'on'
-  #  payload_off: 'off'
-  #  retain: true
-- platform: mqtt
-  name: 'Calefacció dormitori'
-  command_topic: 'wifi/switch/calefaccions/dormitori/set'
-  state_topic: 'wifi/switch/calefaccions/dormitori'
-  state_on: 'on'
-  state_off: 'off'
-  payload_on: 'on'
-  payload_off: 'off'
-  retain: true
+# - platform: mqtt
+#   name: 'Calefacció menjador'
+#   command_topic: 'wifi/switch/calefaccions/menjador/set'
+#   state_topic: 'wifi/switch/calefaccions/menjador'
+#   state_on: 'on'
+#   state_off: 'off'
+#   payload_on: 'on'
+#   payload_off: 'off'
+#   retain: true
+# - platform: mqtt
+#   name: 'Calefacció dormitori'
+#   command_topic: 'wifi/switch/calefaccions/dormitori/set'
+#   state_topic: 'wifi/switch/calefaccions/dormitori'
+#   state_on: 'on'
+#   state_off: 'off'
+#   payload_on: 'on'
+#   payload_off: 'off'
+#   retain: true
 - platform: command_line
   switches:
     xbox:
