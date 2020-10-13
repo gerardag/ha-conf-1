@@ -264,78 +264,78 @@
 # SQL Queries #
 ###############
 
-- platform: sql
-  db_url: !secret db_mysql_url
-  queries:
-    - name: Exterior Temperature MQTT (MAX)
-      unit_of_measurement: ºC
-      query: "SELECT ROUND(MAX(CAST(state AS FLOAT)), 1) AS state FROM states WHERE entity_id = 'sensor.exterior_temperature_mqtt';"
-      column: 'state'
-    - name: Exterior Temperature MQTT (MIN)
-      unit_of_measurement: ºC
-      query: "SELECT ROUND(MIN(CAST(state AS FLOAT)), 1) AS state FROM states WHERE entity_id = 'sensor.exterior_temperature_mqtt' AND state <> 0;"
-      column: 'state'
-    - name: Exterior Temperature MQTT (Diff 24h)
-      unit_of_measurement: ºC
-      query: |
-        SELECT (ROUND(CAST(now.state AS FLOAT), 1) - 
-            (SELECT ROUND(CAST(yesterday.state AS FLOAT), 1)
-              FROM states yesterday 
-              WHERE yesterday.entity_id = 'sensor.exterior_temperature_mqtt' AND state <> 0
-              AND yesterday.created < NOW() - INTERVAL 1 DAY 
-              ORDER BY yesterday.created DESC LIMIT 1
-            )
-        ) AS state
-        FROM states now 
-        WHERE now.entity_id = 'sensor.exterior_temperature_mqtt' AND state <> 0
-        ORDER BY now.created DESC LIMIT 1;
-      column: 'state'
-    - name: Dormitori Temperature MQTT (MAX)
-      unit_of_measurement: ºC
-      query: "SELECT ROUND(MAX(CAST(state AS FLOAT)), 1) AS state FROM states WHERE entity_id = 'sensor.dormitori_temperature_mqtt';"
-      column: 'state'
-    - name: Dormitori Temperature MQTT (MIN)
-      unit_of_measurement: ºC
-      query: "SELECT ROUND(MIN(CAST(state AS FLOAT)), 1) AS state FROM states WHERE entity_id = 'sensor.dormitori_temperature_mqtt' AND state <> 0;"
-      column: 'state'
-    - name: Dormitori Temperature MQTT (Diff 24h)
-      unit_of_measurement: ºC
-      query: |
-        SELECT (ROUND(CAST(now.state AS FLOAT), 1) - 
-            (SELECT ROUND(CAST(yesterday.state AS FLOAT), 1)
-              FROM states yesterday 
-              WHERE yesterday.entity_id = 'sensor.dormitori_temperature_mqtt' AND state <> 0
-              AND yesterday.created < NOW() - INTERVAL 1 DAY 
-              ORDER BY yesterday.created DESC LIMIT 1
-            )
-        ) AS state
-        FROM states now  
-        WHERE now.entity_id = 'sensor.dormitori_temperature_mqtt' AND state <> 0
-        ORDER BY now.created DESC LIMIT 1;
-      column: 'state'
-    - name: Menjador Temperature MQTT (MAX)
-      unit_of_measurement: ºC
-      query: "SELECT ROUND(MAX(CAST(state AS FLOAT)), 1) AS state FROM states WHERE entity_id = 'sensor.menjador_temperature_mqtt';"
-      column: 'state'
-    - name: Menjador Temperature MQTT (MIN)
-      unit_of_measurement: ºC
-      query: "SELECT ROUND(MIN(CAST(state AS FLOAT)), 1) AS state FROM states WHERE entity_id = 'sensor.menjador_temperature_mqtt' AND state <> 0;"
-      column: 'state'
-    - name: Menjador Temperature MQTT (Diff 24h)
-      unit_of_measurement: ºC
-      query: |
-        SELECT (ROUND(CAST(now.state AS FLOAT), 1) - 
-            (SELECT ROUND(CAST(yesterday.state AS FLOAT), 1)
-              FROM states yesterday 
-              WHERE yesterday.entity_id = 'sensor.menjador_temperature_mqtt' AND state <> 0
-              AND yesterday.created < NOW() - INTERVAL 1 DAY 
-              ORDER BY yesterday.created DESC LIMIT 1
-            )
-        ) AS state
-        FROM states now 
-        WHERE now.entity_id = 'sensor.menjador_temperature_mqtt' AND state <> 0
-        ORDER BY now.created DESC LIMIT 1;
-      column: 'state'
+# - platform: sql
+#   db_url: !secret db_mysql_url
+#   queries:
+#     - name: Exterior Temperature (MAX)
+#       unit_of_measurement: ºC
+#       query: "SELECT ROUND(MAX(CAST(state AS FLOAT)), 1) AS state FROM states WHERE entity_id = 'sensor.exterior_temperature';"
+#       column: 'state'
+#     - name: Exterior Temperature (MIN)
+#       unit_of_measurement: ºC
+#       query: "SELECT ROUND(MIN(CAST(state AS FLOAT)), 1) AS state FROM states WHERE entity_id = 'sensor.exterior_temperature' AND state <> 0;"
+#       column: 'state'
+#     - name: Exterior Temperature (Diff 24h)
+#       unit_of_measurement: ºC
+#       query: |
+#         SELECT (ROUND(CAST(now.state AS FLOAT), 1) - 
+#             (SELECT ROUND(CAST(yesterday.state AS FLOAT), 1)
+#               FROM states yesterday 
+#               WHERE yesterday.entity_id = 'sensor.exterior_temperature' AND state <> 0
+#               AND yesterday.created < NOW() - INTERVAL 1 DAY 
+#               ORDER BY yesterday.created DESC LIMIT 1
+#             )
+#         ) AS state
+#         FROM states now 
+#         WHERE now.entity_id = 'sensor.exterior_temperature' AND state <> 0
+#         ORDER BY now.created DESC LIMIT 1;
+#       column: 'state'
+#     - name: Dormitori Temperature (MAX)
+#       unit_of_measurement: ºC
+#       query: "SELECT ROUND(MAX(CAST(state AS FLOAT)), 1) AS state FROM states WHERE entity_id = 'sensor.dormitori_temperature';"
+#       column: 'state'
+#     - name: Dormitori Temperature (MIN)
+#       unit_of_measurement: ºC
+#       query: "SELECT ROUND(MIN(CAST(state AS FLOAT)), 1) AS state FROM states WHERE entity_id = 'sensor.dormitori_temperature' AND state <> 0;"
+#       column: 'state'
+#     - name: Dormitori Temperature (Diff 24h)
+#       unit_of_measurement: ºC
+#       query: |
+#         SELECT (ROUND(CAST(now.state AS FLOAT), 1) - 
+#             (SELECT ROUND(CAST(yesterday.state AS FLOAT), 1)
+#               FROM states yesterday 
+#               WHERE yesterday.entity_id = 'sensor.dormitori_temperature' AND state <> 0
+#               AND yesterday.created < NOW() - INTERVAL 1 DAY 
+#               ORDER BY yesterday.created DESC LIMIT 1
+#             )
+#         ) AS state
+#         FROM states now  
+#         WHERE now.entity_id = 'sensor.dormitori_temperature' AND state <> 0
+#         ORDER BY now.created DESC LIMIT 1;
+#       column: 'state'
+#     - name: Menjador Temperature (MAX)
+#       unit_of_measurement: ºC
+#       query: "SELECT ROUND(MAX(CAST(state AS FLOAT)), 1) AS state FROM states WHERE entity_id = 'sensor.menjador_temperature';"
+#       column: 'state'
+#     - name: Menjador Temperature (MIN)
+#       unit_of_measurement: ºC
+#       query: "SELECT ROUND(MIN(CAST(state AS FLOAT)), 1) AS state FROM states WHERE entity_id = 'sensor.menjador_temperature' AND state <> 0;"
+#       column: 'state'
+#     - name: Menjador Temperature (Diff 24h)
+#       unit_of_measurement: ºC
+#       query: |
+#         SELECT (ROUND(CAST(now.state AS FLOAT), 1) - 
+#             (SELECT ROUND(CAST(yesterday.state AS FLOAT), 1)
+#               FROM states yesterday 
+#               WHERE yesterday.entity_id = 'sensor.menjador_temperature' AND state <> 0
+#               AND yesterday.created < NOW() - INTERVAL 1 DAY 
+#               ORDER BY yesterday.created DESC LIMIT 1
+#             )
+#         ) AS state
+#         FROM states now 
+#         WHERE now.entity_id = 'sensor.menjador_temperature' AND state <> 0
+#         ORDER BY now.created DESC LIMIT 1;
+#       column: 'state'
 
 
 ## Zigbee2mqtt

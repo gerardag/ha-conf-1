@@ -37,13 +37,14 @@ cards:
           ## DISPOSITIUS  ##
           ##################
 
+          - !include 00_home/entrada.yaml
           - !include 00_home/menjador.yaml
-          - !include 00_home/cuina.yaml
 
           - break
 
+          - !include 00_home/cuina.yaml
           - !include 00_home/dormitori.yaml
-          - !include 00_home/entrada.yaml
+          
 
           ##################
           ## TEMPERATURES ##
