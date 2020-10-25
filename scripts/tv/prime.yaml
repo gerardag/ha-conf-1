@@ -1,5 +1,5 @@
 'tv_turn_on_prime':
-  alias: TV Amazon Prime Video
+  alias: Amazon Prime Video
   sequence:
   # - service: scene.turn_on
   #   data: 

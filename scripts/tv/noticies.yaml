@@ -1,9 +1,7 @@
 'tv_turn_on_dinner':
   alias: Vamos a cenar
   sequence:
-  - service: scene.turn_on
-    data:
-      entity_id: scene.cena
+  - service: script.menjador_dynamic_scene
   - service: media_player.turn_on
     data: 
       entity_id: media_player.tele

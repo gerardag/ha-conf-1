@@ -1,0 +1,19 @@
+type: vertical-stack
+cards:
+  - type: custom:layout-card
+    layout: horizontal
+    min_columns: 5
+    max_columns: 5
+    column_width: 100px
+    justify_content: left
+    cards:
+  
+      - template: nest_picture_button
+        type: "custom:decluttering-card"
+        variables:
+          - entity: person.aleix
+
+      - template: nest_picture_button
+        type: "custom:decluttering-card"
+        variables:
+          - entity: person.imma

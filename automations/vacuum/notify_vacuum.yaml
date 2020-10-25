@@ -47,7 +47,7 @@ condition:
 action:
 
   # Send notification
-  - service: notify.gotify_high_priority
+  - service: notify.notify
     data: 
       title: "Aspirador programat"
       message: "L'aspirador es passarà en 15 minuts. Si us plau recolliu les coses del terra."

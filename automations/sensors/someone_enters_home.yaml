@@ -1,5 +1,5 @@
 alias: Casa - Algú entra
-initial_state: false
+initial_state: true
 mode: single
 trigger:
   - entity_id: binary_sensor.motion_entrance 
@@ -12,7 +12,7 @@ condition:
   state: 'on'
 action:
   # Send notification
-  - service: notify.gotify_high_priority
+  - service: notify.notify
     data: 
       title: "Casa"
       message: "Algú entra a casa."

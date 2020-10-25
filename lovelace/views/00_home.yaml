@@ -8,6 +8,7 @@ cards:
   - type: vertical-stack
     cards:
 
+
       - type: custom:layout-card
         layout: vertical
         min_columns: 1
@@ -15,6 +16,7 @@ cards:
         cards:
 
           - !include 00_home/notificacions.yaml
+
 
           ##################
           ## SCENES / AUT ##
@@ -28,6 +30,11 @@ cards:
 
           - !include 00_home/accions_rapides.yaml
 
+          ##################
+          ## Persones ##
+          ##################
+
+          - !include 00_home/persones.yaml
 
 
           - break

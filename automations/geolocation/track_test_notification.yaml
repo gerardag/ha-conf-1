@@ -1,27 +1,37 @@
-alias: "Track test notification"
-initial_state: false
+alias: "Espia"
+initial_state: true
 trigger:
   - platform: zone
-    entity_id: device_tracker.aleix_mobil
-    zone: zone.home
-    event: leave
-  - platform: zone
-    entity_id: device_tracker.aleix_mobil
-    zone: zone.home
-    event: enter
-  - platform: zone
-    entity_id: device_tracker.aleix_mobil
-    zone: zone.feina
-    event: leave
-  - platform: zone
-    entity_id: device_tracker.aleix_mobil
-    zone: zone.feina
-    event: enter
+    entity_id:
+      - device_tracker.sm_a405fn
+      - device_tracker.sm_g970f
+    zone:
+      - zone.home
+      - zone.ma ngo
+      - zone.mercat_d_horta
+    event: 
+      - enter
+      - leave
+  # - platform: zone
+  #   entity_id:
+  #     - device_tracker.sm_a405fn
+  #     - device_tracker.sm_g970f
+  #   zone: zone.home
+  #   event: enter
+  # - platform: zone
+  #   entity_id:
+  #     - device_tracker.sm_a405fn
+  #     - device_tracker.sm_g970f
+  #   zone: zone.feina
+  #   event: leave
+  # - platform: zone
+  #   entity_id:
+  #     - device_tracker.sm_a405fn
+  #     - device_tracker.sm_g970f
+  #   zone: zone.feina
+  #   event: enter
 action:
-  - data:
-      message: "Aleix is now at: {{ states('person.aleix') }}."
-      title: Movement
-      target:
-        - 475501
-        - 417277407
-    service: telegram_bot.send_message
+  - service: notify.notify
+    data:
+      title: Espia
+      message: "Aleix està a {{ states('person.aleix') }}, Imma està a {{ states('person.imma') }}"

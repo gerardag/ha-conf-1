@@ -1,5 +1,5 @@
 'tv_turn_on_netflix':
-  alias: TV Netflix
+  alias: Netflix
   sequence:
   # - service: scene.turn_on
   #   data: 

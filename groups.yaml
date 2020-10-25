@@ -4,17 +4,19 @@ habitacio:
     - media_player.el_lado_oscuro
     - sensor.dormitori_humidity
     - sensor.dormitori_temperature
+    - climate.dormitori
 
 menjador:
   name: Menjador
   entities:
+    - climate.menjador
     - light.mesita
     - light.mesa
     - light.sofa
-    - media_player.cuarto_de_estar
     - media_player.tele
     - scene.buenos_dias
     - scene.cena
+    - scene.comida
     - scene.relax
     - scene.tele
     - sensor.menjador_humidity

@@ -2,6 +2,68 @@ menjador_dynamic_scene:
   alias: Menjador - Activar escena dinàmica
   sequence:
     - choose:
+
+
+
+      ######################
+      # Matí             #
+      ######################
+
+
+      - conditions:
+          - condition: or
+            conditions:
+              - condition: state
+                entity_id: sensor.moment_dia
+                state: Matí
+        sequence:
+        - service: scene.turn_on
+          data:
+            entity_id: scene.relax
+            transition: 5
+
+
+
+      ######################
+      # Migdia             #
+      ######################
+
+      - conditions:
+          - condition: state
+            entity_id: sensor.moment_dia
+            state: Migdia
+        sequence:
+        - service: scene.turn_on
+          data:
+            entity_id: scene.comida
+            transition: 5
+
+
+
+      ######################
+      # TARDA              #
+      ######################
+
+
+
+      - conditions:
+          - condition: or
+            conditions:
+              - condition: state
+                entity_id: sensor.moment_dia
+                state: Tarda
+        sequence:
+        - service: scene.turn_on
+          data:
+            entity_id: scene.relax
+            transition: 5
+
+
+
+      ######################
+      # VESPRE             #
+      ######################
+
       - conditions:
           - condition: state
             entity_id: sensor.moment_dia
@@ -12,30 +74,12 @@ menjador_dynamic_scene:
             entity_id: scene.cena
             transition: 5      
 
-      - conditions:
-          - condition: state
-            entity_id: sensor.moment_dia
-            state: Migdia
-        sequence:
-        - service: scene.turn_on
-          data:
-            entity_id: scene.con_amigos
-            transition: 5
 
-      - conditions:
-          - condition: or
-            conditions:
-              - condition: state
-                entity_id: sensor.moment_dia
-                state: Matí
-              - condition: state
-                entity_id: sensor.moment_dia
-                state: Tarda
-        sequence:
-        - service: scene.turn_on
-          data:
-            entity_id: scene.relax
-            transition: 5
+
+      ######################
+      # NIT                #
+      ######################
+
 
       - conditions:
           - condition: state
@@ -46,6 +90,10 @@ menjador_dynamic_scene:
           data:
             entity_id: scene.tele
             transition: 5
+
+
+
+
 
       default:
         - service: scene.turn_on

@@ -1,9 +1,7 @@
-'tv_turn_on_disney':
-  alias: Disney plus
+'tv_tv3':
+  alias: TV3
   sequence:
-  # - service: scene.turn_on
-  #   data: 
-  #     entity_id: scene.tele
+  - service: script.menjador_dynamic_scene
   - service: media_player.turn_on
     data: 
       entity_id: media_player.tele
@@ -11,7 +9,12 @@
   - service: media_player.select_source
     data: 
       entity_id: media_player.tele
-      source: 'Disney+'
+      source: 'Live TV'
+  - service: media_player.play_media
+    data: 
+      entity_id: media_player.tele
+      media_content_id: "TV3 HD"
+      media_content_type: "channel"
   - service: media_player.volume_mute
     data:
       entity_id: media_player.tele
@@ -19,4 +22,5 @@
   - service: media_player.volume_set
     data:
       entity_id: media_player.tele
-      volume_level: 0.11
+      volume_level: 0.1
+

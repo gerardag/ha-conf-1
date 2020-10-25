@@ -62,3 +62,12 @@
     light.mesa:
       state: true
       brightness: 200 
+- name: Comida
+  entities:
+    light.mesa: 
+      state: true
+      brightness: 200
+    light.mesita:
+      state: false
+    light.sofa:
+      state: false

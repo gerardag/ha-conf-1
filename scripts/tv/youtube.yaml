@@ -1,5 +1,5 @@
 'tv_turn_on_youtube':
-  alias: TV Youtube
+  alias: Youtube
   sequence:
   # - service: scene.turn_on
   #   data: 

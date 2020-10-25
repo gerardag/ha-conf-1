@@ -4,7 +4,6 @@ smart_home:
       - automation
       - script
       - input_boolean
-      - group
       - binary_sensor
       - sensor
       - media_player
@@ -16,6 +15,7 @@ smart_home:
       - light
       - scene
       - climate
+      - group
     include_entity_globs:
       - sensor.*_temperature
       - sensor.*_temperature_mqtt
@@ -31,6 +31,7 @@ smart_home:
       - script.tv_turn_on_xbox
       - script.tv_turn_on_youtube
       - script.tv_antena3
+      - script.tv_bemad
       - script.tv_volume_up
       - script.tv_volume_down
       - script.vacuum_start
@@ -43,22 +44,24 @@ smart_home:
     climate.dormitori:
       name: Dormitorio
     scene.buenos_dias:
-      name: Escena buenos dias
+      name: Buenos dias
     scene.cena:
-      name: Escena cena
+      name: Cena
     scene.con_amigos:
-      name: Escena con amigos
+      name: Amigos
     scene.juegos_de_mesa:
-      name: Escena juegos de mesa
+      name: Juegos de mesa
     scene.relax:
-      name: Escena relax
+      name: Relax
     scene.tele:
-      name: Escena cine
+      name: Cine
+    scene.comida:
+      name: Comida
     script.vacuum_start:
       name: Aspirador
       display_categories: SWITCH
     script.menjador_dynamic_scene:
-      name: Lo que tu creas
+      name: Lo que quieras
     light.entrada:
       name: Entrada
     light.mesa:

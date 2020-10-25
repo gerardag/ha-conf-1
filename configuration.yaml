@@ -108,10 +108,10 @@ lovelace:
 discovery:
 zeroconf:
 
-alarm_control_panel:
-  - platform: manual
-    name: home
-    code: 1234
+# alarm_control_panel:
+#   - platform: manual
+#     name: home
+#     code: 1234
 
 # shopping_list:
 
@@ -121,33 +121,33 @@ alarm_control_panel:
 
 # Notifications
 
-telegram_bot:
-  - platform: polling
-    api_key: !secret telegram_api_key
-    allowed_chat_ids:
-      - !secret telegram_chat_aleix
-      - !secret telegram_chat_imma
+# telegram_bot:
+#   - platform: polling
+#     api_key: !secret telegram_api_key
+#     allowed_chat_ids:
+#       - !secret telegram_chat_aleix
+#       - !secret telegram_chat_imma
 
-notify:
-  - name: "Xat Aleix"
-    platform: telegram
-    chat_id: !secret telegram_chat_aleix
-  - name: "Xat Imma"
-    platform: telegram
-    chat_id: !secret telegram_chat_imma
-  - name: "Grup casa"
-    platform: telegram
-    chat_id: !secret telegram_chat_casa
-  - name: Gotify high priority
-    platform: rest
-    resource: https://gotify.aleix.cloud/message
-    method: POST_JSON
-    headers:
-      X-Gotify-Key: !secret gotify_key
-    message_param_name: message
-    title_param_name: title
-    data:
-      priority: 8
+# notify:
+#   - name: "Xat Aleix"
+#     platform: telegram
+#     chat_id: !secret telegram_chat_aleix
+#   - name: "Xat Imma"
+#     platform: telegram
+#     chat_id: !secret telegram_chat_imma
+#   - name: "Grup casa"
+#     platform: telegram
+#     chat_id: !secret telegram_chat_casa
+#   - name: Gotify high priority
+#     platform: rest
+#     resource: https://gotify.aleix.cloud/message
+#     method: POST_JSON
+#     headers:
+#       X-Gotify-Key: !secret gotify_key
+#     message_param_name: message
+#     title_param_name: title
+#     data:
+#       priority: 8
 
 # Services
 
@@ -186,28 +186,11 @@ mqtt:
     topic: 'hass/status'
     payload: 'offline'
 
-speedtestdotnet:
+# speedtestdotnet:
 
 map:
 
 # browser_mod:
-
-# o365:
-#   client_secret: !secret o365_client_secret
-#   client_id: !secret o365_client_id
-
-# calendar:
-#   - platform: ics
-#     calendars:
-#       - name: CAPSiDE Holidays
-#         url: !secret calendar_capside_holidays
-#         includeAllDay: true
-#       - name: CAPSiDE Oncall
-#         url: !secret calendar_capside_oncall
-#         includeAllDay: true
-#       - name: FCBarcelona matches
-#         url: !secret calendar_fcbarcelona
-#         includeAllDay: true
 
 # Devices
 

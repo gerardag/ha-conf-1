@@ -49,7 +49,7 @@ action:
   - service: shell_command.aspirador_on
 
   # Send notification
-  - service: notify.gotify_high_priority
+  - service: notify.notify
     data: 
       title: Aspirador
       message: S'ha activat l'aspirador
@@ -114,7 +114,7 @@ action:
   - service: shell_command.aspirador_turbo
 
   # Send notification
-  - service: notify.gotify_high_priority
+  - service: notify.notify
     data: 
       title: Aspirador
       message: S'ha activat el mode TURBO

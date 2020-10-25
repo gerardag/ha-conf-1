@@ -1,5 +1,5 @@
 'tv_turn_on_wii':
-  alias: TV Wii
+  alias: Wii
   sequence:
 
   # - service: scene.turn_on

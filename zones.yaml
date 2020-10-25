@@ -1,5 +1,11 @@
-- name: Feina 
-  latitude: !secret latitude_feina
-  longitude: !secret longitude_feina
-  radius: 200
+- name: "MANGO" 
+  latitude: !secret latitude_feina_mango
+  longitude: !secret longitude_feina_mango
+  radius: 300
+  icon: mdi:briefcase
+
+- name: "Mercat d'Horta"
+  latitude: !secret latitude_feina_mercat
+  longitude: !secret longitude_feina_mercat
+  radius: 50
   icon: mdi:briefcase

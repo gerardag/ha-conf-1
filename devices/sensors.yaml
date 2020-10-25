@@ -79,10 +79,10 @@
 #   timeout: 10
 #   median: 1
 #   name: Menjador
-- platform: beewi_smartclim
-  mac: !secret mac_temp_beewi_exterior
-  name: Exterior
-  scan_interval: 60
+# - platform: beewi_smartclim
+#   mac: !secret mac_temp_beewi_exterior
+#   name: Exterior
+#   scan_interval: 60
 # - platform: github
 #   access_token: !secret github_access_token
 #   repositories:
@@ -96,56 +96,56 @@
   scan_interval: 3600
   api_key: !secret google_api_key
   origin: !secret home_address
-  destination: !secret work_address
+  destination: !secret work_address_aleix
   options:
     mode: driving
-- platform: google_travel_time
-  name: "Home to Work bus"
-  scan_interval: 3600
-  api_key: !secret google_api_key
-  origin: !secret home_address
-  destination: !secret work_address
-  options:
-    mode: transit
-    transit_mode: bus
+# - platform: google_travel_time
+#   name: "Home to Work bus"
+#   scan_interval: 3600
+#   api_key: !secret google_api_key
+#   origin: !secret home_address
+#   destination: !secret work_addres_aleix
+#   options:
+#     mode: transit
+#     transit_mode: bus
 - platform: google_travel_time
   name: "Work to home car"
   scan_interval: 3600
   api_key: !secret google_api_key
   destination: !secret home_address
-  origin: !secret work_address
+  origin: !secret work_address_aleix
   options:
     mode: driving
-- platform: google_travel_time
-  name: "Work to home bus"
-  scan_interval: 3600
-  api_key: !secret google_api_key
-  destination: !secret home_address
-  origin: !secret work_address
-  options:
-    mode: transit
-    transit_mode: bus
-- platform: history_stats
-  name: Time at home
-  entity_id: device_tracker.aleix_mobil
-  state: "home"
-  type: time
-  start: "{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}"
-  end: "{{ now() }}"
-- platform: history_stats
-  name: Time at work
-  entity_id: device_tracker.aleix_mobil
-  state: "Feina"
-  type: time
-  start: "{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}"
-  end: "{{ now() }}"
-- platform: history_stats
-  name: Time other
-  entity_id: device_tracker.aleix_mobil
-  state: "fora"
-  type: time
-  start: "{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}"
-  end: "{{ now() }}"
+# - platform: google_travel_time
+#   name: "Work to home bus"
+#   scan_interval: 3600
+#   api_key: !secret google_api_key
+#   destination: !secret home_address
+#   origin: !secret work_addres_aleix
+#   options:
+#     mode: transit
+#     transit_mode: bus
+# - platform: history_stats
+#   name: Time at home
+#   entity_id: device_tracker.aleix_mobil
+#   state: "home"
+#   type: time
+#   start: "{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}"
+#   end: "{{ now() }}"
+# - platform: history_stats
+#   name: Time at work
+#   entity_id: device_tracker.aleix_mobil
+#   state: "Feina"
+#   type: time
+#   start: "{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}"
+#   end: "{{ now() }}"
+# - platform: history_stats
+#   name: Time other
+#   entity_id: device_tracker.aleix_mobil
+#   state: "fora"
+#   type: time
+#   start: "{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}"
+#   end: "{{ now() }}"
 - platform: time_date 
   display_options:
     - 'time'
@@ -162,19 +162,11 @@
     - line: V21
       stop: 366
       name: Casa
-    - line: H6
-      stop: 940
-      name: Feina
 - platform: citybikes
-  name: Horta
+  name: Casa
   latitude: !secret latitude
   longitude: !secret longitude
-  radius: 1000
-- platform: citybikes
-  name: Feina
-  latitude: !secret latitude_feina
-  longitude: !secret longitude_feina
-  radius: 500
+  radius: 200
 - platform: template
   sensors:
     solar_angle:
@@ -251,7 +243,6 @@
         {% endif %}
     moment_dia:
       friendly_name: Moment del dia
-      entity_id: sensor.time
       value_template: |
         {%- if as_timestamp(now()) | timestamp_custom('%H') | int < 7 -%}Matinada
         {%- elif as_timestamp(now()) | timestamp_custom('%H') | int < 12 -%}Matí

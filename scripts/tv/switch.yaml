@@ -1,5 +1,5 @@
 'tv_turn_on_switch':
-  alias: TV Nintendo Switch
+  alias: Nintendo Switch
   sequence:
 
   # - service: scene.turn_on
