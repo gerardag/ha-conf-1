@@ -16,8 +16,8 @@
   type: module
 - url: /hacsfiles/simple-thermostat/simple-thermostat.js
   type: module
-- url: /hacsfiles/custom-header/custom-header.js
-  type: module
+# - url: /hacsfiles/custom-header/custom-header.js
+  # type: module
 - url: /hacsfiles/button-card/button-card.js
   type: module
 - url: /hacsfiles/lovelace-card-mod/card-mod.js
@@ -36,15 +36,15 @@
   type: module
 - url: /local/smhi-forecast-card.js
   type: module
-- url: /local/markdown-mod.js
-  type: module
+# - url: /local/markdown-mod.js
+  # type: module
 - url: /hacsfiles/bar-card/bar-card.js
   type: js
 # Added for 60-experiment UI
 - url: /hacsfiles/circle-sensor-card/circle-sensor-card.js
   type: module
-- url: /browser_mod.js
-  type: module
+# - url: /browser_mod.js
+  # type: module
 # - url: /local/slider-entity-row.js
 #   type: module
 - url: /hacsfiles/light-entity-card/light-entity-card.js

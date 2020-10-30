@@ -1,5 +1,5 @@
 alias: Casa - Algú entra
-initial_state: true
+initial_state: false
 mode: single
 trigger:
   - entity_id: binary_sensor.motion_entrance 
@@ -11,8 +11,20 @@ condition:
   entity_id: binary_sensor.door_main_entrance
   state: 'on'
 action:
-  # Send notification
-  - service: notify.notify
-    data: 
-      title: "Casa"
-      message: "Algú entra a casa."
+
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: "{{ is_state('person.imma', 'home') or is_state('person.aleix', 'home')  }}"
+      sequence:
+        # Send notification
+        - service: notify.notify
+          data: 
+            title: "Casa"
+            message: "Benvingut a casa de nou."
+
+    default:
+      - service: notify.notify
+        data: 
+          title: "Casa"
+          message: "Algú entra a casa."

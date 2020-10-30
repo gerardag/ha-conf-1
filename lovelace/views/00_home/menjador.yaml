@@ -85,7 +85,7 @@ cards:
             type: "custom:decluttering-card"
             variables:
               - name: Xbox One
-              - entity: media_player.xbox_one_menjador
+              - entity: media_player.xboxone
               - icon: "mdi:microsoft-xbox"
               - state_enabled: "on"
           - template: nest_button_light

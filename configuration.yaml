@@ -16,6 +16,8 @@ logger:
 
 config:
 
+default_config:
+
 system_health:
 
 frontend:

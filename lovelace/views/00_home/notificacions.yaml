@@ -11,7 +11,13 @@ cards:
   #         {%- else -%}Bona nit{%- endif -%}
   - type: markdown
     content: |
-      [[ if(sensor.moment_dia == "Matí",    "Bon dia", "") ]][[ if(sensor.moment_dia == "Migdia",  "Bon dia", "") ]][[ if(sensor.moment_dia == "Tarda",   "Bona tarda", "") ]][[ if(sensor.moment_dia == "Vespre",  "Bona tarda", "") ]][[ if(sensor.moment_dia == "Nit",     "Bona nit", "") ]][[ if(sensor.moment_dia == "Matinada","Bona nit", "") ]], [[ {user} ]]
+      {%- if(is_state('sensor.moment_dia', "Matí")) -%}Bon dia, {% endif -%}
+      {%- if(is_state('sensor.moment_dia', "Migdia")) -%}Bon dia, {% endif -%}
+      {%- if(is_state('sensor.moment_dia', "Tarda")) -%}Bona tarda, {% endif -%}
+      {%- if(is_state('sensor.moment_dia', "Vespre")) -%}Bona tarda, {% endif -%}
+      {%- if(is_state('sensor.moment_dia', "Nit")) -%}Bona nit, {% endif -%}
+      {%- if(is_state('sensor.moment_dia', "Matinada")) -%}Bona nit, {% endif -%}
+       {{ user }}   
     style: |
         ha-card {
           font-family: Roboto, 'Open Sans', sans-serif;
@@ -119,11 +125,11 @@ cards:
 
   - type: conditional
     conditions:
-      - entity: media_player.xbox_one_menjador
+      - entity: media_player.xboxone
         state: "on"
     card:
       type: custom:mini-media-player
-      entity: media_player.xbox_one_menjador
+      entity: media_player.xboxone
       icon: mdi:microsoft-xbox
       artwork: cover
       hide:

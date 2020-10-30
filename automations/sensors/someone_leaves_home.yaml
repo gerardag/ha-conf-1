@@ -1,4 +1,4 @@
-alias: Casa - Algú marxa
+alias: Casa - Ningú a casa
 initial_state: true
 mode: single
 trigger:
@@ -11,8 +11,13 @@ condition:
   entity_id: binary_sensor.motion_entrance
   state: 'on'
 action:
+
+  # Donem 20 minuts màxim per abandonar la zona
+  - wait_template: "{{ not is_state('person.imma', 'home') and not is_state('person.aleix', 'home')  }}"
+    timeout: '00:20:00'
+
   # Send notification
   - service: notify.notify
     data: 
       title: "Casa"
-      message: "Algú marxa de casa."
+      message: "No hi ha ningú a casa. Apaguem llums i engeguem alarma?"
