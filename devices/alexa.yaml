@@ -34,6 +34,7 @@ smart_home:
       - script.tv_bemad
       - script.tv_volume_up
       - script.tv_volume_down
+      - script.tv_turn_on_xbox_rocket_league
       - script.vacuum_start
       - script.menjador_dynamic_scene
       - media_player.tele

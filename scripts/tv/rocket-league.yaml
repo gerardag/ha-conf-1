@@ -1,0 +1,9 @@
+'tv_turn_on_xbox_rocket_league':
+  alias: Rocket League
+  sequence:
+    - service: script.tv_turn_on_xbox
+    - service: media_player.play_media 
+      data: 
+        entity_id: media_player.xboxone
+        media_content_type: ""
+        media_content_id: "C125W9BG2K0V" # Rocket League
