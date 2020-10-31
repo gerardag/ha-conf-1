@@ -11,11 +11,9 @@ menjador_dynamic_scene:
 
 
       - conditions:
-          - condition: or
-            conditions:
-              - condition: state
-                entity_id: sensor.moment_dia
-                state: Matí
+        - condition: state
+          entity_id: sensor.moment_dia
+          state: Matí
         sequence:
         - service: scene.turn_on
           data:
@@ -29,9 +27,9 @@ menjador_dynamic_scene:
       ######################
 
       - conditions:
-          - condition: state
-            entity_id: sensor.moment_dia
-            state: Migdia
+        - condition: state
+          entity_id: sensor.moment_dia
+          state: Migdia
         sequence:
         - service: scene.turn_on
           data:
@@ -47,11 +45,9 @@ menjador_dynamic_scene:
 
 
       - conditions:
-          - condition: or
-            conditions:
-              - condition: state
-                entity_id: sensor.moment_dia
-                state: Tarda
+        - condition: state
+          entity_id: sensor.moment_dia
+          state: Tarda
         sequence:
         - service: scene.turn_on
           data:
@@ -90,10 +86,6 @@ menjador_dynamic_scene:
           data:
             entity_id: scene.tele
             transition: 5
-
-
-
-
 
       default:
         - service: scene.turn_on

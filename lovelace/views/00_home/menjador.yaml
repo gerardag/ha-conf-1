@@ -92,13 +92,8 @@ cards:
             type: "custom:decluttering-card"
             variables:
               - name: Aspirador
-              - entity: script.vacuum_start
+              - entity: switch.aspirador
               - icon: "mdi:robot-vacuum"
-              - tap_action:
-                  action: call-service
-                  service: script.turn_on
-                  data:
-                    entity_id: script.vacuum_start
 
       - type: custom:mini-graph-card
         entities: 

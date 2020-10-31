@@ -34,3 +34,20 @@
 #    xbox:
 #      command_on: !secret xbox_command
 #      command_off: !secret xbox_command
+- platform: template
+  switches:
+    aspirador:
+      friendly_name: Aspirador
+      value_template: "off"
+      turn_on:
+        service: remote.send_command
+        data:
+          entity_id: remote.ir_controller_remote
+          device: aspirador
+          command: Turn on
+      turn_off:
+        service: remote.send_command
+        data:
+          entity_id: remote.ir_controller_remote
+          device: aspirador
+          command: Turn on

@@ -5,60 +5,53 @@ cards:
     variables:
       - title: Escenes
 
-  - type: glance
-    show_state: false
-    columns: 6
-    style: |
-      ha-card {
-        margin-left: 5px;
-        margin-right: 5px;
-      }
-    entities:
-      - entity: scene.buenos_dias
-        icon: "mdi:weather-sunny"
-        name: Bon dia
-        tap_action:
-          action: call-service
-          service: scene.turn_on
-          service_data:
-            entity_id: scene.buenos_dias
-      - entity: scene.juegos_de_mesa
-        icon: "mdi:chess-knight"
-        name: Jocs
-        tap_action:
-          action: call-service
-          service: scene.turn_on
-          service_data:
-            entity_id: scene.juegos_de_mesa
-      - entity: scene.con_amigos
-        icon: "mdi:account-group"
-        name: Amics
-        tap_action:
-          action: call-service
-          service: scene.turn_on
-          service_data:
-            entity_id: scene.con_amigos
-      - entity: scene.relax
-        icon: "mdi:book-open-page-variant"
-        name: Relax
-        tap_action:
-          action: call-service
-          service: scene.turn_on
-          service_data:
-            entity_id: scene.relax
-      - entity: scene.cena
-        icon: "mdi:silverware-fork-knife"
-        name: Sopar
-        tap_action:
-          action: call-service
-          service: scene.turn_on
-          service_data:
-            entity_id: scene.cena
-      - entity: scene.tele
-        icon: "mdi:television-classic"
-        name: Cine
-        tap_action:
-          action: call-service
-          service: scene.turn_on
-          service_data:
-            entity_id: scene.tele
+  - type: custom:layout-card
+    layout: horizontal
+    min_columns: 6
+    max_columns: 6
+    column_width: 100px
+    justify_content: left
+    cards:
+
+      - template: nest_button_action
+        type: "custom:decluttering-card"
+        variables:
+          - entity_id: scene.buenos_dias
+          - icon: "mdi:weather-sunny"
+          - title: Bon dia
+          - service: scene.buenos_dias
+      - template: nest_button_action
+        type: "custom:decluttering-card"
+        variables:
+          - entity_id: scene.juegos_de_mesa
+          - icon: "mdi:chess-knight"
+          - title: Jocs
+          - service: scene.juegos_de_mesa
+      - template: nest_button_action
+        type: "custom:decluttering-card"
+        variables:
+          - entity_id: scene.con_amigos
+          - icon: "mdi:account-group"
+          - title: Amics
+          - service: scene.con_amigos
+      - template: nest_button_action
+        type: "custom:decluttering-card"
+        variables:
+          - entity_id: scene.relax
+          - icon: "mdi:book-open-page-variant"
+          - title: Relax
+          - service: scene.relax
+      - template: nest_button_action
+        type: "custom:decluttering-card"
+        variables:
+          - entity_id: scene.cena
+          - icon: "mdi:silverware-fork-knife"
+          - title: Sopar
+          - service: scene.cena
+      - template: nest_button_action
+        type: "custom:decluttering-card"
+        variables:
+          - entity_id: scene.tele
+          - icon: "mdi:television-classic"
+          - title: Cine
+          - service: scene.tele

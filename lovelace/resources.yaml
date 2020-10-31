@@ -43,5 +43,5 @@
   type: module
 - url: /hacsfiles/button-text-card/button-text-card.js
   type: module
-- url: 'https://fonts.googleapis.com/css?family=Raleway'
+- url: 'https://fonts.googleapis.com/css?family=Inter'
   type: css

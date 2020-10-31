@@ -22,6 +22,7 @@ smart_home:
     include_entities:
       - switch.llum_cuina
       - switch.calefaccio_menjador
+      - switch.aspirador
       - script.tv_turn_on_disney
       - script.tv_turn_on_netflix
       - script.tv_turn_on_dinner
@@ -58,9 +59,6 @@ smart_home:
       name: Cine
     scene.comida:
       name: Comida
-    script.vacuum_start:
-      name: Aspirador
-      display_categories: SWITCH
     script.menjador_dynamic_scene:
       name: Lo que quieras
     light.entrada:

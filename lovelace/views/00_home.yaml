@@ -19,6 +19,12 @@ cards:
 
 
           ##################
+          ## AT HOME      ##
+          ##################
+
+          - !include 00_home/at_home.yaml
+
+          ##################
           ## SCENES / AUT ##
           ##################
 
@@ -29,13 +35,6 @@ cards:
           ######################
 
           - !include 00_home/accions_rapides.yaml
-
-          ##################
-          ## Persones ##
-          ##################
-
-          - !include 00_home/persones.yaml
-
 
           - break
 
@@ -51,6 +50,7 @@ cards:
 
           - !include 00_home/cuina.yaml
           - !include 00_home/dormitori.yaml
+          - !include 00_home/exterior.yaml
           
 
           ##################

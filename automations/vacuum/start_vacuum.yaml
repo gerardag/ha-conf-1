@@ -46,7 +46,9 @@ trigger:
 condition:
 action:
   # Start vacuum
-  - service: shell_command.aspirador_on
+  - service: switch.turn_on
+    data:
+      entity_id: switch.aspirador
 
   # Send notification
   - service: notify.notify

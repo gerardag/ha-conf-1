@@ -2,13 +2,13 @@ nest_picture_button:
   card:
     type: "custom:button-card"
     entity: "[[entity]]"
-    show_entity_picture: true
-    show_icon: true
-    show_name: false
-    show_state: true
+    show_entity_picture: "[[show_entity_picture]]"
+    show_icon: "[[show_icon]]"
+    show_name: "[[show_name]]"
+    show_state: "[[show_state]]"
     style: |
       ha-card {
-        font-family: Roboto, 'Open Sans', sans-serif;
+        font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
         /* padding-top: 15px !important;*/
         background-color: rgba(0, 0, 0, 0);
         -webkit-box-shadow: none;
@@ -26,16 +26,19 @@ nest_picture_button:
       }
       #state {
         padding-top: 5px;
-        font-size: [[title-font-size]];
       }
       #label {
         font-size: 70%;
       }
-      #ame {
+      #name {
         margin-top:5px;
-        font-size: [[title-font-size]];
+        font-size:1.0rem;
       }
     default:
-      - title-font-size: "0.9rem"
+      - title-font-size: "1.0rem"
+      - show_entity_picture: true
+      - show_icon: true
+      - show_name: false
+      - show_state: true
     tap_action:
       action: more-info

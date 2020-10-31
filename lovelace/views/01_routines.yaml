@@ -135,7 +135,10 @@ cards:
                         icon: "mdi:flash"
                         tap_action:
                           action: call-service
-                          service: shell_command.aspirador_on
+                          service: switch.turn_on
+                          data:
+                            entity_id: switch.aspirador
+
 
                   - type: section
 

@@ -1,0 +1,100 @@
+type: vertical-stack
+cards:
+  - template: title_h2
+    type: "custom:decluttering-card"
+    variables:
+      - title: Exterior
+
+  - type: "custom:vertical-stack-in-card"
+    style: |
+      ha-card {
+        margin-left: 5px;
+        margin-right: 5px;
+        padding-top: 10px;
+      }
+    cards:
+      - type: custom:layout-card
+        layout: horizontal
+        min_columns: 5
+        max_columns: 5
+        column_width: 100px
+        justify_content: left
+        style: |
+          ha-card {
+            padding: 10px;
+          }
+        cards:
+          - template: nest_button
+            type: "custom:decluttering-card"
+            variables:
+              - entity: sensor.waqi_barcelona_parc_vall_d_hebron_catalunya_spain
+              - icon: "mdi:molecule-co2"
+              - show_name: false
+              - show_state: true 
+              - show_last_changed: false
+              - entity: "[[entity]]"
+              - icon: "[[icon]]"
+              - tap_action:
+                  action: more-info
+              - background_on: "#fbd229"
+              - state_enabled: "[[state_enabled]]"
+
+          - template: nest_button
+            type: "custom:decluttering-card"
+            variables:
+              - entity: sensor.bicing_casa_a512a25dc72978e08e197d1f2f20ae5b
+              - icon: "mdi:bicycle-electric"
+              - show_name: false
+              - show_state: true 
+              - show_last_changed: false
+              - entity: "[[entity]]"
+              - icon: "[[icon]]"
+              - tap_action:
+                  action: more-info
+              - background_on: "#fbd229"
+              - state_enabled: "[[state_enabled]]"
+
+          - template: nest_button
+            type: "custom:decluttering-card"
+            variables:
+              - entity: sensor.v21_casa_366
+              - icon: "mdi:bus-clock"
+              - show_name: false
+              - show_state: true 
+              - show_last_changed: false
+              - entity: "[[entity]]"
+              - icon: "[[icon]]"
+              - tap_action:
+                  action: more-info
+              - background_on: "#fbd229"
+              - state_enabled: "[[state_enabled]]"
+
+          - template: nest_button
+            type: "custom:decluttering-card"
+            variables:
+              - entity: sensor.home_to_work_car
+              - icon: "mdi:office-building-marker-outline"
+              - show_name: false
+              - show_state: true 
+              - show_last_changed: false
+              - entity: "[[entity]]"
+              - icon: "[[icon]]"
+              - tap_action:
+                  action: more-info
+              - background_on: "#fbd229"
+              - state_enabled: "[[state_enabled]]"
+
+          - template: nest_button
+            type: "custom:decluttering-card"
+            variables:
+              - entity: sensor.spain_coronavirus_confirmed
+              - icon: "mdi:virus-outline"
+              - show_name: false
+              - show_state: true 
+              - show_last_changed: false
+              - entity: "[[entity]]"
+              - icon: "[[icon]]"
+              - tap_action:
+                  action: more-info
+              - background_on: "#fbd229"
+              - state_enabled: "[[state_enabled]]"
