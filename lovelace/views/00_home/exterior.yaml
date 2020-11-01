@@ -87,7 +87,7 @@ cards:
           - template: nest_button
             type: "custom:decluttering-card"
             variables:
-              - entity: sensor.spain_coronavirus_confirmed
+              - entity: sensor.covid_24
               - icon: "mdi:virus-outline"
               - show_name: false
               - show_state: true 

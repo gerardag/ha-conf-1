@@ -270,9 +270,24 @@
 # SQL Queries #
 ###############
 
-# - platform: sql
-#   db_url: !secret db_mysql_url
-#   queries:
+- platform: sql
+  db_url: !secret db_mysql_url
+  queries:
+    - name: COVID 24
+      unit_of_measurement: infectats
+      query: |
+        SELECT (ROUND(CAST(now.state AS INT)) - 
+            (SELECT ROUND(CAST(yesterday.state AS INT))
+              FROM states yesterday 
+              WHERE yesterday.entity_id = 'sensor.spain_coronavirus_confirmed' AND state <> 0
+              AND yesterday.created < NOW() - INTERVAL 1 DAY 
+              ORDER BY yesterday.created DESC LIMIT 1
+            )
+        ) AS state
+        FROM states now  
+        WHERE now.entity_id = 'sensor.spain_coronavirus_confirmed' AND state <> 0
+        ORDER BY now.created DESC LIMIT 1;
+      column: 'state'
 #     - name: Exterior Temperature (MAX)
 #       unit_of_measurement: ºC
 #       query: "SELECT ROUND(MAX(CAST(state AS FLOAT)), 1) AS state FROM states WHERE entity_id = 'sensor.exterior_temperature';"

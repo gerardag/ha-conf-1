@@ -20,7 +20,7 @@ cards:
     layout: horizontal
     min_columns: 5
     max_columns: 5
-    column_width: 100px
+    column_width: 85px
     justify_content: left
     cards:
 
@@ -34,7 +34,7 @@ cards:
     layout: horizontal
     min_columns: 5
     max_columns: 5
-    column_width: 100px
+    column_width: 85px
     justify_content: left
     cards:
 
@@ -64,7 +64,7 @@ cards:
     layout: horizontal
     min_columns: 5
     max_columns: 5
-    column_width: 100px
+    column_width: 85px
     justify_content: left
     cards:
 
@@ -94,7 +94,7 @@ cards:
     layout: horizontal
     min_columns: 5
     max_columns: 5
-    column_width: 100px
+    column_width: 85px
     justify_content: left
     cards:
 
@@ -133,7 +133,7 @@ cards:
     layout: horizontal
     min_columns: 5
     max_columns: 5
-    column_width: 100px
+    column_width: 85px
     justify_content: left
     cards:
 
@@ -182,7 +182,7 @@ cards:
     layout: horizontal
     min_columns: 5
     max_columns: 5
-    column_width: 100px
+    column_width: 85px
     justify_content: left
     cards:
 

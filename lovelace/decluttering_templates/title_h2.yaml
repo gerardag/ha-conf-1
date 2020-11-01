@@ -24,20 +24,3 @@ title_h2:
     content: |
       [[title]]
     style: *card_header
-    # style: |
-    #   ha-card {
-    #     font-family: Roboto, 'Open Sans', sans-serif;
-    #     font-size: 100%;
-    #     -webkit-box-shadow: none;
-    #     -moz-box-shadow: none;
-    #     box-shadow: none;
-    #     text-align: left;
-    #     background: rgba(0,0,0,0);
-    #     color: var(--card-header-text-color);;
-    #     font-weight: 300 !important;
-    #     margin: 0px;
-    #     font-size: 1.5em;
-    #   }
-    #   .no-header {
-    #     padding-bottom: 7px;
-    #   }

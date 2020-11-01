@@ -15,6 +15,7 @@ action:
   # Donem 20 minuts màxim per abandonar la zona
   - wait_template: "{{ not is_state('person.imma', 'home') and not is_state('person.aleix', 'home')  }}"
     timeout: '00:20:00'
+    continue_on_timeout: false
 
   # Send notification
   - service: notify.notify

@@ -1,14 +1,5 @@
 type: vertical-stack
 cards:
-  # - template: title_h1
-  #   type: "custom:decluttering-card"
-  #   variables:
-  #     - title: |
-  #         {%- if is_state("sensor.moment_dia", "Matí") -%}Bon dia
-  #         {%- elif is_state("sensor.moment_dia", "Migdia") -%}Bon dia
-  #         {%- elif is_state("sensor.moment_dia", "Tarda") -%}Bona tarda
-  #         {%- elif is_state("sensor.moment_dia", "Vespre") -%}Bona tarda
-  #         {%- else -%}Bona nit{%- endif -%}
   - type: markdown
     content: |
       {%- if(is_state('sensor.moment_dia', "Matí")) -%}Bon dia, {% endif -%}
@@ -27,7 +18,7 @@ cards:
           box-shadow: none;
           text-align: left;
           background: rgba(0,0,0,0);
-          color: var(--card-header-text-color);;
+          color: var(--card-header-text-color);
           font-weight: 300 !important;
           font-size: 2em;
         }
@@ -40,6 +31,7 @@ cards:
         margin-left: 5px;
         margin-right: 5px;
       }
+
 
   - type: conditional
     conditions:
