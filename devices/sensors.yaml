@@ -246,19 +246,12 @@
       entity_id: sensor.time
       value_template: |
         {%- if as_timestamp(now()) | timestamp_custom('%H') | int < 7 -%}Matinada
-        {%- elif as_timestamp(now()) | timestamp_custom('%H') | int < 12 -%}Matí
-        {%- elif as_timestamp(now()) | timestamp_custom('%H') | int < 14 -%}Migdia
+        {%- elif as_timestamp(now()) | timestamp_custom('%H') | int < 13 -%}Matí
+        {%- elif as_timestamp(now()) | timestamp_custom('%H') | int < 15 -%}Migdia
         {%- elif as_timestamp(now()) | timestamp_custom('%H') | int < 20 -%}Tarda
         {%- elif as_timestamp(now()) | timestamp_custom('%H') | int < 22 -%}Vespre
         {%- else -%}Nit{%- endif -%}
     holaluz_franja_horaria:
-      friendly_name: HolaLuz franja horaria
-      entity_id: sensor.time
-      value_template: |
-        {%- if as_timestamp(utcnow()) | timestamp_custom('%H') | int < 11 -%}Vall
-        {%- elif as_timestamp(utcnow()) | timestamp_custom('%H') | int < 21 -%}Punta
-        {%- else -%}Vall{%- endif -%}
-    holaluz_preu:
       friendly_name: HolaLuz franja horaria
       entity_id: sensor.time
       value_template: |
