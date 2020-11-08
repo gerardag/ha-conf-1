@@ -19,39 +19,45 @@ cards:
           - entity_id: scene.buenos_dias
           - icon: "mdi:weather-sunny"
           - title: Bon dia
-          - service: scene.buenos_dias
+          - service: scene.turn_on
+          - service_data: scene.buenos_dias
       - template: nest_button_action
         type: "custom:decluttering-card"
         variables:
           - entity_id: scene.juegos_de_mesa
           - icon: "mdi:chess-knight"
           - title: Jocs
-          - service: scene.juegos_de_mesa
+          - service: scene.turn_on
+          - service_data: scene.juegos_de_mesa
       - template: nest_button_action
         type: "custom:decluttering-card"
         variables:
           - entity_id: scene.con_amigos
           - icon: "mdi:account-group"
           - title: Amics
-          - service: scene.con_amigos
+          - service: scene.turn_on
+          - service_data: scene.con_amigos
       - template: nest_button_action
         type: "custom:decluttering-card"
         variables:
           - entity_id: scene.relax
           - icon: "mdi:book-open-page-variant"
           - title: Relax
-          - service: scene.relax
+          - service: scene.turn_on
+          - service_data: scene.relax
       - template: nest_button_action
         type: "custom:decluttering-card"
         variables:
           - entity_id: scene.cena
           - icon: "mdi:silverware-fork-knife"
           - title: Sopar
-          - service: scene.cena
+          - service: scene.turn_on
+          - service_data: scene.cena
       - template: nest_button_action
         type: "custom:decluttering-card"
         variables:
           - entity_id: scene.tele
           - icon: "mdi:television-classic"
           - title: Cine
-          - service: scene.tele
+          - service: scene.turn_on
+          - service_data: scene.tele
