@@ -24,12 +24,12 @@ cards:
             padding: 10px;
           }
         cards:
-          - template: nest_button_light
-            type: "custom:decluttering-card"
-            variables:
-              - name: Marbre
-              - entity: switch.llum_cuina
-              - icon: "mdi:lightbulb"
+          # - template: nest_button_light
+          #   type: "custom:decluttering-card"
+          #   variables:
+          #     - name: Marbre
+          #     - entity: switch.llum_cuina
+          #     - icon: "mdi:lightbulb"
           - template: nest_button_binary_sensor
             type: "custom:decluttering-card"
             variables:

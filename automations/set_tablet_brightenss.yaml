@@ -1,0 +1,7 @@
+alias: set_tablet_brightenss
+trigger:
+  platform: state
+  entity_id: input_number.tablet_brightness
+action:
+  service: shell_command.set_tablet_brightness
+

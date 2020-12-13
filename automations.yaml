@@ -1,0 +1,23 @@
+- id: '1605114430857'
+  alias: Encendre llum quan es fa fosc
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunset
+  condition:
+  - condition: or
+    conditions:
+    - condition: state
+      entity_id: person.aleix
+      state: home
+    - condition: state
+      entity_id: person.imma
+      state: home
+  - condition: device
+    type: is_off
+    device_id: a2047eca41ad452f87b58ae94d6702df
+    entity_id: light.mesita
+    domain: light
+  action:
+  - scene: scene.tele
+  mode: single

@@ -84,17 +84,9 @@ cards:
               - background_on: "#fbd229"
               - state_enabled: "[[state_enabled]]"
 
-          - template: nest_button
-            type: "custom:decluttering-card"
-            variables:
-              - entity: sensor.covid_24
-              - icon: "mdi:virus-outline"
-              - show_name: false
-              - show_state: true 
-              - show_last_changed: false
-              - entity: "[[entity]]"
-              - icon: "[[icon]]"
-              - tap_action:
-                  action: more-info
-              - background_on: "#fbd229"
-              - state_enabled: "[[state_enabled]]"
+          # - template: nest_button_binary_sensor
+          #   type: "custom:decluttering-card"
+          #   variables:
+          #     - name: Bústia
+          #     - entity: binary_sensor.motion_mailbox
+          #     - icon: "mdi:mailbox"

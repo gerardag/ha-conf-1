@@ -45,3 +45,5 @@
   type: module
 - url: 'https://fonts.googleapis.com/css?family=Inter'
   type: css
+- url: /hacsfiles/zigbee2mqtt-networkmap/zigbee2mqtt-networkmap.js
+  type: module

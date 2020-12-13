@@ -1,0 +1,6 @@
+tablet_brightness:
+  name: Brillo tablet
+  initial: 50
+  min: 0
+  max: 100
+  step: 10

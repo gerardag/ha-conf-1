@@ -77,11 +77,11 @@ cards:
 
   - type: conditional
     conditions:
-      - entity: media_player.echo_dot_de_immaleix
+      - entity: media_player.menjador
         state: "playing"
     card:
       type: custom:mini-media-player
-      entity: media_player.echo_dot_de_immaleix
+      entity: media_player.menjador
       icon: mdi:amazon-alexa
       artwork: cover
       hide:

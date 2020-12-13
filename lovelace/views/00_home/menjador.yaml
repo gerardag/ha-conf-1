@@ -73,7 +73,7 @@ cards:
             type: "custom:decluttering-card"
             variables:
               - name: Echo Dot
-              - entity: media_player.echo_dot_de_immaleix
+              - entity: media_player.menjador
               - icon: "mdi:amazon-alexa"
           # - template: nest_button_media_player
           #   type: "custom:decluttering-card"
@@ -94,6 +94,18 @@ cards:
               - name: Aspirador
               - entity: switch.aspirador
               - icon: "mdi:robot-vacuum"
+
+      # - type: markdown
+      #   content: |
+      #     Calefacció engegada
+      #   style: |
+      #     ha-markdown {
+      #       text-align: center;
+      #       margin: 5px 50px;
+      #       border-radius: 15px;
+      #       background-color: #A81419;
+      #       font-weight: 400 !important;
+      #     }
 
       - type: custom:mini-graph-card
         entities: 

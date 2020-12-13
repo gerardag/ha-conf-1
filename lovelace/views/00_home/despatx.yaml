@@ -26,18 +26,18 @@ cards:
       #   cards:
       #     - break
 
-      # - type: custom:mini-graph-card
-      #   entities: 
-      #     - entity: sensor.0x00158d00051e3de0_temperature
-      #       name: Temperatura
-      #       color: "#ff9933"
-      #     - entity: sensor.0x00158d00051e3de0_humidity
-      #       name: Humitat
-      #       y_axis: secondary
-      #       show_fill: false
-      #   height: 75
-      #   animate: true
-      #   show:
-      #     legend: false
-      #     name: false
-      #     icon: false
+      - type: custom:mini-graph-card
+        entities: 
+          - entity: sensor.sensor_despatx_temperature
+            name: Temperatura
+            color: "#ff9933"
+          - entity: sensor.sensor_despatx_humidity
+            name: Humitat
+            y_axis: secondary
+            show_fill: false
+        height: 75
+        animate: true
+        show:
+          legend: false
+          name: false
+          icon: false
