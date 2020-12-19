@@ -17,6 +17,16 @@ cards:
           - template: title_h2
             type: "custom:decluttering-card"
             variables:
+              - title: Tablet
+
+          - type: entities
+            show_header_toggle: false
+            entities:
+              - entity: input_number.tablet_brightness
+
+          - template: title_h2
+            type: "custom:decluttering-card"
+            variables:
               - title: Zigbee
 
           - type: entities

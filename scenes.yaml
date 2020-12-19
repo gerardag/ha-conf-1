@@ -6,6 +6,7 @@
       color_temp: 454
     light.sofa: false
     light.mesa: false
+    input_number.tablet_brightness: "2"
 - name: Buenos días
   entities:
     light.mesita:
@@ -28,6 +29,7 @@
       state: true
       brightness: 254
     light.mesa: false
+    input_number.tablet_brightness: "80"
 - name: Con amigos
   entities:
     light.mesita:
@@ -40,6 +42,7 @@
     light.mesa: 
       state: true
       brightness: 200
+    input_number.tablet_brightness: "100"
 - name: Relax
   entities:
     light.mesita:
@@ -50,6 +53,7 @@
       state: true
       brightness: 100
     light.mesa: false
+    input_number.tablet_brightness: "50"
 - name: Juegos de mesa
   entities:
     light.mesita:
@@ -62,6 +66,7 @@
     light.mesa:
       state: true
       brightness: 200 
+    input_number.tablet_brightness: "70"
 - name: Comida
   entities:
     light.mesa: 
@@ -71,3 +76,4 @@
       state: false
     light.sofa:
       state: false
+    input_number.tablet_brightness: "50"

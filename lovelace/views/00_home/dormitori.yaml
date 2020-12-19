@@ -33,6 +33,15 @@ cards:
               - state_enabled: "heat"
               - tap_action:
                   action: more-info
+          - template: nest_button_light
+            type: "custom:decluttering-card"
+            variables:
+              - name: Purificador
+              - entity: fan.xiaomi_miio_device
+              - icon: "mdi:air-purifier"
+              - state_enabled: "heat"
+              - tap_action:
+                  action: more-info
           - template: nest_button_binary_sensor
             type: "custom:decluttering-card"
             variables:

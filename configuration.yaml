@@ -236,6 +236,12 @@ shell_command:
 #   mac: !secret mac_remote
 #   name: Broadlink IR
 
+fan:
+  - platform: xiaomi_miio
+    name: Purificador
+    host: 192.168.1.133
+    token: !secret xiaomi_purifier_token
+
 # Devices (external file)
 
 light: !include devices/lights.yaml
