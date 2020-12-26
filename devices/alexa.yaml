@@ -11,6 +11,7 @@ smart_home:
       - switch.ventilador
       - switch.calefaccio_menjador
       - switch.calefaccio_dormitori
+      - switch.calefaccio_despatx
     include_domains:
       - light
       - scene
@@ -22,6 +23,7 @@ smart_home:
     include_entities:
       - switch.llum_cuina
       - switch.calefaccio_menjador
+      - switch.arbre_nadal
       - switch.aspirador
       - script.tv_turn_on_disney
       - script.tv_turn_on_netflix
@@ -45,6 +47,8 @@ smart_home:
       name: Comedor
     climate.dormitori:
       name: Dormitorio
+    climate.despatx:
+      name: Oficina
     scene.buenos_dias:
       name: Buenos dias
     scene.cena:
@@ -73,6 +77,9 @@ smart_home:
       name: Ventilador
     switch.llum_cuina:
       name: Cocina
+      display_categories: LIGHT
+    switch.arbre_nadal:
+      name: Árbol de Navidad
       display_categories: LIGHT
     media_player.xboxone:
       name: Consola

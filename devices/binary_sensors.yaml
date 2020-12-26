@@ -5,3 +5,8 @@
   state_topic: "camera/outside/movement"
   payload_on: 'on'
   payload_off: 'off'
+- platform: template
+  sensors:
+    someone_home:
+      friendly_name: Algú a casa
+      value_template: "{{ is_state('person.imma', 'home') or is_state('person.aleix', 'home')  }}"

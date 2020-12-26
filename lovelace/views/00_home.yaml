@@ -9,29 +9,29 @@ cards:
     cards:
 
 
-      - type: markdown
-        content: |
-          **{{ states('sensor.time') }}** | {{ as_timestamp(now()) | timestamp_custom('%A, %d %B %Y') }}
-        style: &card_header
-          .: |
-            ha-card {
-              background: none;
-              text-align: center;
-              box-shadow: none;
-            }
+      # - type: markdown
+      #   content: |
+      #     **{{ states('sensor.time') }}** | {{ as_timestamp(now()) | timestamp_custom('%A, %d %B %Y') }}
+      #   style: &card_header
+      #     .: |
+      #       ha-card {
+      #         background: none;
+      #         text-align: center;
+      #         box-shadow: none;
+      #       }
 
-            ha-markdown { 
-              padding: 0px !important;
-            }
+      #       ha-markdown { 
+      #         padding: 0px !important;
+      #       }
               
-          ha-markdown:
-            $: |
-              p {
-                font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
-                font-size: 15px !important;
-                font-weight: 300 !important;
-                # margin-top: 5px;
-              }
+      #     ha-markdown:
+      #       $: |
+      #         p {
+      #           font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+      #           font-size: 15px !important;
+      #           font-weight: 300 !important;
+      #           # margin-top: 5px;
+      #         }
 
 
       - type: custom:layout-card

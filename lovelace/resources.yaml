@@ -1,5 +1,5 @@
-- url: /hacsfiles/lovelace-card-preloader/lovelace-card-preloader.js
-  type: js
+# - url: /hacsfiles/lovelace-card-preloader/lovelace-card-preloader.js
+#   type: js
 - url: /hacsfiles/lovelace-layout-card/layout-card.js
   type: module
 - url: /hacsfiles/vertical-stack-in-card/vertical-stack-in-card.js
@@ -32,11 +32,11 @@
   type: module
 - url: /local/smhi-forecast-card.js
   type: module
-- url: /hacsfiles/bar-card/bar-card.js
-  type: js
+# - url: /hacsfiles/bar-card/bar-card.js
+#   type: js
 # Added for 60-experiment UI
-- url: /hacsfiles/circle-sensor-card/circle-sensor-card.js
-  type: module
+# - url: /hacsfiles/circle-sensor-card/circle-sensor-card.js
+#   type: module
 - url: /hacsfiles/light-entity-card/light-entity-card.js
   type: js
 - url: /hacsfiles/lovelace-multiple-entity-row/multiple-entity-row.js

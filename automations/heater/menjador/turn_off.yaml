@@ -1,8 +1,0 @@
-alias: 'Climate menjador - Turn off'
-initial_state: true
-trigger:
-  - platform: time
-    at: "08:30:00"
-action:
-  - service: climate.turn_off
-    entity_id: climate.menjador

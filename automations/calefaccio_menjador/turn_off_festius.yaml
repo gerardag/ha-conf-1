@@ -1,0 +1,35 @@
+alias: 'Calefacció menjador - Apagar (festius)'
+initial_state: true
+trigger:
+  - platform: time
+    at: "10:00:00"
+  - platform: state
+    entity_id: switch.calefaccio_menjador
+    from: "on"
+    to: "off"
+condition:
+  condition: or
+  conditions:
+    - condition: time
+      after: "09:00:00"
+      before: "10:30:00"
+      weekday:
+        - sat
+        - sun
+    - condition: and
+      conditions:
+        - condition: time
+          after: "09:00:00"
+          before: "10:30:00"
+          weekday:
+            - mon
+            - tue
+            - wed
+            - thu
+            - fri
+        - condition: state
+          entity_id: calendar.festius_barcelona
+          state: 'on'
+action:
+  - service: climate.turn_off
+    entity_id: climate.menjador

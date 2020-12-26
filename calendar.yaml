@@ -1,0 +1,5 @@
+- platform: ics
+  calendars:
+    - name: "Festius Barcelona"
+      includeAllDay: true
+      url: https://ajuntament.barcelona.cat/calendarifestius/files/calendarifestius_ca.ics

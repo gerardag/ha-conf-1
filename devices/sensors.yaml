@@ -1,4 +1,4 @@
-- platform: yr
+# - platform: yr
 # - platform: mqtt
 #   name: Exterior Temperature MQTT
 #   state_topic: "ble/exterior/temperature"
@@ -258,7 +258,6 @@
         {%- if as_timestamp(utcnow()) | timestamp_custom('%H') | int < 11 -%}Vall
         {%- elif as_timestamp(utcnow()) | timestamp_custom('%H') | int < 21 -%}Punta
         {%- else -%}Vall{%- endif -%}
-
 ###############
 # SQL Queries #
 ###############

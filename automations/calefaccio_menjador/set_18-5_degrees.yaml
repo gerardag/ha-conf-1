@@ -1,24 +1,19 @@
-alias: 'Climate menjador - Set 19.0 degress'
+alias: 'Calefacció menjador - Configurar 18.5ºC'
 initial_state: true
 trigger:
-  - platform: sun
-    event: sunset
-    offset: "00:30:00"
   - platform: time
-    at: "19:00:00"
-  - platform: time
-    at: "07:00:00"
+    at: "23:00:00"
   - platform: homeassistant
     event: start
 condition:
   condition: and
   conditions:
     - condition: time
-      after: "07:00:00"
+      after: "22:59:00"
     - condition: time
-      before: "23:00:00"
+      before: "01:00:00"
 action:
   - service: climate.set_temperature
     data:
       entity_id: climate.menjador
-      temperature: 19.5
+      temperature: 18.5

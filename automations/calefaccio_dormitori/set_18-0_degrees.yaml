@@ -1,4 +1,4 @@
-alias: 'Climate dormitori - Set 18.0 degrees'
+alias: 'Calefacció dormitori - Configurar 18.0ºC'
 initial_state: true
 trigger:
   - platform: time

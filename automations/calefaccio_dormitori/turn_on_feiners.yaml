@@ -1,0 +1,33 @@
+alias: 'Calefacció dormitori - Engegar (feiners)'
+initial_state: true
+trigger:
+  - platform: time
+    at: "21:30:00"
+condition:
+  condition: and
+  conditions:
+    - condition: time
+      after: "21:00:00"
+      before: "23:00:00"
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+        - sun
+    # - condition: numeric_state
+    #   entity_id: sensor.exterior_temperature_mqtt
+    #   below: 15
+    - condition: template
+      value_template: "{{ is_state('person.imma', 'home') or is_state('person.aleix', 'home')  }}"
+action:
+  - service: climate.turn_on
+    data:
+      entity_id: climate.dormitori
+
+  # Send notification
+  - service: notify.notify
+    data: 
+      title: "Casa"
+      message: "Engeguem calefacció dormitori"

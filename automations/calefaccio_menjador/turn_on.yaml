@@ -1,4 +1,4 @@
-alias: 'Climate menjador - Turn on'
+alias: 'Calefacció menjador - Engegar'
 initial_state: true
 trigger:
   - platform: sun

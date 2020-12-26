@@ -1,19 +1,19 @@
-alias: 'Climate dormitori - Set 18.5 degrees'
+alias: 'Calefacció menjador - Configurar 18.0ºC'
 initial_state: true
 trigger:
   - platform: time
-    at: "23:30:00"
+    at: "01:00:00"
   - platform: homeassistant
     event: start
 condition:
-  condition: or
+  condition: and
   conditions:
     - condition: time
-      after: "22:59:00"
+      after: "01:00:00"
     - condition: time
-      before: "01:00:00"
+      before: "07:00:00"
 action:
   - service: climate.set_temperature
     data:
-      entity_id: climate.dormitori
-      temperature: 18.5
+      entity_id: climate.menjador
+      temperature: 18.0

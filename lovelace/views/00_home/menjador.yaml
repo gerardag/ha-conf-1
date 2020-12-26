@@ -45,6 +45,12 @@ cards:
           - template: nest_button_light
             type: "custom:decluttering-card"
             variables:
+              - name: Àrbre
+              - entity: switch.arbre_nadal
+              - icon: "mdi:pine-tree"
+          - template: nest_button_light
+            type: "custom:decluttering-card"
+            variables:
               - name: Ventilador
               - entity: switch.calefaccio_menjador
               - icon: "mdi:fan"
@@ -69,12 +75,12 @@ cards:
               - name: Tele
               - entity: media_player.tele
               - icon: "mdi:television"
-          - template: nest_button_media_player
-            type: "custom:decluttering-card"
-            variables:
-              - name: Echo Dot
-              - entity: media_player.menjador
-              - icon: "mdi:amazon-alexa"
+          # - template: nest_button_media_player
+          #   type: "custom:decluttering-card"
+          #   variables:
+          #     - name: Echo Dot
+          #     - entity: media_player.menjador
+          #     - icon: "mdi:amazon-alexa"
           # - template: nest_button_media_player
           #   type: "custom:decluttering-card"
           #   variables:
@@ -117,6 +123,8 @@ cards:
             y_axis: secondary
             show_fill: false
         height: 75
+        animate: false
+        line_width: 3
         show:
           legend: false
           name: false

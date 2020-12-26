@@ -1,15 +1,16 @@
-alias: 'Climate dormitori - Turn on'
+alias: 'Calefacció dormitori - Engegar (festius)'
 initial_state: true
 trigger:
   - platform: time
-    at: "21:30:00"
+    at: "22:00:00"
 condition:
   condition: and
   conditions:
     - condition: time
       after: "21:00:00"
-    - condition: time
       before: "23:00:00"
+      weekday:
+        - sat
     # - condition: numeric_state
     #   entity_id: sensor.exterior_temperature_mqtt
     #   below: 15
