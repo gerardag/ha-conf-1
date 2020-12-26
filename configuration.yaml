@@ -117,9 +117,9 @@ zeroconf:
 
 # shopping_list:
 
-#google:
-#  client_id: !secret google_oauth_calendar_id
-#  client_secret: !secret google_oauth_calendar_secret
+google:
+ client_id: !secret google_oauth_calendar_id
+ client_secret: !secret google_oauth_calendar_secret
 
 # Notifications
 
