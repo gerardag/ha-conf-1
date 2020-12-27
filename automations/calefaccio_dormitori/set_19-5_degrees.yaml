@@ -1,19 +1,19 @@
-alias: 'Calefacció dormitori - Configurar 19.0ºC'
+alias: 'Calefacció dormitori - Configurar 19.5ºC'
 initial_state: true
 trigger:
   - platform: time
-    at: "07:00:00"
+    at: "21:30:00"
   - platform: homeassistant
     event: start
 condition:
   condition: and
   conditions:
     - condition: time
-      after: "07:00:00"
+      after: "15:00:00"
     - condition: time
-      before: "08:00:00"
+      before: "23:00:00"
 action:
   - service: climate.set_temperature
     data:
       entity_id: climate.dormitori
-      temperature: 19.0
+      temperature: 19.5

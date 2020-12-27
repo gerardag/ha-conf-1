@@ -1,9 +1,15 @@
 type: vertical-stack
 cards:
-  - template: title_h2
-    type: "custom:decluttering-card"
-    variables:
-      - title: A casa
+
+  - type: conditional
+    conditions:
+      - entity: binary_sensor.someone_home
+        state: "on"
+    card:
+      template: title_h2
+      type: "custom:decluttering-card"
+      variables:
+        - title: A casa
 
   - type: custom:layout-card
     layout: horizontal

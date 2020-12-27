@@ -1,0 +1,35 @@
+alias: 'Calefacció despatx - Engegar'
+initial_state: true
+trigger:
+  - platform: time
+    at: "07:30:00"
+  - platform: homeassistant
+    event: start
+# Engega la calefacció si:
+#  - L'Aleix està a casa
+#  - És un dia laborable
+#  - No és festiu
+#  - L'Aleix fa Teleworking
+condition:
+  - condition: zone
+    entity_id: person.aleix
+    zone: zone.home
+  - condition: time
+    after: "07:00:00"
+    before: "15:00:00"
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  - condition: state
+    entity_id: calendar.festius_barcelona
+    state: 'off'
+  - condition: state
+    entity_id: calendar.teleworking
+    state: 'on'
+action:
+  - service: climate.turn_on
+    data:
+      entity_id: climate.despatx

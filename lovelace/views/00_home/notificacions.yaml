@@ -37,6 +37,8 @@ cards:
     conditions:
       - entity: media_player.tele
         state_not: "off"
+      - entity: media_player.xbox
+        state_not: "on"
     card:
       type: "custom:mini-media-player"
       entity: media_player.tele
