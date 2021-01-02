@@ -167,6 +167,10 @@
   latitude: !secret latitude
   longitude: !secret longitude
   radius: 200
+
+###############
+#  Templates  #
+###############
 - platform: template
   sensors:
     solar_angle:
@@ -177,12 +181,6 @@
       friendly_name: "Aleix velocity"
       unit_of_measurement: 'km/h'
       value_template: "{{ state_attr('device_tracker.aleix_s10e', 'velocity') }}"
-
-###############
-#  Templates  #
-###############
-- platform: template
-  sensors:
     mesa_percent:
       friendly_name: Taula %
       unit_of_measurement: '%'
@@ -258,6 +256,48 @@
         {%- if as_timestamp(utcnow()) | timestamp_custom('%H') | int < 11 -%}Vall
         {%- elif as_timestamp(utcnow()) | timestamp_custom('%H') | int < 21 -%}Punta
         {%- else -%}Vall{%- endif -%}
+    calefaccio_dormitori_target:
+      friendly_name: Calefacció dormitori temperatura objectiu
+      entity_id: sensor.time
+      unit_of_measurement: "ºC"
+      value_template: |
+        {%- if as_timestamp(now()) | timestamp_custom('%H') | int < 1 -%}18.5
+        {%- elif as_timestamp(now()) | timestamp_custom('%H') | int < 7 -%}18.0
+        {%- elif as_timestamp(now()) | timestamp_custom('%H') | int < 13 -%}19.0
+        {%- elif as_timestamp(now()) | timestamp_custom('%H') | int < 15 -%}19.5
+        {%- elif as_timestamp(now()) | timestamp_custom('%H') | int < 20 -%}19.5
+        {%- elif as_timestamp(now()) | timestamp_custom('%H') | int < 22 -%}19.5
+        {%- else -%}19.5{%- endif -%}
+    calefaccio_menjador_target:
+      friendly_name: Calefacció menjador temperatura objectiu
+      entity_id: sensor.time
+      unit_of_measurement: "ºC"
+      value_template: |
+        {%- if as_timestamp(now()) | timestamp_custom('%H') | int < 1 -%}18.5
+        {%- elif as_timestamp(now()) | timestamp_custom('%H') | int < 7 -%}18.0
+        {%- elif as_timestamp(now()) | timestamp_custom('%H') | int < 13 -%}19.0
+        {%- elif as_timestamp(now()) | timestamp_custom('%H') | int < 15 -%}19.5
+        {%- elif as_timestamp(now()) | timestamp_custom('%H') | int < 20 -%}19.5
+        {%- elif as_timestamp(now()) | timestamp_custom('%H') | int < 22 -%}19.5
+        {%- else -%}19.5{%- endif -%}
+    calefaccio_despatx_target:
+      friendly_name: Calefacció despatx temperatura objectiu
+      entity_id: sensor.time
+      unit_of_measurement: "ºC"
+      value_template: |
+        {%- if as_timestamp(now()) | timestamp_custom('%H') | int < 1 -%}18.5
+        {%- elif as_timestamp(now()) | timestamp_custom('%H') | int < 7 -%}18.0
+        {%- elif as_timestamp(now()) | timestamp_custom('%H') | int < 13 -%}19.5
+        {%- elif as_timestamp(now()) | timestamp_custom('%H') | int < 15 -%}19.5
+        {%- elif as_timestamp(now()) | timestamp_custom('%H') | int < 20 -%}18.0
+        {%- elif as_timestamp(now()) | timestamp_custom('%H') | int < 22 -%}18.0
+        {%- else -%}18.0{%- endif -%}
+    purificador_aqi:
+      friendly_name: Purificador AQI
+      entity_id: fan.xiaomi_miio_device
+      unit_of_measuremnet: "AQI"
+      value_template: "{{ state_attr('fan.xiaomi_miio_device', 'aqi') }}"
+
 ###############
 # SQL Queries #
 ###############

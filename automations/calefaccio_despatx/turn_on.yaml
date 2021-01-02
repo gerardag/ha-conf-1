@@ -1,35 +1,37 @@
 alias: 'Calefacció despatx - Engegar'
 initial_state: true
+
 trigger:
-  - platform: time
-    at: "07:30:00"
-  - platform: homeassistant
-    event: start
-# Engega la calefacció si:
-#  - L'Aleix està a casa
-#  - És un dia laborable
-#  - No és festiu
-#  - L'Aleix fa Teleworking
-condition:
-  - condition: zone
-    entity_id: person.aleix
-    zone: zone.home
-  - condition: time
-    after: "07:00:00"
-    before: "15:00:00"
-    weekday:
-      - mon
-      - tue
-      - wed
-      - thu
-      - fri
-  - condition: state
-    entity_id: calendar.festius_barcelona
-    state: 'off'
-  - condition: state
-    entity_id: calendar.teleworking
-    state: 'on'
+  - platform: time                                                                 ##  Cada dia a les 7.30 (mitja hora abans de començar la jornada)
+    at: "07:30:00"                                                                 ##
+
+  - platform: homeassistant                                                        ##  Si el HA es reinicia (fallo elèctric, actualització, reinici forçat)
+    event: start                                                                   ##
+
+condition:                                                                         ##  Engega la calefacció si:
+  - condition: zone                                                                ##  
+    entity_id: person.aleix                                                        ##   - L'Aleix és a casa
+    zone: zone.home                                                                ##
+  - condition: time                                                                ##
+    after: "07:00:00"                                                              ##   - Filtrem l'hora per si s'executa al reiniciar el sistema
+    before: "15:00:00"                                                             ## 
+    weekday:                                                                       ##
+      - mon                                                                        ##   - És un dia laborable
+      - tue                                                                        ##
+      - wed                                                                        ##
+      - thu                                                                        ##
+      - fri                                                                        ##
+  - condition: state                                                               ##   - No és festiu
+    entity_id: calendar.festius_barcelona                                          ##
+    state: 'off'                                                                   ##
+  - condition: state                                                               ##   - L'Aleix fa teleworking
+    entity_id: calendar.teleworking                                                ##
+    state: 'on'                                                                    ##
+  - condition: template                                                            ##
+    value_template: "{{ state_attr('weather.dark_sky', 'temperature') < 16 }}"     ##   - La temperatura exterior és inferior a 16ºC
+  
 action:
-  - service: climate.turn_on
-    data:
-      entity_id: climate.despatx
+  - service: climate.turn_on                                                       ##  Engega la calefacció
+    data:                                                                          ##
+      entity_id: climate.despatx                                                   ##
+

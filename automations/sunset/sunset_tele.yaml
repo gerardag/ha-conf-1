@@ -5,23 +5,12 @@ trigger:
     event: sunset
     offset: "00:05:00"
 condition:
-  condition: and
-  conditions:
-    - condition: state
-      entity_id: light.mesita
-      state: 'off'
-    - condition: or
-      conditions:
-        - condition: state
-          entity_id: 
-            - media_player.tele
-            - switch.llum_cuina
-            - light.entrada
-            - light.mesa
-            - light.sofa
-          state: 
-            - "on"
-            - "playing"
+  - condition: state
+    entity_id: light.mesita
+    state: 'off'
+  - condition: state
+    entity_id: binary_sensor.someone_home
+    state: "on"
 action:
   - service: light.turn_on
     entity_id: light.mesita 

@@ -3,33 +3,47 @@ initial_state: true
 mode: restart
 trigger:
   - entity_id: binary_sensor.motion_entrance 
-    from: 'off'
     platform: state
     to: 'on'
   - entity_id: binary_sensor.door_main_entrance
-    from: 'off'
     platform: state
     to: 'on'
-condition:
-  - condition: time
-    after: "06:30:00"
-  - condition: time
-    before: "23:59:00"
-  - condition: state
-    entity_id: input_select.home_mode
-    state:
-      - Normal
-      - Inactiu
-      - Fora de casa
-      - Simular activitat
+condition: []
 action:
-  - service: light.turn_on
-    data:
-      entity_id: light.entrada
-  - wait_template: "{{ is_state('binary_sensor.motion_entrance', 'off') }}"
-  - delay:
-      minutes: 5
-  - service: light.turn_off
-    data:
-      entity_id: light.entrada
-      transition: 30
+
+  - choose:
+    - conditions:
+        condition: time
+        after: "22:00:00"
+        before: "00:00:00"
+      sequence:
+        - service: light.turn_on
+          data:
+            entity_id: light.entrada
+            brightness: 50
+        - wait_template: "{{ is_state('binary_sensor.motion_entrance', 'off') }}"
+          timeout: "00:01:00"
+        - delay:
+            minutes: 1
+        - service: light.turn_off
+          data:
+            entity_id: light.entrada
+            transition: 10
+
+    - conditions:
+        condition: time
+        after: "07:00:00"
+        before: "22:00:00"
+      sequence:
+        - service: light.turn_on
+          data:
+            entity_id: light.entrada
+            brightness: 250
+        - wait_template: "{{ is_state('binary_sensor.motion_entrance', 'off') }}"
+          timeout: "00:05:00"
+        - delay:
+            minutes: 5
+        - service: light.turn_off
+          data:
+            entity_id: light.entrada
+            transition: 10

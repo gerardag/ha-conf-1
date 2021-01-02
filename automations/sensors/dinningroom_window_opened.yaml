@@ -1,12 +1,11 @@
 alias: Menjador - Finestra oberta
 trigger:
 - entity_id: binary_sensor.window_dinningroom
-  from: 'off'
   platform: state
   to: 'on'
+  for: 
+    seconds: 30
 condition: []
 action:
-- delay:
-    seconds: 1
 - service: climate.turn_off
-  entity_id: climate.dormitori
+  entity_id: climate.menjador

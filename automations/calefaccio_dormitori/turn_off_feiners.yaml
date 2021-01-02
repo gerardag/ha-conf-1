@@ -21,7 +21,7 @@ condition:
         - fri
     - condition: state
       entity_id: calendar.festius_barcelona
-      state: 'on'
+      state: 'off'
 action:
   - service: climate.turn_off
     entity_id: climate.dormitori

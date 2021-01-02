@@ -1,12 +1,11 @@
 alias: Dormitori - Finestra oberta
 trigger:
 - entity_id: binary_sensor.window_dormitori
-  from: 'off'
   platform: state
   to: 'on'
+  for: 
+    seconds: 30
 condition: []
 action:
-- delay:
-    seconds: 1
 - service: climate.turn_off
   entity_id: climate.dormitori

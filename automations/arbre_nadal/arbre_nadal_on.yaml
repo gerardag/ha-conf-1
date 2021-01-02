@@ -3,7 +3,6 @@ initial_state: true
 trigger:
   - platform: sun
     event: sunset
-    offset: "00:05:00"
   - platform: homeassistant
     event: start
   - platform: zone

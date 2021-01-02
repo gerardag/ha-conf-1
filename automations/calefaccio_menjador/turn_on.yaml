@@ -3,7 +3,7 @@ initial_state: true
 trigger:
   - platform: sun
     event: sunset
-    offset: "00:30:00"
+    offset: "00:15:00"
   - platform: time
     at: "19:00:00"
   - platform: homeassistant
@@ -13,7 +13,6 @@ condition:
   conditions:
     - condition: sun
       after: sunset
-      after_offset: "00:30:00"
     - condition: time
       before: "23:00:00"
     # - condition: numeric_state

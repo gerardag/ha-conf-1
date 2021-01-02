@@ -6,9 +6,8 @@ trigger:
   - event: start
     platform: homeassistant
 condition:
-  - condition: state
-    entity_id: sun.sun
-    state: "above_horizon"
+  - condition: sun
+    after: sunrise
 initial_state: true
 action:
   - service: frontend.set_theme
