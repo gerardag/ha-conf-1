@@ -13,7 +13,7 @@ condition:                                                                      
     entity_id: person.aleix                                                        ##   - L'Aleix és a casa
     zone: zone.home                                                                ##
   - condition: time                                                                ##
-    after: "07:00:00"                                                              ##   - Filtrem l'hora per si s'executa al reiniciar el sistema
+    after: "07:30:00"                                                              ##   - Filtrem l'hora per si s'executa al reiniciar el sistema
     before: "15:00:00"                                                             ## 
     weekday:                                                                       ##
       - mon                                                                        ##   - És un dia laborable
@@ -31,6 +31,13 @@ condition:                                                                      
     value_template: "{{ state_attr('weather.dark_sky', 'temperature') < 16 }}"     ##   - La temperatura exterior és inferior a 16ºC
   
 action:
+  - service: climate.turn_off                                                      ##  Apaga la calefacció dormitori (baixar consum)
+    data:                                                                          ##
+      entity_id: climate.dormitori                                                 ##
+
+  - delay:
+      seconds: 10
+
   - service: climate.turn_on                                                       ##  Engega la calefacció
     data:                                                                          ##
       entity_id: climate.despatx                                                   ##

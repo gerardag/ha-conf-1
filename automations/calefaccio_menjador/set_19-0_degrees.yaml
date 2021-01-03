@@ -2,7 +2,7 @@ alias: 'Calefacció menjador - Configurar 19.0ºC'
 initial_state: true
 trigger:
   - platform: time
-    at: "07:00:00"
+    at: "06:30:00"
   - platform: homeassistant
     event: start
 condition:
