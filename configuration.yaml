@@ -28,6 +28,7 @@ http:
   use_x_forwarded_for: true
   trusted_proxies: 
     - 127.0.0.1
+    - 172.0.0.0/8
     - 10.0.0.0/8
   # ip_ban_enabled: true
   # login_attempts_threshold: 3
@@ -98,17 +99,20 @@ duckdns:
   domain: hass-amurtra
   access_token: !secret duckdns_api_key
 
-cloudflare:
-  email: !secret cloudflare_email
-  api_key: !secret cloudflare_token
-  zone: aleix.cloud
-  records:
-    - casa.sys
+# cloudflare:
+#   email: !secret cloudflare_email
+#   api_key: !secret cloudflare_token
+#   zone: aleix.cloud
+#   records:
+#     - casa.sys
+
 lovelace:
   mode: yaml
+  resources: !include lovelace/resources.yaml
 
 discovery:
 zeroconf:
+  default_interface: true
 
 # alarm_control_panel:
 #   - platform: manual
@@ -167,11 +171,7 @@ tts:
     service_name: google_say
     language: es
 
-google_assistant:
-  project_id: !secret google_project_id
-  service_account: !include google-home-serviceaccount.json
-  report_state: true
-  expose_by_default: true
+google_assistant: !include devices/google_assistant.yaml
 
 wake_on_lan:
 

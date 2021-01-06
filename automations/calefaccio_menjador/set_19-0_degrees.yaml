@@ -9,10 +9,13 @@ condition:
   condition: and
   conditions:
     - condition: time
-      after: "07:00:00"
-      before: "8:00:00"
+      after: "06:30:00"
+      before: "08:00:00"
 action:
   - service: climate.set_temperature
     data:
       entity_id: climate.menjador
       temperature: 19.0
+  - service: climate.turn_on
+    data:
+      entity_id: climate.menjador

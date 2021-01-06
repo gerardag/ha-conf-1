@@ -241,7 +241,6 @@
         {% endif %}
     moment_dia:
       friendly_name: Moment del dia
-      entity_id: sensor.time
       value_template: |
         {%- if as_timestamp(now()) | timestamp_custom('%H') | int < 7 -%}Matinada
         {%- elif as_timestamp(now()) | timestamp_custom('%H') | int < 13 -%}Matí
@@ -251,14 +250,12 @@
         {%- else -%}Nit{%- endif -%}
     holaluz_franja_horaria:
       friendly_name: HolaLuz franja horaria
-      entity_id: sensor.time
       value_template: |
         {%- if as_timestamp(utcnow()) | timestamp_custom('%H') | int < 11 -%}Vall
         {%- elif as_timestamp(utcnow()) | timestamp_custom('%H') | int < 21 -%}Punta
         {%- else -%}Vall{%- endif -%}
     calefaccio_dormitori_target:
       friendly_name: Calefacció dormitori temperatura objectiu
-      entity_id: sensor.time
       unit_of_measurement: "ºC"
       value_template: |
         {%- if as_timestamp(now()) | timestamp_custom('%H') | int < 1 -%}18.5
@@ -270,7 +267,6 @@
         {%- else -%}19.5{%- endif -%}
     calefaccio_menjador_target:
       friendly_name: Calefacció menjador temperatura objectiu
-      entity_id: sensor.time
       unit_of_measurement: "ºC"
       value_template: |
         {%- if as_timestamp(now()) | timestamp_custom('%H') | int < 1 -%}18.5
@@ -282,7 +278,6 @@
         {%- else -%}19.5{%- endif -%}
     calefaccio_despatx_target:
       friendly_name: Calefacció despatx temperatura objectiu
-      entity_id: sensor.time
       unit_of_measurement: "ºC"
       value_template: |
         {%- if as_timestamp(now()) | timestamp_custom('%H') | int < 1 -%}18.5
@@ -294,8 +289,7 @@
         {%- else -%}18.0{%- endif -%}
     purificador_aqi:
       friendly_name: Purificador AQI
-      entity_id: fan.xiaomi_miio_device
-      unit_of_measuremnet: "AQI"
+      unit_of_measurement: "AQI"
       value_template: "{{ state_attr('fan.xiaomi_miio_device', 'aqi') }}"
 
 ###############

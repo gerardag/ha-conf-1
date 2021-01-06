@@ -1,0 +1,77 @@
+project_id: !secret google_project_id
+service_account: !include ../google-home-serviceaccount.json
+report_state: true
+expose_by_default: false
+entity_config:
+    climate.menjador:
+      name: Comedor
+      room: Comedor
+    light.mesa:
+      name: Mesa
+      room: Comedor
+    light.sofa:
+      name: Sofá
+      room: Comedor
+    light.mesita:
+      name: Mesita
+      room: Comedor
+    switch.calefaccio_menjador:
+      name: Ventilador
+      room: Comedor
+    scene.buenos_dias:
+      name: Buenos dias
+      room: Comedor
+    scene.cena:
+      name: Cena
+      room: Comedor
+    scene.con_amigos:
+      name: Amigos
+      room: Comedor
+    scene.juegos_de_mesa:
+      name: Juegos de mesa
+      room: Comedor
+    scene.relax:
+      name: Relax
+      room: Comedor
+    scene.tele:
+      name: Cine
+      room: Comedor
+    scene.comida:
+      name: Comida
+      room: Comedor
+    script.menjador_dynamic_scene:
+      name: Lo que quieras
+      room: Comedor
+    switch.arbre_nadal:
+      name: Árbol de Navidad
+      room: Comedor
+    media_player.xboxone:
+      name: Consola
+      room: Comedor
+
+
+
+    climate.dormitori:
+      name: Dormitorio
+      room: Dormitorio
+    fan.xiaomi_miio_device:
+      name: Purificador
+      room: Dormitorio
+
+
+
+    climate.despatx:
+      name: Oficina
+      room: Oficina
+
+
+
+    light.entrada:
+      name: Entrada
+      room: Entrada
+
+
+
+    switch.llum_cuina:
+      name: Encimera
+      room: Cocina

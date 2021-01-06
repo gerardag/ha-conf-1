@@ -1,5 +1,4 @@
 title: Casa
-resources: !include lovelace/resources.yaml
 preload:
   - conditional
 # custom_header: !include lovelace/custom_header.yaml

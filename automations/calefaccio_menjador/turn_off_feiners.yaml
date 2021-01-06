@@ -3,25 +3,32 @@ initial_state: true
 trigger:
   - platform: time
     at: "08:30:00"
+  - platform: time
+    at: "00:00:00"
   - platform: state
     entity_id: switch.calefaccio_menjador
     from: "on"
     to: "off"
 condition:
-  condition: and
+  condition: or
   conditions:
     - condition: time
-      after: "07:30:00"
-      before: "09:00:00"
-      weekday:
-        - mon
-        - tue
-        - wed
-        - thu
-        - fri
-    - condition: state
-      entity_id: calendar.festius_barcelona
-      state: 'off'
+      after: "23:30:00"
+      before: "00:30:00"
+    - condition: and
+      conditions:
+        - condition: time
+          after: "07:30:00"
+          before: "09:00:00"
+          weekday:
+            - mon
+            - tue
+            - wed
+            - thu
+            - fri
+        - condition: state
+          entity_id: calendar.festius_barcelona
+          state: 'off'
 action:
   - service: climate.turn_off
     entity_id: climate.menjador
