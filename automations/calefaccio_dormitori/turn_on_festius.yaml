@@ -1,5 +1,5 @@
 alias: 'Calefacció dormitori - Engegar (festius)'
-initial_state: true
+initial_state: false
 trigger:
   - platform: time
     at: "22:00:00"

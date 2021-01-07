@@ -1,5 +1,5 @@
 alias: 'Calefacció menjador - Apagar (feiners)'
-initial_state: true
+initial_state: false
 trigger:
   - platform: time
     at: "08:30:00"

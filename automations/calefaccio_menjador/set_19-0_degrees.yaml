@@ -1,5 +1,5 @@
 alias: 'Calefacció menjador - Configurar 19.0ºC'
-initial_state: true
+initial_state: false
 trigger:
   - platform: time
     at: "06:30:00"

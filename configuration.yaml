@@ -64,7 +64,7 @@ history:
 
 recorder:
   db_url: !secret db_mysql_url
-  purge_keep_days: 7
+  purge_keep_days: 14
   purge_interval: 1
 
 logbook:

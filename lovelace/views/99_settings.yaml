@@ -17,6 +17,18 @@ cards:
           - template: title_h2
             type: "custom:decluttering-card"
             variables:
+              - title: Schedy
+
+          - type: entities
+            show_header_toggle: false
+            entities:    
+              - entity: input_boolean.schedy_dormitori
+              - entity: input_boolean.schedy_menjador
+              - entity: input_boolean.schedy_oficina
+
+          - template: title_h2
+            type: "custom:decluttering-card"
+            variables:
               - title: Tablet
 
           - type: entities

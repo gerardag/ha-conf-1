@@ -1,5 +1,5 @@
 alias: 'Calefacció menjador - Apagar (festius)'
-initial_state: true
+initial_state: false
 trigger:
   - platform: time
     at: "10:00:00"

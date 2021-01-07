@@ -5,6 +5,16 @@ work_focus:
 ## ASPIRADOR ##
 ###############
 
+schedy_dormitori:
+  name: Dormitori
+  initial: true
+schedy_menjador:
+  name: Menjador
+  initial: true
+schedy_oficina:
+  name: Oficina
+  initial: true
+
 ## mon
 vacuum_enable_mon:
   name: Passar aspirador (mon)

@@ -5,6 +5,9 @@ www/community
 google-home-serviceaccount.json
 alexa_media.alemurbcn@gmail.com.pickle
 
+**/__pycache__/*
+**/*.pyc
+
 # Created by https://www.gitignore.io/api/homeassistant
 # Edit at https://www.gitignore.io/?templates=homeassistant
 

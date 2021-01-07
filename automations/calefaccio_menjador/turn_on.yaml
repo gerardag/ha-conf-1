@@ -1,5 +1,5 @@
 alias: 'Calefacció menjador - Engegar'
-initial_state: true
+initial_state: false
 trigger:
   - platform: sun
     event: sunset

@@ -1,5 +1,5 @@
 alias: 'Calefacció dormitori - Configurar 18.0ºC'
-initial_state: true
+initial_state: false
 trigger:
   - platform: time
     at: "01:00:00"

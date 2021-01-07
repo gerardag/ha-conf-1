@@ -3,6 +3,49 @@ service_account: !include ../google-home-serviceaccount.json
 report_state: true
 expose_by_default: false
 entity_config:
+
+    switch.aspirador:
+      expose: true
+    script.tv_turn_on_disney:
+      expose: true
+    script.tv_turn_on_netflix:
+      expose: true
+    script.tv_turn_on_dinner:
+      expose: true
+    script.tv_turn_on_prime:
+      expose: true
+    script.tv_turn_on_switch:
+      expose: true
+    script.tv_turn_on_wii:
+      expose: true
+    script.tv_turn_on_xbox:
+      expose: true
+    script.tv_turn_on_youtube:
+      expose: true
+    script.tv_antena3:
+      expose: true
+      aliases:
+        - antena 3
+        - ruleta
+        - pasapalabra
+    script.tv_bemad:
+      expose: true
+      aliases:
+        - bemad
+        - callejeros
+    script.tv_volume_up:
+      expose: true
+    script.tv_volume_down:
+      expose: true
+    script.tv_turn_on_xbox_rocket_league:
+      expose: true
+      aliases:
+        - rocket league
+    script.vacuum_start:
+      expose: true
+    media_player.tele:
+      expose: true
+
     climate.menjador:
       name: Comedor
       room: Comedor

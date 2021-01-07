@@ -1,5 +1,5 @@
 alias: 'Arbre Nadal - Off'
-initial_state: true
+initial_state: false
 trigger:
   - platform: time
     at: "00:00:00"

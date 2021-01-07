@@ -1,5 +1,5 @@
 alias: 'Calefacció despatx - Configurar 18.0ºC'
-initial_state: true
+initial_state: false
 trigger:
   - platform: time
     at: "17:00:00"

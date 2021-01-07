@@ -6,14 +6,13 @@
   max_temp: 25
   ac_mode: false
   target_temp: 18.5
-  cold_tolerance: 0.4
-  hot_tolerance: 0.2
+  cold_tolerance: 0.6
+  hot_tolerance: 0
   min_cycle_duration:
-    minutes: 5
+    minutes: 30
   keep_alive:
-    minutes: 3
+    minutes: 15
   initial_hvac_mode: "off"
-  away_temp: 18
   precision: 0.1
 - platform: generic_thermostat
   name: Dormitori
@@ -23,14 +22,13 @@
   max_temp: 25
   ac_mode: false
   target_temp: 18.5
-  cold_tolerance: 0.4
-  hot_tolerance: 0.2
+  cold_tolerance: 0.6
+  hot_tolerance: 0
   min_cycle_duration:
-    minutes: 5
+    minutes: 30
   keep_alive:
-    minutes: 3
+    minutes: 15
   initial_hvac_mode: "off"
-  away_temp: 18
   precision: 0.1
 - platform: generic_thermostat
   name: Despatx
@@ -40,12 +38,11 @@
   max_temp: 25
   ac_mode: false
   target_temp: 18.5
-  cold_tolerance: 0.4
-  hot_tolerance: 0.2
+  cold_tolerance: 0.6
+  hot_tolerance: 0
   min_cycle_duration:
-    minutes: 5
+    minutes: 30
   keep_alive:
-    minutes: 3
+    minutes: 15
   initial_hvac_mode: "off"
-  away_temp: 18
   precision: 0.1
