@@ -13,8 +13,8 @@ cards:
 
   - type: custom:layout-card
     layout: horizontal
-    min_columns: 6
-    max_columns: 6
+    min_columns: 5
+    max_columns: 5
     column_width: 85px
     justify_content: left
     cards:

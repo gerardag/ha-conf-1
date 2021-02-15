@@ -95,6 +95,16 @@ cards:
               - entity: switch.aspirador
               - icon: "mdi:robot-vacuum"
 
+          - template: nest_button_light
+            type: "custom:decluttering-card"
+            variables:
+              - name: Escena
+              - entity: input_select.escena_menjador
+              - icon: "mdi:lightbulb-group"
+              - tap_action:
+                  action: more-info
+
+
       # - type: markdown
       #   content: |
       #     Calefacció engegada
@@ -107,14 +117,14 @@ cards:
       #       font-weight: 400 !important;
       #     }
 
-      - type: entities
-        show_header_toggle: false
-        style: |
-          ha-card {
-            margin-right: 5px;
-          }
-        entities:
-          - entity: input_select.escena_menjador
+      # - type: entities
+      #   show_header_toggle: false
+      #   style: |
+      #     ha-card {
+      #       margin-right: 5px;
+      #     }
+      #   entities:
+      #     - entity: input_select.escena_menjador
 
       - type: custom:mini-graph-card
         entities: 

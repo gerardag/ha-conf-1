@@ -3,7 +3,7 @@ cards:
   - template: title_h2
     type: "custom:decluttering-card"
     variables:
-      - title: Dormitori
+      - title: Despatx
 
   - type: "custom:vertical-stack-in-card"
     style: |
@@ -27,43 +27,52 @@ cards:
           - template: nest_button_light
             type: "custom:decluttering-card"
             variables:
+              - name: Peu
+              - entity: light.llum_despatx_peu
+              - icon: "mdi:floor-lamp"
+          - template: nest_button_light
+            type: "custom:decluttering-card"
+            variables:
+              - name: Taula
+              - entity: light.llum_despatx_taula
+              - icon: "mdi:lightbulb"
+          - template: nest_button_light
+            type: "custom:decluttering-card"
+            variables:
+              - name: Radiador
+              - entity: switch.calefaccio_despatx
+              - icon: "mdi:radiator"
+          - template: nest_button_light
+            type: "custom:decluttering-card"
+            variables:
               - name: Calefacció
-              - entity: climate.dormitori
+              - entity: climate.despatx
               - icon: "mdi:home-thermometer-outline"
               - state_enabled: "heat"
               - tap_action:
                   action: more-info
-          - template: nest_button_light
-            type: "custom:decluttering-card"
-            variables:
-              - name: Purificador
-              - entity: fan.xiaomi_miio_device
-              - icon: "mdi:air-purifier"
-          - template: nest_button_binary_sensor
-            type: "custom:decluttering-card"
-            variables:
-              - name: Finestra
-              - entity: binary_sensor.window_dormitori
-              - icon: "mdi:window-closed"
           - template: nest_button_media_player
             type: "custom:decluttering-card"
             variables:
-              - name: Chromecast
-              - entity: media_player.el_lado_oscuro
-              - icon: "mdi:cast"
-          # - template: nest_button_media_player
-          #   type: "custom:decluttering-card"
-          #   variables:
-          #     - name: Tele
-          #     - entity: media_player.tele
-          #     - icon: "mdi:television"
+              - name: Nest Mini
+              - entity: media_player.cuina
+              - icon: "mdi:google-home"
+
+          - template: nest_button_light
+            type: "custom:decluttering-card"
+            variables:
+              - name: Escena
+              - entity: input_select.escena_oficina
+              - icon: "mdi:lightbulb-group"
+              - tap_action:
+                  action: more-info
 
       - type: custom:mini-graph-card
         entities: 
-          - entity: sensor.dormitori_temperature
+          - entity: sensor.sensor_despatx_temperature
             name: Temperatura
             color: "#ff9933"
-          - entity: sensor.dormitori_humidity
+          - entity: sensor.sensor_despatx_humidity
             name: Humitat
             y_axis: secondary
             show_fill: false

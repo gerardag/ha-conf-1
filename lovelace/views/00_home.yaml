@@ -47,7 +47,7 @@ cards:
           ## AT HOME      ##
           ##################
 
-          - !include 00_home/at_home.yaml
+          # - !include 00_home/at_home.yaml
 
           ##################
           ## SCENES / AUT ##
@@ -59,24 +59,29 @@ cards:
           ## ACCIONS RÀPIDES  ##
           ######################
 
-          - !include 00_home/accions_rapides.yaml
+          # - !include 00_home/accions_rapides.yaml
 
-          - break
-
+      - type: custom:layout-card
+        layout: vertical
+        min_columns: 1
+        max_columns: 3
+        cards:
 
           ##################
           ## DISPOSITIUS  ##
           ##################
 
-          - !include 00_home/entrada.yaml
-          - !include 00_home/menjador.yaml
           - !include 00_home/exterior.yaml
+          - !include 00_home/room_menjador.yaml
+          - break
+
+          - !include 00_home/room_entrada.yaml
+          - !include 00_home/room_despatx.yaml
 
           - break
 
-          - !include 00_home/cuina.yaml
-          - !include 00_home/dormitori.yaml
-          - !include 00_home/despatx.yaml
+          - !include 00_home/room_cuina.yaml
+          - !include 00_home/room_dormitori.yaml
           
           
 

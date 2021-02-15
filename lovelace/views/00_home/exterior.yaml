@@ -39,6 +39,22 @@ cards:
               - background_on: "#fbd229"
               - state_enabled: "[[state_enabled]]"
 
+
+          - template: nest_button
+            type: "custom:decluttering-card"
+            variables:
+              - entity: sensor.exterior_temperature 
+              - icon: "mdi:thermometer"
+              - show_name: false
+              - show_state: true 
+              - show_last_changed: false
+              - entity: "[[entity]]"
+              - icon: "[[icon]]"
+              - tap_action:
+                  action: more-info
+              - background_on: "#fbd229"
+              - state_enabled: "[[state_enabled]]"
+
           - template: nest_button
             type: "custom:decluttering-card"
             variables:
@@ -91,19 +107,19 @@ cards:
           #     - entity: binary_sensor.motion_mailbox
           #     - icon: "mdi:mailbox"
 
-      - type: custom:mini-graph-card
-        entities: 
-          - entity: sensor.exterior_temperature
-            name: Temperatura
-            color: "#ff9933"
-          - entity: sensor.exterior_humidity
-            name: Humitat
-            y_axis: secondary
-            show_fill: false
-        height: 75
-        animate: false
-        line_width: 3
-        show:
-          legend: false
-          name: false
-          icon: false
+      # - type: custom:mini-graph-card
+      #   entities: 
+      #     - entity: sensor.exterior_temperature
+      #       name: Temperatura
+      #       color: "#ff9933"
+      #     - entity: sensor.exterior_humidity
+      #       name: Humitat
+      #       y_axis: secondary
+      #       show_fill: false
+      #   height: 75
+      #   animate: false
+      #   line_width: 3
+      #   show:
+      #     legend: false
+      #     name: false
+      #     icon: false

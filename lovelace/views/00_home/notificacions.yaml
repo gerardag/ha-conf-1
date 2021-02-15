@@ -1,27 +1,27 @@
 type: vertical-stack
 cards:
-  - type: markdown
-    content: |
-      {%- if(is_state('sensor.moment_dia', "Matí")) -%}Bon dia, {% endif -%}
-      {%- if(is_state('sensor.moment_dia', "Migdia")) -%}Bon dia, {% endif -%}
-      {%- if(is_state('sensor.moment_dia', "Tarda")) -%}Bona tarda, {% endif -%}
-      {%- if(is_state('sensor.moment_dia', "Vespre")) -%}Bona tarda, {% endif -%}
-      {%- if(is_state('sensor.moment_dia', "Nit")) -%}Bona nit, {% endif -%}
-      {%- if(is_state('sensor.moment_dia', "Matinada")) -%}Bona nit, {% endif -%}
-       {{ user }}   
-    style: |
-        ha-card {
-          font-family: Roboto, 'Open Sans', sans-serif;
-          font-size: 100%;
-          -webkit-box-shadow: none;
-          -moz-box-shadow: none;
-          box-shadow: none;
-          text-align: left;
-          background: rgba(0,0,0,0);
-          color: var(--card-header-text-color);
-          font-weight: 300 !important;
-          font-size: 2em;
-        }
+  # - type: markdown
+  #   content: |
+  #     {%- if(is_state('sensor.moment_dia', "Matí")) -%}Bon dia, {% endif -%}
+  #     {%- if(is_state('sensor.moment_dia', "Migdia")) -%}Bon dia, {% endif -%}
+  #     {%- if(is_state('sensor.moment_dia', "Tarda")) -%}Bona tarda, {% endif -%}
+  #     {%- if(is_state('sensor.moment_dia', "Vespre")) -%}Bona tarda, {% endif -%}
+  #     {%- if(is_state('sensor.moment_dia', "Nit")) -%}Bona nit, {% endif -%}
+  #     {%- if(is_state('sensor.moment_dia', "Matinada")) -%}Bona nit, {% endif -%}
+  #      {{ user }}   
+  #   style: |
+  #       ha-card {
+  #         font-family: Roboto, 'Open Sans', sans-serif;
+  #         font-size: 100%;
+  #         -webkit-box-shadow: none;
+  #         -moz-box-shadow: none;
+  #         box-shadow: none;
+  #         text-align: center;
+  #         background: rgba(0,0,0,0);
+  #         color: var(--card-header-text-color);
+  #         font-weight: 300 !important;
+  #         font-size: 2em;
+  #       }
   - type: custom:simple-weather-card
     entity: weather.dark_sky
     name: "Horta (Barcelona)"
