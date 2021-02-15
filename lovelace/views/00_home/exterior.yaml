@@ -48,6 +48,7 @@ cards:
               - show_name: false
               - show_state: true 
               - show_last_changed: false
+              - color: "#FF5733"
               - entity: "[[entity]]"
               - icon: "[[icon]]"
               - tap_action:

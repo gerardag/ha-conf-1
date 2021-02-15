@@ -9,7 +9,7 @@ nest_button:
     state:
       - color: "#ffffff"
         value: "[[state_enabled]]"
-      - color: "#999999"
+      - color: "[[color]]"
         operator: default
     tap_action: "[[tap_action]]"
     icon: "[[icon]]"
@@ -57,7 +57,7 @@ nest_button:
     - background_off: "var(--primary-background-color)"
     - background_on: "#fbd229"
     - title-font-size: "1.0rem"
-    - color: rgb(251, 210, 41)
+    - color: "#999999"
     - tap_action:
         action: toggle
     - state_enabled: "on"

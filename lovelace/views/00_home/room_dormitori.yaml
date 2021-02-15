@@ -27,21 +27,6 @@ cards:
           - template: nest_button_light
             type: "custom:decluttering-card"
             variables:
-              - name: Radiador
-              - entity: switch.calefaccio_dormitori
-              - icon: "mdi:radiator"
-          - template: nest_button_light
-            type: "custom:decluttering-card"
-            variables:
-              - name: Calefacció
-              - entity: climate.dormitori
-              - icon: "mdi:home-thermometer-outline"
-              - state_enabled: "heat"
-              - tap_action:
-                  action: more-info
-          - template: nest_button_light
-            type: "custom:decluttering-card"
-            variables:
               - name: Purificador
               - entity: fan.xiaomi_miio_device
               - icon: "mdi:air-purifier"
@@ -64,19 +49,81 @@ cards:
           #     - entity: media_player.tele
           #     - icon: "mdi:television"
 
-      - type: custom:mini-graph-card
-        entities: 
-          - entity: sensor.dormitori_temperature
-            name: Temperatura
-            color: "#ff9933"
-          - entity: sensor.dormitori_humidity
-            name: Humitat
-            y_axis: secondary
-            show_fill: false
-        height: 75
-        animate: false
-        line_width: 3
-        show:
-          legend: false
-          name: false
-          icon: false
+      - type: custom:layout-card
+        layout: horizontal
+        min_columns: 5
+        max_columns: 5
+        column_width: 100px
+        justify_content: left
+        style: |
+          ha-card {
+            padding: 10px;
+          }
+        cards:
+
+
+          - template: nest_button
+            type: "custom:decluttering-card"
+            variables:
+              - entity: sensor.dormitori_temperature
+              - icon: "mdi:thermometer"
+              - show_name: false
+              - show_state: true 
+              - show_last_changed: false
+              - color: "#FF5733"
+              - entity: "[[entity]]"
+              - icon: "[[icon]]"
+              - tap_action:
+                  action: more-info
+              - background_on: "#fbd229"
+              - state_enabled: "[[state_enabled]]"
+
+          - template: nest_button
+            type: "custom:decluttering-card"
+            variables:
+              - entity: sensor.dormitori_humidity
+              - icon: "mdi:water-percent"
+              - show_name: false
+              - show_state: true 
+              - show_last_changed: false
+              - color: "#339FFF"
+              - entity: "[[entity]]"
+              - icon: "[[icon]]"
+              - tap_action:
+                  action: more-info
+              - background_on: "#fbd229"
+              - state_enabled: "[[state_enabled]]"
+
+          - template: nest_button_light
+            type: "custom:decluttering-card"
+            variables:
+              - name: Radiador
+              - entity: switch.calefaccio_dormitori
+              - icon: "mdi:radiator"
+          - template: nest_button_light
+            type: "custom:decluttering-card"
+            variables:
+              - name: Calefacció
+              - entity: climate.dormitori
+              - icon: "mdi:home-thermometer-outline"
+              - state_enabled: "heat"
+              - tap_action:
+                  action: more-info
+
+
+      # - type: custom:mini-graph-card
+      #   entities: 
+      #     - entity: sensor.dormitori_temperature
+      #       name: Temperatura
+      #       color: "#ff9933"
+      #     - entity: sensor.dormitori_humidity
+      #       name: Humitat
+      #       y_axis: secondary
+      #       show_fill: false
+      #   height: 75
+      #   animate: false
+      #   line_width: 3
+      #   show:
+      #     legend: false
+      #     name: false
+      #     icon: false
