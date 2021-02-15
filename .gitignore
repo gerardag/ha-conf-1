@@ -57,3 +57,8 @@ tele-menjador.conf
 .storage/
 .spotify-token-cache
 core
+radarr
+sonarr
+jackett
+.shopping_list.json
+xdg

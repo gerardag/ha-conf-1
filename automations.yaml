@@ -21,3 +21,29 @@
   action:
   - scene: scene.tele
   mode: single
+- id: '1613040447539'
+  alias: Rice cooker
+  description: ''
+  trigger:
+  - platform: time
+    at: '13:30'
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 8ec91fd540e8abad027240dfefe73885
+    entity_id: switch.arbre_nadal
+    domain: switch
+  mode: single
+- id: '1613040503874'
+  alias: Rice cooker
+  description: ''
+  trigger:
+  - platform: time
+    at: '13:30'
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 8ec91fd540e8abad027240dfefe73885
+    entity_id: switch.arbre_nadal
+    domain: switch
+  mode: single

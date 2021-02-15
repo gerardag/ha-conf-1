@@ -77,3 +77,26 @@
     light.sofa:
       state: false
     input_number.tablet_brightness: "50"
+
+
+- name: Oficina trabajo
+  entities:
+    light.llum_despatx_peu: 
+      state: true
+      brightness: 250
+      transition: 3
+    light.llum_despatx_taula: 
+      state: true
+      brightness: 250
+      transition: 3
+
+- name: Oficina juegos
+  entities:
+    light.llum_despatx_peu: 
+      state: true
+      brightness: 75
+      transition: 3
+    light.llum_despatx_taula: 
+      state: true
+      brightness: 75
+      transition: 3

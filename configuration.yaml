@@ -13,6 +13,12 @@ homeassistant:
 
 logger:
   default: info
+  logs:
+    custom_components.hacs: debug
+    hacs: debug
+    queueman: debug
+    AIOGitHubAPI: debug
+
 
 config:
 
@@ -64,7 +70,7 @@ history:
 
 recorder:
   db_url: !secret db_mysql_url
-  purge_keep_days: 14
+  purge_keep_days: 30
   purge_interval: 1
 
 logbook:

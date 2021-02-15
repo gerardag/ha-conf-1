@@ -30,15 +30,35 @@ cards:
               - name: Marbre
               - entity: switch.llum_cuina
               - icon: "mdi:lightbulb"
+          - template: nest_button_light
+            type: "custom:decluttering-card"
+            variables:
+              - name: Arrocera
+              - entity: switch.arbre_nadal
+              - icon: "mdi:rice"
           - template: nest_button_binary_sensor
             type: "custom:decluttering-card"
             variables:
               - name: Moviment
               - entity: binary_sensor.motion_kitchen
               - icon: "mdi:motion-sensor"
-          - template: nest_button_media_player
-            type: "custom:decluttering-card"
-            variables:
-              - name: Nest Mini
-              - entity: media_player.cuina
-              - icon: "mdi:google-home"
+
+
+
+      - type: entities
+        show_header_toggle: false
+        style: |
+          ha-card {
+            margin-right: 5px;
+          }
+        entities:
+          - entity: input_boolean.arrocera_enable
+            name: Programació Arrocera
+            show_state: true
+            toggle: true
+            icon: "mdi:rice"
+            type: "custom:multiple-entity-row"
+            entities:
+              - entity: input_datetime.arrocera_schedule
+                name: false
+                state_color: true

@@ -1,3 +1,8 @@
+arrocera_schedule:
+  name: Arrocera schedule
+  has_date: false
+  has_time: true
+
 ####################################################################
 ## Home cleaning routines
 rutina_fregar:

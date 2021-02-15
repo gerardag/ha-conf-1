@@ -1,0 +1,12 @@
+alias: Algú pica al timbre
+initial_state: true
+trigger:
+  - platform: state
+    entity_id: sensor.vibracio_interfon_action
+    to: vibration
+condition: []
+action:
+  - service: notify.notify
+    data: 
+      title: "Casa"
+      message: "Algú ha picat al timbre!!!"

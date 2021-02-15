@@ -3,7 +3,6 @@ initial_state: true
 mode: restart
 trigger:
   - entity_id: binary_sensor.motion_kitchen 
-    from: 'off'
     platform: state
     to: 'on'
 condition:
@@ -11,13 +10,6 @@ condition:
     after: "06:30:00"
   - condition: time
     before: "22:30:00"
-  - condition: state
-    entity_id: input_select.home_mode
-    state:
-      - Normal
-      - Inactiu
-      - Fora de casa
-      - Simular activitat
 action:
   - service: switch.turn_on
     data:

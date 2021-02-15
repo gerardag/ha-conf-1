@@ -53,7 +53,7 @@ cards:
           ## SCENES / AUT ##
           ##################
 
-          - !include 00_home/escenes.yaml
+          # - !include 00_home/escenes.yaml
 
           ######################
           ## ACCIONS RÀPIDES  ##

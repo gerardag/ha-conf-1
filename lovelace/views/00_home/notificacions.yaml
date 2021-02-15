@@ -42,7 +42,7 @@ cards:
     card:
       type: "custom:mini-media-player"
       entity: media_player.tele
-      icon: 'mdi:television-classic'
+      icon: 'mdi:television'
       artwork: cover
       name: Televisor menjador
       hide:

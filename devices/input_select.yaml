@@ -10,6 +10,23 @@ home_mode:
   icon: mdi:robot
 
 
+escena_menjador:
+  name: Escena menjador
+  options:
+    - buenos_dias
+    - cena
+    - con_amigos
+    - juegos_de_mesa
+    - relax
+    - tele
+    - comida
+  
+escena_oficina:
+  name: Escena oficina
+  options:
+    - oficina_trabajo
+    - oficina_juegos
+
 ## Zigbee2Mqtt
 
 zigbee2mqtt_log_level:

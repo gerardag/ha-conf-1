@@ -45,15 +45,9 @@ cards:
           - template: nest_button_light
             type: "custom:decluttering-card"
             variables:
-              - name: Àrbre
-              - entity: switch.arbre_nadal
-              - icon: "mdi:pine-tree"
-          - template: nest_button_light
-            type: "custom:decluttering-card"
-            variables:
-              - name: Ventilador
+              - name: Radiador
               - entity: switch.calefaccio_menjador
-              - icon: "mdi:fan"
+              - icon: "mdi:radiator"
           - template: nest_button_light
             type: "custom:decluttering-card"
             variables:
@@ -112,6 +106,15 @@ cards:
       #       background-color: #A81419;
       #       font-weight: 400 !important;
       #     }
+
+      - type: entities
+        show_header_toggle: false
+        style: |
+          ha-card {
+            margin-right: 5px;
+          }
+        entities:
+          - entity: input_select.escena_menjador
 
       - type: custom:mini-graph-card
         entities: 

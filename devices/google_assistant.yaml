@@ -103,8 +103,20 @@ entity_config:
 
 
 
+    light.llum_despatx_peu:
+      name: Pie
+      room: Oficina
+    light.llum_despatx_taula:
+      name: Mesa
+      room: Oficina
     climate.despatx:
       name: Oficina
+      room: Oficina
+    scene.oficina_trabajo:
+      name: Trabajo
+      room: Oficina
+    scene.oficina_juegos:
+      name: Juegos
       room: Oficina
 
 

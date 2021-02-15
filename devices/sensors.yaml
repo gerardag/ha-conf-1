@@ -79,10 +79,10 @@
 #   timeout: 10
 #   median: 1
 #   name: Menjador
-# - platform: beewi_smartclim
-#   mac: !secret mac_temp_beewi_exterior
-#   name: Exterior
-#   scan_interval: 60
+- platform: beewi_smartclim
+  mac: !secret mac_temp_beewi_exterior
+  name: Exterior
+  scan_interval: 60
 # - platform: github
 #   access_token: !secret github_access_token
 #   repositories:
@@ -167,6 +167,13 @@
   latitude: !secret latitude
   longitude: !secret longitude
   radius: 200
+
+
+- platform: steam_online
+  api_key: !secret steam_api_key
+  accounts:
+    - !secret steam_account_id_aleix
+    - !secret steam_account_id_imma
 
 ###############
 #  Templates  #

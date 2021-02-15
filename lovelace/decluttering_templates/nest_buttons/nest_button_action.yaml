@@ -19,9 +19,10 @@ nest_button_action:
           - color: "#999999"
             icon: "[[icon]]"
             operator: default
-      - background_off: "#ffffff"
+      - background_off: "[[background_off]]"
       - title-font-size: "0.9rem"
   default:
+    background_off: "#ffffff"
     title: "NOT_DEFINED"
     service: "NOT_DEFINED"
     icon: "mdi:netflix"

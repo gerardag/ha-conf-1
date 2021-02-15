@@ -1,6 +1,9 @@
 work_focus:
   name: Mode concentració
 
+arrocera_enable:
+  name: Arrocera schedule (on/off)
+
 ###############
 ## ASPIRADOR ##
 ###############

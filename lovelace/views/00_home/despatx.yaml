@@ -24,7 +24,18 @@ cards:
             padding: 10px;
           }
         cards:
-          # - break
+          - template: nest_button_light
+            type: "custom:decluttering-card"
+            variables:
+              - name: Peu
+              - entity: light.llum_despatx_peu
+              - icon: "mdi:floor-lamp"
+          - template: nest_button_light
+            type: "custom:decluttering-card"
+            variables:
+              - name: Taula
+              - entity: light.llum_despatx_taula
+              - icon: "mdi:lightbulb"
           - template: nest_button_light
             type: "custom:decluttering-card"
             variables:
@@ -40,6 +51,23 @@ cards:
               - state_enabled: "heat"
               - tap_action:
                   action: more-info
+          - template: nest_button_media_player
+            type: "custom:decluttering-card"
+            variables:
+              - name: Nest Mini
+              - entity: media_player.cuina
+              - icon: "mdi:google-home"
+
+
+      - type: entities
+        show_header_toggle: false
+        style: |
+          ha-card {
+            margin-right: 5px;
+          }
+        entities:
+          - input_select.escena_oficina
+
       - type: custom:mini-graph-card
         entities: 
           - entity: sensor.sensor_despatx_temperature
