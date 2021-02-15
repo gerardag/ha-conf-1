@@ -100,7 +100,7 @@ cards:
               - name: Radiador
               - entity: switch.calefaccio_dormitori
               - icon: "mdi:radiator"
-          - template: nest_button_light
+          - template: nest_button_clima
             type: "custom:decluttering-card"
             variables:
               - name: Calefacció

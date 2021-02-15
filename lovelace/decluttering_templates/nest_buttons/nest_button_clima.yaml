@@ -1,0 +1,20 @@
+nest_button_clima:
+  card:
+    template: nest_button
+    type: "custom:decluttering-card"
+    variables:
+      - name: "[[name]]"
+      - show_name: true
+      - show_state: false 
+      - show_last_changed: false
+      - entity: "[[entity]]"
+      - icon: "[[icon]]"
+      - tap_action: "[[tap_action]]"
+      # - background_on: "#fbd229"
+      - background_on: "[[background_off]]"
+      - state_enabled: "[[state_enabled]]"
+      - color_enabled: "#fbd229"
+  default:
+    - state_enabled: "on"
+    - tap_action:
+        action: toggle
