@@ -1,9 +1,12 @@
+glances
+appdaemon/apps/*.backup
 www/Qwerty*
 .HA_VERSION
 www/community
 .virtualenv
 google-home-serviceaccount.json
 alexa_media.alemurbcn@gmail.com.pickle
+notebooks
 
 **/__pycache__/*
 **/*.pyc

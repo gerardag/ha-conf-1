@@ -1,0 +1,27 @@
+- alias: "🚪 Entrada - Turn lights on when sun setting"
+  id: "1615486961573761208"
+  initial_state: false
+  trigger:
+    - platform: sun
+      event: sunset
+      offset: "00:05:00"
+  condition:
+    condition: and
+    conditions:
+      - condition: or
+        conditions:
+          - condition: state
+            entity_id: 
+              - media_player.tele
+              - switch.kitchen_light_1
+              - light.entrance_light_1
+              - light.livingroom_light_1
+              - light.livingroom_light_2
+            state: 
+              - "on"
+              - "playing"
+  action:
+    - service: light.turn_on
+      entity_id: light.entrance_light_1 
+      data:
+        transition: 30

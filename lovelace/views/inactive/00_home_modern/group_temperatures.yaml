@@ -115,7 +115,7 @@
             - show_name: true
             - show_last_changed: false
             - name: Temperatura
-            - entity: sensor.menjador_temperature_mqtt
+            - entity: sensor.livingroom_sensor_1_temperature_mqtt
             - tap_action:
                 action: more-info
             - state:
@@ -144,7 +144,7 @@
             - show_name: true
             - show_last_changed: false
             - name: Humitat
-            - entity: sensor.menjador_humidity_mqtt
+            - entity: sensor.livingroom_sensor_1_humidity_mqtt
             - tap_action:
                 action: more-info
             - state:
@@ -170,7 +170,7 @@
             - show_name: true
             - show_last_changed: false
             - name: Temperatura
-            - entity: sensor.dormitori_temperature_mqtt
+            - entity: sensor.bedroom_sensor_1_temperature_mqtt
             - tap_action:
                 action: more-info
             - state:
@@ -199,7 +199,7 @@
             - show_name: true
             - show_last_changed: false
             - name: Humitat
-            - entity: sensor.dormitori_humidity_mqtt
+            - entity: sensor.bedroom_sensor_1_humidity_mqtt
             - tap_action:
                 action: more-info
             - state:

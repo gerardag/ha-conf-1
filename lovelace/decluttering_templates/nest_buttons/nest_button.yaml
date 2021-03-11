@@ -33,8 +33,8 @@ nest_button:
       }
       #img-cell {
         background-color: {% if is_state('[[entity]]', '[[state_enabled]]') %}[[background_on]]{% else %}[[background_off]]{% endif %};
-        border-radius: 10px;
-        border: 2px solid {% if is_state('[[entity]]', '[[state_enabled]]') %}[[background_on]]{% else %}var(--secondary-background-color){% endif %};;
+        border-radius: 50%;
+        /* border: 2px solid {% if is_state('[[entity]]', '[[state_enabled]]') %}[[background_on]]{% else %}var(--secondary-background-color){% endif %};;*/
         height: 50px !important;
         width: 50px !important;
       }
@@ -55,6 +55,7 @@ nest_button:
     - show_last_changed: true
     # - background_off: "#F5F5F5"
     - background_off: "var(--primary-background-color)"
+    # - background_off: "white"
     - background_on: "#fbd229"
     - title-font-size: "1.0rem"
     - color_enabled: "#ffffff"

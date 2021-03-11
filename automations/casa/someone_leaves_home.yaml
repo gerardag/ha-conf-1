@@ -1,0 +1,25 @@
+- alias: "🏠 Casa - Ningú a casa"
+  id: "1615486955662134775"
+  initial_state: true
+  mode: single
+  trigger:
+    - entity_id: binary_sensor.entrance_contact_1 
+      from: 'off'
+      platform: state
+      to: 'on'
+  condition:
+    condition: state
+    entity_id: binary_sensor.entrance_occupancy_1
+    state: 'on'
+  action:
+
+    # Donem 20 minuts màxim per abandonar la zona
+    - wait_template: "{{ not is_state('person.imma', 'home') and not is_state('person.aleix', 'home')  }}"
+      timeout: '00:20:00'
+      continue_on_timeout: false
+
+    # Send notification
+    - service: notify.notify
+      data: 
+        title: "Casa"
+        message: "No hi ha ningú a casa. Apaguem llums i engeguem alarma?"

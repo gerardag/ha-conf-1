@@ -7,7 +7,7 @@
         - show_name: true
         - show_state: false
         - name: Taula
-        - entity: light.mesa
+        - entity: light.livingroom_light_1
         - state:
             - color: "#999999"
               icon: "mdi:ceiling-light"
@@ -21,7 +21,7 @@
         - show_name: true
         - show_state: false
         - name: Sofà
-        - entity: light.sofa
+        - entity: light.livingroom_light_2
         - state:
             - color: "#999999"
               icon: "mdi:floor-lamp"
@@ -35,7 +35,7 @@
         - show_name: true
         - show_state: false
         - name: Tele
-        - entity: light.mesita
+        - entity: light.livingroom_light_3
         - state:
             - color: "#999999"
               icon: "mdi:lightbulb"
@@ -65,7 +65,7 @@
         - show_name: true
         - show_state: false
         - name: Cuina
-        - entity: switch.llum_cuina
+        - entity: switch.kitchen_light_1
         - state:
             - color: "#999999"
               icon: "mdi:lightbulb"
@@ -79,7 +79,7 @@
         - show_name: true
         - show_state: false
         - name: Entrada
-        - entity: light.entrada
+        - entity: light.entrance_light_1
         - state:
             - color: "#999999"
               icon: "mdi:lightbulb"

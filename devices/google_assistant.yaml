@@ -49,13 +49,13 @@ entity_config:
     climate.menjador:
       name: Comedor
       room: Comedor
-    light.mesa:
+    light.livingroom_light_1:
       name: Mesa
       room: Comedor
-    light.sofa:
+    light.livingroom_light_2:
       name: Sofá
       room: Comedor
-    light.mesita:
+    light.livingroom_light_3:
       name: Mesita
       room: Comedor
     switch.calefaccio_menjador:
@@ -85,7 +85,7 @@ entity_config:
     script.menjador_dynamic_scene:
       name: Lo que quieras
       room: Comedor
-    switch.arbre_nadal:
+    switch.kitchen_switch_ricecooker:
       name: Árbol de Navidad
       room: Comedor
     media_player.xboxone:
@@ -103,10 +103,10 @@ entity_config:
 
 
 
-    light.llum_despatx_peu:
+    light.office_light_2:
       name: Pie
       room: Oficina
-    light.llum_despatx_taula:
+    light.office_light_1:
       name: Mesa
       room: Oficina
     climate.despatx:
@@ -121,12 +121,12 @@ entity_config:
 
 
 
-    light.entrada:
+    light.entrance_light_1:
       name: Entrada
       room: Entrada
 
 
 
-    switch.llum_cuina:
+    switch.kitchen_light_1:
       name: Encimera
       room: Cocina

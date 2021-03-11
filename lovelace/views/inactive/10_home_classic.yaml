@@ -6,21 +6,21 @@ badges: []
 cards:
   - cards:
       - entities:
-          - entity: light.mesa
+          - entity: light.livingroom_light_1
             hold_action:
               action: more-info
             icon: 'mdi:ceiling-light'
             name: Taula
             tap_action:
               action: toggle
-          - entity: light.sofa
+          - entity: light.livingroom_light_2
             hold_action:
               action: more-info
             icon: 'mdi:floor-lamp'
             name: Sofà
             tap_action:
               action: toggle
-          - entity: light.mesita
+          - entity: light.livingroom_light_3
             hold_action:
               action: more-info
             name: Tele
@@ -45,7 +45,7 @@ cards:
       - cards:
           - columns: 2
             entities:
-              - entity: switch.calefaccio_dormitori
+              - entity: switch.bedroom_switch_heater
                 hold_action:
                   action: more-info
                 icon: 'mdi:radiator'
@@ -56,13 +56,13 @@ cards:
             type: glance
           - columns: 2
             entities:
-              - entity: switch.llum_cuina
+              - entity: switch.kitchen_light_1
                 hold_action:
                   action: more-info
                 name: Cuina
                 tap_action:
                   action: toggle
-              - entity: light.entrada
+              - entity: light.entrance_light_1
                 hold_action:
                   action: more-info
                 tap_action:
@@ -72,14 +72,14 @@ cards:
         type: horizontal-stack
       - cards:
           - entities:
-              - sensor.dormitori_temperature_mqtt
+              - sensor.bedroom_sensor_1_temperature_mqtt
             icon: 'mdi:thermometer'
             line_color: orange
             line_width: 0
             name: Dormitori
             type: 'custom:mini-graph-card'
           - entities:
-              - sensor.menjador_temperature_mqtt
+              - sensor.livingroom_sensor_1_temperature_mqtt
             icon: 'mdi:thermometer'
             line_color: orange
             line_width: 0
@@ -95,14 +95,14 @@ cards:
         type: horizontal-stack
       - cards:
           - entities:
-              - sensor.dormitori_humidity_mqtt
+              - sensor.bedroom_sensor_1_humidity_mqtt
             icon: 'mdi:water'
             line_color: '#00C6C5'
             line_width: 0
             name: Dormitori
             type: 'custom:mini-graph-card'
           - entities:
-              - sensor.menjador_humidity_mqtt
+              - sensor.livingroom_sensor_1_humidity_mqtt
             icon: 'mdi:water'
             line_color: '#00C6C5'
             line_width: 0

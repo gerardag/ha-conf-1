@@ -1,0 +1,11 @@
+- alias: "🛋️ Menjador - Set escena Menjador"
+  id: "1615486966894204109"
+  initial_state: true
+  trigger:
+  - platform: state
+    entity_id: input_select.escena_menjador
+  condition: []
+  action:
+  - service: scene.turn_on
+    data:
+      entity_id: "scene.{{ states('input_select.escena_menjador') }}"

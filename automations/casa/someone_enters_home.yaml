@@ -1,0 +1,31 @@
+- alias: "🏠 Casa - Algú entra"
+  id: "1615486955648240968"
+  initial_state: false
+  mode: single
+  trigger:
+    - entity_id: binary_sensor.entrance_occupancy_1 
+      from: 'off'
+      platform: state
+      to: 'on'
+  condition:
+    condition: state
+    entity_id: binary_sensor.entrance_contact_1
+    state: 'on'
+  action:
+
+    - choose:
+      - conditions:
+        - condition: template
+          value_template: "{{ is_state('person.imma', 'home') or is_state('person.aleix', 'home')  }}"
+        sequence:
+          # Send notification
+          - service: notify.notify
+            data: 
+              title: "Casa"
+              message: "Benvingut a casa de nou."
+
+      default:
+        - service: notify.notify
+          data: 
+            title: "Casa"
+            message: "Algú entra a casa."

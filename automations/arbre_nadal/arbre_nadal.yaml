@@ -1,0 +1,56 @@
+- alias: '🎄 Arbre Nadal - Off'
+  id: "1615486958439903130"
+  initial_state: false
+  trigger:
+    - platform: time
+      at: "00:00:00"
+    - platform: zone
+      entity_id:
+        - person.imma
+        - person.aleix
+      event: leave
+      zone: zone.home
+  condition:
+    condition: and
+    conditions:
+      - condition: time
+        after: "23:00:00"
+      - condition: time
+        before: "9:00:00"
+      - condition: state
+        entity_id: binary_sensor.someone_home
+        state: "off"
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id: switch.kitchen_switch_ricecooker
+
+
+- alias: '🎄 Arbre Nadal - On'
+  id: "1615486958439903131"
+  initial_state: false
+  trigger:
+    - platform: sun
+      event: sunset
+    - platform: homeassistant
+      event: start
+    - platform: zone
+      entity_id:
+        - person.imma
+        - person.aleix
+      event: enter
+      zone: zone.home
+  condition:
+    condition: and
+    conditions:
+      - condition: time
+        after: "15:00:00"
+      - condition: time
+        before: "23:00:00"
+      - condition: state
+        entity_id: binary_sensor.someone_home
+        state: "on"
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.kitchen_switch_ricecooker

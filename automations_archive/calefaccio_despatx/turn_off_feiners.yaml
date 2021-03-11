@@ -1,0 +1,28 @@
+alias: 'Calefacció despatx - Apagar (feiners)'
+initial_state: false
+trigger:
+  - platform: time
+    at: "13:30:00"
+  - platform: state
+    entity_id: switch.office_switch_heater
+    from: "on"
+    to: "off"
+condition:
+  - condition: time
+    before: "12:00:00"
+    after: "14:00:00"
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  - condition: state
+    entity_id: calendar.festius_barcelona
+    state: 'off'
+  - condition: state
+    entity_id: calendar.teleworking
+    state: 'on'
+action:
+  - service: climate.turn_off
+    entity_id: climate.despatx

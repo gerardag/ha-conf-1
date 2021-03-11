@@ -12,7 +12,7 @@ cards:
         margin-right: 5px;
       }
     entities:
-      - entity: sensor.menjador_temperature_mqtt                    
+      - entity: sensor.livingroom_sensor_1_temperature_mqtt                    
         type: custom:multiple-entity-row
         name: Menjador
         entities:
@@ -26,18 +26,18 @@ cards:
             #   action: call-service
             #   service: light.turn_off
             #   service_data:
-            #     entity_id: light.sofa
+            #     entity_id: light.livingroom_light_2
           - entity: climate.menjador
             name: false
-          - entity: sensor.menjador_humidity_mqtt
+          - entity: sensor.livingroom_sensor_1_humidity_mqtt
             name: false
-      - entity: sensor.dormitori_temperature_mqtt                    
+      - entity: sensor.bedroom_sensor_1_temperature_mqtt                    
         type: custom:multiple-entity-row
         name: Dormitori
         entities:
           - entity: climate.dormitori
             name: false
-          - entity: sensor.dormitori_humidity_mqtt
+          - entity: sensor.bedroom_sensor_1_humidity_mqtt
             name: false
 
       - entity: sensor.0x00158d0005404a6d_temperature                    

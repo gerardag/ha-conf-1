@@ -271,7 +271,8 @@ input_datetime: !include devices/input_datetime.yaml
 
 scene: !include scenes.yaml
 group: !include groups.yaml
-automation: !include_dir_list automations/
+automation: !include_dir_merge_list automations/
+# automation: !include automations.yaml
 script: !include_dir_merge_named scripts/
 zone: !include zones.yaml
 timer: !include timers.yaml

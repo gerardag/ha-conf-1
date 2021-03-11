@@ -1,0 +1,117 @@
+- alias: "🛋️ Menjador - Disminuir brillo"
+  id: "1615486966794438936"
+  initial_state: true
+  trigger:
+    - entity_id: sensor.livingroom_remote_1_action
+      platform: state
+      to: 'brightness_down_click'
+  action:
+    - service: light.turn_on
+      data_template: 
+        entity_id: light.livingroom_light_3
+        brightness: "{{ [state_attr('light.livingroom_light_3', 'brightness') | int - 50, 1] | max }}"
+        transition: 1
+    - service: light.turn_on
+      data_template: 
+        entity_id: light.livingroom_light_1
+        brightness: "{{ [state_attr('light.livingroom_light_1', 'brightness') | int - 50, 1] | max }}"
+        transition: 1
+    - service: light.turn_on
+      data_template: 
+        entity_id: light.livingroom_light_2
+        brightness: "{{ [state_attr('light.livingroom_light_2', 'brightness') | int - 50, 1] | max }}"
+        transition: 1
+
+
+
+
+- alias: "🛋️ Menjador - Augmentar brillo"
+  id: "1615486966809713772"
+  initial_state: true
+  trigger:
+    - entity_id: sensor.livingroom_remote_1_action
+      platform: state
+      to: 'brightness_up_click'
+  action:
+    - service: light.turn_on
+      data_template: 
+        entity_id: light.livingroom_light_3
+        brightness: "{{ [state_attr('light.livingroom_light_3', 'brightness') | int + 50, 254] | min }}"
+        transition: 1
+    - service: light.turn_on
+      data_template: 
+        entity_id: light.livingroom_light_1
+        brightness: "{{ [state_attr('light.livingroom_light_1', 'brightness') | int + 50, 254] | min }}"
+        transition: 1
+    - service: light.turn_on
+      data_template: 
+        entity_id: light.livingroom_light_2
+        brightness: "{{ [state_attr('light.livingroom_light_2', 'brightness') | int + 50, 254] | min }}"
+        transition: 1
+
+
+
+
+- alias: "🛋️ Menjador - Fletxa dreta"
+  id: "1615486966825826925"
+  initial_state: true
+  trigger:
+    - entity_id: sensor.livingroom_remote_1_action
+      platform: state
+      to: 'arrow_right_click'
+  condition:
+    - condition: state
+      entity_id: light.livingroom_light_3
+      state: 'on'
+  action:
+    - service: light.turn_on
+      data_template: 
+        entity_id: light.livingroom_light_3
+        color_temp: "{{ [state_attr('light.livingroom_light_3', 'color_temp') | int + 75, 500] | min }}"
+        transition: 1
+
+
+
+
+- alias: "🛋️ Menjador - Fletxa esquerra"
+  id: "1615486966845245496"
+  initial_state: true
+  trigger:
+    - entity_id: sensor.livingroom_remote_1_action
+      platform: state
+      to: 'arrow_left_click'
+  condition:
+    - condition: state
+      entity_id: light.livingroom_light_3
+      state: 'on'
+  action:
+    - service: light.turn_on
+      data_template: 
+        entity_id: light.livingroom_light_3
+        color_temp: "{{ [state_attr('light.livingroom_light_3', 'color_temp') | int - 75, 250] | max }}"
+        transition: 1
+
+
+
+
+- alias: "🛋️ Menjador - Comandament toggle"
+  id: "1615486966864451571"
+  initial_state: true
+  trigger:
+    - entity_id: sensor.livingroom_remote_1_action
+      platform: state
+      to: 'toggle'
+  action:
+    - service: light.toggle
+      data_template: 
+        entity_id: light.livingroom_light_3
+    - service: light.toggle
+      data_template: 
+        entity_id: light.livingroom_light_2
+    - service: light.toggle
+      data_template: 
+        entity_id: light.livingroom_light_1
+
+
+
+

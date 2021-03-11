@@ -1,0 +1,13 @@
+- alias: "🚪 Entrada - Algú pica al timbre"
+  id: "1615486961588478462"
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: sensor.entrance_vibration_1_action
+      to: vibration
+  condition: []
+  action:
+    - service: notify.notify
+      data: 
+        title: "Casa"
+        message: "Algú ha picat al timbre!!!"

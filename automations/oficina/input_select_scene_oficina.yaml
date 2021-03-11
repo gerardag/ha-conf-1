@@ -1,0 +1,11 @@
+- alias: "🖥️ Oficina - Set escena oficina"
+  id: "1615486971586469468"
+  initial_state: true
+  trigger:
+  - platform: state
+    entity_id: input_select.escena_oficina
+  condition: []
+  action:
+  - service: scene.turn_on
+    data:
+      entity_id: "scene.{{ states('input_select.escena_oficina') }}"

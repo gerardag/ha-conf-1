@@ -1,0 +1,27 @@
+alias: 'Calefacció dormitori - Apagar (feiners)'
+initial_state: false
+trigger:
+  - platform: time
+    at: "08:30:00"
+  - platform: state
+    entity_id: switch.bedroom_switch_heater
+    from: "on"
+    to: "off"
+condition:
+  condition: and
+  conditions:
+    - condition: time
+      after: "07:30:00"
+      before: "09:30:00"
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+    - condition: state
+      entity_id: calendar.festius_barcelona
+      state: 'off'
+action:
+  - service: climate.turn_off
+    entity_id: climate.dormitori

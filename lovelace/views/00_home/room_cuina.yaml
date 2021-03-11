@@ -28,19 +28,19 @@ cards:
             type: "custom:decluttering-card"
             variables:
               - name: Marbre
-              - entity: switch.llum_cuina
+              - entity: switch.kitchen_light_1
               - icon: "mdi:lightbulb"
           - template: nest_button_light
             type: "custom:decluttering-card"
             variables:
               - name: Arrocera
-              - entity: switch.arbre_nadal
+              - entity: switch.kitchen_switch_ricecooker
               - icon: "mdi:rice"
           - template: nest_button_binary_sensor
             type: "custom:decluttering-card"
             variables:
               - name: Moviment
-              - entity: binary_sensor.motion_kitchen
+              - entity: binary_sensor.kitchen_occupancy_1_occupancy
               - icon: "mdi:motion-sensor"
 
 
@@ -53,12 +53,16 @@ cards:
           }
         entities:
           - entity: input_boolean.arrocera_enable
-            name: Programació Arrocera
+            name: Programació arrocera
             show_state: true
             toggle: true
             icon: "mdi:rice"
             type: "custom:multiple-entity-row"
             entities:
-              - entity: input_datetime.arrocera_schedule
-                name: false
+              - entity: input_datetime.arrocera_schedule_start
+                name: "Inici"
                 state_color: true
+              - entity: input_datetime.arrocera_schedule_stop
+                name: "Final"
+                state_color: true
+

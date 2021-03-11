@@ -28,14 +28,20 @@ cards:
             type: "custom:decluttering-card"
             variables:
               - name: Peu
-              - entity: light.llum_despatx_peu
+              - entity: light.office_light_2
               - icon: "mdi:floor-lamp"
           - template: nest_button_light
             type: "custom:decluttering-card"
             variables:
               - name: Taula
-              - entity: light.llum_despatx_taula
+              - entity: light.office_light_1
               - icon: "mdi:lightbulb"
+          - template: nest_button_binary_sensor
+            type: "custom:decluttering-card"
+            variables:
+              - name: Moviment
+              - entity: binary_sensor.office_occupancy_1_occupancy
+              - icon: "mdi:motion-sensor"
           - template: nest_button_media_player
             type: "custom:decluttering-card"
             variables:
@@ -68,7 +74,7 @@ cards:
           - template: nest_button
             type: "custom:decluttering-card"
             variables:
-              - entity: sensor.sensor_despatx_temperature
+              - entity: sensor.office_sensor_1_temperature
               - icon: "mdi:thermometer"
               - show_name: false
               - show_state: true 
@@ -84,7 +90,7 @@ cards:
           - template: nest_button
             type: "custom:decluttering-card"
             variables:
-              - entity: sensor.sensor_despatx_humidity
+              - entity: sensor.office_sensor_1_humidity
               - icon: "mdi:water-percent"
               - show_name: false
               - show_state: true 
@@ -101,7 +107,7 @@ cards:
             type: "custom:decluttering-card"
             variables:
               - name: Radiador
-              - entity: switch.calefaccio_despatx
+              - entity: switch.office_switch_heater
               - icon: "mdi:radiator"
           - template: nest_button_clima
             type: "custom:decluttering-card"
@@ -116,10 +122,10 @@ cards:
 
       # - type: custom:mini-graph-card
       #   entities: 
-      #     - entity: sensor.sensor_despatx_temperature
+      #     - entity: sensor.office_sensor_1_temperature
       #       name: Temperatura
       #       color: "#ff9933"
-      #     - entity: sensor.sensor_despatx_humidity
+      #     - entity: sensor.office_sensor_1_humidity
       #       name: Humitat
       #       y_axis: secondary
       #       show_fill: false

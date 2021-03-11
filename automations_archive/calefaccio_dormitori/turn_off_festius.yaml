@@ -1,0 +1,35 @@
+alias: 'Calefacció dormitori - Apagar (festius)'
+initial_state: false
+trigger:
+  - platform: time
+    at: "09:30:00"
+  - platform: state
+    entity_id: switch.bedroom_switch_heater
+    from: "on"
+    to: "off"
+condition:
+  - condition: or
+    conditions:
+    - condition: time
+      after: "08:30:00"
+      before: "10:00:00"
+      weekday:
+        - sat
+        - sun
+    - condition: and
+      conditions:
+        - condition: time
+          after: "08:30:00"
+          before: "10:00:00"
+          weekday:
+            - mon
+            - tue
+            - wed
+            - thu
+            - fri
+        - condition: state
+          entity_id: calendar.festius_barcelona
+          state: 'on'
+action:
+  - service: climate.turn_off
+    entity_id: climate.dormitori

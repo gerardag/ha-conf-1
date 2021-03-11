@@ -2,25 +2,25 @@ habitacio:
   name: Habitació
   entities:
     - media_player.el_lado_oscuro
-    - sensor.dormitori_humidity
-    - sensor.dormitori_temperature
+    - sensor.bedroom_sensor_1_humidity
+    - sensor.bedroom_sensor_1_temperature
     - climate.dormitori
 
 menjador:
   name: Menjador
   entities:
     - climate.menjador
-    - light.mesita
-    - light.mesa
-    - light.sofa
+    - light.livingroom_light_3
+    - light.livingroom_light_1
+    - light.livingroom_light_2
     - media_player.tele
     - scene.buenos_dias
     - scene.cena
     - scene.comida
     - scene.relax
     - scene.tele
-    - sensor.menjador_humidity
-    - sensor.menjador_temperature
+    - sensor.livingroom_sensor_1_humidity
+    - sensor.livingroom_sensor_1_temperature
     - switch.calefaccio_menjador
 
 exterior:
@@ -33,4 +33,4 @@ exterior:
 entrada:
   name: Entrada
   entities:
-    - light.entrada
+    - light.entrance_light_1

@@ -1,0 +1,12 @@
+- alias: "🛋️ Menjador - Finestra oberta"
+  id: "1615486966880048641"
+  trigger:
+  - entity_id: binary_sensor.livingroom_contact_1_contact
+    platform: state
+    to: 'on'
+    for: 
+      seconds: 30
+  condition: []
+  action:
+  - service: climate.turn_off
+    entity_id: climate.menjador

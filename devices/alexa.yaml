@@ -10,8 +10,8 @@ smart_home:
     exclude_entities:
       - switch.ventilador
       - switch.calefaccio_menjador
-      - switch.calefaccio_dormitori
-      - switch.calefaccio_despatx
+      - switch.bedroom_switch_heater
+      - switch.office_switch_heater
     include_domains:
       - light
       - scene
@@ -21,9 +21,9 @@ smart_home:
       - sensor.*_temperature
       - sensor.*_temperature_mqtt
     include_entities:
-      - switch.llum_cuina
+      - switch.kitchen_light_1
       - switch.calefaccio_menjador
-      - switch.arbre_nadal
+      - switch.kitchen_switch_ricecooker
       - switch.aspirador
       - script.tv_turn_on_disney
       - script.tv_turn_on_netflix
@@ -65,20 +65,20 @@ smart_home:
       name: Comida
     script.menjador_dynamic_scene:
       name: Lo que quieras
-    light.entrada:
+    light.entrance_light_1:
       name: Entrada
-    light.mesa:
+    light.livingroom_light_1:
       name: Mesa
-    light.sofa:
+    light.livingroom_light_2:
       name: Sofá
-    light.mesita:
+    light.livingroom_light_3:
       name: Mesita
     switch.calefaccio_menjador:
       name: Ventilador
-    switch.llum_cuina:
+    switch.kitchen_light_1:
       name: Cocina
       display_categories: LIGHT
-    switch.arbre_nadal:
+    switch.kitchen_switch_ricecooker:
       name: Árbol de Navidad
       display_categories: LIGHT
     media_player.xboxone:

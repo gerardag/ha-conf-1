@@ -28,25 +28,25 @@ cards:
             type: "custom:decluttering-card"
             variables:
               - name: Taula
-              - entity: light.mesa
+              - entity: light.livingroom_light_1
               - icon: "mdi:ceiling-light"
           - template: nest_button_light
             type: "custom:decluttering-card"
             variables:
               - name: Sofà
-              - entity: light.sofa
+              - entity: light.livingroom_light_2
               - icon: "mdi:floor-lamp"
           - template: nest_button_light
             type: "custom:decluttering-card"
             variables:
               - name: Tauleta
-              - entity: light.mesita
+              - entity: light.livingroom_light_3
               - icon: "mdi:lightbulb"
           - template: nest_button_binary_sensor
             type: "custom:decluttering-card"
             variables:
               - name: Finestra
-              - entity: binary_sensor.window_dinningroom
+              - entity: binary_sensor.livingroom_contact_1_contact
               - icon: "mdi:window-closed"
           - template: nest_button_media_player
             type: "custom:decluttering-card"
@@ -89,22 +89,23 @@ cards:
               - tap_action:
                   action: more-info
 
-
-      - type: custom:layout-card
-        layout: horizontal
-        min_columns: 5
-        max_columns: 5
-        column_width: 100px
-        justify_content: left
-        style: |
-          ha-card {
-            padding: 10px;
-          }
-        cards:
+          - break
+          - break
+      # - type: custom:layout-card
+      #   layout: horizontal
+      #   min_columns: 5
+      #   max_columns: 5
+      #   column_width: 100px
+      #   justify_content: left
+      #   style: |
+      #     ha-card {
+      #       padding: 10px;
+      #     }
+      #   cards:
           - template: nest_button
             type: "custom:decluttering-card"
             variables:
-              - entity: sensor.menjador_temperature
+              - entity: sensor.livingroom_sensor_1_temperature
               - icon: "mdi:thermometer"
               - show_name: false
               - show_state: true 
@@ -120,7 +121,7 @@ cards:
           - template: nest_button
             type: "custom:decluttering-card"
             variables:
-              - entity: sensor.menjador_humidity
+              - entity: sensor.livingroom_sensor_1_humidity
               - icon: "mdi:water-percent"
               - show_name: false
               - show_state: true 
@@ -139,6 +140,7 @@ cards:
               - name: Radiador
               - entity: switch.calefaccio_menjador
               - icon: "mdi:radiator"
+
           - template: nest_button_clima
             type: "custom:decluttering-card"
             variables:
@@ -172,10 +174,10 @@ cards:
 
       # - type: custom:mini-graph-card
       #   entities: 
-      #     - entity: sensor.menjador_temperature
+      #     - entity: sensor.livingroom_sensor_1_temperature
       #       name: Temperatura
       #       color: "#ff9933"
-      #     - entity: sensor.menjador_humidity
+      #     - entity: sensor.livingroom_sensor_1_humidity
       #       name: Humitat
       #       y_axis: secondary
       #       show_fill: false

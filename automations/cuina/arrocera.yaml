@@ -1,0 +1,78 @@
+- alias: '👩🏻‍🍳 Cuina - Arrocera configurar final'
+  id: "1615486952089741987"
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: input_datetime.arrocera_schedule_start
+      
+  condition: []
+  action:
+    - service: input_datetime.set_datetime
+      data:
+        entity_id: input_datetime.arrocera_schedule_stop
+        timestamp: |
+          {{ state_attr('input_datetime.arrocera_schedule_start', 'timestamp') | int }}
+
+    - service: input_boolean.turn_on
+      data:
+        entity_id: input_boolean.arrocera_enable
+
+- alias: '👩🏻‍🍳 Cuina - Arrocera apagar segons programació'
+  id: "1615486952105976953"
+  initial_state: true
+  trigger:
+    - platform: template
+      value_template: |
+        {{ 
+          (states('sensor.time') == (state_attr('input_datetime.arrocera_schedule_stop', 'timestamp') | int | timestamp_custom('%H:%M', False)))
+        }}
+  condition:
+    - condition: state
+      entity_id: input_boolean.arrocera_enable
+      state: "on"
+    - condition: state
+      entity_id: switch.kitchen_switch_ricecooker
+      state: "on"
+  action:
+  
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.arrocera_enable
+  
+    # Start arrocera
+    - service: switch.turn_off
+      data:
+        entity_id: switch.kitchen_switch_ricecooker
+  
+    # Send notification
+    - service: notify.notify
+      data: 
+        title: Arrocera
+        message: "S'ha apagat l'arrocera"
+
+
+
+- alias: '👩🏻‍🍳 Cuina - Arrocera arrencar segons programació'
+  id: "1615486952118911630"
+  initial_state: true
+  trigger:
+    - platform: template
+      value_template: |
+        {{ 
+          (states('sensor.time') == (state_attr('input_datetime.arrocera_schedule_start', 'timestamp') | int | timestamp_custom('%H:%M', False)))
+        }}
+  condition:
+    - condition: state
+      entity_id: input_boolean.arrocera_enable
+      state: "on"
+  action:
+    # Start arrocera
+    - service: switch.turn_on
+      data:
+        entity_id: switch.kitchen_switch_ricecooker
+  
+    # Send notification
+    - service: notify.notify
+      data: 
+        title: Arrocera
+        message: "S'ha activat l'arrocera"

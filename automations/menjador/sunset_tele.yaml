@@ -1,0 +1,21 @@
+- alias: "🛋️ Menjador - Encen llums quan es fa fosc"
+  id: "1615486966910661904"
+  initial_state: true
+  trigger:
+    - platform: sun
+      event: sunset
+      offset: "00:05:00"
+  condition:
+    - condition: state
+      entity_id: light.livingroom_light_3
+      state: 'off'
+    - condition: state
+      entity_id: binary_sensor.someone_home
+      state: "on"
+  action:
+    - service: light.turn_on
+      entity_id: light.livingroom_light_3 
+      data:
+        brightness: 10
+        color_temp: 454
+        transition: 30

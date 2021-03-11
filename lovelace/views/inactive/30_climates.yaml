@@ -128,7 +128,7 @@ cards:
           - type: "horizontal-stack"
             cards:
               - entities:
-                  - entity: sensor.menjador_temperature_mqtt
+                  - entity: sensor.livingroom_sensor_1_temperature_mqtt
                     show_fill: false
                 icon: 'mdi:thermometer'
                 line_color: orange
@@ -144,7 +144,7 @@ cards:
                     margin-bottom: 10px;
                   }
               - entities:
-                  - entity: sensor.menjador_humidity_mqtt
+                  - entity: sensor.livingroom_sensor_1_humidity_mqtt
                     show_fill: false
                 icon: 'mdi:water'
                 line_color: '#00C6C5'
@@ -216,7 +216,7 @@ cards:
           - type: "horizontal-stack"
             cards:
               - entities:
-                  - entity: sensor.dormitori_temperature_mqtt
+                  - entity: sensor.bedroom_sensor_1_temperature_mqtt
                     show_fill: false
                 icon: 'mdi:thermometer'
                 line_color: orange
@@ -233,7 +233,7 @@ cards:
                     margin-bottom: 10px;
                   }
               - entities:
-                  - entity: sensor.dormitori_humidity_mqtt
+                  - entity: sensor.bedroom_sensor_1_humidity_mqtt
                     show_fill: false
                 icon: 'mdi:water'
                 line_color: '#00C6C5'
@@ -269,11 +269,11 @@ cards:
   - entities:
       - entity: switch.calefaccio_menjador
         name: Menjador
-      - entity: switch.calefaccio_dormitori
+      - entity: switch.bedroom_switch_heater
         name: Dormitori
-      - entity: sensor.menjador_temperature_mqtt
+      - entity: sensor.livingroom_sensor_1_temperature_mqtt
         name: Menjador
-      - entity: sensor.dormitori_temperature_mqtt
+      - entity: sensor.bedroom_sensor_1_temperature_mqtt
         name: Dormitori
       - entity: sensor.exterior_temperature_mqtt
         name: Exterior

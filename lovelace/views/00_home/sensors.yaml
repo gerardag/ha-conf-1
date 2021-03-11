@@ -14,13 +14,13 @@ cards:
     entities:
       - entity: camera.escala
         icon: "mdi:cctv"
-      - entity: binary_sensor.door_main_entrance 
+      - entity: binary_sensor.entrance_contact_1 
         icon: "mdi:door-closed"
-      - entity: binary_sensor.motion_entrance 
+      - entity: binary_sensor.entrance_occupancy_1 
         icon: "mdi:motion-sensor"
-      - entity: binary_sensor.motion_kitchen 
+      - entity: binary_sensor.kitchen_occupancy_1_occupancy 
         icon: "mdi:motion-sensor"
-      - entity: binary_sensor.window_dinningroom 
+      - entity: binary_sensor.livingroom_contact_1_contact 
         icon: "mdi:window-closed"
-      - entity: binary_sensor.window_dormitori 
+      - entity: binary_sensor.bedroom_contact_1_contact 
         icon: "mdi:window-closed"

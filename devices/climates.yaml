@@ -1,7 +1,7 @@
 - platform: generic_thermostat
   name: Menjador
   heater: switch.calefaccio_menjador
-  target_sensor: sensor.menjador_temperature
+  target_sensor: sensor.livingroom_sensor_1_temperature
   min_temp: 7
   max_temp: 25
   ac_mode: false
@@ -16,8 +16,8 @@
   precision: 0.1
 - platform: generic_thermostat
   name: Dormitori
-  heater: switch.calefaccio_dormitori
-  target_sensor: sensor.dormitori_temperature
+  heater: switch.bedroom_switch_heater
+  target_sensor: sensor.bedroom_sensor_1_temperature
   min_temp: 7
   max_temp: 25
   ac_mode: false
@@ -32,8 +32,8 @@
   precision: 0.1
 - platform: generic_thermostat
   name: Despatx
-  heater: switch.calefaccio_despatx
-  target_sensor: sensor.sensor_despatx_temperature
+  heater: switch.office_switch_heater
+  target_sensor: sensor.office_sensor_1_temperature
   min_temp: 7
   max_temp: 25
   ac_mode: false

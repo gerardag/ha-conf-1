@@ -13,7 +13,7 @@ schedy:
         - x: "'OFF' if is_off('input_boolean.schedy_menjador') else Next()"
 
         # Turn off if dinning room's window is opened
-        # - x: "'OFF' if is_on('binary_sensor.window_dinningroom') else Next()"
+        # - x: "'OFF' if is_on('binary_sensor.livingroom_contact_1_contact') else Next()"
 
         - weekdays: 1-5
           rules:
@@ -33,7 +33,7 @@ schedy:
         - { v: "OFF" }
 
       watched_entities:
-        - "binary_sensor.window_dinningroom"
+        - "binary_sensor.livingroom_contact_1_contact"
         - "input_boolean.schedy_menjador"
 
     dormitori:
@@ -44,7 +44,7 @@ schedy:
         - x: "'OFF' if is_off('input_boolean.schedy_dormitori') else Next()"
 
         # Turn off if bedrooms' room window is opened
-        # - x: "'OFF' if is_on('binary_sensor.window_dormitori') else Next()"
+        # - x: "'OFF' if is_on('binary_sensor.bedroom_contact_1_contact') else Next()"
 
         - weekdays: 1-5
           rules:
@@ -61,7 +61,7 @@ schedy:
         - { v: "OFF" }
 
       watched_entities:
-        - "binary_sensor.window_dormitori"
+        - "binary_sensor.bedroom_contact_1_contact"
         - "input_boolean.schedy_dormitori"
 
     despatx:

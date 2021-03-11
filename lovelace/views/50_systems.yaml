@@ -4,25 +4,164 @@ path: system
 badges: []
 panel: true
 cards:
-  - type: custom:layout-card
-    layout: horizontal
-    min_columns: 1
-    max_columns: 3
+
+  - type: vertical-stack
     cards:
 
-      - template: sys_monitoring_stack
+
+      - template: title_h1
         type: "custom:decluttering-card"
         variables:
-          - system: pi4
+          - title: "pi4.sys.aleix.cloud"
+            align: center
+
+      - type: custom:layout-card
+        layout: horizontal
+        min_columns: 3
+        max_columns: 3
+        cards:
+
+          - type: vertical-stack
+            cards:
 
 
-      - template: sys_monitoring_stack
-        type: "custom:decluttering-card"
-        variables:
-          - system: pi3a
+              - template: title_h2
+                type: "custom:decluttering-card"
+                variables:
+                  - title: Overview
 
-          
-      - template: sys_monitoring_stack
-        type: "custom:decluttering-card"
-        variables:
-          - system: pizw
+              - type: horizontal-stack
+                cards:
+
+                  - type: sensor
+                    graph: line
+                    entity: sensor.pi4_cpu_used
+                    name: CPU
+
+                  - type: sensor
+                    graph: line
+                    entity: sensor.pi4_ram_used_percent
+                    name: RAM
+
+                  - type: sensor
+                    graph: line
+                    entity: sensor.pi4_addons_used_percent
+                    name: Disk
+
+              - template: title_h2
+                type: "custom:decluttering-card"
+                variables:
+                  - title: Monitoring
+
+              - type: entities
+                entities: 
+                  - binary_sensor.aleix_casa
+
+
+          - type: vertical-stack
+            cards:
+              - template: title_h2
+                type: "custom:decluttering-card"
+                variables:
+                  - title: Internet
+
+              - type: horizontal-stack
+                cards:
+
+                  - type: sensor
+                    graph: line
+                    entity: sensor.speedtest_download
+                    name: Download
+
+                  - type: sensor
+                    graph: line
+                    entity: sensor.speedtest_upload
+                    name: Upload
+
+                  - type: sensor
+                    graph: line
+                    entity: sensor.speedtest_ping
+                    name: Ping
+
+              - template: title_h2
+                type: "custom:decluttering-card"
+                variables:
+                  - title: Disk
+
+              - type: horizontal-stack
+                cards:
+
+                  - type: sensor
+                    graph: line
+                    entity: sensor.pi4_addons_free
+                    name: Free
+
+                  - type: sensor
+                    graph: line
+                    entity: sensor.pi4_addons_used
+                    name: Used
+
+                  - type: sensor
+                    graph: line
+                    entity: sensor.pi4_addons_used_percent
+                    name: Percent
+
+          - type: vertical-stack
+            cards:
+
+              - template: title_h2
+                type: "custom:decluttering-card"
+                variables:
+                  - title: Docker
+
+              - type: horizontal-stack
+                cards:
+
+                  - type: sensor
+                    graph: line
+                    entity: sensor.pi4_containers_active
+                    name: Containers
+
+                  - type: sensor
+                    graph: line
+                    entity: sensor.pi4_containers_cpu_used
+                    name: CPU
+
+                  - type: sensor
+                    graph: line
+                    entity: sensor.pi4_containers_ram_used
+                    name: RAM
+
+              - template: title_h2
+                type: "custom:decluttering-card"
+                variables:
+                  - title: Others
+
+              - type: horizontal-stack
+                cards:
+
+                  - type: sensor
+                    graph: line
+                    entity: sensor.pi4_cpu_thermal_1_temperature
+                    name: Temperature
+
+                  - type: sensor
+                    graph: line
+                    entity: sensor.pi4_thread
+                    name: Threads
+
+                  - type: sensor
+                    graph: line
+                    entity: sensor.pi4_swap_used_percent
+                    name: Swap
+
+          # - template: sys_monitoring_stack
+          #   type: "custom:decluttering-card"
+          #   variables:
+          #     - system: pi3a
+
+              
+          # - template: sys_monitoring_stack
+          #   type: "custom:decluttering-card"
+          #   variables:
+          #     - system: pizw

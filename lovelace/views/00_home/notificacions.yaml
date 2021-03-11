@@ -25,7 +25,9 @@ cards:
   - type: custom:simple-weather-card
     entity: weather.dark_sky
     name: "Horta (Barcelona)"
-    backdrop: true
+    backdrop:
+      fade: true
+      text: white
     style: |
       ha-card {
         margin-left: 5px;

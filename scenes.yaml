@@ -1,102 +1,102 @@
 - name: Tele
   entities:
-    light.mesita:
+    light.livingroom_light_3:
       state: true
       brightness: 10
       color_temp: 454
-    light.sofa: false
-    light.mesa: false
+    light.livingroom_light_2: false
+    light.livingroom_light_1: false
     input_number.tablet_brightness: "2"
 - name: Buenos días
   entities:
-    light.mesita:
+    light.livingroom_light_3:
       state: true
       brightness: 1
       color_temp: 250
-    light.sofa: false
-    light.mesa: false
-    switch.llum_cuina:
+    light.livingroom_light_2: false
+    light.livingroom_light_1: false
+    switch.kitchen_light_1:
       state: true
-    light.entrada:
+    light.entrance_light_1:
       state: true
 - name: Cena
   entities:
-    light.mesita:
+    light.livingroom_light_3:
       state: true
       brightness: 254
       color_temp: 294
-    light.sofa:
+    light.livingroom_light_2:
       state: true
       brightness: 254
-    light.mesa: false
+    light.livingroom_light_1: false
     input_number.tablet_brightness: "80"
 - name: Con amigos
   entities:
-    light.mesita:
+    light.livingroom_light_3:
       state: true
       brightness: 254
       color_temp: 294
-    light.sofa:
+    light.livingroom_light_2:
       state: true
       brightness: 254
-    light.mesa: 
+    light.livingroom_light_1: 
       state: true
       brightness: 200
     input_number.tablet_brightness: "100"
 - name: Relax
   entities:
-    light.mesita:
+    light.livingroom_light_3:
       state: true
       brightness: 128
       color_temp: 454
-    light.sofa:
+    light.livingroom_light_2:
       state: true
       brightness: 100
-    light.mesa: false
+    light.livingroom_light_1: false
     input_number.tablet_brightness: "50"
 - name: Juegos de mesa
   entities:
-    light.mesita:
+    light.livingroom_light_3:
       state: true
       brightness: 64
       color_temp: 454
-    light.sofa:
+    light.livingroom_light_2:
       state: true
       brightness: 64
-    light.mesa:
+    light.livingroom_light_1:
       state: true
       brightness: 200 
     input_number.tablet_brightness: "70"
 - name: Comida
   entities:
-    light.mesa: 
+    light.livingroom_light_1: 
       state: true
       brightness: 200
-    light.mesita:
+    light.livingroom_light_3:
       state: false
-    light.sofa:
+    light.livingroom_light_2:
       state: false
     input_number.tablet_brightness: "50"
 
 
 - name: Oficina trabajo
   entities:
-    light.llum_despatx_peu: 
+    light.office_light_2: 
       state: true
       brightness: 250
       transition: 3
-    light.llum_despatx_taula: 
+    light.office_light_1: 
       state: true
       brightness: 250
       transition: 3
 
 - name: Oficina juegos
   entities:
-    light.llum_despatx_peu: 
+    light.office_light_2: 
       state: true
       brightness: 75
       transition: 3
-    light.llum_despatx_taula: 
+    light.office_light_1: 
       state: true
       brightness: 75
       transition: 3

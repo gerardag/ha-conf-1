@@ -28,19 +28,19 @@ cards:
             type: "custom:decluttering-card"
             variables:
               - name: Llum
-              - entity: light.entrada
+              - entity: light.entrance_light_1
               - icon: "mdi:lightbulb"
           - template: nest_button_binary_sensor
             type: "custom:decluttering-card"
             variables:
               - name: Porta
-              - entity: binary_sensor.door_main_entrance
+              - entity: binary_sensor.entrance_contact_1_contact
               - icon: "mdi:door-closed"
           - template: nest_button_binary_sensor
             type: "custom:decluttering-card"
             variables:
               - name: Moviment
-              - entity: binary_sensor.motion_entrance
+              - entity: binary_sensor.entrance_occupancy_1_occupancy
               - icon: "mdi:motion-sensor"
           - template: nest_button_binary_sensor
             type: "custom:decluttering-card"

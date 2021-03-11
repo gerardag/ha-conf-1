@@ -1,5 +1,10 @@
-arrocera_schedule:
-  name: Arrocera schedule
+arrocera_schedule_start:
+  name: Arrocera schedule (start)
+  has_date: false
+  has_time: true
+
+arrocera_schedule_stop:
+  name: Arrocera schedule (stop)
   has_date: false
   has_time: true
 

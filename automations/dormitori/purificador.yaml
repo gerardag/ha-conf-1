@@ -1,0 +1,65 @@
+- alias: '🛏️ Dormitori - Purificador LED on/off'
+  id: "1615486940533331814"
+  initial_state: true
+  trigger:
+    - platform: time
+      at: "23:30:00"
+    - platform: time
+      at: "09:00:00"
+    - platform: homeassistant
+      event: start
+  action:
+    # Apaga el led per la nit
+    - choose:
+      - conditions:
+          condition: time
+          after: "23:30:00"
+          before: "09:00:00"
+        sequence:
+          - service: xiaomi_miio.fan_set_led_off
+            data:
+              entity_id: fan.xiaomi_miio_device
+      # Engega el led durant el dia
+      default:
+        - service: xiaomi_miio.fan_set_led_on
+          data:
+            entity_id: fan.xiaomi_miio_device
+
+
+
+- alias: '🛏️ Dormitori - Purificador Mode idle/favorite/quiet/auto'
+  id: "1615486940567137997"
+  initial_state: true
+  trigger:
+    - platform: time
+      at: "21:00:00"
+    - platform: time
+      at: "22:30:00"
+    - platform: homeassistant
+      event: start
+  action:
+    - choose:
+      - conditions:
+          condition: time
+          after: "21:00:00"
+          before: "22:30:00"
+        sequence:
+          - service: fan.set_speed
+            data:
+              entity_id: fan.xiaomi_miio_device
+              speed: favorite
+      - conditions:
+          condition: time
+          after: "22:30:00"
+          before: "01:00:00"
+        sequence:
+          - service: fan.set_speed
+            data:
+              entity_id: fan.xiaomi_miio_device
+              speed: silent
+      # Engega el led durant el dia
+      default:
+        - service: fan.turn_off
+          data:
+            entity_id: fan.xiaomi_miio_device
+

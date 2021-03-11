@@ -34,7 +34,7 @@ cards:
             type: "custom:decluttering-card"
             variables:
               - name: Finestra
-              - entity: binary_sensor.window_dormitori
+              - entity: binary_sensor.bedroom_contact_1_contact
               - icon: "mdi:window-closed"
           - template: nest_button_media_player
             type: "custom:decluttering-card"
@@ -65,7 +65,7 @@ cards:
           - template: nest_button
             type: "custom:decluttering-card"
             variables:
-              - entity: sensor.dormitori_temperature
+              - entity: sensor.bedroom_sensor_1_temperature
               - icon: "mdi:thermometer"
               - show_name: false
               - show_state: true 
@@ -81,7 +81,7 @@ cards:
           - template: nest_button
             type: "custom:decluttering-card"
             variables:
-              - entity: sensor.dormitori_humidity
+              - entity: sensor.bedroom_sensor_1_humidity
               - icon: "mdi:water-percent"
               - show_name: false
               - show_state: true 
@@ -98,7 +98,7 @@ cards:
             type: "custom:decluttering-card"
             variables:
               - name: Radiador
-              - entity: switch.calefaccio_dormitori
+              - entity: switch.bedroom_switch_heater
               - icon: "mdi:radiator"
           - template: nest_button_clima
             type: "custom:decluttering-card"
@@ -113,10 +113,10 @@ cards:
 
       # - type: custom:mini-graph-card
       #   entities: 
-      #     - entity: sensor.dormitori_temperature
+      #     - entity: sensor.bedroom_sensor_1_temperature
       #       name: Temperatura
       #       color: "#ff9933"
-      #     - entity: sensor.dormitori_humidity
+      #     - entity: sensor.bedroom_sensor_1_humidity
       #       name: Humitat
       #       y_axis: secondary
       #       show_fill: false

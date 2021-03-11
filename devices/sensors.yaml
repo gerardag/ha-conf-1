@@ -192,8 +192,8 @@
       friendly_name: Taula %
       unit_of_measurement: '%'
       value_template: >-
-        {% if is_state('light.mesa', 'on') %}
-        {{ (state_attr('light.mesa', 'brightness') / (255/100)) | round(0, 'ceil') }}
+        {% if is_state('light.livingroom_light_1', 'on') %}
+        {{ (state_attr('light.livingroom_light_1', 'brightness') / (255/100)) | round(0, 'ceil') }}
         {% else %}
         0
         {% endif %}
@@ -201,8 +201,8 @@
       friendly_name: Tauleta %
       unit_of_measurement: '%'
       value_template: >-
-        {% if is_state('light.mesita', 'on') %}
-        {{ (state_attr('light.mesita', 'brightness') / (255/100)) | round(0, 'ceil') }}
+        {% if is_state('light.livingroom_light_3', 'on') %}
+        {{ (state_attr('light.livingroom_light_3', 'brightness') / (255/100)) | round(0, 'ceil') }}
         {% else %}
         0
         {% endif %}
@@ -210,8 +210,8 @@
       friendly_name: Sofà %
       unit_of_measurement: '%'
       value_template: >-
-        {% if is_state('light.sofa', 'on') %}
-        {{ (state_attr('light.sofa', 'brightness') / (255/100)) | round(0, 'ceil') }}
+        {% if is_state('light.livingroom_light_2', 'on') %}
+        {{ (state_attr('light.livingroom_light_2', 'brightness') / (255/100)) | round(0, 'ceil') }}
         {% else %}
         0
         {% endif %}
@@ -219,8 +219,8 @@
       friendly_name: Entrada %
       unit_of_measurement: '%'
       value_template: >-
-        {% if is_state('light.entrada', 'on') %}
-        {{ (state_attr('light.entrada', 'brightness') / (255/100)) | round(0, 'ceil') }}
+        {% if is_state('light.entrance_light_1', 'on') %}
+        {{ (state_attr('light.entrance_light_1', 'brightness') / (255/100)) | round(0, 'ceil') }}
         {% else %}
         0
         {% endif %}
@@ -261,7 +261,7 @@
         {%- if as_timestamp(utcnow()) | timestamp_custom('%H') | int < 11 -%}Vall
         {%- elif as_timestamp(utcnow()) | timestamp_custom('%H') | int < 21 -%}Punta
         {%- else -%}Vall{%- endif -%}
-    calefaccio_dormitori_target:
+    bedroom_switch_heater_target:
       friendly_name: Calefacció dormitori temperatura objectiu
       unit_of_measurement: "ºC"
       value_template: |
@@ -283,7 +283,7 @@
         {%- elif as_timestamp(now()) | timestamp_custom('%H') | int < 20 -%}19.5
         {%- elif as_timestamp(now()) | timestamp_custom('%H') | int < 22 -%}19.5
         {%- else -%}19.5{%- endif -%}
-    calefaccio_despatx_target:
+    office_switch_heater_target:
       friendly_name: Calefacció despatx temperatura objectiu
       unit_of_measurement: "ºC"
       value_template: |
@@ -346,11 +346,11 @@
 #       column: 'state'
 #     - name: Dormitori Temperature (MAX)
 #       unit_of_measurement: ºC
-#       query: "SELECT ROUND(MAX(CAST(state AS FLOAT)), 1) AS state FROM states WHERE entity_id = 'sensor.dormitori_temperature';"
+#       query: "SELECT ROUND(MAX(CAST(state AS FLOAT)), 1) AS state FROM states WHERE entity_id = 'sensor.bedroom_sensor_1_temperature';"
 #       column: 'state'
 #     - name: Dormitori Temperature (MIN)
 #       unit_of_measurement: ºC
-#       query: "SELECT ROUND(MIN(CAST(state AS FLOAT)), 1) AS state FROM states WHERE entity_id = 'sensor.dormitori_temperature' AND state <> 0;"
+#       query: "SELECT ROUND(MIN(CAST(state AS FLOAT)), 1) AS state FROM states WHERE entity_id = 'sensor.bedroom_sensor_1_temperature' AND state <> 0;"
 #       column: 'state'
 #     - name: Dormitori Temperature (Diff 24h)
 #       unit_of_measurement: ºC
@@ -358,22 +358,22 @@
 #         SELECT (ROUND(CAST(now.state AS FLOAT), 1) - 
 #             (SELECT ROUND(CAST(yesterday.state AS FLOAT), 1)
 #               FROM states yesterday 
-#               WHERE yesterday.entity_id = 'sensor.dormitori_temperature' AND state <> 0
+#               WHERE yesterday.entity_id = 'sensor.bedroom_sensor_1_temperature' AND state <> 0
 #               AND yesterday.created < NOW() - INTERVAL 1 DAY 
 #               ORDER BY yesterday.created DESC LIMIT 1
 #             )
 #         ) AS state
 #         FROM states now  
-#         WHERE now.entity_id = 'sensor.dormitori_temperature' AND state <> 0
+#         WHERE now.entity_id = 'sensor.bedroom_sensor_1_temperature' AND state <> 0
 #         ORDER BY now.created DESC LIMIT 1;
 #       column: 'state'
 #     - name: Menjador Temperature (MAX)
 #       unit_of_measurement: ºC
-#       query: "SELECT ROUND(MAX(CAST(state AS FLOAT)), 1) AS state FROM states WHERE entity_id = 'sensor.menjador_temperature';"
+#       query: "SELECT ROUND(MAX(CAST(state AS FLOAT)), 1) AS state FROM states WHERE entity_id = 'sensor.livingroom_sensor_1_temperature';"
 #       column: 'state'
 #     - name: Menjador Temperature (MIN)
 #       unit_of_measurement: ºC
-#       query: "SELECT ROUND(MIN(CAST(state AS FLOAT)), 1) AS state FROM states WHERE entity_id = 'sensor.menjador_temperature' AND state <> 0;"
+#       query: "SELECT ROUND(MIN(CAST(state AS FLOAT)), 1) AS state FROM states WHERE entity_id = 'sensor.livingroom_sensor_1_temperature' AND state <> 0;"
 #       column: 'state'
 #     - name: Menjador Temperature (Diff 24h)
 #       unit_of_measurement: ºC
@@ -381,13 +381,13 @@
 #         SELECT (ROUND(CAST(now.state AS FLOAT), 1) - 
 #             (SELECT ROUND(CAST(yesterday.state AS FLOAT), 1)
 #               FROM states yesterday 
-#               WHERE yesterday.entity_id = 'sensor.menjador_temperature' AND state <> 0
+#               WHERE yesterday.entity_id = 'sensor.livingroom_sensor_1_temperature' AND state <> 0
 #               AND yesterday.created < NOW() - INTERVAL 1 DAY 
 #               ORDER BY yesterday.created DESC LIMIT 1
 #             )
 #         ) AS state
 #         FROM states now 
-#         WHERE now.entity_id = 'sensor.menjador_temperature' AND state <> 0
+#         WHERE now.entity_id = 'sensor.livingroom_sensor_1_temperature' AND state <> 0
 #         ORDER BY now.created DESC LIMIT 1;
 #       column: 'state'
 

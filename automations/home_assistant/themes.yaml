@@ -1,0 +1,35 @@
+- alias: "⚙️ Home Assistant - Set Light theme"
+  id: "1615486964354863851"
+  trigger:
+    - platform: sun
+      event: sunrise
+      offset: "+00:01:00"
+    - event: start
+      platform: homeassistant
+  condition:
+    - condition: sun
+      after: sunrise
+  initial_state: true
+  action:
+    - service: frontend.set_theme
+      data:
+        name: "Google Light Theme"
+
+
+- alias: "⚙️ Home Assistant - Set Dark theme"
+  id: "1615486964403671042"
+  trigger:
+    - platform: sun
+      event: sunset
+      offset: "00:15:00"
+    - event: start
+      platform: homeassistant
+  condition:
+    - condition: sun
+      after: sunset
+  initial_state: true
+  action:
+    - service: frontend.set_theme
+      data:
+        name: "Google Dark Theme"
+

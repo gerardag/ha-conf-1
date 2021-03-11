@@ -1,0 +1,12 @@
+- alias: "🛏️ Dormitori - Finestra oberta"
+  id: "1615486940493800371"
+  trigger:
+  - entity_id: binary_sensor.bedroom_contact_1_contact
+    platform: state
+    to: 'on'
+    for: 
+      seconds: 30
+  condition: []
+  action:
+  - service: climate.turn_off
+    entity_id: climate.dormitori
