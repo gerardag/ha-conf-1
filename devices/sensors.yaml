@@ -175,6 +175,26 @@
     - !secret steam_account_id_aleix
     - !secret steam_account_id_imma
 
+- platform: twitch
+  client_id: !secret twitch_client_id
+  token: !secret twitch_token
+  channels:
+    - ibai
+    - iamcristinini
+    - outconsumer
+    - ernesbarbeq
+
+- platform: scrape
+  name: Ibai scrape
+  resource: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCaY_-ksFSQtTGk0y1HA_3YQ'
+  select: yt\:videoid
+
+- platform: scrape
+  name: Cintigar scrape
+  resource: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCGOyDWpNs644AInjqNuhRyg'
+  select: yt\:videoid
+
+
 ###############
 #  Templates  #
 ###############

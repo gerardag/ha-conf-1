@@ -1,0 +1,44 @@
+'youtube_cintigar':
+  alias: Cintigar
+  sequence:
+
+    - service: script.tv_turn_on_youtube
+
+    - service: webostv.command
+      data:
+        entity_id: media_player.tele
+        command: "system.launcher/launch"
+        payload:
+          id: "youtube.leanback.v4"
+          contentId: "{{ states('sensor.cintigar_scrape') }}"
+
+    - delay: 5
+
+    - service: webostv.button
+      data:
+        entity_id: media_player.tele
+        button: ENTER
+
+  
+'youtube_ibai':
+  alias: Ibai youtube
+  sequence:
+
+    - service: script.tv_turn_on_youtube
+
+    - service: webostv.command
+      data:
+        entity_id: media_player.tele
+        command: "system.launcher/launch"
+        payload:
+          id: "youtube.leanback.v4"
+          contentId: "{{ states('sensor.ibai_scrape') }}"
+
+    - delay: 5
+
+    - service: webostv.button
+      data:
+        entity_id: media_player.tele
+        button: ENTER
+
+  

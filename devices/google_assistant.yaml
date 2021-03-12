@@ -22,6 +22,10 @@ entity_config:
       expose: true
     script.tv_turn_on_youtube:
       expose: true
+    script.tv_twitch:
+      expose: true
+      aliases:
+        - Ibai
     script.tv_antena3:
       expose: true
       aliases:
@@ -41,6 +45,10 @@ entity_config:
       expose: true
       aliases:
         - rocket league
+    script.youtube_cintigar:
+      expose: true
+    script.youtube_ibai:
+      expose: true
     script.vacuum_start:
       expose: true
     media_player.tele:
@@ -86,7 +94,7 @@ entity_config:
       name: Lo que quieras
       room: Comedor
     switch.kitchen_switch_ricecooker:
-      name: Árbol de Navidad
+      name: Arrocera
       room: Comedor
     media_player.xboxone:
       name: Consola

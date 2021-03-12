@@ -95,6 +95,8 @@ logbook:
       - sensor.cuina_temps_restant_percent
       - sensor.entrada_temps_restant_percent
 
+media_extractor:
+
 api:
 
 auth:

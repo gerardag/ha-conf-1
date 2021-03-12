@@ -33,6 +33,7 @@ smart_home:
       - script.tv_turn_on_wii
       - script.tv_turn_on_xbox
       - script.tv_turn_on_youtube
+      - script.tv_twitch
       - script.tv_antena3
       - script.tv_bemad
       - script.tv_volume_up
@@ -79,7 +80,7 @@ smart_home:
       name: Cocina
       display_categories: LIGHT
     switch.kitchen_switch_ricecooker:
-      name: Árbol de Navidad
+      name: Arrocera
       display_categories: LIGHT
     media_player.xboxone:
       name: Consola
